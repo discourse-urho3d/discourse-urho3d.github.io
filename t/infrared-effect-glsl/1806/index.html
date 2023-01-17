@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Infrared Effect (GLSL)</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/site-logo.png" height="40" alt="Urho3D" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 17/01/2023.</div>
+    <h1 class="topic-title">Infrared Effect (GLSL)</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/55_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">rasteron</div>
+          <div class="post_content">
+<p>Infrared or Thermal Vision effect, if you’re in Predator Mode. <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=9" title=":wink:"/></p>
+<p><img alt="" height="331" src="http://i.imgur.com/I6pZ5H5l.png" width="640"/></p>
+<p><aside class="onebox githubgist">
+<header class="source">
+<a href="https://gist.github.com/rasteron/149e3cc403b9d45438ea" rel="nofollow noopener" target="_blank">gist.github.com</a>
+</header>
+<article class="onebox-body">
+<h4><a href="https://gist.github.com/rasteron/149e3cc403b9d45438ea" rel="nofollow noopener" target="_blank">https://gist.github.com/rasteron/149e3cc403b9d45438ea</a></h4>
+<h5>Infrared.xml</h5>
+<pre><code class="XML">&lt;renderpath&gt;
+    &lt;command type="quad" tag="Infrared" vs="Infrared" ps="Infrared" output="viewport"&gt;
+        &lt;texture unit="diffuse" name="viewport" /&gt;
+    &lt;/command&gt;
+&lt;/renderpath&gt;</code></pre>
+<p>
+</p>
+</article>
+<div class="onebox-metadata">
+</div>
+<div style="clear: both"></div>
+</aside>
+<br/>
+<aside class="onebox githubgist">
+<header class="source">
+<a href="https://gist.github.com/rasteron/323354d0e7152e3cd905" rel="nofollow noopener" target="_blank">gist.github.com</a>
+</header>
+<article class="onebox-body">
+<h4><a href="https://gist.github.com/rasteron/323354d0e7152e3cd905" rel="nofollow noopener" target="_blank">https://gist.github.com/rasteron/323354d0e7152e3cd905</a></h4>
+<h5>Infrared.glsl</h5>
+<pre><code class="GLSL">#include "Uniforms.glsl"
+#include "Samplers.glsl"
+#include "Transform.glsl"
+#include "ScreenPos.glsl"
+#include "Lighting.glsl"
+
+varying vec2 vScreenPos;
+uniform float vx_offset;
+
+void VS()</code></pre>
+This file has been truncated. <a href="https://gist.github.com/rasteron/323354d0e7152e3cd905" rel="nofollow noopener" target="_blank">show original</a>
+<p>
+</p>
+</article>
+<div class="onebox-metadata">
+</div>
+<div style="clear: both"></div>
+</aside>
+<br/>
+…as requested by George.</p>
+<p>Enjoy! <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=9" title=":slight_smile:"/></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/119_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">codingmonkey</div>
+          <div class="post_content">
+<p>Wow, it’s look as from my’s eyes <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/> Thanks for sharing!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/55_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">rasteron</div>
+          <div class="post_content">
+<aside class="quote">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/codingmonkey/40/119_1.png" width="20"/> codingmonkey:</div>
+<blockquote>
+<p>Wow, it’s look as from my’s eyes <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/> Thanks for sharing!</p>
+</blockquote>
+</aside>
+<p>hehe nice!  <img alt=":laughing:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/laughing.png?v=5" title=":laughing:"/></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Lumak</div>
+          <div class="post_content">
+<p>Hey Ron, can you repost the source on gist or github? The ones above are dead.</p>
+<p>Edit: nvm, links are still valid, just have to remove “[/gist” at the ends.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3290_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Modanung</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="4" data-topic="1806" data-username="Lumak">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/l/8491ac/40.png" width="20"/> Lumak:</div>
+<blockquote>
+<p>just have to remove “[/gist” at the ends.</p>
+</blockquote>
+</aside>
+<p>Done. <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=10" title=":slight_smile:"/></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/55_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">rasteron</div>
+          <div class="post_content">
+<p>nice one Modanung. hope you’ll find it useful Lumak <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/></p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

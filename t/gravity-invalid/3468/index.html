@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Gravity Invalid</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/site-logo.png" height="40" alt="Urho3D" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 17/01/2023.</div>
+    <h1 class="topic-title">Gravity Invalid</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/450_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">ChunFengTsin</div>
+          <div class="post_content">
+<p>Hello everyone ,</p>
+<p>I make a demo , learn from a open game “KO”.<br/>
+After I import character to scene, it can be control to move , and the physics is well when collision happen.</p>
+<p>But the confusion to me is : gravity invalid for the character.</p>
+<p>My core code  here （Hero inherit from Controller）:</p>
+<p>Hero-&gt;<br/>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/1X/73dc8c4391b62cc080b167fe7a8a67057ea39f41.png" rel="nofollow noopener" title="2017-08-21 00-27-01屏幕截图.png"><img alt="2017-08-21 00-27-01屏幕截图" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/73dc8c4391b62cc080b167fe7a8a67057ea39f41_2_10x10.png" height="423" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/73dc8c4391b62cc080b167fe7a8a67057ea39f41_2_690x423.png" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/73dc8c4391b62cc080b167fe7a8a67057ea39f41_2_690x423.png, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/73dc8c4391b62cc080b167fe7a8a67057ea39f41_2_1035x634.png 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/original/1X/73dc8c4391b62cc080b167fe7a8a67057ea39f41.png 2x" width="690"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">2017-08-21 00-27-01屏幕截图.png</span><span class="informations">1250×768 159 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>Controller-&gt;<br/>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/1X/f694f5af9ac4b21a02b9ee6216df6935a3fbc7f3.png" rel="nofollow noopener" title="2017-08-21 00-26-31屏幕截图.png"><img alt="2017-08-21 00-26-31屏幕截图" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/f694f5af9ac4b21a02b9ee6216df6935a3fbc7f3_2_10x10.png" height="196" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/f694f5af9ac4b21a02b9ee6216df6935a3fbc7f3_2_690x196.png" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/f694f5af9ac4b21a02b9ee6216df6935a3fbc7f3_2_690x196.png, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/f694f5af9ac4b21a02b9ee6216df6935a3fbc7f3_2_1035x294.png 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/original/1X/f694f5af9ac4b21a02b9ee6216df6935a3fbc7f3.png 2x" width="690"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">2017-08-21 00-26-31屏幕截图.png</span><span class="informations">1112×317 60.2 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>And  load scene code:<br/>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/1X/8a54308115f356101e5d4e3221bccaf8f5618d50.png" rel="nofollow noopener" title="2017-08-21 00-30-13屏幕截图.png"><img alt="2017-08-21 00-30-13屏幕截图" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/8a54308115f356101e5d4e3221bccaf8f5618d50_2_10x10.png" height="328" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/8a54308115f356101e5d4e3221bccaf8f5618d50_2_690x328.png" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/8a54308115f356101e5d4e3221bccaf8f5618d50_2_690x328.png, https://global.discourse-cdn.com/standard17/uploads/urho3d/original/1X/8a54308115f356101e5d4e3221bccaf8f5618d50.png 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/original/1X/8a54308115f356101e5d4e3221bccaf8f5618d50.png 2x" width="690"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">2017-08-21 00-30-13屏幕截图.png</span><span class="informations">876×417 43.1 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>scene in editor:</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/1X/22dab0de1fc770fb4aec6700d34557ef73788703.png" rel="nofollow noopener" title="2017-08-21 00-30-41屏幕截图.png"><img alt="2017-08-21 00-30-41屏幕截图" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/22dab0de1fc770fb4aec6700d34557ef73788703_2_10x10.png" height="388" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/22dab0de1fc770fb4aec6700d34557ef73788703_2_690x388.png" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/22dab0de1fc770fb4aec6700d34557ef73788703_2_690x388.png, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/22dab0de1fc770fb4aec6700d34557ef73788703_2_1035x582.png 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/22dab0de1fc770fb4aec6700d34557ef73788703_2_1380x776.png 2x" width="690"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">2017-08-21 00-30-41屏幕截图.png</span><span class="informations">1920×1080 471 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>when game running , character in sky ,do not drop to ground, everything else is normal</p>
+<p>someone can help me ,thanks !</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/902_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Eugene</div>
+          <div class="post_content">
+<p>I see that you intentionally disabled rigid body movement along Y axis (linear factor)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/450_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">ChunFengTsin</div>
+          <div class="post_content">
+<p>oh oh,thanks very much, I am so sorry , I have not understand the LinearFactor before .</p>
+<p>But now ,you see that  AngularFactor is UP , it is only rotation on Y axis?<br/>
+why my character will fall  when it walk on  ground not flat ?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/902_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Eugene</div>
+          <div class="post_content">
+<p>I don’t know. Try to set angular factor to zero. You probably don’t need even yaw rotation for the collider.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3290_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Modanung</div>
+          <div class="post_content">
+<aside class="quote" data-post="3" data-topic="3468">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/chunfengtsin/40/450_1.png" width="20"/> ChunFengTsin:</div>
+<blockquote>
+<p>But now ,you see that  AngularFactor is UP , it is only rotation on Y axis?</p>
+</blockquote>
+</aside>
+<p>Yes, that is correct.</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

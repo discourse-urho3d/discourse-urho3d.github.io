@@ -1,0 +1,2591 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>RE: To rbfx and not to rbfx</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/site-logo.png" height="40" alt="Urho3D" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 17/01/2023.</div>
+    <h1 class="topic-title">RE: To rbfx and not to rbfx</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3294_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Lcbx</div>
+          <div class="post_content">
+<p>Hello,</p>
+<p>sorry if I reopen a contentious topic.<br/>
+I believe some possibilities weren’t brought up in the last discussion.</p>
+<p>rbfx adds neat features/changes to Urho : the lightmapper, automatic bindings via swig (C# for now, but lua should be relatively easy to add), built-in serialization, better containers, …</p>
+<p>But some people want to :</p>
+<ul>
+<li>avoid the C# ecosystem (because Microsoft)</li>
+<li>keep angelscript (which is removed in rbfx, and would need work to add to swig definitions)</li>
+<li>keep the original editor (built on angelscript)</li>
+<li>avoid the eastl containers (because EA)</li>
+</ul>
+<p>Here’s my take on it :</p>
+<ul>
+<li>
+<p>so long as the engine itself doesn’t depend on C#, the <em>binding does no harm</em>.<br/>
+I don’t like Microsoft either, but the language is good for scripting purposes and is becoming the industry standard. If Microsoft fuckery happens, we just keep the last clean open-source version of the .Net environment until the userbase has migrated their projects, then ditch the binding</p>
+</li>
+<li>
+<p>while angelscript can’t have auto bindings, we could <em>keep the original angelscript manual bindings</em> (<span class="mention">@rku</span> : can you confirm that the manual bindings could be brought back ?). Also, let’s drop the burden of maintaining them to whoever uses them instead of those that add features.</p>
+</li>
+<li>
+<p>thus, the original editor can be kept with angelscript for the sake of retro-compatibility, but having the editor dependent on one of the scripting languages was a really bad idea. The new editor already in rbfx, while not full-featured, <em>is in c++ like the rest of the engine</em> as it should, on top of being easier on the eyes. Let’s just build it up to what the old one was capable of.</p>
+</li>
+<li>
+<p>the eastl containers are different from the C# bindings in that they are an integral part of the engine. BUT <em>a container library is very different from a language</em>. Even if it goes closed-source or stops being maintained, we would just keep the last clean open-source version and maintain it ourselves, which is already the case with the actual containers anyway.</p>
+</li>
+</ul>
+<p>Hope that makes sense, looking forward to your responses,<br/>
+and thanks for coming to my TED talk <img alt=":stuck_out_tongue:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/stuck_out_tongue.png?v=9" title=":stuck_out_tongue:"/></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<p><a href="https://github.com/AtomicGameEngine/AtomicGameEngine">https://github.com/AtomicGameEngine/AtomicGameEngine</a></p>
+<p>JavaScript, C#, own editor, 2d lighting and other cool features</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3200_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">rku</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="1" data-topic="6605" data-username="Lcbx">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/lcbx/40/3294_2.png" width="20"/> Lcbx:</div>
+<blockquote>
+<p>automatic bindings via swig (C# for now, <strong>but lua should be relatively easy to add</strong>)</p>
+</blockquote>
+</aside>
+<p>We should not. SWIG support for lua is quite bad. No polymorphism support for example. However i am eyeing <a href="https://github.com/ThePhD/sol2" rel="noopener nofollow ugc">sol2</a> for that. Bindings using sol2 could be generated from clang ast. clang10+ can dump ast as json and i am working on a python script that would pregenerate lots of SWIG crap. There is another similar script i made, but it uses pyclang and is terrible in just about any way you could imagine so it must be set afire <img alt=":fire:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/fire.png?v=9" title=":fire:"/>.</p>
+<aside class="quote no-group" data-post="1" data-topic="6605" data-username="Lcbx">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/lcbx/40/3294_2.png" width="20"/> Lcbx:</div>
+<blockquote>
+<p><span class="mention">@rku</span> : can you confirm that the manual bindings could be brought back ?</p>
+</blockquote>
+</aside>
+<p>There is no technical obstacle, lack of AS in rbfx is purely political. I am not going to put any work behind something i think is a bad investment.</p>
+<hr/>
+<p>It is clear that there are multiple groups of people who want different things. People who would like to maintain status quo may keep using upstream Urho3D. People who want to experiment may use rbfx. This is totally fine.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/902_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Eugene</div>
+          <div class="post_content">
+<p>Oh hell here we go again. God I hate such threads so badly.</p>
+<p>Last time I had a poll it was clear that significant portion of Urho users enjoy its stability and lack of breaking changes and feature removal. It’s their choice and I am fine with it.</p>
+<p>Whereas the main purpose of the rbfx fork (and almost any other fork in general) is to be different from original, to change things in breaking manner. To lose something and to gain something else.</p>
+<p>I don’t see how you can realistically reconcile these two very different approaches to development. It’s hard to make breaking changes in fork. It would be three times as hard to make similar non-breaking changes in master.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="3" data-topic="6605" data-username="rku">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/rku/40/3200_2.png" width="20"/> rku:</div>
+<blockquote>
+<p>There is no technical obstacle, lack of AS in rbfx is purely political. I am not going to put any work behind something i think is a bad investment.</p>
+</blockquote>
+</aside>
+<p>Does this mean that there is only one person making decisions in your organization?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3200_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">rku</div>
+          <div class="post_content">
+<p>No. But this particular decision was made when there was just one person total. Be that as it may, it does not change a fact that AngelScript is a bad investment.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<p>I’ve always considered AS to be one of the best scripting languages out there. Can you substantiate your point of view?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3290_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Modanung</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="1" data-topic="6605" data-username="Lcbx">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/lcbx/40/3294_2.png" width="20"/> Lcbx:</div>
+<blockquote>
+<p>But some people want to :</p>
+<ul>
+<li>avoid the C# ecosystem (because Microsoft)</li>
+<li>keep angelscript (which is removed in rbfx, and would need work to add to swig definitions)</li>
+<li>keep the original editor (built on angelscript)</li>
+<li>avoid the eastl containers (because EA)</li>
+</ul>
+</blockquote>
+</aside>
+<p>Those may also want to consider giving <a href="https://gitlab.com/luckeyproductions/dry" rel="noopener nofollow ugc">Dry</a> a try, which also comes with a (∞WIP) <a href="https://gitlab.com/explore/projects?tag=Dry" rel="noopener nofollow ugc">editor cluster</a>.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/902_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Eugene</div>
+          <div class="post_content">
+<aside class="quote no-group" data-full="true" data-post="7" data-topic="6605" data-username="1vanK">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/1vank/40/768_2.png" width="20"/> 1vanK:</div>
+<blockquote>
+<p>I’ve always considered AS to be one of the best scripting languages out there. Can you substantiate your point of view?</p>
+</blockquote>
+</aside>
+<p>I admit that AS has good aspects, efficient C++AS interop in first place.<br/>
+What I don’t like in AS:</p>
+<ol>
+<li>No automatic binding library. Your autobinder may or may not fill this niche later, but at the moment of AS removal from rbfx there were none, and your binder is still not generic enough.</li>
+<li>AS is assembly library and it cannot work without platform-specific assembly code implemented by AS maintainers. I don’t think it caused actual issues with Urho, but I don’t like this kind of dependency. I just don’t want to rely on portability of assembler library in year 2020.</li>
+<li>Derived from 1) and 2), C++AS bindings are very type-unsafe. One mistake may lead to crash or security risk.</li>
+</ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3200_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">rku</div>
+          <div class="post_content">
+<aside class="quote no-group" data-full="true" data-post="7" data-topic="6605" data-username="1vanK">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/1vank/40/768_2.png" width="20"/> 1vanK:</div>
+<blockquote>
+<p>I’ve always considered AS to be one of the best scripting languages out there. Can you substantiate your point of view?</p>
+</blockquote>
+</aside>
+<ul>
+<li>AS is very C++-like. If i wanted something like C++, i would use C++.
+<ul>
+<li>Since it is a scripting language i do not understand why it adds a cognitive load of C++ concepts.</li>
+</ul>
+</li>
+<li>AS has no ecosystem around it.
+<ul>
+<li>No editors</li>
+<li>No debugging</li>
+<li>No libraries</li>
+</ul>
+</li>
+</ul>
+<aside class="quote no-group" data-post="8" data-topic="6605" data-username="Modanung">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/modanung/40/3290_2.png" width="20"/> Modanung:</div>
+<blockquote>
+<p>Those may also want to consider giving <a href="https://gitlab.com/luckeyproductions/dry" rel="noopener nofollow ugc">Dry</a> a try, which also comes with a (∞WIP) <a href="https://gitlab.com/explore/projects?tag=Dry" rel="noopener nofollow ugc">editor cluster</a>.</p>
+</blockquote>
+</aside>
+<p>You split a community. <img alt=":eyes:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/eyes.png?v=9" title=":eyes:"/></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<aside class="quote no-group quote-modified" data-post="10" data-topic="6605" data-username="rku">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/rku/40/3200_2.png" width="20"/> rku:</div>
+<blockquote>
+<p>AS is very C+±like. If i wanted something like C++, i would use C++.</p>
+</blockquote>
+</aside>
+<p>C# is very C+±like. If i wanted something like C++, i would use C++.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="9" data-topic="6605" data-username="Eugene">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/eugene/40/902_2.png" width="20"/> Eugene:</div>
+<blockquote>
+<p>AS is assembly library and it cannot work without platform-specific assembly code implemented by AS maintainers. I don’t think it caused actual issues with Urho, but I don’t like this kind of dependency. I just don’t want to rely on portability of assembler library in year 2020.</p>
+</blockquote>
+</aside>
+<p>C# uses assembler for interopt</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3200_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">rku</div>
+          <div class="post_content">
+<p>C# is syntax is C++-like, but we do not need to think about pointers when writing a C# script. It also has insanely rich ecosystem around it (libraries and tools). And no, it does not use assembly for interop.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<aside class="quote no-group quote-modified" data-full="true" data-post="14" data-topic="6605" data-username="rku">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/rku/40/3200_2.png" width="20"/> rku:</div>
+<blockquote>
+<p>C# is syntax is C+±like, but we do not need to think about pointers when writing a C# script. It also has insanely rich ecosystem around it (libraries and tools). And no, it does not use assembly for interop.</p>
+</blockquote>
+</aside>
+<p>But C# not scripting language.  And use assbler for interopt.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/902_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Eugene</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="13" data-topic="6605" data-username="1vanK">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/1vank/40/768_2.png" width="20"/> 1vanK:</div>
+<blockquote>
+<p>C# uses assembler for interopt</p>
+</blockquote>
+</aside>
+<p>Sure, C# interop is quite dirty. That’s why I don’t want to use C# as script language as well. It has even bigger platform compatibility issues than AS.<br/>
+However, I have a bit more trust in long term support of C# than support of AS.</p>
+<p>If I had a choice, I would have used Lua or some similar lightweight 100% integrated and platform independent language for scripting</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="16" data-topic="6605" data-username="Eugene">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/eugene/40/902_2.png" width="20"/> Eugene:</div>
+<blockquote>
+<p>However, I have a bit more trust in long term support of C# than support of AS.</p>
+</blockquote>
+</aside>
+<p><a href="https://killedbymicrosoft.info/">https://killedbymicrosoft.info/</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<p>Strange why there is no UrhoSharp and mfc in this list xD</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3200_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">rku</div>
+          <div class="post_content">
+<p>And? Claiming that we can not rely on Microsoft to not kill C# is like saying we can not rely on Microsoft to not kill Windows. These are their flagship products, they are not going anywhere ever. Besides C# is so widely used in enterprise sector and is opensource and MIT, that it is essentially unkillable now.</p>
+<p>Still i agree lighter alternative would also be good. They serve different usecases and having both would be good.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<p>Great template “X are their flagship products, they are not going anywhere ever”.</p>
+<p>UrhoSharp are their flagship products, they are not going anywhere ever.<br/>
+XNA are their flagship products, they are not going anywhere ever.<br/>
+MFC are their flagship products, they are not going anywhere ever.<br/>
+Kinect are their flagship products, they are not going anywhere ever.<br/>
+SilverLight are their flagship products, they are not going anywhere ever.</p>
+<blockquote>
+<p>Microsoft to not kill Windows</p>
+</blockquote>
+<p>Microsoft installs Linux on its servers and adds support for running Linux applications on Windows.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3200_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">rku</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="20" data-topic="6605" data-username="1vanK">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/1vank/40/768_2.png" width="20"/> 1vanK:</div>
+<blockquote>
+<p>Great template “X are their flagship products, they are not going anywhere ever”.</p>
+<p>UrhoSharp are their flagship products, they are not going anywhere ever.<br/>
+XNA are their flagship products, they are not going anywhere ever.<br/>
+MFC are their flagship products, they are not going anywhere ever.<br/>
+Kinect are their flagship products, they are not going anywhere ever.<br/>
+SilverLight are their flagship products, they are not going anywhere ever.</p>
+</blockquote>
+</aside>
+<p>Neither of those were ever flagship products.</p>
+<aside class="quote no-group" data-post="20" data-topic="6605" data-username="1vanK">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/1vank/40/768_2.png" width="20"/> 1vanK:</div>
+<blockquote>
+<p>Microsoft installs Linux on its servers and adds support for running Linux applications on Windows.</p>
+</blockquote>
+</aside>
+<p>So Microsoft goes where money is. Big surprise. Enterprise windows licensing is big money too.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<p>C# and Windows</p>
+<aside class="quote no-group" data-post="21" data-topic="6605" data-username="rku">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/rku/40/3200_2.png" width="20"/> rku:</div>
+<blockquote>
+<p>Neither of those were ever flagship products.</p>
+</blockquote>
+</aside>
+<p> <a class="onebox" href="https://images.a2-finance.com/uploads/2019/11/16/17_04-rpwuquko-cW4cVotgFAS6w/Microsoft_Revenue.png" rel="noopener" target="_blank">
+<img height="460" src="https://images.a2-finance.com/uploads/2019/11/16/17_04-rpwuquko-cW4cVotgFAS6w/Microsoft_Revenue.png" width="690"/>
+</a>
+</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<p>Windows Phone are their flagship products, they are not going anywhere ever…</p>
+<p>But where is Nokia xD</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/902_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Eugene</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="17" data-topic="6605" data-username="1vanK">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/1vank/40/768_2.png" width="20"/> 1vanK:</div>
+<blockquote>
+<p><a href="https://killedbymicrosoft.info/" rel="noopener nofollow ugc">https://killedbymicrosoft.info/</a></p>
+</blockquote>
+</aside>
+<p>Jokes aside, I would like to compare “killed by Microsoft” to “not killed by Miscrosoft” and “died of old age unrelated to Microsoft” and to “killed by anything else”.</p>
+<p>What is the fraction of discontinuted software in total, comparing to all supported software in the world?<br/>
+What is the fraction of discontinuted software to supported software among everything owned by Microsoft?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<p>If you have such a question, you may have already found this list. So how many Microsoft products do you use besides Windows and VS?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3290_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Modanung</div>
+          <div class="post_content">
+<aside class="quote no-group quote-modified" data-post="10" data-topic="6605" data-username="rku">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/rku/40/3200_2.png" width="20"/> rku:</div>
+<blockquote>
+<aside class="quote no-group" data-post="8" data-topic="6605" data-username="Modanung">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/modanung/40/3290_2.png" width="20"/> Modanung:</div>
+<blockquote>
+<p>Those may also want to consider giving <a href="https://gitlab.com/luckeyproductions/dry" rel="noopener nofollow ugc">Dry</a> a try, which also comes with a (∞WIP) <a href="https://gitlab.com/explore/projects?tag=Dry" rel="noopener nofollow ugc">editor cluster</a>.</p>
+</blockquote>
+</aside>
+<p>You split a community. <img alt=":eyes:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/eyes.png?v=9" title=":eyes:"/></p>
+</blockquote>
+</aside>
+<p>It’s more of a salvaging operation, really. <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=9" title=":wink:"/></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3294_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Lcbx</div>
+          <div class="post_content">
+<p>I should have waited until after work to start this. you guys are quick <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=9" title=":slight_smile:"/></p>
+<aside class="quote no-group" data-full="true" data-post="2" data-topic="6605" data-username="1vanK">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/1vank/40/768_2.png" width="20"/> 1vanK:</div>
+<blockquote>
+<p><a href="https://github.com/AtomicGameEngine/AtomicGameEngine" rel="noopener nofollow ugc">https://github.com/AtomicGameEngine/AtomicGameEngine</a></p>
+<p>JavaScript, C#, own editor, 2d lighting and other cool features</p>
+</blockquote>
+</aside>
+<p>Atomic died because the main developer moved on with no contributor willing to take his place.<br/>
+Urho3d survives despite the same happening because of the people and the features. Both go together. No features no devs, no devs no features. Splitting the project harms both</p>
+<aside class="quote no-group quote-modified" data-full="true" data-post="17" data-topic="6605" data-username="1vanK">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/1vank/40/768_2.png" width="20"/> 1vanK:</div>
+<blockquote>
+<aside class="quote no-group" data-post="16" data-topic="6605" data-username="Eugene">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/eugene/40/902_2.png" width="20"/> Eugene:</div>
+<blockquote>
+<p>However, I have a bit more trust in long term support of C# than support of AS.</p>
+</blockquote>
+</aside>
+<p><a href="https://killedbymicrosoft.info/" rel="noopener nofollow ugc">https://killedbymicrosoft.info/ </a></p>
+</blockquote>
+</aside>
+<p>your concern over the future of C# is noted <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=9" title=":wink:"/></p>
+<aside class="quote no-group quote-modified" data-post="3" data-topic="6605" data-username="rku">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/rku/40/3200_2.png" width="20"/> rku:</div>
+<blockquote>
+<aside class="quote no-group" data-post="1" data-topic="6605" data-username="Lcbx">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/lcbx/40/3294_2.png" width="20"/> Lcbx:</div>
+<blockquote>
+<p><span class="mention">@rku</span> : can you confirm that the manual bindings could be brought back ?</p>
+</blockquote>
+</aside>
+<p>There is no technical obstacle, lack of AS in rbfx is purely political. I am not going to put any work behind something i think is a bad investment.</p>
+</blockquote>
+</aside>
+<p>Then I don’t see why it can’t be brought back for those that use it.</p>
+<p>All I’ve seen in this thread thus far is two camps arguing over each other’s choice of programming language. <em>Who cares ?</em></p>
+<p>vanilla and rbfx can use the same game engine and different scripting languages. Don’t spit on each other’s contributions to the engine itself</p>
+<p>the bigger question was can the merge be done without harming one too much.<br/>
+The C# part is moot, don’t use if you don’t want to.<br/>
+The angelscript part is too, surprisingly. just bring it back and let whoever uses it maintain it.<br/>
+And it seems like the eastl bit isn’t that problematic since no one brought it up.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<blockquote>
+<p>your concern over the future of C# is noted</p>
+</blockquote>
+<p>I have nothing against C #. It’s just that it will attract users who do not write C ++ code and will not do PRs to the engine.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/902_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Eugene</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="27" data-topic="6605" data-username="Lcbx">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/lcbx/40/3294_2.png" width="20"/> Lcbx:</div>
+<blockquote>
+<p>And it seems like the eastl bit isn’t that problematic since no one brought it up.</p>
+</blockquote>
+</aside>
+<p>Oh, it’s very problematic. No one brought it up because there is nothing to argue about.</p>
+<p>Significant part of current Urho users prefer custom Urho containers and want to use them.<br/>
+Most (all?) of rbfx users prefer standard (EASTL) containers and want to use them.<br/>
+I don’t see how it can be “merged”. One can’t do both.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3200_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">rku</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="27" data-topic="6605" data-username="Lcbx">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/lcbx/40/3294_2.png" width="20"/> Lcbx:</div>
+<blockquote>
+<p>the bigger question was can the merge be done without harming one too much.</p>
+</blockquote>
+</aside>
+<p>No it can not, because nobody in upstream wants it. And that is fine. To be honest i dont think i want it either.</p>
+<aside class="quote no-group" data-post="28" data-topic="6605" data-username="1vanK">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/1vank/40/768_2.png" width="20"/> 1vanK:</div>
+<blockquote>
+<p>I have nothing against C #. It’s just that it will attract users who do not write C ++ code and will not do PRs to the engine.</p>
+</blockquote>
+</aside>
+<p>So no different compared to current userbase.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="30" data-topic="6605" data-username="rku">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/rku/40/3200_2.png" width="20"/> rku:</div>
+<blockquote>
+<p>So no different compared to current userbase.</p>
+</blockquote>
+</aside>
+<p>Yes, but at the moment we do not often have to answer the question “How can I add a button to Urhosharp”</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3294_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Lcbx</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="29" data-topic="6605" data-username="Eugene">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/eugene/40/902_2.png" width="20"/> Eugene:</div>
+<blockquote>
+<p>Significant part of current Urho users prefer custom Urho containers and want to use them.<br/>
+Most (all?) of rbfx users prefer standard (EASTL) containers and want to use them.</p>
+</blockquote>
+</aside>
+<p>can’t understand why, but if that’s the case then the merge is indeed sleeping with the fishes <img alt=":upside_down_face:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/upside_down_face.png?v=9" title=":upside_down_face:"/></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<p>becuase eastl is slow</p>
+<p><a class="inline-onebox" href="https://discourse.urho3d.io/t/migration-from-custom-container-library-to-augmented-eastl/5872/130">Migration from custom container library to augmented EASTL</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3200_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">rku</div>
+          <div class="post_content">
+<aside class="quote no-group" data-full="true" data-post="33" data-topic="6605" data-username="1vanK">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/1vank/40/768_2.png" width="20"/> 1vanK:</div>
+<blockquote>
+<p>becuase eastl is slow</p>
+</blockquote>
+</aside>
+<p>EASTL iterators are raw pointers so iteration is as fast as it gets. If it still is slow for you, then problem is in a chosen data structure or in the code. Typical frame should not be allocating memory. Hot path should not allocate memory. If these are true then any possible slowdown is amortized by vastly expanded feature set. Did you know that Urho3D HashMap used to allocate memory even if it was empty? And it was like that for years. Some SendEvent() variant would cause memory allocation even if no parameters were passed. Urho code is not as stellar as people say it is.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<blockquote>
+<p>Did you know that Urho3D HashMap used to allocate memory even if it was empty?</p>
+</blockquote>
+<p>How does this affect performance?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3200_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">rku</div>
+          <div class="post_content">
+<p>Someone already explained the issue <a href="https://discourse.urho3d.io/t/re-to-rbfx-and-not-to-rbfx/6605/34">here</a>.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<p>I don’t see any measurements taken there.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">adhoc99</div>
+          <div class="post_content">
+<p>If rbfx already has everything you want, then go use rbfx.</p>
+<p>If you want C#/UrhoSharp, then go ask MS to support it there. They created that mess, it’s their problem.</p>
+<p>Please stop trying to push C# and EASTL here.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/902_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Eugene</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="33" data-topic="6605" data-username="1vanK">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/1vank/40/768_2.png" width="20"/> 1vanK:</div>
+<blockquote>
+<p>becuase eastl is slow</p>
+</blockquote>
+</aside>
+<p>It’s slower, but why does it matter? Urho is slower than plain OpenGL, yet you still use it because it offers more.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<p>We have already discussed this many times. No one is stopping you from using your containers wherever you need to. But why replace fast containers with slow ones inside the engine?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/902_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Eugene</div>
+          <div class="post_content">
+<p>It was done because maintaining two sets of incompatible containers is even worse than having just EASTL or just Urho containers. I wouldn’t want to work with such code.</p>
+<p>So yep there are three options all of which are bad. You just choose your preferred kind of bad</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<p>My favorite example is an array of batches, which is sorted every frame. It directly affects performance, but you don’t interact with it in any way. Why touch him?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3294_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Lcbx</div>
+          <div class="post_content">
+<p>I do believe that in an open-source project where people do voluntary work, readability and maintainability should trump performance as a goal (unto a point. t’would be idiotic remake the engine in python). If devs hate touching the code, they won’t.<br/>
+The eastl while less performant than custom-made code, is probably a better choice for the project itself. You’re still using a reasonably fast c++ library.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<p>I have a different question. Do you choose which project you will send PRs, or just decided to engage in organizational activities?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3294_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Lcbx</div>
+          <div class="post_content">
+<p>maybe my last message was a bit preachy. Apologies.</p>
+<p>I stumbled onto Urho recently while searching for an alternative to Godot.</p>
+<p>I read the last rbfx thread and thought the problem could be solved by keeping angelscript and wanted to make the suggestion. I am not dictating what you should do or not.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">adhoc99</div>
+          <div class="post_content">
+<p>rbfx is also open source. If it already has all those changes, why not use it instead? Why change Urho3D and turn it into another rbfx?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/902_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Eugene</div>
+          <div class="post_content">
+<p>Does it worth keeping whole class of container for sake of tiny performance gain per frame? I dunno, maybe for someone. Not for me. So I don’t really care.<br/>
+I never needed these extra 0.05ms per frame.</p>
+<p>It’s not like I’m asking anyone to replace Urho containers with EASTL in their projects</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<blockquote>
+<p>I never needed these extra 0.05ms per frame.</p>
+</blockquote>
+<p>60 FPS = 1/60 = 0.01ms</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/902_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Eugene</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="45" data-topic="6605" data-username="Lcbx">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/lcbx/40/3294_2.png" width="20"/> Lcbx:</div>
+<blockquote>
+<p>I read the last rbfx thread and thought the problem could be solved by keeping angelscript and wanted to make the suggestion.</p>
+</blockquote>
+</aside>
+<p>If only things were so easy, if only.<br/>
+rbfx discussion was the longest thread on this forum, and probably had more activity than whole year prior and after it.</p>
+<p>And there were no solution found. The only outcome was that different things should sometimes just stay different.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3290_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Modanung</div>
+          <div class="post_content">
+<p><code>60F/1000ms ~ 17ms/F</code></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<p>Yes you are right. In any case, this figure was invented and not confirmed by the test. In any case, together with eastl, we get terrible string class. And what about smart pointers?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<p><a href="https://github.com/rokups/rbfx/blob/master/Source/Urho3D/Engine/Application.cpp">https://github.com/rokups/rbfx/blob/master/Source/Urho3D/Engine/Application.cpp</a></p>
+<pre><code class="lang-auto">std::vector&lt;std::string&gt; cliArgs;
+</code></pre>
+<p><a href="https://github.com/rokups/rbfx/blob/master/Source/Urho3D/IO/File.h">https://github.com/rokups/rbfx/blob/master/Source/Urho3D/IO/File.h</a></p>
+<pre><code class="lang-auto">const ea::string&amp; GetAbsoluteName()
+</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3294_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Lcbx</div>
+          <div class="post_content">
+<p>Despite (minor) differences like eastl, this is the same code base/3d engine.<br/>
+So it would be better for the userbase and devs both if efforts are not duplicated.<br/>
+You seem to devilify rbfx. I don’t believe that’s rational.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<p>There is no duplication of effort, code is ported from two repositories in both directions.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">adhoc99</div>
+          <div class="post_content">
+<p>Wouldn’t it be more rational just to use rbfx instead of having to implement major breaking changes to current Urho3D?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3294_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Lcbx</div>
+          <div class="post_content">
+<p>The implementation is already done. We’re talking about a merge, which isn’t much work. And I answered to that <a href="https://discourse.urho3d.io/t/re-to-rbfx-and-not-to-rbfx/6605/53">already</a>.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3294_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Lcbx</div>
+          <div class="post_content">
+<p>Welp I don’t think this will be solved today. feel free to close the thread.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3220_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">JSandusky</div>
+          <div class="post_content">
+<p>.NET Native AOT is totally worth selling one’s soul to a lifetime of adoring MS. Even while a buggy mess it’s still a hundred times better than a ten mile long esoteric log for a handful of template errors.</p>
+<p>You can run BEPU Physics as fast native Bullet, the whole thing is nuts.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<p>.net is very fast until it runs out of memory. After that, the permanent StopTheWorld begins.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3200_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">rku</div>
+          <div class="post_content">
+<p>eastl string is great. Also I kept Urho3D smart pointers because moving away from those proved to be too difficult. Maybe one day, but not today.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<p>If eastl strings are so great, why didn’t you adapt them for your engine? Why all your functions outside string class?</p>
+<p>At the same time, you were able to modify the terrible RefCounted for your engine. When you go to great eastl smart pointers, will the new functionality be outside the class too?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3200_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">rku</div>
+          <div class="post_content">
+<p>We did add extra functions to string class. Only few utf-8 ones are outside due to obvious reasons.</p>
+<p>I don’t recall details regarding smart pointers in eastl. Not sure if there is intrusive variant. If there isn’t then there may be nothing left to do othert han sticking to current implementation.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<blockquote>
+<p>We did add extra functions to string class. Only few utf-8 ones are outside due to obvious reasons.</p>
+</blockquote>
+<p>The reasons are not obvious to me. In Urho3D utf-8 is the internal encoding for strings (like UTF-16 is internal encoding for .net).</p>
+<p>What is the internal encoding in your engine?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3290_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Modanung</div>
+          <div class="post_content">
+<p>Does it introduce support for dextrosinistral writing systems?</p>
+<div class="spoiler">
+<p>Also, did anyone try <a href="https://www.evertype.com/standards/csur/klingon.html" rel="noopener nofollow ugc">Klingon</a> by now?</p>
+</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3290_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Modanung</div>
+          <div class="post_content">
+<p>Btw, in <a href="https://en.wiktionary.org/wiki/dry#Old_English" rel="noopener nofollow ugc"><strong>Dry</strong></a> <code>String::Empty()</code> was renamed to <code>String::IsEmpty()</code>, for the sake of consistency.<br/>
+“Breaks” things though.</p>
+<p>…and <code>IntVector#</code>s are converted to float vectors in calculations, just as separate <code>int</code>s would be.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/902_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Eugene</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="63" data-topic="6605" data-username="1vanK">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/1vank/40/768_2.png" width="20"/> 1vanK:</div>
+<blockquote>
+<p>In Urho3D utf-8 is the internal encoding for strings</p>
+</blockquote>
+</aside>
+<p>It’s not. You cannot do <code>str[2]</code> in Urho and expect it to pick 3rd UTF-8 character from string. Same with all other string functions. They don’t care about string being in UTF-8.</p>
+<p>I would say, ASCII is internal encoding for strings in Urho, same as in EASTL.<br/>
+It just so happens that UTF-8 and ASCII are kind of compatible.</p>
+<aside class="quote no-group" data-post="61" data-topic="6605" data-username="1vanK">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/1vank/40/768_2.png" width="20"/> 1vanK:</div>
+<blockquote>
+<p>you were able to modify the terrible RefCounted for your engine. When you go to great eastl smart pointers</p>
+</blockquote>
+</aside>
+<p>EASTL has no equivalent of Urho WeakPtr/SharedPtr/RefCounted.<br/>
+What did you expect to happen?<br/>
+To have <code>RefCounted</code> replaced… with what exactly?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<blockquote>
+<p>EASTL has no equivalent of Urho WeakPtr/SharedPtr/RefCounted.</p>
+</blockquote>
+<p>I thought it was the ideal library… It turns out that you have replaced one imperfect library with another imperfect library.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<blockquote>
+<p>It’s not. You cannot do <code>str[2]</code> in Urho and expect it to pick 3rd UTF-8 character from string</p>
+</blockquote>
+<p>What encoding are characters extracted from a string in when rendering text?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/902_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Eugene</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="67" data-topic="6605" data-username="1vanK">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/1vank/40/768_2.png" width="20"/> 1vanK:</div>
+<blockquote>
+<p>I thought it was the ideal library…</p>
+</blockquote>
+</aside>
+<p>I don’t know who told you that EASTL is perfect library…<br/>
+It just offers about 10 times as much as Urho containers and I find it quite convenient when writing code.</p>
+<aside class="quote no-group" data-post="68" data-topic="6605" data-username="1vanK">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/1vank/40/768_2.png" width="20"/> 1vanK:</div>
+<blockquote>
+<p>What encoding are characters extracted from a string in when rendering text?</p>
+</blockquote>
+</aside>
+<p>If I remember correctly, Urho treats string contents as UTF-8, converts it to UTF-32 and then does the rendering. Urho text renderer works with UTF-8 string as input, but String doesn’t know anything about it.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<blockquote>
+<p>Urho treats string contents as UTF-8</p>
+</blockquote>
+<p>Exactly.</p>
+<p>For any input / output (localization, clipboard, input, rendering), strings are interpreted as UTF-8 without any checks. The engine does not even expect that there may be some other coding. But of course that does not mean that the internal encoding is UTF-8.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<aside class="quote no-group quote-modified" data-post="66" data-topic="6605" data-username="Eugene">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/eugene/40/902_2.png" width="20"/> Eugene:</div>
+<blockquote>
+<p>I would say, ASCII is internal encoding for strings in Urho, same as in EASTL.<br/>
+It just so happens that UTF-8 are kind of compatible.</p>
+</blockquote>
+</aside>
+<p>Windows-1251, CP866 are ASCII compatible, so maybe Urho3D works with it?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3220_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">JSandusky</div>
+          <div class="post_content">
+<p>RogueWave STL is the only good STL, like any good STL, it doesn’t even know what UTF-8 is. As all things should be.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<p>STL is ThirdPary library. In Urho3D all ThirdPary libraries are wrapped. When you use Urho3D, you are not accessing Bullet and Box2D directly, you are not accessing SDL and Recast directly. In Urho3D we use UTF-8. So need we wrap std::string ?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/902_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Eugene</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="71" data-topic="6605" data-username="1vanK">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/1vank/40/768_2.png" width="20"/> 1vanK:</div>
+<blockquote>
+<p>Windows-1251, CP866 are ASCII compatible, so maybe Urho3D works with it?</p>
+</blockquote>
+</aside>
+<p>String as container can keep all these formats. Urho classes just cannot work with them.</p>
+<p>UTF-8 support in Urho is at the level of public API (I.e. class methods), while internal format of String is just ASCII-like something.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<p>From this point of view, why did you decide that String knows something about ASCII?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3220_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">JSandusky</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="73" data-topic="6605" data-username="1vanK">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/1vank/40/768_2.png" width="20"/> 1vanK:</div>
+<blockquote>
+<p>In Urho3D all ThirdPary libraries are wrapped.</p>
+</blockquote>
+</aside>
+<p>Which is the single most terrible thing in the entirety of Urho3D.</p>
+<aside class="quote no-group" data-post="73" data-topic="6605" data-username="1vanK">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/1vank/40/768_2.png" width="20"/> 1vanK:</div>
+<blockquote>
+<p>STL is ThirdPary library</p>
+</blockquote>
+</aside>
+<p>There would probably be a lot less debate about this if Urho’s TL (JTL as I call it, because it’s junk) were a an external library (along with the math and core data types) eliminating most of the code-sharing headaches that rise up in real-world pipeline projects.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="76" data-topic="6605" data-username="JSandusky">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/jsandusky/40/3220_2.png" width="20"/> JSandusky:</div>
+<blockquote>
+<p>Which is the single most terrible thing in the entirety of Urho3D.</p>
+</blockquote>
+</aside>
+<p>How would you change this? How it should look like, for example, adding a node with a physical body in a user’s application with a direct call Bullet functions and conversion btVector3 to Urho3D::Vector3 every time?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/96_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">JTippetts1</div>
+          <div class="post_content">
+<p>I know I’m just a user here, but part of what has always annoyed me about Urho3D is the custom containers. I don’t believe that containers should be encapsulated or wrapped, unlike the other ThirdParty bits, and I think that any containers you do use should be compatible with C++ language constructs. I’m not 100% sold on EASTL itself, but at least it supports standard library naming conventions so that switching to the standard library, or using C++ iteration constructs, is possible.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<p>No professional engine uses STL. But we need to ignore the needs of our engine and use other people’s libraries that do not fully suit us.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3200_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">rku</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="77" data-topic="6605" data-username="1vanK">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/1vank/40/768_2.png" width="20"/> 1vanK:</div>
+<blockquote>
+<p>How would you change this? How it should look like, for example, adding a node with a physical body in a user’s application with a direct call Bullet functions and conversion btVector3 to Urho3D::Vector3 every time?</p>
+</blockquote>
+</aside>
+<p>Things should be wrapped, but within a reason. It makes sense with bullet, but for example we wrapped next to nothing for RmlUi because it’s a lot of stuff and we ironed out type compatibility. There are times when you do need full power of library api. Same is true for bullet. Try doing something complicated, I do not believe everything is possible without including bullet headers.</p>
+<aside class="quote no-group" data-post="79" data-topic="6605" data-username="1vanK">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/1vank/40/768_2.png" width="20"/> 1vanK:</div>
+<blockquote>
+<p>No professional engine uses STL.</p>
+</blockquote>
+</aside>
+<p>Frostbite (eastl), proprietary engine used by Black Desert (stdlib). Just a few that come to mind. Take any game from those companies it will be using stl I bet.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/902_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Eugene</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="77" data-topic="6605" data-username="1vanK">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/1vank/40/768_2.png" width="20"/> 1vanK:</div>
+<blockquote>
+<p>How it should look like, for example, adding a node with a physical body in a user’s application with a direct call Bullet functions and conversion btVector3 to Urho3D::Vector3 every time?</p>
+</blockquote>
+</aside>
+<p><code>RigidBody</code> is not just <code>btRigidBody</code> with Urho types and Urho-style names, it’s much more. It is component of rigid body implemented via <code>btRigidBody</code>.</p>
+<p>It’s quite silly to have “wrapper” that does nothing expect… well… wrapping.<br/>
+Wrapping is a tool, not a goal.</p>
+<aside class="quote no-group" data-post="73" data-topic="6605" data-username="1vanK">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/1vank/40/768_2.png" width="20"/> 1vanK:</div>
+<blockquote>
+<p>In Urho3D we use UTF-8. So need we wrap std::string ?</p>
+</blockquote>
+</aside>
+<p>What kind of functionality you want to add to std::string by wrapping?<br/>
+These ones?<br/>
+</p><aside class="onebox githubblob">
+<header class="source">
+<a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Container/Str.h#L452-L472" rel="noopener nofollow ugc" target="_blank">github.com</a>
+</header>
+<article class="onebox-body">
+<h4><a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Container/Str.h#L452-L472" rel="noopener nofollow ugc" target="_blank">urho3d/Urho3D/blob/master/Source/Urho3D/Container/Str.h#L452-L472</a></h4>
+<pre class="onebox"><code class="lang-h"><ol class="start lines" start="452" style="counter-reset: li-counter 451 ;">
+<li>/// Construct UTF8 content from Latin1.
+</li><li>void SetUTF8FromLatin1(const char* str);
+</li><li>/// Construct UTF8 content from wide characters.
+</li><li>void SetUTF8FromWChar(const wchar_t* str);
+</li><li>/// Calculate number of characters in UTF8 content.
+</li><li>/// @property{get_utf8Length}
+</li><li>unsigned LengthUTF8() const;
+</li><li>/// Return byte offset to char in UTF8 content.
+</li><li>unsigned ByteOffsetUTF8(unsigned index) const;
+</li><li>/// Return next Unicode character from UTF8 content and increase byte offset.
+</li><li>unsigned NextUTF8Char(unsigned&amp; byteOffset) const;
+</li><li>/// Return Unicode character at index from UTF8 content.
+</li><li>unsigned AtUTF8(unsigned index) const;
+</li><li>/// Replace Unicode character at index from UTF8 content.
+</li><li>void ReplaceUTF8(unsigned index, unsigned unicodeChar);
+</li><li>/// Append Unicode character at the end as UTF8.
+</li><li>String&amp; AppendUTF8(unsigned unicodeChar);
+</li><li>/// Return a UTF8 substring from position to end.
+</li><li>String SubstringUTF8(unsigned pos) const;
+</li><li>/// Return a UTF8 substring with length from position.
+</li><li>String SubstringUTF8(unsigned pos, unsigned length) const;
+</li>
+</ol></code></pre>
+</article>
+<div class="onebox-metadata">
+</div>
+<div style="clear: both"></div>
+</aside>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<p>StartsWith, ReplaceAll, Join, TrimStart, TrimEnd() etc etc etc</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/902_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Eugene</div>
+          <div class="post_content">
+<p>We added all this stuff directly to EASTL classes.<br/>
+This was part of the reason why EASTL is better suited for our goal than STL.<br/>
+It’s a shame C++ standard doesn’t have such basic methods in standard string type.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3290_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Modanung</div>
+          <div class="post_content">
+<p>With <code>std::basic_string</code>, <code>+</code>, <code>+=</code> and <code>append</code> concatenate. C++20 introduces <code>starts_with</code> and <code>ends_with</code> functions to it. <a href="https://en.cppreference.com/w/cpp/string/basic_string/erase" rel="noopener nofollow ugc"><code>erase</code></a> is quite powerful in that it can do all your trimming.<br/>
+</p><aside class="onebox allowlistedgeneric">
+<header class="source">
+<img class="site-icon" height="32" src="https://en.cppreference.com/favicon.ico" width="32"/>
+<a href="https://en.cppreference.com/w/cpp/string" rel="noopener nofollow ugc" target="_blank">en.cppreference.com</a>
+</header>
+<article class="onebox-body">
+<img class="thumbnail" height="" src="" width=""/>
+<h3><a href="https://en.cppreference.com/w/cpp/string" rel="noopener nofollow ugc" target="_blank">Strings library - cppreference.com</a></h3>
+</article>
+<div class="onebox-metadata">
+</div>
+<div style="clear: both"></div>
+</aside>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="9" data-topic="6605" data-username="Eugene">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/eugene/40/902_2.png" width="20"/> Eugene:</div>
+<blockquote>
+<p>AS is assembly library and it cannot work without platform-specific assembly code implemented by AS maintainers. I don’t think it caused actual issues with Urho, but I don’t like this kind of dependency. I just don’t want to rely on portability of assembler library in year 2020.</p>
+</blockquote>
+</aside>
+<p><a class="inline-onebox" href="https://www.angelcode.com/angelscript/sdk/docs/manual/doc_generic.html">AngelScript: The generic calling convention</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/902_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Eugene</div>
+          <div class="post_content">
+<p>Okay, it’s nice that AS has fallback route that doesn’t depend on ASM. Can Urho work on this fallback route only? Perhaps in new bindings?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<p>Yes.</p>
+<p>The engine used generic calling functions on some platform (WEB, ARM64). After the last workaround of VS bugs, this mode is available on any platform.</p>
+<aside class="onebox githubcommit">
+<header class="source">
+<a href="https://github.com/urho3d/Urho3D/commit/711053d293183d4d94cd043c5b7cdce0926727bc" rel="noopener" target="_blank">github.com/urho3d/Urho3D</a>
+</header>
+<article class="onebox-body">
+<div class="github-row">
+<div class="github-icon-container" title="Commit">
+<svg aria-hidden="true" class="github-icon" height="60" viewbox="0 0 14 16" width="60"><path d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"></path></svg>
+</div>
+<div class="github-info-container">
+<h4>
+<a href="https://github.com/urho3d/Urho3D/commit/711053d293183d4d94cd043c5b7cdce0926727bc" rel="noopener" target="_blank">AS Bindings: Allows using generic calling convention on any platform [cache clear] (#2783)</a>
+</h4>
+<div class="github-info">
+<div class="date">
+        committed <span class="discourse-local-date" data-date="2021-02-23" data-format="ll" data-time="18:31:21" data-timezone="UTC">06:31PM - 23 Feb 21 UTC</span>
+</div>
+<div class="user">
+<a href="https://github.com/1vanK" rel="noopener" target="_blank">
+<img alt="1vanK" class="onebox-avatar-inline" height="20" src="https://avatars.githubusercontent.com/u/13021826?v=4" width="20"/>
+          1vanK
+        </a>
+</div>
+<div class="lines" title="changed 83 files with 31976 additions and 31992 deletions">
+<a href="https://github.com/urho3d/Urho3D/commit/711053d293183d4d94cd043c5b7cdce0926727bc" rel="noopener" target="_blank">
+<span class="added">+31976</span>
+<span class="removed">-31992</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div class="onebox-metadata">
+</div>
+<div style="clear: both"></div>
+</aside>
+<p>New bindings are not needed, as there is a set of macros that wraps functions automatically.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">George1</div>
+          <div class="post_content">
+<p>elix22 have updated UrhoSharp…  The .net binding is generated.  See his post.</p>
+<aside class="quote quote-modified" data-post="1" data-topic="6674">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" loading="lazy" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/elix22/40/1437_2.png" width="20"/>
+<a href="https://discourse.urho3d.io/t/urho-net-c-cross-platform-game-development-framework/6674">Urho.Net C# Cross platform game development framework</a> <a class="badge-wrapper bullet" href="/c/showcase/17"><span class="badge-category-bg" style="background-color: #F1592A;"></span><span class="badge-category clear-badge" data-drop-close="true" style="" title="Share things created with or for Urho3D.">Showcase</span></a>
+</div>
+<blockquote>
+    In the last couple of months I had a lot of spare time (thanks to Covid) 
+I have been working on a C# cross platform game development framework . 
+Basically it’s updated C# bindings (using UrhoSharp binding tools) for Urho3D . 
+Currently runs on Windows,Linux,Mac,iOS,Android. 
+No dependency on Xamarin.iOS or Xamarin.Android . 
+First class Visual Studio Code support on all 3 platforms Linux,Window,MacOS (autocompletion , debugging , Mobile deployment for iOS and Android) 
+Why I did it ? 
+Because …
+  </blockquote>
+</aside>
+<p>Actually C# is not bad.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/821_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">WangKai</div>
+          <div class="post_content">
+<p>The renderer imrovements <span class="mention">@Eugene</span> has been doing on rbfx seems very promising. I wonder if these changes would go to upstream Urho3d?</p>
+<p>Thanks!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">adhoc99</div>
+          <div class="post_content">
+<p>Yes, <a href="https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/" rel="noopener nofollow ugc">it’s bad</a>.<br/>
+<a href="https://docs.microsoft.com/en-us/dotnet/core/tools/telemetry" rel="noopener nofollow ugc">Really bad</a>.<br/>
+<a href="https://github.com/mono/mono/issues/16875" rel="noopener nofollow ugc">Really really bad</a>.<br/>
+<a href="https://benchmarksgame-team.pages.debian.net/benchmarksgame/fastest/csharpcore-gpp.html" rel="noopener nofollow ugc">Really really really bad</a>.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">adhoc99</div>
+          <div class="post_content">
+<p>Since rbfx is so promising, why not use rbfx instead.</p>
+<p>Also, apparently Github has “forum” (<a href="https://docs.github.com/en/github/administering-a-repository/enabling-or-disabling-github-discussions-for-a-repository" rel="noopener nofollow ugc">Discussion tab</a>) support now. Maybe ask rbfx to enable it on their Github so they can finally have a forum.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="91" data-topic="6605" data-username="adhoc99">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/a/97f17d/40.png" width="20"/> adhoc99:</div>
+<blockquote>
+<p>Also, apparently Github has “forum” (<a href="https://docs.github.com/en/github/administering-a-repository/enabling-or-disabling-github-discussions-for-a-repository">Discussion tab</a>) support now. Maybe ask rbfx to enable it on their Github so they can finally have a forum.</p>
+</blockquote>
+</aside>
+<p>It looks interesting. Is it possible to download a forum using a git client the same way as wiki?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/821_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">WangKai</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="91" data-topic="6605" data-username="adhoc99">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/a/97f17d/40.png" width="20"/> adhoc99:</div>
+<blockquote>
+<p>Since rbfx is so promising, why not use rbfx instead.</p>
+</blockquote>
+</aside>
+<p>Hi <span class="mention">@adhoc99</span> , don’t misunderstand me, I’m working on Urho3D some times and recently just contributed a little to the project when I got some vocation.</p>
+<p>If you look at the rendering subsystem of Urho3D closely, you’d find there is surely need more work. For the future of Urho, it needs improvements, a lot. Additionally, Eugene is also one of the main maintainers of Urho for a long time.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">adhoc99</div>
+          <div class="post_content">
+<p>I took a look at the <a href="https://docs.github.com/en/discussions" rel="noopener nofollow ugc">Discussion documentation</a> but couldn’t find an option for that at the moment. Apparently <a href="https://docs.github.com/en/discussions/managing-discussions-for-your-community/managing-discussions-in-your-repository" rel="noopener nofollow ugc">it looks more like the issue system</a> than the wiki system.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/902_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Eugene</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="89" data-topic="6605" data-username="WangKai">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/wangkai/40/821_2.png" width="20"/> WangKai:</div>
+<blockquote>
+<p>The renderer imrovements <span class="mention">@Eugene</span> has been doing on rbfx seems very promising. I wonder if these changes would go to upstream Urho3d?</p>
+</blockquote>
+</aside>
+<p>I don’t really see a point in talking about it now, since upstream community has <em>already</em> declined to accept these changes.</p>
+<p>We had <a href="https://discourse.urho3d.io/t/to-rbfx-and-not-to-rbfx/5864">this discussion</a> year ago, and <em>significant</em> portion of Urho community has refused to accept breaking changes from the fork to upstream repo. And I respect others’ choises even if I don’t agree with them.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">George1</div>
+          <div class="post_content">
+<p>I know that you are afraid of telemetry, but elix22 work is not Microsoft’s work.</p>
+<p>Everything you do now a day is monitored.  E.g. Google record everything you do on android phone, Windows record things you do on windows,   Apple record everything you do on Apple’s phone etc… Now stop using them.  When you go to the web, website track your interest with AI and display your last view items.  Now, do you stop using the internet too?</p>
+<p>.Net core is opensource.   Just disable what ever function you wanted…</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3220_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">JSandusky</div>
+          <div class="post_content">
+<p>Guess we have to run in terror at v1 and v2 UUIDs because how dare someone other than me be able to use hard work to figure out my mac-address from a bunch of UUIDs … when my mac address is already used pretty much everywhere /s.</p>
+<p>Telemetry and sysinfo arguments are tiresome because when someone complains about basic telemetry data they’re likely also complaining about Wirth’s Law or “<em>planned obsolescence</em>” somewhere else.</p>
+<p>Do you expect platform vendors to just magically divine the decisions they need to make in regards to their targets to support?</p>
+<p>The last time MS made “<em>magical</em>” decisions … we got Silverlight.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">adhoc99</div>
+          <div class="post_content">
+<p>No, just not oblivious to it. Some people actually care about privacy.</p>
+<p>Maybe use Startpage or DuckDuckGo instead of Google, LineageOS instead of Android, Linux instead of Windows or MacOS, Firefox instead of Chrome, and NoScript, uBlockOrigin, TOR, /etc/hosts, etc.</p>
+<p>And being opensource doesn’t make it good in the slightest. It and C# are still horribly slow.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">George1</div>
+          <div class="post_content">
+<p>duckduckgo knows everything you do.  When you are on the internet, really there is no privacy.</p>
+<p>How big is the game you are making? 100 players?  1000 players?  The wrapper is auto generated, so if you are developing in C++ then it does not effect you.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">throwawayerino</div>
+          <div class="post_content">
+<p>Telemetry is what’s bothering you people? If anything, I’m against C# simply because it requires another compiler. Angelscript is interpreted letting you edit it faster and could be later compiled for release</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/902_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Eugene</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="100" data-topic="6605" data-username="throwawayerino">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/t/da6949/40.png" width="20"/> throwawayerino:</div>
+<blockquote>
+<p>I’m against C# simply because it requires another compiler</p>
+</blockquote>
+</aside>
+<p>I don’t like C# simply because <code>¯\_(ツ)_/¯</code><br/>
+I just like C++ more, nothing else.</p>
+<p>Yes, you have good point too. C# introduces too much build complexity into project, I just don’t trust it to be reliable and stable.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3220_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">JSandusky</div>
+          <div class="post_content">
+<p>The linux crowd is getting very very loud despite the OS not being a viable target.</p>
+<p>Even when Valve tried to hamfist it into a target it failed.</p>
+<p>Nixer’s and AMD/ATI fanboys would shit themselves if I had free reign in the graphics code. Fuck AMD if they won’t offer competitive APIs to VR-works or NV’s fast-gs. Intel has a fast path, why is that so hard for AMD?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="102" data-topic="6605" data-username="JSandusky">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/jsandusky/40/3220_2.png" width="20"/> JSandusky:</div>
+<blockquote>
+<p>The linux crowd is getting very very loud despite the OS not being a viable target.</p>
+</blockquote>
+</aside>
+<p>Have you heard anything about android?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3220_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">JSandusky</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="103" data-topic="6605" data-username="1vanK">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/1vank/40/768_2.png" width="20"/> 1vanK:</div>
+<blockquote>
+<p>Have you heard anything about android?</p>
+</blockquote>
+</aside>
+<p>Embroiled waist deep in lawsuits that will end the platform if they lose.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="104" data-topic="6605" data-username="JSandusky">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/jsandusky/40/3220_2.png" width="20"/> JSandusky:</div>
+<blockquote>
+<p>Embroiled waist deep in lawsuits that will end the platform if they lose.</p>
+</blockquote>
+</aside>
+<p>The lawsuits concern only the virtual machine, not linux (which is not a operating system, but a kernel). They have plans to create their own virtual machine. In addition, Linux turned the software world upside down, it made even Microsoft pay attention to open source.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3220_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">JSandusky</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="105" data-topic="6605" data-username="1vanK">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/1vank/40/768_2.png" width="20"/> 1vanK:</div>
+<blockquote>
+<p>The lawsuits concern only the virtual machine, not linux (which is not a operating system, but a kernel). They have plans to create their own virtual machine. In addition, Linux turned the software world upside down, it made even Microsoft pay attention to open source.</p>
+</blockquote>
+</aside>
+<p>No, they concern the app market as a whole. Gacha games in particular have come under attack as most use a “complete” model that is illegal in most countries so many games have had to change their model like SMT-DX2 where they ceased the loop on upgrades and added a spirit mechanic to dodge the law.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<p>In any case, when the Chinese say they need to switch to linux, the whole world will switch to linux xD</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/1437_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">elix22</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="96" data-topic="6605" data-username="George1">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/g/9e8a1a/40.png" width="20"/> George1:</div>
+<blockquote>
+<p>elix22 work is not Microsoft’s work</p>
+</blockquote>
+</aside>
+<p>You can bet on that , I am not affiliated to Microsoft in any way <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=9" title=":slight_smile:"/><br/>
+Actually after 20 years as a professional in the Software industry and with Covid’s help I decided to take a year off and relax this year (I can afford it)  .</p>
+<p>As a C++/C developer all my professional life , I was actually very surprised by the really good performance of <a href="http://Urho.Net" rel="noopener nofollow ugc">Urho.Net</a>  , specifically on mobiles (Mono runtime) .<br/>
+It’s actually has fast edit/compile iteration time , on par with AngleScript or any other scripting language.<br/>
+AngleScript runtime is actually much slower than the Mono runtime(I actually did some benchmarks on a bunch of scripting runtimes …)<br/>
+AngleScript doesn’t have any good IDE support as opposed to C# (Visual-Studio-Code is just perfect in my opinion)</p>
+<p>I am not trying to convince anyone or sell anything<br/>
+By the end of the day Urho3D is  just a middleware , the end-goal objective  is to create fun enjoyable  games .<br/>
+Everyone should feel free and comfortable to use any language and platform to bring their creative games into live.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3200_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">rku</div>
+          <div class="post_content">
+<p>A very valid question about new renderer turns into bikeshedding fest. This is why upstream can not have nice things.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<p>Comparing C# and AS is incorrect. Because AS is an embedded language. For example you need a console in your application - use AS. You can only compare C# with C ++. And C# loses to C++ in many ways.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/1437_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">elix22</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="110" data-topic="6605" data-username="1vanK">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/1vank/40/768_2.png" width="20"/> 1vanK:</div>
+<blockquote>
+<p>And C# loses to C++ in many ways.</p>
+</blockquote>
+</aside>
+<p>I don’t think that’s the case today anymore , it’s supported on all major platforms.<br/>
+The related runtimes are all open sourced and if you run AOT code than the performance is on par with native compiled code.<br/>
+I personally think Net 6 is going to be a game changer.<br/>
+Yes it has some cons (I personally don’t like the GC stuff ) but it has big advantages when it comes to<br/>
+fast iterative development</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">throwawayerino</div>
+          <div class="post_content">
+<p>Never thought I’d see gacha being discussed next to lightmappers and telemetry</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<p>Yes, GC is a big problem. C # application runs fast until it runs out of memory. After that, the constant “stop the world” begins.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">throwawayerino</div>
+          <div class="post_content">
+<p>And if a C++ program runs out of memory? Either way if your game needs more than 4GB of RAM you’re doing something wrong.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<p>You probably don’t understand well how GC works. C# can’t even handle simple applications like autoclicker.</p>
+<p><a class="inline-onebox" href="https://github.com/1vanK/AutoClicker">GitHub - 1vanK/AutoClicker</a><br/>
+<a class="inline-onebox" href="https://www.youtube.com/watch?v=2rjBXPPgxVs">Cell to Singularity - Evolution Never Ends | Cheat | Auto Clicker - YouTube</a></p>
+<p>The first half an hour the program works normally, but the longer it works, the more often it freezes and the longer these microfreezes. I write all my utilities, and even medium-sized projects in C #. But never in my right mind would I use it for anything serious.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">George1</div>
+          <div class="post_content">
+<p>Why are you clicking so fast?<br/>
+1/100 seconds.  e.g. 100 clicks in a second?<br/>
+If you want to write a bot then 2 clicks every second is already too fast.  You will bring every application down by clicking that fast.</p>
+<p>I used to write an auto clicker to test my application (data capturing tool). It can run several hours without problems.</p>
+<p>I think it is depends on how event messages are implemented.  If they implemented similar to the UDP technique then it won’t slow down.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/902_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Eugene</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="115" data-topic="6605" data-username="1vanK">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/1vank/40/768_2.png" width="20"/> 1vanK:</div>
+<blockquote>
+<p>The first half an hour the program works normally, but the longer it works, the more often it freezes and the longer these microfreezes</p>
+</blockquote>
+</aside>
+<p>I wonder why. There’s no explicit allocations in autoclicker. Do you know why it cannot work smoothly all the time?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3290_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Modanung</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="98" data-topic="6605" data-username="adhoc99">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/a/97f17d/40.png" width="20"/> adhoc99:</div>
+<blockquote>
+<p>Some people actually care about privacy.</p>
+</blockquote>
+</aside>
+<p>While others adhere to false profits.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<p>Much time passed and my memories became clouded. It was not the program slowed down, but the game which is written on Unity. This is written in README in repo.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">George1</div>
+          <div class="post_content">
+<p>There is a message queue.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/821_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">WangKai</div>
+          <div class="post_content">
+<p>Seeing people arguing with each other is actually much better than checking a dead fish forum and project. <img alt=":joy:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/joy.png?v=9" title=":joy:"/></p>
+<p>Why we talk about language choice? I guess only a few people like Java in this forum, but it’s still an important part of our software world.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/821_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">WangKai</div>
+          <div class="post_content">
+<p>To be or not to be. It seems very binary. Maybe this question is fundamentally wrong. (For the community)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3200_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">rku</div>
+          <div class="post_content">
+<p>I think we should just upstream C# support and be done with it.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">adhoc99</div>
+          <div class="post_content">
+<p>Or maybe stay on rbfx since it already has C# support.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3200_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">rku</div>
+          <div class="post_content">
+<p>But it’s a perfect fit together with boost. I know you would love it as well.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">adhoc99</div>
+          <div class="post_content">
+<p>Fits a lot better on rbfx. It could even become the next “unity”.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3200_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">rku</div>
+          <div class="post_content">
+<p>Probably next “division” from the looks of it</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3290_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Modanung</div>
+          <div class="post_content">
+<p>Same old, same old. <code>[α ω]</code></p>
+<p>How’s that forum coming along?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3200_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">rku</div>
+          <div class="post_content">
+<p>Its there. But this place is more fun <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=9" title=":slight_smile:"/></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3290_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Modanung</div>
+          <div class="post_content">
+<p><a href="https://github.com/rokups/rbfx/discussions" rel="noopener nofollow ugc"><img alt="" height="431" src="https://4.bp.blogspot.com/-RQrDIabMtU0/U1CiuBUzEHI/AAAAAAAALJA/IaYaTNsqV_0/s1600/scummvm00869.png" width="690"/></a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3200_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">rku</div>
+          <div class="post_content">
+<p>Its ok, we still love you <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=9" title=":slight_smile:"/></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3290_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Modanung</div>
+          <div class="post_content">
+<p><img alt=":fish:" class="emoji only-emoji" src="https://emoji.discourse-cdn.com/twitter/fish.png?v=9" title=":fish:"/><br/>
+<img alt=":raised_hand_with_fingers_splayed:" class="emoji only-emoji" src="https://emoji.discourse-cdn.com/twitter/raised_hand_with_fingers_splayed.png?v=9" title=":raised_hand_with_fingers_splayed:"/></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3220_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">JSandusky</div>
+          <div class="post_content">
+<p>Upstreaming C# in one way or another. Be it embedding mono, one of the newer for embedding CoreCLR experimentals (I was delighted to see those efforts from MS), or as PInvoke bindings should be a priority.</p>
+<p>Urho desperately needs some new blood and C# is a good avenue to catch some “victims” … I mean future contributors that aren’t soiled with arguments of old.</p>
+<p>Reality is we all tend to fixate on rendering and that holds us down because everyone with any knowhow in that area is strongly opinionated in one specific or another which is often in conflict with others.</p>
+<p>C# is something that at worst dissenters can belatedly agree with for the greater benefit of fresh blood.</p>
+<p>At some point we do have to accept that we’re dead in the water and need to start swimming.</p>
+<p>Edit: I prefer embedding mono or CoreCLR than Swig bindings, but that’s me. If Swig gets us there faster, let’s do it. I’m onboard for contributing to that sort of thing.</p>
+<p>We should also probably retire Angelscript and keep Lua but focus on making sure we’re Zerobrane compatible for those that choose Lua. Even as an Angelscript guru myself, it’s time to just let it go. Dial in what we need to do, which is be future facing and move on.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="134" data-topic="6605" data-username="JSandusky">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/jsandusky/40/3220_2.png" width="20"/> JSandusky:</div>
+<blockquote>
+<p>Urho desperately needs some new blood and C# is a good avenue to catch some “victims” …</p>
+</blockquote>
+</aside>
+<p>C # will only attract people who won’t write C ++ code. We already have a lot of forum posts from UrhoSharp users “Hello, I need to add a button, help me!” These people will not help the development of the engine in any way.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/902_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Eugene</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="134" data-topic="6605" data-username="JSandusky">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/jsandusky/40/3220_2.png" width="20"/> JSandusky:</div>
+<blockquote>
+<p>Reality is we all tend to fixate on rendering and that holds us down because everyone with any knowhow in that area is strongly opinionated in one specific or another which is often in conflict with others.</p>
+</blockquote>
+</aside>
+<p>Just curious, what’s you opinion on ongoing renderer refactoring?<br/>
+I think you are the only person here who have really touched renderer deeply.</p>
+<p>TL;RD is to increase flexibility and ease of change:</p>
+<ul>
+<li>Remove shader copypaste with help of SpirV-Cross</li>
+<li>Remove hardcoded shader permutations aka LoadPassShaders</li>
+<li>Replace declarative XML RenderPath with programmable one</li>
+<li>Cache pipeline states externally to simplify modern GAPI backends integration and remove this kind of equilibristics in PrepareDraw:<br/>
+<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/7TnUpEEt3XHmDVgC6vpwcKbuaEh.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/3/3751fbcc5d9bbd6126b7d1c4bbb4d6a090d049e9.png" rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="7TnUpEEt3XHmDVgC6vpwcKbuaEh" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/3/3751fbcc5d9bbd6126b7d1c4bbb4d6a090d049e9_2_10x10.png" height="188" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/3/3751fbcc5d9bbd6126b7d1c4bbb4d6a090d049e9.png" width="690"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1005×275 10.6 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg>
+</div></a></div>
+</li>
+</ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/1437_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">elix22</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="135" data-topic="6605" data-username="1vanK">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/1vank/40/768_2.png" width="20"/> 1vanK:</div>
+<blockquote>
+<p>We already have a lot of forum posts from UrhoSharp users “Hello, I need to add a button, help me!”</p>
+</blockquote>
+</aside>
+<p>Thanks God I know how to add a button <img alt=":joy:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/joy.png?v=9" title=":joy:"/></p>
+<p>Ask yourself this :<br/>
+1 - What kind of people did you attract so far by investing so much effort on AngelScript ?<br/>
+2 - Did you attract major game engine developers that contribute to Urho3D ?<br/>
+3 - Did you attract Game developers that are making games with Urho3D ?</p>
+<p>The more people you have that are asking “how to add a button” the better , these are the key people.<br/>
+These people will also attract Game engine developers that will contribute to Urho3D development .<br/>
+The " Chicken or the egg"  problem <a class="inline-onebox" href="https://en.wikipedia.org/wiki/Chicken_or_the_egg" rel="noopener nofollow ugc">Chicken or the egg - Wikipedia</a></p>
+<p><strong>So far there are no chickens nor eggs , just  a dead fish</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/768_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">1vanK</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="137" data-topic="6605" data-username="elix22">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/elix22/40/1437_2.png" width="20"/> elix22:</div>
+<blockquote>
+<p>What kind of people did you attract so far by investing so much effort on AngelScript ?</p>
+</blockquote>
+</aside>
+<p>We have AngelScript, but it annoys many people that you have to manually make bindings. I am solving this problem.</p>
+<p>About “more users = more developers” this is very controversial.  For example, a Unity developer talked on the Box2D forum and asked a lot of questions. As a result, Unity has a CapsuleCollider2D, but he hasn’t sended the modifications to the main repository. Bullet is very popular library. But how many contributors does it have?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3220_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">JSandusky</div>
+          <div class="post_content">
+<p><span class="mention">@Eugene</span></p>
+<p>Is there a render refactor branch around?</p>
+<p>Aside from pipeline-hell (which isn’t that bad if you know most of your permutations AOT) SetData/GetData is the pain point in the modern apis as Urho doesn’t consider that anything could be async. I’d hope there isn’t a lot of code out there depending on a GetData including the contents of a SetData from a few function-calls ago, it’s easy enough if tracking sync-points and waiting before rendering is enough. Descriptors suck. I haven’t touched the new APIs much since picking up TheForge, so I’m probably missing things.</p>
+<p>Be it GLSLang+SPIRVCross or ShaderConductor one of them is necessary IMO. I use ShaderConductor but have used GLSLang+SPIRVCross and only prefer SC because of append/consume structured buffers (spits out extra buffers for the counters in GL/VK).</p>
+<p>I’m not a fan of the renderpath as data either. It’s a headache and if you’re doing anything complicated it turns into a mess of toggling tags or concatenating multiple renderpaths. It’s hard to handle things like quality settings well. Adding single-pass stereo to that was a complete cludge-fest.</p>
+<p>I cringe whenever I see all the bitwise hell that’s scattered about. I gave up and tore it out in a few places to just crc64 stuff instead.</p>
+<p>I hate thinking about this stuff though because there’s so much to trivially miss in the renderer. Be it stencil test on lights, vertex-lights being a thing, zones being awkward.</p>
+<p><span class="mention">@1vanK</span> “<em>more users = more developers</em>” is indeed very unlikely, but “<em>more users = more tiny, often questionable PRs</em>” seems probable enough. Sure stuff like “how do I change the color of a button” sucks, but it’s not like it’s only trivial nonsense that’ll come up.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/902_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Eugene</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="139" data-topic="6605" data-username="JSandusky">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/jsandusky/40/3220_2.png" width="20"/> JSandusky:</div>
+<blockquote>
+<p>Is there a render refactor branch around?</p>
+</blockquote>
+</aside>
+<p><a href="https://github.com/rokups/rbfx/tree/ek/renderer%2Fmaster" rel="noopener nofollow ugc">Here</a> is the branch. <a href="https://github.com/rokups/rbfx/tree/ek/renderer/master/Source/Urho3D/RenderPipeline" rel="noopener nofollow ugc">This folder</a> is basically 80% of new code. There’s still a lot of draft code and most of samples don’t work yet.</p>
+<aside class="quote no-group" data-post="139" data-topic="6605" data-username="JSandusky">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/jsandusky/40/3220_2.png" width="20"/> JSandusky:</div>
+<blockquote>
+<p>I hate thinking about this stuff though because there’s so much to trivially miss in the renderer</p>
+</blockquote>
+</aside>
+<p>Yeah, Since I’m working in the fork, I don’t really bother. I aim at 98% feature parity, I don’t think I have to pick every single little feature that old renderer has.<br/>
+E.g. I ignore “shadow map reuse” completely. And light stenicl/scissor optimizations (perhaps I’d add them later)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3200_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">rku</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="134" data-topic="6605" data-username="JSandusky">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/jsandusky/40/3220_2.png" width="20"/> JSandusky:</div>
+<blockquote>
+<p>Edit: I prefer embedding mono or CoreCLR than Swig bindings, but that’s me. If Swig gets us there faster, let’s do it. I’m onboard for contributing to that sort of thing.</p>
+</blockquote>
+</aside>
+<p>Its tricky. Well nowdays it is less tricky, but in the past it was quite annoying. For example to debug mono in visual studio all these big engines provide IDE plugin. It is absolute nonsense. Now that Microsoft aims to ship mono as part of .NET6 that might change, but still… The path i have taken is runtime-agnostic. Swig generates interop layer that runs on any runtime and we create application entry point in C# executable, which gives us free runtime hosting without writing any of runtime hosting code. This means we could run everything on old .net framework and debug it in Visual Studio just like that, while also doing same with mono on linux in whatever IDE you work on linux. Note that you can not really avoid c interop layer no matter what runtime you use. There are some solutions like CppSharp or Biohazrd (early WIP) that side-step c layer altogether, but i did not have good luck with either of them. So we would still need Swig or something comparable no matter what. Now that .NET6 is bringing different runtimes together (mono+net core) seems like i unknowingly took a right path, as entry point delegation to C# code hits a jackpot here and we can get same code run on multiple platforms and runtimes easily. It might sound annoying for people who want to mostly use C++ and only do some light scripting in C#, but managed entry point is merely this:</p>
+<pre><code class="lang-cs">internal class Program
+{
+    private void Run(string[] args)
+    {
+        Urho3D.ParseArguments(Assembly.GetExecutingAssembly(), args);
+        Context.SetRuntimeApi(new ScriptRuntimeApiReloadableImpl());
+        using (var context = new Context())
+        {
+            using (Application editor = Application.CreateApplicationFromFactory(context, CreateApplication))
+            {
+                Environment.ExitCode = editor.Run();
+            }
+        }
+    }
+
+    [STAThread]
+    public static void Main(string[] args)
+    {
+        new Program().Run(args);
+    }
+
+    [DllImport("libEditor")]
+    private static extern IntPtr CreateApplication(HandleRef context);
+}
+</code></pre>
+<p>Everything else (starting from your <code>Application</code> subclass) is done in C++. I would say its a cheap cost to get multi-runtime support without any special code for each runtime.</p>
+<hr/>
+<p>By the way i did try runtime hosting. Running your application in debugger and expecting to work is out of question in that case (on linux at least). So it isnt very user-friendly.</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>
