@@ -35,10 +35,10 @@
 <p>Hi guys,</p>
 <p>I just found that if <code>RigidBody</code> with zero mass stops moving for a while, it will become <strong>“deactivated”</strong> and stops all collisions.</p><aside class="onebox githubblob">
 <header class="source">
-<a href="https://github.com/urho3d/Urho3D/blob/6802a83fcd259430098426480d6c045114c0786c/Source/ThirdParty/Bullet/src/BulletDynamics/Dynamics/btRigidBody.h#L499" rel="noopener" target="_blank">github.com</a>
+<a  rel="noopener" target="_blank">github.com</a>
 </header>
 <article class="onebox-body">
-<h4><a href="https://github.com/urho3d/Urho3D/blob/6802a83fcd259430098426480d6c045114c0786c/Source/ThirdParty/Bullet/src/BulletDynamics/Dynamics/btRigidBody.h#L499" rel="noopener" target="_blank">urho3d/Urho3D/blob/6802a83fcd259430098426480d6c045114c0786c/Source/ThirdParty/Bullet/src/BulletDynamics/Dynamics/btRigidBody.h#L499</a></h4>
+<h4><a  rel="noopener" target="_blank">urho3d/Urho3D/blob/6802a83fcd259430098426480d6c045114c0786c/Source/ThirdParty/Bullet/src/BulletDynamics/Dynamics/btRigidBody.h#L499</a></h4>
 <pre class="onebox"><code class="lang-h"><ol class="start lines" start="489" style="counter-reset: li-counter 488 ;">
 <li>
 <li>		return m_inverseMass + normal.dot(vec);</li>
@@ -70,10 +70,10 @@
 <p>It seems we need to set active to <code>DISABLE_DEACTIVATION</code> and add as an interface to <code>RigidBody</code>.</p>
 <aside class="onebox githubblob">
 <header class="source">
-<a href="https://github.com/urho3d/Urho3D/blob/6802a83fcd259430098426480d6c045114c0786c/Source/ThirdParty/Bullet/src/BulletDynamics/Dynamics/btRigidBody.h#L518" rel="noopener" target="_blank">github.com</a>
+<a  rel="noopener" target="_blank">github.com</a>
 </header>
 <article class="onebox-body">
-<h4><a href="https://github.com/urho3d/Urho3D/blob/6802a83fcd259430098426480d6c045114c0786c/Source/ThirdParty/Bullet/src/BulletDynamics/Dynamics/btRigidBody.h#L518" rel="noopener" target="_blank">urho3d/Urho3D/blob/6802a83fcd259430098426480d6c045114c0786c/Source/ThirdParty/Bullet/src/BulletDynamics/Dynamics/btRigidBody.h#L518</a></h4>
+<h4><a  rel="noopener" target="_blank">urho3d/Urho3D/blob/6802a83fcd259430098426480d6c045114c0786c/Source/ThirdParty/Bullet/src/BulletDynamics/Dynamics/btRigidBody.h#L518</a></h4>
 <pre class="onebox"><code class="lang-h"><ol class="start lines" start="508" style="counter-reset: li-counter 507 ;">
 <li>		}</li>
 <li>		else</li>

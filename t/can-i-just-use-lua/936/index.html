@@ -88,7 +88,7 @@
           <div class="user_name">JTippetts</div>
           <div class="post_content">
 <p>Lua is just another language. The main benefit it offers is essentially in allowing you to skip the compilation step, which can mean faster iteration time during design/prototyping. There is nothing keeping you from mixing C++ and Lua as needed. I’ve found it beneficial to use Lua for things such as AI script components, while implementing performance-critical stuff in C++.</p>
-<p>Note that there are still <a href="https://github.com/urho3d/Urho3D/issues/649" rel="nofollow noopener">issues</a> regarding garbage collection if you generate lots of garbage at one time, without interleaved GC sweeps in Lua. It can be mitigated by explicitly calling the GC when you are doing garbage-heavy things like iterating all the pixels of an Image or things of that nature, but it’s something to be aware of. Anything that returns an Urho3D object by value is a potential pain point here, so things like procedural generation of various things might better be implemented in C++.</p>
+<p>Note that there are still <a  rel="nofollow noopener">issues</a> regarding garbage collection if you generate lots of garbage at one time, without interleaved GC sweeps in Lua. It can be mitigated by explicitly calling the GC when you are doing garbage-heavy things like iterating all the pixels of an Image or things of that nature, but it’s something to be aware of. Anything that returns an Urho3D object by value is a potential pain point here, so things like procedural generation of various things might better be implemented in C++.</p>
           </div>
         </div>
       </div>

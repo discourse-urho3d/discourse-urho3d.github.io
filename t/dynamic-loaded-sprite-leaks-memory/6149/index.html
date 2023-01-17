@@ -104,10 +104,10 @@ The only thing I used from outside that function scope is the scene_ where the N
 It’s possible to make the cache more smart by using WeakPtr-s instead.<br/>
 <aside class="onebox githubblob">
 <header class="source">
-<a href="https://github.com/urho3d/Urho3D/blob/97b09f848b9388c0b3cd116906cc0ab3b442ded0/Source/Urho3D/Urho2D/Renderer2D.h#L130-L133" rel="nofollow noopener" target="_blank">github.com</a>
+<a  rel="nofollow noopener" target="_blank">github.com</a>
 </header>
 <article class="onebox-body">
-<h4><a href="https://github.com/urho3d/Urho3D/blob/97b09f848b9388c0b3cd116906cc0ab3b442ded0/Source/Urho3D/Urho2D/Renderer2D.h#L130-L133" rel="nofollow noopener" target="_blank">urho3d/Urho3D/blob/97b09f848b9388c0b3cd116906cc0ab3b442ded0/Source/Urho3D/Urho2D/Renderer2D.h#L130-L133</a></h4>
+<h4><a  rel="nofollow noopener" target="_blank">urho3d/Urho3D/blob/97b09f848b9388c0b3cd116906cc0ab3b442ded0/Source/Urho3D/Urho2D/Renderer2D.h#L130-L133</a></h4>
 <pre class="onebox"><code class="lang-h"><ol class="start lines" start="130" style="counter-reset: li-counter 129 ;">
 <li>/// Cached materials.</li>
 <li>HashMap&lt;Texture2D*, HashMap&lt;int, SharedPtr&lt;Material&gt; &gt; &gt; cachedMaterials_;</li>
@@ -132,7 +132,7 @@ It’s possible to make the cache more smart by using WeakPtr-s instead.<br/>
           <div class="user_name">Kimichura</div>
           <div class="post_content">
 <p>Thank you very much the cache was indeed my problem. Clearing it solves my memory issue.</p>
-<p>But I don’t know how I would get it to work with WeakPtrs because the Material is created inside of GetMaterial and would be freed immediately (it would have to return a SharedPtr instead of a raw ptr to keep it alive?) <a href="https://github.com/urho3d/Urho3D/blob/97b09f848b9388c0b3cd116906cc0ab3b442ded0/Source/Urho3D/Urho2D/Renderer2D.cpp#L251-L253" rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/97b09f848b9388c0b3cd116906cc0ab3b442ded0/Source/Urho3D/Urho2D/Renderer2D.cpp#L251-L253</a></p>
+<p>But I don’t know how I would get it to work with WeakPtrs because the Material is created inside of GetMaterial and would be freed immediately (it would have to return a SharedPtr instead of a raw ptr to keep it alive?) <a  rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/97b09f848b9388c0b3cd116906cc0ab3b442ded0/Source/Urho3D/Urho2D/Renderer2D.cpp#L251-L253</a></p>
 <p>But I got a workaround for me by removing the texture from the ‘cachedMaterials_’ manually, it’s not pretty (i guess?) but I think it’ll work out for my small project.</p>
 <pre><code>void Renderer2D::UncacheTexture(Texture2D* texture)
 {

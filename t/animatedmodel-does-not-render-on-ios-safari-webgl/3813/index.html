@@ -112,7 +112,7 @@
           <div class="post_content">
 <p>Found a solution.</p>
 <p>Similar to the Raspberry Pi, the problem is the maximum number of bones. Probably to do with the number of uniforms that iOS safari supports, there’s <a href="https://github.com/mrdoob/three.js/issues/7807" rel="nofollow noopener">this issue</a> on threejs that describes a similar problem they experienced.</p>
-<p>The change required was in <code>Graphics::GetMaxBones()</code> <a href="https://github.com/urho3d/Urho3D/blob/54ed4c917f242817029797a72eb7867ea7ab0247/Source/Urho3D/Graphics/OpenGL/OGLGraphics.cpp#L2154" rel="nofollow noopener">here</a>. I changes it to <code>return 16;</code> and it worked, I don’t know what the correct number for iOS Safari is at the moment (according to that threejs issue they like to change it from time to time).</p>
+<p>The change required was in <code>Graphics::GetMaxBones()</code> <a  rel="nofollow noopener">here</a>. I changes it to <code>return 16;</code> and it worked, I don’t know what the correct number for iOS Safari is at the moment (according to that threejs issue they like to change it from time to time).</p>
 <p><img alt="bunion-ios" height="500" src="//cdck-file-uploads-global.s3.dualstack.us-west-2.amazonaws.com/standard17/uploads/urho3d/original/2X/5/58c50d21fb2f26c45a14749208f47b85aface8de.gif" width="280"/></p>
 <p>Animations running at 60fps on iOS <img alt=":slight_smile:" class="emoji" src="/images/emoji/twitter/slight_smile.png?v=9" title=":slight_smile:"/></p>
           </div>

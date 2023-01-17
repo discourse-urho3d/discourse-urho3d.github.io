@@ -231,7 +231,7 @@
         <div class="post">
           <div class="user_name">SirNate0</div>
           <div class="post_content">
-<p>Those “standard” models are something UrhoSharp added, to the best of my knowledge they don’t exist in Urho (unless they’re just a wrapper for loading the Sphere.mdl that Urho3D does come with). I would suggest either downloading the Sphere.mdl from github <a href="https://github.com/urho3d/Urho3D/tree/master/bin/Data/Models">here</a>, or creating your own using the AssetImporter and/or the Blender exporter.</p>
+<p>Those “standard” models are something UrhoSharp added, to the best of my knowledge they don’t exist in Urho (unless they’re just a wrapper for loading the Sphere.mdl that Urho3D does come with). I would suggest either downloading the Sphere.mdl from github <a >here</a>, or creating your own using the AssetImporter and/or the Blender exporter.</p>
 <p>I have no idea why your having those issues, but I suspect that it has something to do with the UrhoSharp bindings. What happens if you instead do the following:</p>
 <pre><code class="lang-auto">var model =  CoreAssets.Models.Sphere;
 var newModel = model.Clone();

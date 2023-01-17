@@ -72,7 +72,7 @@ Basically, I would need to create in C++ without patching URHO3D:</p>
 <p>I also did a Tab Menu Component workaround and example wayback. This was tested with older versions but since this was done purely via angelscript and xml layout files, it does not require tinkering with engine code and should work on the latest Editor code with some slight or no modifications at all.</p>
 <p><img alt="" height="330" src="../../../images2/f686de1087bd601a0155f336aa7a5d4c.jpg" width="400"/></p>
 <p>Original Thread and Files<br/>
-<a href="https://groups.google.com/forum/#!topic/urho3d/7IKM_UJndOg" rel="nofollow noopener">groups.google.com/forum/#!topic … IKM_UJndOg</a></p>
+<a  rel="nofollow noopener">groups.google.com/forum/#!topic … IKM_UJndOg</a></p>
 <p>*Patch is just for angelscript files only to automate the process but you can manually do those edits without problems.</p>
           </div>
         </div>
@@ -103,11 +103,11 @@ If we compare with Unreal editor, check the icon size they have:<br/>
           <div class="post_content">
 <p>Hi,</p>
 <p>From memory there’s one texture atlas Textures/UI.png and an xml file which defines the offsets. You could, for instance, 2x the texture but then the offsets are pixel-aligned and not based on points.<br/>
-<a data-bbcode="true" href="https://github.com/urho3d/Urho3D/blob/master/bin/Data/UI/DefaultStyle.xml" rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/bin/Data/UI/DefaultStyle.xml</a></p>
+<a data-bbcode="true"  rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/bin/Data/UI/DefaultStyle.xml</a></p>
 <p>From the docs:<br/>
 <a data-bbcode="true" href="http://urho3d.github.io/documentation/1.4/_u_i.html" rel="nofollow noopener">http://urho3d.github.io/documentation/1.4/_u_i.html</a></p>
 <p>So yeah, it would need to be patched so that it doesn’t use integers (IntRect) but rather floating point normalized to the screen co-ords perhaps?<br/>
-<a data-bbcode="true" href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/UI/BorderImage.h" rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/UI/BorderImage.h</a><br/>
+<a data-bbcode="true"  rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/UI/BorderImage.h</a><br/>
 (at the bottom).</p>
 <p>Or BYO libRocket/imgui/TurboBadger/nanovg-based GUI and hook up Urho3D’s resource/events/gfx/etc.? I’ve recently played around with kivy (a touch/UI framework for python that also works on mobile) and that brings some nice concepts too, but it’s python…</p>
           </div>

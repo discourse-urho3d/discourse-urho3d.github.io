@@ -34,7 +34,7 @@
           <div class="post_content">
 <p>While playing with some widgets based on DebugRenderer’s DrawTriangle method, I noticed that depth testing was failing for debugdraw solids - to be clear, they are properly depth tested against scene geometry, but NOT each other!<br/>
 When I examined the sourcecode for DebugRenderer:Render method, I noticed that, for some silly reason, depth write is being disabled immediately prior to drawing depthtested triangles!<br/>
-I moved the offending line of code slightly futher down, to just prior to non-depth triangles, this completely fixes the problem, debug solids will be properly depth-sorted.<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/hg5f9l4TANGSopc9ylLADMJTHDs.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/7/78f66afb5b1f079509708c23cd19cac8820ff412.png" rel="nofollow noopener" title="Screenshot from 2019-09-19 13-54-28.png"><img alt="Screenshot%20from%202019-09-19%2013-54-28" data-base62-sha1="hg5f9l4TANGSopc9ylLADMJTHDs"  height="388" src="../../../images2/bb539339af9ced77601507858d6f6ada.png"  width="690"/><div class="meta">
+I moved the offending line of code slightly futher down, to just prior to non-depth triangles, this completely fixes the problem, debug solids will be properly depth-sorted.<div class="lightbox-wrapper"><a class="lightbox"   rel="nofollow noopener" title="Screenshot from 2019-09-19 13-54-28.png"><img alt="Screenshot%20from%202019-09-19%2013-54-28" data-base62-sha1="hg5f9l4TANGSopc9ylLADMJTHDs"  height="388" src="../../../images2/bb539339af9ced77601507858d6f6ada.png"  width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">Screenshot from 2019-09-19 13-54-28.png</span><span class="informations">1920×1080 591 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg>
 </div></a></div></p>
           </div>
@@ -160,7 +160,7 @@ Especially if they fix bugs.</p>
         <div class="post">
           <div class="user_name">Modanung</div>
           <div class="post_content">
-<p>I recently did a <a href="https://github.com/urho3d/Urho3D/pull/2505" rel="nofollow noopener">one-line PR</a>. It was merged the same day. The same could be true for your improvement to the DebugRenderer. The amount of simultaneous changes greatly defines how much effort it takes others to make sense them</p>
+<p>I recently did a <a  rel="nofollow noopener">one-line PR</a>. It was merged the same day. The same could be true for your improvement to the DebugRenderer. The amount of simultaneous changes greatly defines how much effort it takes others to make sense them</p>
           </div>
         </div>
       </div>

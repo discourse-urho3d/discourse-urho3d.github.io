@@ -50,10 +50,10 @@
 <p>TL;DR: There is no async API for GAPI objects in Urho.</p>
 <p>Try calling GetData in the beginning of next frame and remove/cache all redundant work from it</p><aside class="onebox githubblob">
 <header class="source">
-<a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Graphics/Direct3D11/D3D11Texture2D.cpp#L327" rel="noopener nofollow ugc" target="_blank">github.com</a>
+<a  rel="noopener nofollow ugc" target="_blank">github.com</a>
 </header>
 <article class="onebox-body">
-<h4><a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Graphics/Direct3D11/D3D11Texture2D.cpp#L327" rel="noopener nofollow ugc" target="_blank">urho3d/Urho3D/blob/master/Source/Urho3D/Graphics/Direct3D11/D3D11Texture2D.cpp#L327</a></h4>
+<h4><a  rel="noopener nofollow ugc" target="_blank">urho3d/Urho3D/blob/master/Source/Urho3D/Graphics/Direct3D11/D3D11Texture2D.cpp#L327</a></h4>
 <pre class="onebox"><code class="lang-cpp"><ol class="start lines" start="317" style="counter-reset: li-counter 316 ;">
 <li>textureDesc.Height = (UINT)levelHeight;</li><li>textureDesc.MipLevels = 1;</li><li>textureDesc.ArraySize = 1;</li><li>textureDesc.Format = (DXGI_FORMAT)format_;</li><li>textureDesc.SampleDesc.Count = 1;</li><li>textureDesc.SampleDesc.Quality = 0;</li><li>textureDesc.Usage = D3D11_USAGE_STAGING;</li><li>textureDesc.CPUAccessFlags = D3D11_CPU_ACCESS_READ;</li><li></li><li>ID3D11Texture2D* stagingTexture = nullptr;</li><li class="selected">HRESULT hr = graphics_-&gt;GetImpl()-&gt;GetDevice()-&gt;CreateTexture2D(&amp;textureDesc, nullptr, &amp;stagingTexture);</li><li>if (FAILED(hr))</li><li>{</li><li>    URHO3D_LOGD3DERROR("Failed to create staging texture for GetData", hr);</li><li>    URHO3D_SAFE_RELEASE(stagingTexture);</li><li>    return false;</li><li>}</li><li></li><li>ID3D11Resource* srcResource = (ID3D11Resource*)(resolveTexture_ ? resolveTexture_ : object_.ptr_);</li><li>unsigned srcSubResource = D3D11CalcSubresource(level, 0, levels_);</li><li></li>
 </ol></code></pre>

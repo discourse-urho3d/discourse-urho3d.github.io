@@ -32,7 +32,7 @@
         <div class="post">
           <div class="user_name">Modanung</div>
           <div class="post_content">
-<p><a data-bbcode="true" href="https://github.com/urho3d/Urho3D/pull/1271">SPLIT FROM GITHUB</a></p>
+<p><a data-bbcode="true" >SPLIT FROM GITHUB</a></p>
 <p>To get fast sines I use a Vector of floats as a look-up table. It is generated when the program starts - but this should be possible during compile time - and after that you get pretty accurate (depending on the resolution) and fast results. Quarter of a period would be enough to generate since this data could be mirrored to fill in the rest.<br/>
 Would this be a good way to have fast sines built into Urho? Since sines are pretty versatile and useful for game world control.</p>
 <p>[quote=“damu”]I also thought of using a look-up table with a resolution of for example 1 degree. It would have to be interpolated. I have the feeling it would be slower as one of the variants from/based on Michaels work but it is worth to benchmark and to compare the precision. With caching it might actually be faster.</p>
@@ -50,7 +50,7 @@ Would this be a good way to have fast sines built into Urho? Since sines are pre
         <div class="post">
           <div class="user_name">weitjong</div>
           <div class="post_content">
-<p>I don’t want to upload my graphs to somewhere else just so that I can link them here, so I uploaded them to the same github issue that you splitted. <a href="https://github.com/urho3d/Urho3D/pull/1271#issuecomment-202431947">github.com/urho3d/Urho3D/pull/1 … -202431947</a>. Based on these graphs, the squared quadratic approximation of the sine function looks pretty darn good.</p>
+<p>I don’t want to upload my graphs to somewhere else just so that I can link them here, so I uploaded them to the same github issue that you splitted. <a >github.com/urho3d/Urho3D/pull/1 … -202431947</a>. Based on these graphs, the squared quadratic approximation of the sine function looks pretty darn good.</p>
 <p>Range from -pi to pi:<br/>
 <div class="lightbox-wrapper"><a class="lightbox" href="https://cloud.githubusercontent.com/assets/5548048/14080685/48aeef08-f539-11e5-8751-7c26fcf0e7da.png" title=""><img alt="" height="420" src="../../../images2/9cd1a370e3e09de785375017513f53d6.png" width="690"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">1547×942</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
 <p>Zoom in on range from 0 to pi:<br/>
@@ -68,7 +68,7 @@ Would this be a good way to have fast sines built into Urho? Since sines are pre
           <div class="post_content">
 <p>Cool graph drawings.<br/>
 Reposting my test output where one can compare the squared quadratic with sinf and cosf by values: <a href="http://i.imgur.com/b8LEPUY.jpg" rel="nofollow noopener">i.imgur.com/b8LEPUY.jpg</a><br/>
-Just to be sure: That graphs function is the same as in the code currently in the pull request, right? <a href="https://github.com/urho3d/Urho3D/pull/1271/commits/86ff45ce74251b03d2edea56691220a772275bae" rel="nofollow noopener">github.com/urho3d/Urho3D/pull/1 … a772275bae</a><br/>
+Just to be sure: That graphs function is the same as in the code currently in the pull request, right? <a  rel="nofollow noopener">github.com/urho3d/Urho3D/pull/1 … a772275bae</a><br/>
 My test output was made with that. Also in my benchmark this approximation was nearly 3 times as fast as sincosf.</p>
           </div>
         </div>

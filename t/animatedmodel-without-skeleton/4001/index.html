@@ -63,7 +63,7 @@
 <p>Edit: didn’t know about the stuff Modanung referenced, that looks ideal.</p>
 <hr/>
 <p>There’s AttributeAnimation and ObjectAnimation (a collection of attribute-animations) which can animate most attributes. I don’t believe the Assimp based converter has support for exporting those.</p>
-<p>They can be loaded from Xml/Json files <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Scene/ObjectAnimation.h" rel="nofollow noopener">see source,<br/>
+<p>They can be loaded from Xml/Json files <a  rel="nofollow noopener">see source,<br/>
 ObjectAnimation.h</a>, example 30_LightAnimation shows how to set them up in code.</p>
 <p>The simplest way to do that would be to use <a href="https://github.com/reattiva/Urho3D-Blender" rel="nofollow noopener">Reattiva’s Blender exporter</a> and use the <a href="https://github.com/reattiva/Urho3D-Blender/blob/master/guide.txt#L281" rel="nofollow noopener">Prefab mode</a> such that each part is a separate object. You would have to add the capability in Python for the exporter to output ObjectAnimation.xml/json for each object track in Blender.</p>
 <p>The process for getting the key info should be the same as for the bones.</p>

@@ -35,7 +35,7 @@
 <p>I have tested on Windows and Android. Failed to build them for both platforms.</p>
 <aside class="onebox githubissue">
 <header class="source">
-<a href="https://github.com/urho3d/Urho3D/issues/2754" rel="noopener nofollow ugc" target="_blank">github.com/urho3d/Urho3D</a>
+<a  rel="noopener nofollow ugc" target="_blank">github.com/urho3d/Urho3D</a>
 </header>
 <article class="onebox-body">
 <div class="github-row">
@@ -44,7 +44,7 @@
 </div>
 <div class="github-info-container">
 <h4>
-<a href="https://github.com/urho3d/Urho3D/issues/2754" rel="noopener nofollow ugc" target="_blank">Cannot generate solution for Visual Studio</a>
+<a  rel="noopener nofollow ugc" target="_blank">Cannot generate solution for Visual Studio</a>
 </h4>
 <div class="github-info">
 <div class="date">
@@ -75,7 +75,7 @@ It seems I cannot pass the "Build...</p>
 </aside>
 <aside class="onebox githubissue">
 <header class="source">
-<a href="https://github.com/urho3d/Urho3D/issues/2755" rel="noopener nofollow ugc" target="_blank">github.com/urho3d/Urho3D</a>
+<a  rel="noopener nofollow ugc" target="_blank">github.com/urho3d/Urho3D</a>
 </header>
 <article class="onebox-body">
 <div class="github-row">
@@ -84,7 +84,7 @@ It seems I cannot pass the "Build...</p>
 </div>
 <div class="github-info-container">
 <h4>
-<a href="https://github.com/urho3d/Urho3D/issues/2755" rel="noopener nofollow ugc" target="_blank">Build Failed: Android</a>
+<a  rel="noopener nofollow ugc" target="_blank">Build Failed: Android</a>
 </h4>
 <div class="github-info">
 <div class="date">
@@ -174,7 +174,7 @@ cmake.exe ../Urho3D -G "Visual Studio 16" -A Win32 -DURHO3D_OPENGL=1 -DURHO3D_AN
 <p>When in doubt you can always use the git blame to trace the commit that introduced the code change and try to understand the rationale from the commit message and the rest of the changes in the same commit.</p>
 <aside class="onebox githubcommit">
 <header class="source">
-<a href="https://github.com/urho3d/Urho3D/commit/7937119e634ddf617d57d9e5fe90f2036d3cd207" rel="noopener" target="_blank">github.com/urho3d/Urho3D</a>
+<a  rel="noopener" target="_blank">github.com/urho3d/Urho3D</a>
 </header>
 <article class="onebox-body">
 <div class="github-row">
@@ -183,7 +183,7 @@ cmake.exe ../Urho3D -G "Visual Studio 16" -A Win32 -DURHO3D_OPENGL=1 -DURHO3D_AN
 </div>
 <div class="github-info-container">
 <h4>
-<a href="https://github.com/urho3d/Urho3D/commit/7937119e634ddf617d57d9e5fe90f2036d3cd207" rel="noopener" target="_blank">Handle CMake cache entry in '-D &lt;var&gt;=&lt;value&gt;' format.</a>
+<a  rel="noopener" target="_blank">Handle CMake cache entry in '-D &lt;var&gt;=&lt;value&gt;' format.</a>
 </h4>
 <div class="github-info">
 <div class="date">
@@ -196,7 +196,7 @@ cmake.exe ../Urho3D -G "Visual Studio 16" -A Win32 -DURHO3D_OPENGL=1 -DURHO3D_AN
         </a>
 </div>
 <div class="lines" title="changed 12 files with 39 additions and 124 deletions">
-<a href="https://github.com/urho3d/Urho3D/commit/7937119e634ddf617d57d9e5fe90f2036d3cd207" rel="noopener" target="_blank">
+<a  rel="noopener" target="_blank">
 <span class="added">+39</span>
 <span class="removed">-124</span>
 </a>
@@ -262,10 +262,10 @@ ninja: error: '{urho3d_folder}/android/urho3d-lib/.cxx/cmake/debug/armeabi-v7a/l
 <p>I did <code>git clean</code> for many times and I’m trying <code>cleanAll</code>.</p>
 <p>I’m not very familiar with the build system of Urho, however, it seems that on Android, if it’s not Urho3D itself (Urho3DPlayer.so in our case, as a SHARED), <code>libUrho3D.so</code> will be used as the dependency, please correct me if I’m wrong -</p><aside class="onebox githubblob">
 <header class="source">
-<a href="https://github.com/urho3d/Urho3D/blob/36cabe96398da686cd220f66920f89b124d7c2d2/cmake/Modules/FindUrho3D.cmake#L87" rel="noopener nofollow ugc" target="_blank">github.com</a>
+<a  rel="noopener nofollow ugc" target="_blank">github.com</a>
 </header>
 <article class="onebox-body">
-<h4><a href="https://github.com/urho3d/Urho3D/blob/36cabe96398da686cd220f66920f89b124d7c2d2/cmake/Modules/FindUrho3D.cmake#L87" rel="noopener nofollow ugc" target="_blank">urho3d/Urho3D/blob/36cabe96398da686cd220f66920f89b124d7c2d2/cmake/Modules/FindUrho3D.cmake#L87</a></h4>
+<h4><a  rel="noopener nofollow ugc" target="_blank">urho3d/Urho3D/blob/36cabe96398da686cd220f66920f89b124d7c2d2/cmake/Modules/FindUrho3D.cmake#L87</a></h4>
 <pre class="onebox"><code class="lang-cmake"><ol class="start lines" start="77" style="counter-reset: li-counter 76 ;">
 <li>    string (TOLOWER ${CMAKE_BUILD_TYPE} config)</li><li>    if (BUILD_STAGING_DIR)</li><li>        # Another special case where library location is already known to be in the build tree of Urho3D project</li><li>        set (URHO3D_HOME ${BUILD_STAGING_DIR}/cmake/${config}/${ANDROID_ABI})</li><li>    elseif (JNI_DIR)</li><li>        # Using Urho3D AAR from Maven repository</li><li>        set (URHO3D_HOME ${JNI_DIR}/urho3d/${config}/${ANDROID_ABI})</li><li>    else ()</li><li>        message (FATAL_ERROR "Neither 'BUILD_STAGING_DIR' nor 'JNI_DIR' is set")</li><li>    endif ()</li><li class="selected">    if (URHO3D_LIB_TYPE STREQUAL STATIC)</li><li>        set (URHO3D_LIBRARIES ${URHO3D_HOME}/lib/libUrho3D.a)</li><li>    else ()</li><li>        set (URHO3D_LIBRARIES ${URHO3D_HOME}/lib/libUrho3D.so)</li><li>    endif ()</li><li>    set (SKIP_COMPILE_TEST TRUE)</li><li>elseif (NOT URHO3D_HOME AND DEFINED ENV{URHO3D_HOME})</li><li>    # Library location would be searched (based on URHO3D_HOME variable if provided and in system-wide default location)</li><li>    file (TO_CMAKE_PATH "$ENV{URHO3D_HOME}" URHO3D_HOME)</li><li>endif ()</li><li># Convert to integer literal to match it with our internal cache representation; it also will be used as foreach loop control variable</li>
 </ol></code></pre>

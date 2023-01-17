@@ -58,7 +58,7 @@ Should I add a step in the game CMake to add a symlink to  “Uroh3D\Build\bin�
           <div class="post_content">
 <p>You can pretty much define your resource path and probably play around with it first using Urho3D Player.</p>
 <p>I’m not sure if this works the same if you’re planning to build on Android because the paths are still hardcoded (which does not seem to be a big issue) to Data;CoreData as I recall.</p>
-<p><a href="https://github.com/urho3d/Urho3D/issues/809" rel="nofollow noopener">github.com/urho3d/Urho3D/issues/809</a></p>
+<p><a  rel="nofollow noopener">github.com/urho3d/Urho3D/issues/809</a></p>
 <p>Hope that helps.</p>
           </div>
         </div>
@@ -99,7 +99,7 @@ There are also AutoloadPaths prioritized before the default folders, the default
 <span class="hashtag">#if</span> !defined(<em>DEBUG)<br/>
 engineParameters</em>[“ResourcePaths”] = “ReleaseData;Data;CoreData”;<br/>
 <span class="hashtag">#endif</span><br/>
-<a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Engine/Engine.cpp#L754">github.com/urho3d/Urho3D/blob/m … e.cpp#L754</a></p>
+<a >github.com/urho3d/Urho3D/blob/m … e.cpp#L754</a></p>
 <p>I can’t really speak on .pak as I haven’t used them…</p>
 <p>And I will just mention that with <span class="bbcode-b">thebluefish’s</span> ConfigManager, we can have stuff in a .cfg file and much less recompiling. <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/> <a href="http://discourse.urho3d.io/t/a-more-advanced-ini-parser/1449/1">topic1502.html</a></p>
 <p>HTH</p>
@@ -195,7 +195,7 @@ Also prefix to a path is the same as assuming all path are relatives. so basical
           <div class="user_name">jmiller</div>
           <div class="post_content">
 <p>Yes, Engine::Initialize() adds all of the prefix(es) to each ResourcePaths and does AddResourceDir() with those.<br/>
-<a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Engine/Engine.cpp#L217">github.com/urho3d/Urho3D/blob/m … e.cpp#L217</a></p>
+<a >github.com/urho3d/Urho3D/blob/m … e.cpp#L217</a></p>
 <p>The ResourcePrefixPaths engine parameter described: <a href="https://urho3d.github.io/documentation/HEAD/_main_loop.html">urho3d.github.io/documentation/ … _loop.html</a><br/>
 "ResourcePrefixPaths (string) A semicolon-separated list of resource prefix paths to use. If not specified then the default prefix path is set to executable path. The resource prefix paths can also be defined using URHO3D_PREFIX_PATH env-var. When both are defined, the paths set by -pp takes higher precedence."</p>
           </div>

@@ -136,7 +136,7 @@ Reducing the radius from 2.0f, which admittedly was way too large, to 0.025f now
 I agree, it is strange that the body, normal and position are filled whilst distance and HitFraction are zero.</p>
 </blockquote>
 </aside>
-<p>I’m not certain, but I think the hit fraction is the fraction of the total distance the sphere has traversed before hitting the other body. So if the sphere, when placed, hits anything, (including something “behind” it along the ray) the hitFraction will be 0. Since the <a href="https://github.com/urho3d/Urho3D/blob/796802f595472a414fd9815f9c3dfde7d350d9f4/Source/Urho3D/Physics/PhysicsWorld.cpp#L491" rel="noopener nofollow ugc">distance is calculated from the hitFraction</a>, it is unsurprising that the distance is 0 when the hitfraction is 0 (hitfraction is also set to 0 for the case of no hit, while distance is M_INFINITY, so there is an exception to that).</p>
+<p>I’m not certain, but I think the hit fraction is the fraction of the total distance the sphere has traversed before hitting the other body. So if the sphere, when placed, hits anything, (including something “behind” it along the ray) the hitFraction will be 0. Since the <a  rel="noopener nofollow ugc">distance is calculated from the hitFraction</a>, it is unsurprising that the distance is 0 when the hitfraction is 0 (hitfraction is also set to 0 for the case of no hit, while distance is M_INFINITY, so there is an exception to that).</p>
           </div>
         </div>
       </div>

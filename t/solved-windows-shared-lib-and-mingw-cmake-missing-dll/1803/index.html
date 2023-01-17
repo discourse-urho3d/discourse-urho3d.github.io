@@ -180,7 +180,7 @@ as indicated by the error dialogs, I do not see the .dll appear there.</p>
           <div class="user_name">weitjong</div>
           <div class="post_content">
 <p>As far as I concern, there is nothing wrong with our implementation or otherwise the CI builds on AppVeyor would have failed in each run. The CI build is designed to perform two scaffolding tests, i.e. it performs tests with two downstream projects, one using Urho SDK and one using Urho build tree. The CI build covers both STATIC and SHARED cases. I could not think of anything else it could have gone wrong and causes your issue. Sorry.</p>
-<p>BTW, the DLL must have been copied unless your module is outdated. See this. <a href="https://github.com/urho3d/Urho3D/blob/master/CMake/Modules/FindUrho3D.cmake#L241-L247">github.com/urho3d/Urho3D/blob/m … #L241-L247</a>. Either that, or your CMake version is broken. I recall Ivank encountered some issues with the FindUrho3D module and logged a GitHub issue, but in the end the culprit was his CMake. So, probably you should not rule that out too for your case.</p>
+<p>BTW, the DLL must have been copied unless your module is outdated. See this. <a >github.com/urho3d/Urho3D/blob/m … #L241-L247</a>. Either that, or your CMake version is broken. I recall Ivank encountered some issues with the FindUrho3D module and logged a GitHub issue, but in the end the culprit was his CMake. So, probably you should not rule that out too for your case.</p>
           </div>
         </div>
       </div>

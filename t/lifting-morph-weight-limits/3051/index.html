@@ -34,7 +34,7 @@
           <div class="post_content">
 <p>Is there a reason why morph weights are limited between 0 and 1, other than protecting us from unintended results? If so I would like to propose lifting this limitation altogether (and getting the same result with a <code>Clamp</code>) or being able to set the <code>min</code> and <code>max</code> for each weight (like in Blender), defaulting to 0 and 1.<br/>
 There are situations where a weight greater than 1 - or even negative - is very useful. Since morphs are merely vertex offsets, the effect can easily be multiplied by any scalar.<br/>
-It seems removing <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Graphics/AnimatedModel.cpp#L562">this line</a> would be the simplest solution.</p>
+It seems removing <a >this line</a> would be the simplest solution.</p>
           </div>
         </div>
       </div>
@@ -58,7 +58,7 @@ It seems removing <a href="https://github.com/urho3d/Urho3D/blob/master/Source/U
         <div class="post">
           <div class="user_name">Modanung</div>
           <div class="post_content">
-<p>Right, <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Graphics/AnimatedModel.cpp#L1372">this check</a>.</p>
+<p>Right, <a >this check</a>.</p>
 <p>Will do. Maybe tonight. But don’t let this stop anyone else.</p>
           </div>
         </div>

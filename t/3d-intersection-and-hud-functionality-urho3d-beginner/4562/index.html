@@ -121,7 +121,7 @@ D. After I determine the points of intersection, how will I know how those point
           <div class="user_name">Modanung</div>
           <div class="post_content">
 <p>It can all be done.</p>
-<p>To create the intersection meshes I think you should use <a href="https://discourse.urho3d.io/t/procedural-geometry-helpers/4547">something like CARVE</a>. For the reticles you’re probably best off using a <code>BillboardSet</code>. There’s a <a href="https://github.com/urho3d/Urho3D/tree/master/Source/Samples/07_Billboards">sample</a> demonstrating its use.</p>
+<p>To create the intersection meshes I think you should use <a href="https://discourse.urho3d.io/t/procedural-geometry-helpers/4547">something like CARVE</a>. For the reticles you’re probably best off using a <code>BillboardSet</code>. There’s a <a >sample</a> demonstrating its use.</p>
           </div>
         </div>
       </div>
@@ -1201,7 +1201,7 @@ plane.Model = CoreAssets.Models.Plane;</code></pre>
           <div class="user_name">Kronix</div>
           <div class="post_content">
 <p>Well, I figured out a solution.</p>
-<p>I create a Plane for possible movement at the point of the first/previous touch raycast hit and then find a point on the same plane for the subsequent touch using this code which I found here <a href="https://github.com/urho3d/Urho3D/issues/1504" rel="nofollow noopener">https://github.com/urho3d/Urho3D/issues/1504</a> :</p>
+<p>I create a Plane for possible movement at the point of the first/previous touch raycast hit and then find a point on the same plane for the subsequent touch using this code which I found here <a  rel="nofollow noopener">https://github.com/urho3d/Urho3D/issues/1504</a> :</p>
 <p><code>Vector3 result = cameraRay.origin_ + cameraRay.direction_ * dist;</code></p>
 <p>Then I subtract the coordinate(s) for the first point from this point to get the translate amount.</p>
 <p>I am disappointed that such a common process still must be done manually, unless there’s something easier that I am missing.</p>

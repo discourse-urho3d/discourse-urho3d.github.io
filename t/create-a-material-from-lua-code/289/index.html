@@ -108,7 +108,7 @@ component:Commit()
 <pre><code class="lang-auto">local tech = Technique:new()</code></pre>
 <p>But its result is the message error:<br/>
 attempt to call method ‘new’ (a nil value)</p>
-<p>Could it be because the constructor is not exposed? <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Engine/LuaScript/pkgs/Graphics/Technique.pkg" rel="nofollow noopener">github.com/urho3d/Urho3D/blob/m … hnique.pkg</a></p>
+<p>Could it be because the constructor is not exposed? <a  rel="nofollow noopener">github.com/urho3d/Urho3D/blob/m … hnique.pkg</a></p>
 <p>Later, I tried to load it directly from the resource cache:</p>
 <pre><code class="lang-auto">local tech = cache:GetResource('Techinque', 'Techniques/NoTextureOverlay.xml')</code></pre>
 <p>But the error message is:<br/>

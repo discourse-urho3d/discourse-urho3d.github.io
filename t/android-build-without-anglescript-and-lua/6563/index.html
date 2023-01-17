@@ -109,10 +109,10 @@ Is this deliberately removed?  I could submit a PR (based on previous versions o
 <p>I think you can change these parameters to apply the build flags ( e.g. <code> -D URHO3D_LUA=0</code>):<br/>
 </p><aside class="onebox githubblob">
 <header class="source">
-<a href="https://github.com/urho3d/Urho3D/blob/eb0e7677f67296a318fa7ad3404b43a20b2cfdd0/android/urho3d-lib/build.gradle.kts#L51" rel="noopener nofollow ugc" target="_blank">github.com</a>
+<a  rel="noopener nofollow ugc" target="_blank">github.com</a>
 </header>
 <article class="onebox-body">
-<h4><a href="https://github.com/urho3d/Urho3D/blob/eb0e7677f67296a318fa7ad3404b43a20b2cfdd0/android/urho3d-lib/build.gradle.kts#L51" rel="noopener nofollow ugc" target="_blank">urho3d/Urho3D/blob/eb0e7677f67296a318fa7ad3404b43a20b2cfdd0/android/urho3d-lib/build.gradle.kts#L51</a></h4>
+<h4><a  rel="noopener nofollow ugc" target="_blank">urho3d/Urho3D/blob/eb0e7677f67296a318fa7ad3404b43a20b2cfdd0/android/urho3d-lib/build.gradle.kts#L51</a></h4>
 <pre class="onebox"><code class="lang-kts"><ol class="start lines" start="41" style="counter-reset: li-counter 40 ;">
 <li>compileSdkVersion(30)</li><li>defaultConfig {</li><li>    minSdkVersion(18)</li><li>    targetSdkVersion(30)</li><li>    versionCode = 1</li><li>    versionName = project.version.toString()</li><li>    testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"</li><li>    externalNativeBuild {</li><li>        cmake {</li><li>            arguments.apply {</li><li class="selected">                System.getenv("ANDROID_CCACHE")?.let { add("-D ANDROID_CCACHE=$it") }</li><li>                // Pass along matching env-vars as CMake build options</li><li>                addAll(project.file("../../script/.build-options")</li><li>                    .readLines()</li><li>                    .mapNotNull { variable -&gt; System.getenv(variable)?.let { "-D $variable=$it" } }</li><li>                )</li><li>            }</li><li>            targets.add("Urho3D")</li><li>        }</li><li>    }</li><li>    splits {</li>
 </ol></code></pre>
@@ -124,10 +124,10 @@ Is this deliberately removed?  I could submit a PR (based on previous versions o
 <br/>
 <aside class="onebox githubblob">
 <header class="source">
-<a href="https://github.com/urho3d/Urho3D/blob/eb0e7677f67296a318fa7ad3404b43a20b2cfdd0/android/launcher-app/build.gradle.kts#L48" rel="noopener nofollow ugc" target="_blank">github.com</a>
+<a  rel="noopener nofollow ugc" target="_blank">github.com</a>
 </header>
 <article class="onebox-body">
-<h4><a href="https://github.com/urho3d/Urho3D/blob/eb0e7677f67296a318fa7ad3404b43a20b2cfdd0/android/launcher-app/build.gradle.kts#L48" rel="noopener nofollow ugc" target="_blank">urho3d/Urho3D/blob/eb0e7677f67296a318fa7ad3404b43a20b2cfdd0/android/launcher-app/build.gradle.kts#L48</a></h4>
+<h4><a  rel="noopener nofollow ugc" target="_blank">urho3d/Urho3D/blob/eb0e7677f67296a318fa7ad3404b43a20b2cfdd0/android/launcher-app/build.gradle.kts#L48</a></h4>
 <pre class="onebox"><code class="lang-kts"><ol class="start lines" start="38" style="counter-reset: li-counter 37 ;">
 <li>minSdkVersion(18)</li><li>targetSdkVersion(30)</li><li>applicationId = "io.urho3d.launcher"</li><li>versionCode = 1</li><li>versionName = project.version.toString()</li><li>testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"</li><li>externalNativeBuild {</li><li>    cmake {</li><li>        arguments.apply {</li><li>            System.getenv("ANDROID_CCACHE")?.let { add("-D ANDROID_CCACHE=$it") }</li><li class="selected">            add("-D BUILD_STAGING_DIR=${findProject(":android:urho3d-lib")!!.projectDir}/$buildStagingDir")</li><li>            add("-D URHO3D_PLAYER=1")</li><li>            // Skip building samples for 'STATIC' lib type to reduce the spacetime requirement</li><li>            add("-D URHO3D_SAMPLES=${if (System.getenv("URHO3D_LIB_TYPE") == "SHARED") "1" else "0"}")</li><li>            // Pass along matching env-vars as CMake build options</li><li>            addAll(project.file("../../script/.build-options")</li><li>                .readLines()</li><li>                .filterNot { listOf("URHO3D_PLAYER", "URHO3D_SAMPLES").contains(it) }</li><li>                .mapNotNull { variable -&gt; System.getenv(variable)?.let { "-D $variable=$it" } }</li><li>            )</li><li>        }</li>
 </ol></code></pre>
@@ -235,7 +235,7 @@ Is this deliberately removed?  I could submit a PR (based on previous versions o
 <p>Sorry for late answer. In the last Gradle build system refactoring I have decided to remove the support for using “-P” to pass through the build option in order to simplify the build script and to reduce the possibility of conflict. The documentation file has been updated accordingly. If you guys ever look at the commit itself, you know it is intentional. Note that the site is no longer updated automatically anymore.<br/>
 </p><aside class="onebox githubcommit">
 <header class="source">
-<a href="https://github.com/urho3d/Urho3D/commit/0d4e0388277cf3419e35ac8a9895aca6f8105e7d" rel="noopener" target="_blank">github.com/urho3d/Urho3D</a>
+<a  rel="noopener" target="_blank">github.com/urho3d/Urho3D</a>
 </header>
 <article class="onebox-body">
 <div class="github-row">
@@ -244,7 +244,7 @@ Is this deliberately removed?  I could submit a PR (based on previous versions o
 </div>
 <div class="github-info-container">
 <h4>
-<a href="https://github.com/urho3d/Urho3D/commit/0d4e0388277cf3419e35ac8a9895aca6f8105e7d" rel="noopener" target="_blank">Major refactoring on the Gradle build system.</a>
+<a  rel="noopener" target="_blank">Major refactoring on the Gradle build system.</a>
 </h4>
 <div class="github-info">
 <div class="date">
@@ -257,7 +257,7 @@ Is this deliberately removed?  I could submit a PR (based on previous versions o
         </a>
 </div>
 <div class="lines" title="changed 37 files with 519 additions and 529 deletions">
-<a href="https://github.com/urho3d/Urho3D/commit/0d4e0388277cf3419e35ac8a9895aca6f8105e7d" rel="noopener" target="_blank">
+<a  rel="noopener" target="_blank">
 <span class="added">+519</span>
 <span class="removed">-529</span>
 </a>

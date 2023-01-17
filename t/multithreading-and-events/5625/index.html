@@ -98,10 +98,10 @@ void Urho3D::Player::LightOnOff(bool OnTrue)
 <p>If the <code>m_light</code> is an object instance derived from <code>Urho3D::Component</code> class then that would explain it. The <code>Component::SetEnabled()</code> method will send an event before it returns, but in your case instead of sending the event, the engine simply logging it as a programming error and bailing out.</p>
 <aside class="onebox githubblob">
 <header class="source">
-<a href="https://github.com/urho3d/Urho3D/blob/fda628912d3ba7b0059e26135521f6a285d2dcae/Source/Urho3D/Scene/Component.cpp#L139" rel="nofollow noopener" target="_blank">github.com</a>
+<a  rel="nofollow noopener" target="_blank">github.com</a>
 </header>
 <article class="onebox-body">
-<h4><a href="https://github.com/urho3d/Urho3D/blob/fda628912d3ba7b0059e26135521f6a285d2dcae/Source/Urho3D/Scene/Component.cpp#L139" rel="nofollow noopener" target="_blank">urho3d/Urho3D/blob/fda628912d3ba7b0059e26135521f6a285d2dcae/Source/Urho3D/Scene/Component.cpp#L139</a></h4>
+<h4><a  rel="nofollow noopener" target="_blank">urho3d/Urho3D/blob/fda628912d3ba7b0059e26135521f6a285d2dcae/Source/Urho3D/Scene/Component.cpp#L139</a></h4>
 <pre class="onebox"><code class="lang-cpp"><ol class="start lines" start="129" style="counter-reset: li-counter 128 ;">
 <li>        Scene* scene = GetScene();
 </li>
@@ -153,10 +153,10 @@ void Urho3D::Player::LightOnOff(bool OnTrue)
 </aside>
 <aside class="onebox githubblob">
 <header class="source">
-<a href="https://github.com/urho3d/Urho3D/blob/fda628912d3ba7b0059e26135521f6a285d2dcae/Source/Urho3D/Core/Object.cpp#L299-L303" rel="nofollow noopener" target="_blank">github.com</a>
+<a  rel="nofollow noopener" target="_blank">github.com</a>
 </header>
 <article class="onebox-body">
-<h4><a href="https://github.com/urho3d/Urho3D/blob/fda628912d3ba7b0059e26135521f6a285d2dcae/Source/Urho3D/Core/Object.cpp#L299-L303" rel="nofollow noopener" target="_blank">urho3d/Urho3D/blob/fda628912d3ba7b0059e26135521f6a285d2dcae/Source/Urho3D/Core/Object.cpp#L299-L303</a></h4>
+<h4><a  rel="nofollow noopener" target="_blank">urho3d/Urho3D/blob/fda628912d3ba7b0059e26135521f6a285d2dcae/Source/Urho3D/Core/Object.cpp#L299-L303</a></h4>
 <pre class="onebox"><code class="lang-cpp"><ol class="start lines" start="299" style="counter-reset: li-counter 298 ;">
 <li>if (!Thread::IsMainThread())
 </li>

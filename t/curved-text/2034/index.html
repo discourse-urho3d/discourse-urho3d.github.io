@@ -99,7 +99,7 @@ Vector3 up = Vector3::UP;
 float angle Angle(dir, up)</code></pre>
 <p>You’ll either get back 0 or nan (can’t remember) for the angle. However Unity will translate this as 90.0 degrees. GLM returns back in radians, however once you convert it you would see that it returns 90 degrees as well. Not sure if I did something wrong but I just ended up using glm to be the happy medium in my port from Unity to Urho. Perhaps Urho was also returning radians and I just didn’t notice heh <img alt=":slight_smile:" class="emoji" src="../../../images2/480f97b912eb537e18032299081e582a.png" title=":slight_smile:"/>.</p>
 <p>EDIT:<br/>
-If you see here <a data-bbcode="true" href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Math/Vector3.h#L232" rel="noopener nofollow ugc">https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Math/Vector3.h#L232</a> it will find the magnitude of the dir and so you end up with a n / 0 case.</p>
+If you see here <a data-bbcode="true"  rel="noopener nofollow ugc">https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Math/Vector3.h#L232</a> it will find the magnitude of the dir and so you end up with a n / 0 case.</p>
           </div>
         </div>
       </div>
@@ -112,7 +112,7 @@ If you see here <a data-bbcode="true" href="https://github.com/urho3d/Urho3D/blo
           <div class="user_name">Victor</div>
           <div class="post_content">
 <p>Still working out some issues, so I probably won’t have any examples soon. However <span class="bbcode-b">yushli</span>, the only thing I’m really doing to curve my text is manipulating this example here:</p>
-<p><a data-bbcode="true" href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/UI/Text3D.cpp#L492-L542" rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/UI/Text3D.cpp#L492-L542</a></p>
+<p><a data-bbcode="true"  rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/UI/Text3D.cpp#L492-L542</a></p>
 <p>You can get a curve through using a parabola method like the following:</p>
 <pre><code class="lang-auto">    static glm::vec3 SampleParabola(glm::vec3 start, glm::vec3 end, float height, float t)
     {

@@ -52,10 +52,10 @@ BiasParameters s_FarBias = new BiasParameters() { ConstantBias = 0.001f };</p>
           <div class="post_content">
 <p>A quick fix (maybe?) is divide by 2. I’m not sure why, maybe one of the wizards here could help more</p><aside class="onebox githubblob">
 <header class="source">
-<a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Graphics/OpenGL/OGLGraphics.cpp#L1818" rel="noopener nofollow ugc" target="_blank">github.com</a>
+<a  rel="noopener nofollow ugc" target="_blank">github.com</a>
 </header>
 <article class="onebox-body">
-<h4><a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Graphics/OpenGL/OGLGraphics.cpp#L1818" rel="noopener nofollow ugc" target="_blank">urho3d/Urho3D/blob/master/Source/Urho3D/Graphics/OpenGL/OGLGraphics.cpp#L1818</a></h4>
+<h4><a  rel="noopener nofollow ugc" target="_blank">urho3d/Urho3D/blob/master/Source/Urho3D/Graphics/OpenGL/OGLGraphics.cpp#L1818</a></h4>
 <pre class="onebox"><code class="lang-cpp"><ol class="start lines" start="1808" style="counter-reset: li-counter 1807 ;">
 <li>    }
 </li>
@@ -107,10 +107,10 @@ BiasParameters s_FarBias = new BiasParameters() { ConstantBias = 0.001f };</p>
 </aside>
 <aside class="onebox githubblob">
 <header class="source">
-<a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Graphics/View.cpp#L751" rel="noopener nofollow ugc" target="_blank">github.com</a>
+<a  rel="noopener nofollow ugc" target="_blank">github.com</a>
 </header>
 <article class="onebox-body">
-<h4><a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Graphics/View.cpp#L751" rel="noopener nofollow ugc" target="_blank">urho3d/Urho3D/blob/master/Source/Urho3D/Graphics/View.cpp#L751</a></h4>
+<h4><a  rel="noopener nofollow ugc" target="_blank">urho3d/Urho3D/blob/master/Source/Urho3D/Graphics/View.cpp#L751</a></h4>
 <pre class="onebox"><code class="lang-cpp"><ol class="start lines" start="741" style="counter-reset: li-counter 740 ;">
 <li>            camera-&gt;IsOrthographic() ? 0.0f : 1.0f);
 </li>
@@ -206,7 +206,7 @@ BiasParameters s_FarBias = new BiasParameters() { ConstantBias = 0.001f };</p>
           <div class="post_content">
 <p>The “a lot” means it’s grossly skewing the location of the object on the screen downwards a LOT.   I was applying it to Far terrain which goes from under the camera on to the horizon, about 1800 miles away.  The Near Terrain only goes to around 300 miles, so beyond 300 miles, you should only be seeing the Far Terrain.</p>
 <p>Here is what it’s supposed to look like, with OpenGL DepthBias set to 0.000035, it’s working well, and looks like this – here you can see the far terrain matches up exactly with Far Water, to fade out together in unison.  No Offset here is apparent.</p>
-<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/iow4M9gOOfGf9GrstIQWoRq4F5v.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/8/80ec9f4b87fdd9138428f85140d0b4276527acd9.png" rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="iow4M9gOOfGf9GrstIQWoRq4F5v"  height="298" src="../../../images2/1f43765631783bfcfe06a05822d73c91.png" width="690"/><div class="meta">
+<p><div class="lightbox-wrapper"><a class="lightbox"   rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="iow4M9gOOfGf9GrstIQWoRq4F5v"  height="298" src="../../../images2/1f43765631783bfcfe06a05822d73c91.png" width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">779×337 43.4 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg>
 </div></a></div></p>
 <p>When I set the DepthBias to 0.001, the far terrain drops WAY DOWN on screen.  What is really happening here is that the FarClip is kicking in way too close… so it’s not really moving it DOWN, but rather is simply culling out all Far Terrain beyond a certain point.   The DepthBias is effectively rampantly causing the FarClip plane to skoot WAY CLOSER.  Here is the result of 0.001:</p>

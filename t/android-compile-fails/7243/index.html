@@ -35,7 +35,7 @@
 <p>Hi.<br/>
 I tried to compile urho3d for Android.<br/>
 I use docker like <a href="https://urho3d.io/docs/getting-started/quick-start:" rel="noopener nofollow ugc">https://urho3d.io/docs/getting-started/quick-start:</a><br/>
-git clone <a class="inline-onebox" href="https://github.com/urho3d/Urho3D.git" rel="noopener nofollow ugc">GitHub - urho3d/Urho3D: Cross-platform 2D and 3D game engine</a><br/>
+git clone <a class="inline-onebox"  rel="noopener nofollow ugc">GitHub - urho3d/Urho3D: Cross-platform 2D and 3D game engine</a><br/>
 cd Urho3D<br/>
 script/dockerized.sh android rake build install</p>
 <p>But it fails:</p>
@@ -89,8 +89,8 @@ It works, thank u.</p>
           <div class="user_name">weitjong</div>
           <div class="post_content">
 <p>It has been awhile since I last checked the CI/CD workflow in our project GitHub action. But based on these logs from the last build against the main branch, I am sure both STATIC and SHARED lib type are still working fine.</p>
-<p><a class="inline-onebox" href="https://github.com/urho3d/Urho3D/runs/6225610854?check_suite_focus=true#step:8:8763">Use inline for global consts in MathDefs.h &amp; GraphicsDefs.h (#2918) · urho3d/Urho3D@78bbe50 · GitHub</a><br/>
-<a class="inline-onebox" href="https://github.com/urho3d/Urho3D/runs/6225610954?check_suite_focus=true#step:8:9319">Use inline for global consts in MathDefs.h &amp; GraphicsDefs.h (#2918) · urho3d/Urho3D@78bbe50 · GitHub</a></p>
+<p><a class="inline-onebox" >Use inline for global consts in MathDefs.h &amp; GraphicsDefs.h (#2918) · urho3d/Urho3D@78bbe50 · GitHub</a><br/>
+<a class="inline-onebox" >Use inline for global consts in MathDefs.h &amp; GraphicsDefs.h (#2918) · urho3d/Urho3D@78bbe50 · GitHub</a></p>
 <p>The difference between these two jobs are one of them got the “URHO3D_LIB_TYPE” env-var defined to “SHARED”. Urho3D prefers “STATIC” by default.</p>
 <aside class="quote no-group" data-post="3" data-topic="7243" data-username="feresmu">
 <div class="title">

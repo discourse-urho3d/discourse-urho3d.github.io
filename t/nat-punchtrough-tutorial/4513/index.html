@@ -60,8 +60,8 @@
 <p><strong>Note:</strong> NAT punchtrough master server should be placed on a public server!</p>
 <hr/>
 <p><strong>How to let others join my server?</strong></p>
-<p>52_NATPunchtrough sample shows just how to do that. When you create a server using NAT punchtrough mode your server will generate unique GUID. You can then retrieve it by calling <code>Network::GetGUID</code> (<a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Network/Network.h#L74" rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Network/Network.h#L74</a>).</p>
-<p>This GUID is later used by others to allow them to connect to your server using NAT punchtrough mode. Instead of calling <code>Network::Connect</code> they’ll have to call <code>Network::AttemptNATPunchtrough</code> (<a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Network/Network.h#L76" rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Network/Network.h#L76</a>)</p>
+<p>52_NATPunchtrough sample shows just how to do that. When you create a server using NAT punchtrough mode your server will generate unique GUID. You can then retrieve it by calling <code>Network::GetGUID</code> (<a  rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Network/Network.h#L74</a>).</p>
+<p>This GUID is later used by others to allow them to connect to your server using NAT punchtrough mode. Instead of calling <code>Network::Connect</code> they’ll have to call <code>Network::AttemptNATPunchtrough</code> (<a  rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Network/Network.h#L76</a>)</p>
 <hr/>
 <p><strong>One more thing!</strong> I actually have already running NAT punchtrough master server on Digital Ocean so if you would like just to test it out you can access it here: <code>178.62.212.92:61111</code>. It was built with the repo mentioned previously.</p>
 <hr/>

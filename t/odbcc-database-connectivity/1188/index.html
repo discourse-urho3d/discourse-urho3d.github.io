@@ -309,7 +309,7 @@ rake make</p>
         <div class="post">
           <div class="user_name">weitjong</div>
           <div class="post_content">
-<p>I am about to merge the branch anytime now once Travis CI builds all cleared. As mentioned in <a href="https://github.com/urho3d/Urho3D/issues/820">github.com/urho3d/Urho3D/issues/820</a>, the branch includes changes that will break existing Lua scripts as the VariantMap getter function signatures have been changed. For Linux and Mac users, you can use this one liner to migrate the scripts to use the new signature. Execute this in a terminal after cd-ing into the parent directory containing all your Lua scripts.</p>
+<p>I am about to merge the branch anytime now once Travis CI builds all cleared. As mentioned in <a >github.com/urho3d/Urho3D/issues/820</a>, the branch includes changes that will break existing Lua scripts as the VariantMap getter function signatures have been changed. For Linux and Mac users, you can use this one liner to migrate the scripts to use the new signature. Execute this in a terminal after cd-ing into the parent directory containing all your Lua scripts.</p>
 <pre><code class="lang-auto">find . -type f -exec grep -lP "eventData:Get.+?\(.+?\)" {} \; |xargs -n 1  perl -pi.bak -e 's/eventData:Get(.+?)\((?:([^,)]+),\s*(.*?)|(.+?))\)/eventData[\3\4]:Get\1(\2)/g'</code></pre>
 <p>It is left as an exercise for users on Windows.</p>
           </div>

@@ -404,7 +404,7 @@ const bool Lua = false;</p>
           <div class="user_name">weitjong</div>
           <div class="post_content">
 <p>It looks like you have superseded the provided “Precompiled.h” with your own “stdafx.h” file. We usually do not advise user to abuse PCH in this way. The purpose of PCH is speeding up the build, not to save typing.</p>
-<p>Assuming the “Urho3D.h” is being generated correctly, I suppose your problem come from the “stdafx.h” not being included in all the Urho3D source files as you have claimed. Did you modify the Urho3D’s CMakeLists.txt also to tell CMake to configure MSVC to use it? Or you just did this manually via Visual Studio IDE? Observe the last argument in this line. <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/CMakeLists.txt#L143">github.com/urho3d/Urho3D/blob/m … s.txt#L143</a>. You may want to modify it to “stdafx.h”. However, once you do that, you are on your own.</p>
+<p>Assuming the “Urho3D.h” is being generated correctly, I suppose your problem come from the “stdafx.h” not being included in all the Urho3D source files as you have claimed. Did you modify the Urho3D’s CMakeLists.txt also to tell CMake to configure MSVC to use it? Or you just did this manually via Visual Studio IDE? Observe the last argument in this line. <a >github.com/urho3d/Urho3D/blob/m … s.txt#L143</a>. You may want to modify it to “stdafx.h”. However, once you do that, you are on your own.</p>
           </div>
         </div>
       </div>

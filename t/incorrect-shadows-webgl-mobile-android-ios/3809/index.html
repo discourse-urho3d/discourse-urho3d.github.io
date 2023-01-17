@@ -64,7 +64,7 @@ Maybe WebGL on mobiles is just broken. Have you tried native demos?</p>
           <div class="post_content">
 <p>Can confirm they work correctly on my Desktop browser (chrome and Firefox) and the native (Linux) build. Seems to mobile specific.</p>
 <p>Tried tweaking some biases, and light ranges, but seems to not fix it.</p>
-<p>Looking at the light class I can see a define DESKTOP_GRAHPICS which sets the max number of cascades, <a href="https://github.com/urho3d/Urho3D/blob/26ff4fce30bcc8f5a9f21e0e938d221cb2a53eaa/Source/Urho3D/Graphics/Light.h#L47" rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/26ff4fce30bcc8f5a9f21e0e938d221cb2a53eaa/Source/Urho3D/Graphics/Light.h#L47</a></p>
+<p>Looking at the light class I can see a define DESKTOP_GRAHPICS which sets the max number of cascades, <a  rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/26ff4fce30bcc8f5a9f21e0e938d221cb2a53eaa/Source/Urho3D/Graphics/Light.h#L47</a></p>
 <p>Not sure if it’s worth trying to unset that, just don’t know how to configure cmake to do it.</p>
 <p>–</p>
 <p>Really enjoying the performance otherwise, compiling with EMSCRIPTEN_WASM=1 gives a massive performance boost, the Physics example is running at 60fps on Nexus 4 and iPhone 5S.</p>
@@ -79,7 +79,7 @@ Maybe WebGL on mobiles is just broken. Have you tried native demos?</p>
         <div class="post">
           <div class="user_name">eldog</div>
           <div class="post_content">
-<p>OK got shadows on iOS safari now (not android chrome though)  thanks <span class="mention">@Eugene</span> for pointing to the Light class. I added an <code>__EMSCRIPTEN__</code> check to <a class="inline-onebox-loading" href="https://github.com/urho3d/Urho3D/blob/460a3a38c0833245b9dd6fa789a18ff4e519d82d/Source/Urho3D/Graphics/GraphicsDefs.h#L34" rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/460a3a38c0833245b9dd6fa789a18ff4e519d82d/Source/Urho3D/Graphics/GraphicsDefs.h#L34</a></p>
+<p>OK got shadows on iOS safari now (not android chrome though)  thanks <span class="mention">@Eugene</span> for pointing to the Light class. I added an <code>__EMSCRIPTEN__</code> check to <a class="inline-onebox-loading"  rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/460a3a38c0833245b9dd6fa789a18ff4e519d82d/Source/Urho3D/Graphics/GraphicsDefs.h#L34</a></p>
 <pre><code>#if defined(IOS) || defined(TVOS) || defined(__ANDROID__) || defined(__arm__) || defined(__aarch64__) || defined(__EMSCRIPTEN__)
 #define MOBILE_GRAPHICS
 #else
@@ -127,7 +127,7 @@ Maybe WebGL on mobiles is just broken. Have you tried native demos?</p>
         <div class="post">
           <div class="user_name">weitjong</div>
           <div class="post_content">
-<p>I have raised it as an issue. <a href="https://github.com/urho3d/Urho3D/issues/2195">https://github.com/urho3d/Urho3D/issues/2195</a></p>
+<p>I have raised it as an issue. <a >https://github.com/urho3d/Urho3D/issues/2195</a></p>
           </div>
         </div>
       </div>
@@ -153,7 +153,7 @@ Maybe WebGL on mobiles is just broken. Have you tried native demos?</p>
           <div class="user_name">eldog</div>
           <div class="post_content">
 <p>OK got something to appear via quick and ugly hacking:</p>
-<p>I changed <a href="https://github.com/urho3d/Urho3D/blob/dbfbda76c3ee05f316d0b5aadf43600e43937158/Source/Urho3D/Graphics/OpenGL/OGLGraphics.cpp#L2840" rel="nofollow noopener">this line</a> in <code>OGLGraphics.cpp</code></p>
+<p>I changed <a  rel="nofollow noopener">this line</a> in <code>OGLGraphics.cpp</code></p>
 <p>to be</p>
 <p><code>shadowMapFormat_ = GetRGBAFormat();</code></p>
 <p>Basically if it doesn’t suppoer <code>WEBGL_depth_texture</code> then tell it to use a RGBA one.</p>

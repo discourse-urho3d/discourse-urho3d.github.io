@@ -138,7 +138,7 @@
           <div class="user_name">jmiller</div>
           <div class="post_content">
 <p>Hi lassademus.</p>
-<p>Saving a screenshot is easier in current master; e.g.: <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Samples/Sample.inl#L340">https://github.com/urho3d/Urho3D/blob/master/Source/Samples/Sample.inl#L340</a></p>
+<p>Saving a screenshot is easier in current master; e.g.: <a >https://github.com/urho3d/Urho3D/blob/master/Source/Samples/Sample.inl#L340</a></p>
 <p>Here is a bit of my code with added functionality.<br/>
 ‘cfg_’ is the <a data-bbcode="true" href="https://discourse.urho3d.io/t/a-more-advanced-ini-parser/1449">most useful ini/config Manager by thebluefish</a>. Here it is just setting the path from .cfg file.</p>
 <pre><code class="lang-auto">bool App::SaveScreenshot(String dir /* = String::EMPTY */) const {
@@ -209,7 +209,7 @@ const String App::UTCTime(bool local /* = true */) const {
           <div class="user_name">jmiller</div>
           <div class="post_content">
 <p>The OpenGL Takescreenshot() is normally RGB (except on mobile):<br/>
-<a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Graphics/OpenGL/OGLGraphics.cpp#L608">https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Graphics/OpenGL/OGLGraphics.cpp#L608</a></p>
+<a >https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Graphics/OpenGL/OGLGraphics.cpp#L608</a></p>
 <p>Like your original function, this one reads Texture components directly – but for RGBA, passed Texture must already be RGBA (4 components) so problem is the same.</p>
 <pre><code class="lang-auto">bool App::SaveTexturePNG(Texture2D* texture, const String&amp; filePath) const {
   SharedPtr&lt;Image&gt; image(new Image(context_));

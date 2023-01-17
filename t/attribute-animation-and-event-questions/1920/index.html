@@ -42,7 +42,7 @@
     &lt;/attributeanimation&gt;
 &lt;/objectanimation&gt;</code></pre>
 <p>To see if animation is finished i decided to use “eventframe” (undocumented feature it seems).</p>
-<p>Q1: Why eventtype is uint? ( <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Scene/ValueAnimation.cpp#L123" rel="nofollow noopener">github.com/urho3d/Urho3D/blob/m … n.cpp#L123</a> ). It ends up converted to StringHash. Would it not be better to allow string types so they have more meaningful names? I could make PR changing it to string, but it is not backwards-compatible so need developer blessing on this one. Ofc it can be made backwards-compatible with ugly hack of converting numeric strings to integers before generating StringHash but its ugly.</p>
+<p>Q1: Why eventtype is uint? ( <a  rel="nofollow noopener">github.com/urho3d/Urho3D/blob/m … n.cpp#L123</a> ). It ends up converted to StringHash. Would it not be better to allow string types so they have more meaningful names? I could make PR changing it to string, but it is not backwards-compatible so need developer blessing on this one. Ofc it can be made backwards-compatible with ugly hack of converting numeric strings to integers before generating StringHash but its ugly.</p>
 <p>Q2: Can we modify scene graph from “eventframe” event? I want to remove node from scene graph when animation is done.</p>
 <pre><code class="lang-auto">animation-&gt;SubscribeToEvent(StringHash(1), URHO3D_HANDLER(MyObj, OnPickupAnimationEnd));
 ...

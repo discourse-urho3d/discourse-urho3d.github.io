@@ -38,7 +38,7 @@
 <p>They both produce this output (the last line also shows up in a popup box, so it kinda works)</p>
 <p>ERROR: Could not create window, root cause: ‘Could not initialize EGL’</p>
 <p><a href="https://hastebin.com/raw/ehufinugaf" rel="nofollow noopener">https://hastebin.com/raw/ehufinugaf</a> --01HelloWorld output</p>
-<p><a href="https://github.com/urho3d/Urho3D/blob/master/Source/ThirdParty/SDL/src/video/SDL_egl.c#L272" rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/Source/ThirdParty/SDL/src/video/SDL_egl.c#L272</a> --line showing me the error</p>
+<p><a  rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/Source/ThirdParty/SDL/src/video/SDL_egl.c#L272</a> --line showing me the error</p>
 <p><a href="http://m.uploadedit.com/bbtc/1512498083388.txt" rel="nofollow noopener">http://m.uploadedit.com/bbtc/1512498083388.txt</a> --strace output</p>
 <p>I’d try the experimental arm build process but that’s a single paragraph that’s clearly written for more intermediate users. I have no idea what half the stuff it refers to, so i can’t even attempt to build that just yet.</p>
 <p>But is this issue with the .debs workaroundable do you think?</p>
@@ -284,10 +284,10 @@
 <p>I have already answered that. The name of the problematic header is “GL.h”. Compare the content of that file in your host system to Urho prepared ARM sysroot to see if there is anything wrong. I have highlighted one of the line.</p>
 <aside class="onebox githubblob">
 <header class="source">
-<a href="https://github.com/urho3d/armhf-sysroot/blob/master/usr/include/GLES/gl.h#L683" rel="nofollow noopener" target="_blank">github.com</a>
+<a  rel="nofollow noopener" target="_blank">github.com</a>
 </header>
 <article class="onebox-body">
-<h4><a href="https://github.com/urho3d/armhf-sysroot/blob/master/usr/include/GLES/gl.h#L683" rel="nofollow noopener" target="_blank">urho3d/armhf-sysroot/blob/master/usr/include/GLES/gl.h#L683</a></h4>
+<h4><a  rel="nofollow noopener" target="_blank">urho3d/armhf-sysroot/blob/master/usr/include/GLES/gl.h#L683</a></h4>
 <pre class="onebox"><code class="lang-h"><ol class="start lines" start="673" style="counter-reset: li-counter 672 ;">
 <li>GL_API void GL_APIENTRY glGetBufferParameteriv (GLenum target, GLenum pname, GLint *params);</li>
 <li>GL_API void GL_APIENTRY glGetClipPlanex (GLenum pname, GLfixed eqn[4]);</li>
@@ -660,10 +660,10 @@ It gave this output<br/>
 <p>Good. Then based on the code in this line below then the compiler should use the “GLES2/gl2.h” header file (only today I am responding to you with my primay system in front of me).</p>
 <aside class="onebox githubblob">
 <header class="source">
-<a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Graphics/OpenGL/OGLGraphicsImpl.h#L36" rel="nofollow noopener" target="_blank">github.com</a>
+<a  rel="nofollow noopener" target="_blank">github.com</a>
 </header>
 <article class="onebox-body">
-<h4><a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Graphics/OpenGL/OGLGraphicsImpl.h#L36" rel="nofollow noopener" target="_blank">urho3d/Urho3D/blob/master/Source/Urho3D/Graphics/OpenGL/OGLGraphicsImpl.h#L36</a></h4>
+<h4><a  rel="nofollow noopener" target="_blank">urho3d/Urho3D/blob/master/Source/Urho3D/Graphics/OpenGL/OGLGraphicsImpl.h#L36</a></h4>
 <pre class="onebox"><code class="lang-h"><ol class="start lines" start="26" style="counter-reset: li-counter 25 ;">
 <li>#include "../../Core/Timer.h"
 </li>
@@ -716,10 +716,10 @@ It gave this output<br/>
 <p>In Urho prepared sysroot for our CI build, we have something like this.</p>
 <aside class="onebox githubblob">
 <header class="source">
-<a href="https://github.com/urho3d/armhf-sysroot/blob/master/usr/include/GLES2/gl2.h#L448" rel="nofollow noopener" target="_blank">github.com</a>
+<a  rel="nofollow noopener" target="_blank">github.com</a>
 </header>
 <article class="onebox-body">
-<h4><a href="https://github.com/urho3d/armhf-sysroot/blob/master/usr/include/GLES2/gl2.h#L448" rel="nofollow noopener" target="_blank">urho3d/armhf-sysroot/blob/master/usr/include/GLES2/gl2.h#L448</a></h4>
+<h4><a  rel="nofollow noopener" target="_blank">urho3d/armhf-sysroot/blob/master/usr/include/GLES2/gl2.h#L448</a></h4>
 <pre class="onebox"><code class="lang-h"><ol class="start lines" start="438" style="counter-reset: li-counter 437 ;">
 <li>GL_APICALL void GL_APIENTRY glGetFloatv (GLenum pname, GLfloat *data);</li>
 <li>GL_APICALL void GL_APIENTRY glGetFramebufferAttachmentParameteriv (GLenum target, GLenum attachment, GLenum pname, GLint *params);</li>

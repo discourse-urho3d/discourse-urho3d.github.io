@@ -79,7 +79,7 @@ Regards</p>
           <div class="user_name">PerfectSlayer</div>
           <div class="post_content">
 <p>Thanks for the heads up and the documentation udpate!</p>
-<p>I found it few hours later when I start reading the source code of the DBE… I saw <a href="https://github.com/weitjong/dockerized/blob/9d0a513690bb20170e525ee176e663f4083d0f0e/urho3d/rpi/sysroot/rpi_entrypoint.sh#L25" rel="noopener nofollow ugc">the following lines</a> and try it. The build binaries are well for armv7. Thanks!</p>
+<p>I found it few hours later when I start reading the source code of the DBE… I saw <a  rel="noopener nofollow ugc">the following lines</a> and try it. The build binaries are well for armv7. Thanks!</p>
 <hr/>
 <p><em>Quick question:</em> does it mean DBE only supports RPI 3 and 4 only? (no more 1 or 2, but I guess I can still build them myself using CMake)</p>
 <hr/>
@@ -87,7 +87,7 @@ Regards</p>
 <pre><code class="lang-auto">Bus error
 </code></pre>
 <p>Then the sample stops with error code 135.</p>
-<p><s>I checked at the source code and it seems to be related to <code>Tracy</code>, the engine profiler: <a href="https://github.com/urho3d/Urho3D/blob/9f968f3d24a97ee0619e1310522ebb6e89507363/Source/ThirdParty/Tracy/client/TracyProfiler.cpp#L848" rel="noopener nofollow ugc">related source</a>.</s> It look like the sample is receiving a <a href="https://en.wikipedia.org/wiki/Bus_error" rel="noopener nofollow ugc">SIG_BUS</a>.</p>
+<p><s>I checked at the source code and it seems to be related to <code>Tracy</code>, the engine profiler: <a  rel="noopener nofollow ugc">related source</a>.</s> It look like the sample is receiving a <a href="https://en.wikipedia.org/wiki/Bus_error" rel="noopener nofollow ugc">SIG_BUS</a>.</p>
 <p>As I just reflash a new raspbian, I increase the video memory to 128mo and even 256mo but I still get the issue. I also tried the three GL Driver options (1. <code>Legacy-Original non-GL desktop driver</code>, 2. <code>GL (Fake KMS)-OpenGL desktop driver with fake KMS</code> and 3. <code>GL (Full KMS)-Open GL desktop driver with full KMS</code>) from <code>raspi-config</code> but the samples keep crashing with the same error.</p>
 <p>My next step will be to find a way to disable profiling at all and check if sample works. I saw <code>URHO3D_PROFILING </code> from the documentation and <code>TRACY_ENABLE</code> from source code. I just need to find a way to use them!</p>
 <p>If you have any better idea for the <code>Bus error</code>, I am all ears opened! Thanks again</p>
@@ -109,7 +109,7 @@ I can see from <code>cat /proc/cpu/alignment</code> the <code>User</code> count 
 <div class="quote-controls"></div>
 <img alt="" class="avatar" height="20" src="../../../images2/08e2073e430966d2ccebb25d9a0443a5.png" width="20"/> PerfectSlayer:</div>
 <blockquote>
-<p>I found it few hours later when I start reading the source code of the DBE… I saw <a href="https://github.com/weitjong/dockerized/blob/9d0a513690bb20170e525ee176e663f4083d0f0e/urho3d/rpi/sysroot/rpi_entrypoint.sh#L25">the following lines</a> and try it. The build binaries are well for armv7. Thanks!</p>
+<p>I found it few hours later when I start reading the source code of the DBE… I saw <a >the following lines</a> and try it. The build binaries are well for armv7. Thanks!</p>
 <p><em>Quick question:</em> does it mean DBE only supports RPI 3 and 4 only? (no more 1 or 2, but I guess I can still build them myself using CMake)</p>
 </blockquote>
 </aside>

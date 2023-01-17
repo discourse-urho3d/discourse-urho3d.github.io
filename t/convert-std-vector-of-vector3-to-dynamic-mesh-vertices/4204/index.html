@@ -80,7 +80,7 @@
         auto* object = node-&gt;CreateComponent&lt;StaticModel&gt;();
         object-&gt;SetModel(fromScratchModel);
 </code></pre>
-<p>Here’s where I got my idea for putting the vertices in a float std::vector: <a href="https://github.com/urho3d/Urho3D/blob/218e4d7592cf8681001e795cac6672fb29fb156a/Source/Samples/34_DynamicGeometry/DynamicGeometry.cpp#L168" rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/218e4d7592cf8681001e795cac6672fb29fb156a/Source/Samples/34_DynamicGeometry/DynamicGeometry.cpp#L168</a></p>
+<p>Here’s where I got my idea for putting the vertices in a float std::vector: <a  rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/218e4d7592cf8681001e795cac6672fb29fb156a/Source/Samples/34_DynamicGeometry/DynamicGeometry.cpp#L168</a></p>
 <p>To explain my above code: A have a std::vector full of Urho3D Vector3’s and I want to convert them to something that a dynamic mesh can use, and to do this I put each vector’s components into a std::vector of floats that will later be used as an array. From the link, it looks like you are supposed to put the vertex data into an array like so: Vector3.x, Vector3.y, Vector3.z, normal.x, normal.y, normal.z then you do the same for the next 6 indexes.</p>
 <p>My problem is that I am not getting a mesh that is correct (I can upload a picture). I’m wondering if the way I’m doing all of this is correct, or maybe I should go review my code that generates the original Vector3 std::vector. The part I’m most concerned with is the for-loop at the very top of the code.</p>
 <p>Thanks for any help, please ask for clarification on anything!</p>

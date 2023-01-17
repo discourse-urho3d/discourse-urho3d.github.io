@@ -38,7 +38,7 @@
 <p>Uncaught emscripten_get_num_gamepads() can only be called after having first called emscripten_sample_gamepad_data() and that function has returned EMSCRIPTEN_RESULT_SUCCESS!</p>
 </blockquote>
 <p>Adding <code>emscripten_sample_gamepad_data()</code> to the <code>Sample</code> constructor does not help. Adding it to <code>Sample::Setup()</code> does not help.  It just still spits back the same error. I tried removing all references to anything called <em>joystick</em> or <em>input</em> as a test and I still get the same error. The same is true for <code>Water::Water()</code> and <code>Water::Setup()</code>.</p>
-<p>I did find <a href="https://github.com/urho3d/Urho3D/issues/2324" rel="nofollow noopener">a reference</a> to an SDL-related issue but I do not think it is of any help.</p>
+<p>I did find <a  rel="nofollow noopener">a reference</a> to an SDL-related issue but I do not think it is of any help.</p>
 <p>My command looks like</p>
 <blockquote>
 <p>emcc																<br/>

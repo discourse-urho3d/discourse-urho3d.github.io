@@ -191,7 +191,7 @@ mingw32-make: *** [all] Error 2</code></pre>
         <div class="post">
           <div class="user_name">weitjong</div>
           <div class="post_content">
-<p>Interesting that you have this issue also using MinGW compiler on Windows host. I thought only MSVC compiler on Windows host get it. Try changing this line <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/CMakeLists.txt#L132">github.com/urho3d/Urho3D/blob/m … s.txt#L132</a> to read: “if (CMAKE_HOST_WIN32)” and see whether it helps.</p>
+<p>Interesting that you have this issue also using MinGW compiler on Windows host. I thought only MSVC compiler on Windows host get it. Try changing this line <a >github.com/urho3d/Urho3D/blob/m … s.txt#L132</a> to read: “if (CMAKE_HOST_WIN32)” and see whether it helps.</p>
           </div>
         </div>
       </div>
@@ -266,7 +266,7 @@ See also “F:/dev/Urho3D_master/Android/CMakeFiles/CMakeOutput.log”.</p>
 <div class="quote-controls"></div>
 <img alt="" class="avatar" height="20" src="../../../images2/5dc21abd616a69d8b82c2d56dfa657a5.png" width="20"/> weitjong:</div>
 <blockquote>
-<p>Interesting that you have this issue also using MinGW compiler on Windows host. I thought only MSVC compiler on Windows host get it. Try changing this line <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/CMakeLists.txt#L132" rel="nofollow noopener">github.com/urho3d/Urho3D/blob/m … s.txt#L132</a> to read: “if (CMAKE_HOST_WIN32)” and see whether it helps.</p>
+<p>Interesting that you have this issue also using MinGW compiler on Windows host. I thought only MSVC compiler on Windows host get it. Try changing this line <a  rel="nofollow noopener">github.com/urho3d/Urho3D/blob/m … s.txt#L132</a> to read: “if (CMAKE_HOST_WIN32)” and see whether it helps.</p>
 </blockquote>
 </aside>
 <p>Unfortunately I still get the same error <img alt=":frowning:" class="emoji" src="../../../images2/2506cac83464f3f86e257fa414340d4c.png" title=":frowning:"/> . I even tried building with mingw build script and it is still giving me that same error</p>
@@ -286,7 +286,7 @@ See also “F:/dev/Urho3D_master/Android/CMakeFiles/CMakeOutput.log”.</p>
 <div class="quote-controls"></div>
 <img alt="" class="avatar" height="20" src="../../../images2/f4748da84624d02ddd97927fbea23bd6.png" width="20"/> Bluemoon:</div>
 <blockquote>
-<p>[quote=“weitjong”]Interesting that you have this issue also using MinGW compiler on Windows host. I thought only MSVC compiler on Windows host get it. Try changing this line <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/CMakeLists.txt#L132">github.com/urho3d/Urho3D/blob/m … s.txt#L132</a> to read: “if (CMAKE_HOST_WIN32)” and see whether it helps.</p>
+<p>[quote=“weitjong”]Interesting that you have this issue also using MinGW compiler on Windows host. I thought only MSVC compiler on Windows host get it. Try changing this line <a >github.com/urho3d/Urho3D/blob/m … s.txt#L132</a> to read: “if (CMAKE_HOST_WIN32)” and see whether it helps.</p>
 </blockquote>
 </aside>
 <p>Unfortunately I still get the same error <img alt=":frowning:" class="emoji" src="../../../images2/2506cac83464f3f86e257fa414340d4c.png" title=":frowning:"/> . I even tried building with mingw build script and it is still giving me that same error[/quote]<br/>
@@ -352,7 +352,7 @@ ANDROID_MAIN_C_PATH:FILEPATH=C:/Users/weitjong/SDKs/urho3d/android-Build/include
 <div class="quote-controls"></div>
 <img alt="" class="avatar" height="20" src="../../../images2/5dc21abd616a69d8b82c2d56dfa657a5.png" width="20"/> weitjong:</div>
 <blockquote>
-<p>Try changing this line <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/CMakeLists.txt#L132" rel="nofollow noopener">github.com/urho3d/Urho3D/blob/m … s.txt#L132</a> to read: “if (CMAKE_HOST_WIN32)” </p>
+<p>Try changing this line <a  rel="nofollow noopener">github.com/urho3d/Urho3D/blob/m … s.txt#L132</a> to read: “if (CMAKE_HOST_WIN32)” </p>
 </blockquote>
 </aside>
           </div>
@@ -375,7 +375,7 @@ ANDROID_MAIN_C_PATH:FILEPATH=C:/Users/weitjong/SDKs/urho3d/android-Build/include
 <div class="quote-controls"></div>
 <img alt="" class="avatar" height="20" src="../../../images2/5dc21abd616a69d8b82c2d56dfa657a5.png" width="20"/> weitjong:</div>
 <blockquote>
-<p>Try changing this line <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/CMakeLists.txt#L132">github.com/urho3d/Urho3D/blob/m … s.txt#L132</a> to read: “if (CMAKE_HOST_WIN32)” [/quote]</p>
+<p>Try changing this line <a >github.com/urho3d/Urho3D/blob/m … s.txt#L132</a> to read: “if (CMAKE_HOST_WIN32)” [/quote]</p>
 </blockquote>
 </aside>
 <p>No. Just pull and you should be all good. Finger cross.</p>
@@ -1720,7 +1720,7 @@ Visual Studio, Xcode, Eclipse, CodeBlocks, QtCreator, GCC, <span class="bbcode-b
           <div class="post_content">
 <p>Regarding your problem with Code::Blocks on Windows XP, I think it is more useful if you post the output of CMake when it configured and generated the *.cbp project file. I have not seen XP in action for a few years now, so I could not comment more on your particular problem. Having said that, we have a number of success stories from users who use C::B as their IDE on both Windows and Linux host systems. I myself have no problem with it on my Linux. I do recall a few cases where Code::Blocks users on Windows encountering problem due to the default TDM-GCC MinGW that come bundled with C::B. Our standard recommendation is, install the standalone MinGW-W64 compiler toolchain separately and then configure your C::B and CMake to find and use the MinGW-W64 compiler toolchain. This can be done by ensuring the toolchain executables are in the PATH environment variable.</p>
 <p>One last note on this. We have recently also enhanced our common CMake module to enable precompiled header for GCC/Clang. One beneficial side effect of this is, any incompatible or too-old-version compiler toolchain would already falter at the time of CMake attempting to configure and generate the project file, instead of have to wait until the actual build time. BTW, this is the reason why I ask you to double check the output of CMake first. TDM-GCC MinGW is one of the confirmed compiler that doesn’t cut it.</p>
-<p>As for the LLVM/Clang. We have test build the Urho3D library with it in each CI build. The last 4 build jobs on Linux CI build environment are using Clang, see <a href="https://travis-ci.org/urho3d/Urho3D/builds/55791878">travis-ci.org/urho3d/Urho3D/builds/55791878</a>.</p>
+<p>As for the LLVM/Clang. We have test build the Urho3D library with it in each CI build. The last 4 build jobs on Linux CI build environment are using Clang, see <a >travis-ci.org/urho3d/Urho3D/builds/55791878</a>.</p>
           </div>
         </div>
       </div>

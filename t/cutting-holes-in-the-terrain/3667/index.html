@@ -103,7 +103,7 @@ Navigation etc - I don’t know.</p>
           <div class="user_name">rku</div>
           <div class="post_content">
 <p>I thought of that. It would likely be easiest approach, but then these two terrains would not be stitched together and lesser problem is gaps would be allowed only at terrain boundaries.</p>
-<p><span class="mention">@Eugene</span> thanks for pointers. Any idea if sentinel height value could be used with heightmap itself? I tried naive thing (discarding vertices <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Graphics/Terrain.cpp#L706" rel="nofollow noopener">here</a>) and it ended up being a royal mess because clearly i have no idea what im doing.</p>
+<p><span class="mention">@Eugene</span> thanks for pointers. Any idea if sentinel height value could be used with heightmap itself? I tried naive thing (discarding vertices <a  rel="nofollow noopener">here</a>) and it ended up being a royal mess because clearly i have no idea what im doing.</p>
           </div>
         </div>
       </div>
@@ -445,7 +445,7 @@ I just noticed that white pixel on the right was tiny bit darker than white pixe
         <div class="post">
           <div class="user_name">Modanung</div>
           <div class="post_content">
-<p>Looking at the <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Graphics/Terrain.cpp">code</a> it seems like neighbours should be set before creating the terrain geometry:</p>
+<p>Looking at the <a >code</a> it seems like neighbours should be set before creating the terrain geometry:</p>
 <pre><code class="lang-auto">void Terrain::HandleNeighborTerrainCreated(StringHash eventType, VariantMap&amp; eventData)
 {
     UpdateEdgePatchNeighbors();

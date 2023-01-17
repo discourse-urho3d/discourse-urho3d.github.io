@@ -110,7 +110,7 @@
           <div class="user_name">lahiruzz</div>
           <div class="post_content">
 <p>I found why this is happen on windows.<br/>
-<a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/IO/FileSystem.cpp" rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/IO/FileSystem.cpp</a> (<code>bool FileSystem::FileExists(const String&amp; fileName) const</code>)<br/>
+<a  rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/IO/FileSystem.cpp</a> (<code>bool FileSystem::FileExists(const String&amp; fileName) const</code>)<br/>
 here we have this check statement</p>
 <pre><code class="lang-auto">#ifdef WIN32
     DWORD attributes = GetFileAttributesW(WString(fixedName).CString());

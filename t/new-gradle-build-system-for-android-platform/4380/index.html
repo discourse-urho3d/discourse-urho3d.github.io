@@ -32,7 +32,7 @@
         <div class="post">
           <div class="user_name">weitjong</div>
           <div class="post_content">
-<p>I have pushed the initial Gradle build system for Android to <code>gradle-kotlin-dsl</code> development branch. <del>It is still WIP.</del> I haven’t finished clean up the CMake build script to remove now old and redundant fixtures for Android build. I have only tested it on Linux host system with symlink workaround I mentioned in <a href="https://github.com/urho3d/Urho3D/issues/743">https://github.com/urho3d/Urho3D/issues/743</a>. <del>The workaround only works when invoking gradle wrapper from the CLI (Still haven’t figured out how to prevent the Android plugin bug to manifest itself during Android Studio “gradle sync”). However, if you don’t modify the gradle build script in Android Studio editor then you should not see the problem at all. Please test the build system on Urho3D project only, or if you want to try it on your own project then make sure you have a proper backup plan due to symlink bug. You have been warned.</del></p>
+<p>I have pushed the initial Gradle build system for Android to <code>gradle-kotlin-dsl</code> development branch. <del>It is still WIP.</del> I haven’t finished clean up the CMake build script to remove now old and redundant fixtures for Android build. I have only tested it on Linux host system with symlink workaround I mentioned in <a >https://github.com/urho3d/Urho3D/issues/743</a>. <del>The workaround only works when invoking gradle wrapper from the CLI (Still haven’t figured out how to prevent the Android plugin bug to manifest itself during Android Studio “gradle sync”). However, if you don’t modify the gradle build script in Android Studio editor then you should not see the problem at all. Please test the build system on Urho3D project only, or if you want to try it on your own project then make sure you have a proper backup plan due to symlink bug. You have been warned.</del></p>
 <p>For CLI user, after checking out the development branch, cd to the Urho3D project root and run:</p>
 <pre><code class="lang-auto">./gradlew build
 </code></pre>
@@ -729,7 +729,7 @@ ninja: build stopped: subcommand failed.</p>
 <p>Also is there any way how I can reduce the build directory size?</p>
 </blockquote>
 </aside>
-<p>There will be one more way to reduce the APK size for testing, if I have carried out my full plan. I have chosen to setup a multi-modules Gradle build for a few reasons. I have not mentioned it in the <a href="https://github.com/urho3d/Urho3D/issues/743">https://github.com/urho3d/Urho3D/issues/743</a> because at that time I was not even sure I could finish the initial work. One of the reason is to be able to have each sample being setup as a module in itself. I imagine user can just choose one of many sample apps in the IDE and be able to build and run the individual APK. This will be similar to how iOS sample apps are being setup currently.</p>
+<p>There will be one more way to reduce the APK size for testing, if I have carried out my full plan. I have chosen to setup a multi-modules Gradle build for a few reasons. I have not mentioned it in the <a >https://github.com/urho3d/Urho3D/issues/743</a> because at that time I was not even sure I could finish the initial work. One of the reason is to be able to have each sample being setup as a module in itself. I imagine user can just choose one of many sample apps in the IDE and be able to build and run the individual APK. This will be similar to how iOS sample apps are being setup currently.</p>
           </div>
         </div>
       </div>
@@ -823,10 +823,10 @@ Still wondering how my Windows 7 can survive it though. I only disable Lua subsy
 <p>There is no specific config file for ninja, but you can get the inspiration from here to tweak some CMake variables.</p>
 <aside class="onebox githubblob">
 <header class="source">
-<a href="https://github.com/urho3d/Urho3D/blob/70049ba58210ad26d8402363cf4d864f6c294155/CMake/Toolchains/Emscripten.cmake#L165-L173" target="_blank">github.com</a>
+<a  target="_blank">github.com</a>
 </header>
 <article class="onebox-body">
-<h4><a href="https://github.com/urho3d/Urho3D/blob/70049ba58210ad26d8402363cf4d864f6c294155/CMake/Toolchains/Emscripten.cmake#L165-L173" target="_blank">urho3d/Urho3D/blob/70049ba58210ad26d8402363cf4d864f6c294155/CMake/Toolchains/Emscripten.cmake#L165-L173</a></h4>
+<h4><a  target="_blank">urho3d/Urho3D/blob/70049ba58210ad26d8402363cf4d864f6c294155/CMake/Toolchains/Emscripten.cmake#L165-L173</a></h4>
 <pre class="onebox"><code class="lang-cmake"><ol class="start lines" start="165" style="counter-reset: li-counter 164 ;">
 <li># Use response files on Windows host</li>
 <li>if (CMAKE_HOST_WIN32)</li>
@@ -1048,10 +1048,10 @@ I got ccache permission error as my g++ during the initial build process. The is
 <p>This is a common pitfall for Ubuntu distro. Fedora, the distro that I use, will setup the PATH environment variable correctly after the <code>ccache</code> package is installed. You probably need the following line as well as in our CI (which also uses Ubuntu) to fix the mistake of the Ubuntu <code>ccache</code> package.</p>
 <aside class="onebox githubblob" data-onebox-src="https://github.com/urho3d/Urho3D/blob/0f01ee7ccc283924906651abdbb81ae70eb149ca/.travis.yml#L341">
 <header class="source">
-<a href="https://github.com/urho3d/Urho3D/blob/0f01ee7ccc283924906651abdbb81ae70eb149ca/.travis.yml#L341" rel="noopener" target="_blank">github.com</a>
+<a  rel="noopener" target="_blank">github.com</a>
 </header>
 <article class="onebox-body">
-<h4><a href="https://github.com/urho3d/Urho3D/blob/0f01ee7ccc283924906651abdbb81ae70eb149ca/.travis.yml#L341" rel="noopener" target="_blank">urho3d/Urho3D/blob/0f01ee7ccc283924906651abdbb81ae70eb149ca/.travis.yml#L341</a></h4>
+<h4><a  rel="noopener" target="_blank">urho3d/Urho3D/blob/0f01ee7ccc283924906651abdbb81ae70eb149ca/.travis.yml#L341</a></h4>
 <pre class="onebox">    <code class="lang-yml">
       <ol class="start lines" start="331" style="counter-reset: li-counter 330 ;">
           <li>    - ORG_GRADLE_PROJECT_ANDROID_ABI=arm64-v8a ORG_GRADLE_PROJECT_URHO3D_LIB_TYPE=STATIC SYS_IMG=android-25 PLATFORM=android-21</li>
@@ -1174,7 +1174,7 @@ I don’t have much experience in Android platform but if I find something I can
 <img alt="" class="avatar" height="20" src="../../../images2/5dc21abd616a69d8b82c2d56dfa657a5.png" width="20"/> weitjong:</div>
 <blockquote>
 <p>There is no specific config file for ninja, but you can get the inspiration from here to tweak some CMake variables.</p>
-<p><a href="https://github.com/urho3d/Urho3D/blob/70049ba58210ad26d8402363cf4d864f6c294155/CMake/Toolchains/Emscripten.cmake#L165-L173">https://github.com/urho3d/Urho3D/blob/70049ba58210ad26d8402363cf4d864f6c294155/CMake/Toolchains/Emscripten.cmake#L165-L173</a></p>
+<p><a >https://github.com/urho3d/Urho3D/blob/70049ba58210ad26d8402363cf4d864f6c294155/CMake/Toolchains/Emscripten.cmake#L165-L173</a></p>
 <p>Copy those lines and modify them as necessary to a top level CMakeLists.txt or UrhoCommon.cmake. Change the condition to become <code>if (ANDROID AND CMAKE_HOST_WIN32)</code> or something like that. Good luck.</p>
 </blockquote>
 </aside>

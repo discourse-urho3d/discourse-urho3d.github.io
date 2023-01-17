@@ -95,7 +95,7 @@ Here’s how a vertex is in my custom objects</p>
           <div class="post_content">
 <p>The difference is in the normals, and with it the number of vertices.<br/>
 Normals are interpolated along connected faces, but each vertex only holds a single normal direction. So to sharpen the edges they are split. To achieve this effect with custom geometry you’d have to create six separate faces using 24 vertices and orthogonal normals, in case of a cube.<br/>
-This is why the pyramid in the <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Samples/34_DynamicGeometry/DynamicGeometry.cpp#L163-L263">DynamicGeometry</a> sample uses 18 vertices, not 5.</p>
+This is why the pyramid in the <a >DynamicGeometry</a> sample uses 18 vertices, not 5.</p>
           </div>
         </div>
       </div>
@@ -127,7 +127,7 @@ This is why the pyramid in the <a href="https://github.com/urho3d/Urho3D/blob/ma
 <p>To calculate the normals correctly would it be best to double the amount of vertices of each so it’s 48 in total?</p>
 </blockquote>
 </aside>
-<p>No, 24 is enough. In this case you’ll want to calculate the normals as in the <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Samples/34_DynamicGeometry/DynamicGeometry.cpp#L204-L217">linked-to sample</a>: By calculating the cross product of the edge direction.</p>
+<p>No, 24 is enough. In this case you’ll want to calculate the normals as in the <a >linked-to sample</a>: By calculating the cross product of the edge direction.</p>
           </div>
         </div>
       </div>
@@ -222,10 +222,10 @@ Did I mention how little experience I have with custom geometry?</p>
 <p>And these:<br/>
 <aside class="onebox githubblob">
 <header class="source">
-<a href="https://github.com/urho3d/Urho3D/blob/master/Source/Samples/34_DynamicGeometry/DynamicGeometry.cpp#L205-L212" rel="nofollow noopener" target="_blank">github.com</a>
+<a  rel="nofollow noopener" target="_blank">github.com</a>
 </header>
 <article class="onebox-body">
-<h4><a href="https://github.com/urho3d/Urho3D/blob/master/Source/Samples/34_DynamicGeometry/DynamicGeometry.cpp#L205-L212" rel="nofollow noopener" target="_blank">urho3d/Urho3D/blob/master/Source/Samples/34_DynamicGeometry/DynamicGeometry.cpp#L205-L212</a></h4>
+<h4><a  rel="nofollow noopener" target="_blank">urho3d/Urho3D/blob/master/Source/Samples/34_DynamicGeometry/DynamicGeometry.cpp#L205-L212</a></h4>
 <pre class="onebox"><code class="lang-cpp"><ol class="start lines" start="205" style="counter-reset: li-counter 204 ;">
 <li>for (unsigned i = 0; i &lt; numVertices; i += 3)</li>
 <li>{</li>

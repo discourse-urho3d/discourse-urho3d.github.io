@@ -148,7 +148,7 @@ The tiles are 256px by 256px PNGs.</p>
         <div class="post">
           <div class="user_name">JTippetts1</div>
           <div class="post_content">
-<p>TextureUnit is an enum defined at <a class="inline-onebox" href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Graphics/GraphicsDefs.h#L321">Urho3D/GraphicsDefs.h at master · urho3d/Urho3D · GitHub</a> which just gives enum name handles to the various commonly-used texture types in the default shaders. The awkward part of this scheme is that if you are not using the default shaders, or you are using heavily-edited shaders, you still need to use a member of TextureUnit to designate which slot they’re bound to, even if the name doesn’t match up to your usage. So to bind to texture slot 0, you’d call SetTexture with TU_DIFFUSE, for example.</p>
+<p>TextureUnit is an enum defined at <a class="inline-onebox" >Urho3D/GraphicsDefs.h at master · urho3d/Urho3D · GitHub</a> which just gives enum name handles to the various commonly-used texture types in the default shaders. The awkward part of this scheme is that if you are not using the default shaders, or you are using heavily-edited shaders, you still need to use a member of TextureUnit to designate which slot they’re bound to, even if the name doesn’t match up to your usage. So to bind to texture slot 0, you’d call SetTexture with TU_DIFFUSE, for example.</p>
 <p>You don’t pass an image to SetTexture, you pass a Texture. <span class="mention">@SirNate0</span> already mentioned how to get the Image data into the Texture2D, by way of Texture2D::SetData which, when passed an Image, will construct the texture from the image. Your job will be to create the Image, pass it to a Texture2D by SetData, and bind that texture to the appropriate texture slot in the shader.</p>
           </div>
         </div>
@@ -309,7 +309,7 @@ I checked the return values and they all came back as <code>1</code>. Where as b
         <div class="post">
           <div class="user_name">JTippetts1</div>
           <div class="post_content">
-<p>Well, it’s not going to work just creating a blank material. If you read the <a href="https://urho3d.github.io/documentation/HEAD/_materials.html">documentation</a> for Materials, you can see that the XML format provides a lot of different tags for passes, techniques, cull settings, etc… If you elect to not define your material via XML, then you need to duplicate those necessary setups in code. For example, if you don’t provide a technique, it will fall-back to a default which is a NoTexture technique, meaning no textures will be applied. You can see what the Material defaults look like <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Graphics/Material.cpp#L1246">here</a>. You need to define your material so that it renders your object exactly as you need it, including technique which is pretty important. The easiest way to do it is to define the material XML, load it from the resource cache and assign it to the object. Then you can bind your texture to the material texture slot it needs to go. But if you really can’t/won’t do that for some reason, you can manually create a Technique that does what you need it to do.</p>
+<p>Well, it’s not going to work just creating a blank material. If you read the <a href="https://urho3d.github.io/documentation/HEAD/_materials.html">documentation</a> for Materials, you can see that the XML format provides a lot of different tags for passes, techniques, cull settings, etc… If you elect to not define your material via XML, then you need to duplicate those necessary setups in code. For example, if you don’t provide a technique, it will fall-back to a default which is a NoTexture technique, meaning no textures will be applied. You can see what the Material defaults look like <a >here</a>. You need to define your material so that it renders your object exactly as you need it, including technique which is pretty important. The easiest way to do it is to define the material XML, load it from the resource cache and assign it to the object. Then you can bind your texture to the material texture slot it needs to go. But if you really can’t/won’t do that for some reason, you can manually create a Technique that does what you need it to do.</p>
           </div>
         </div>
       </div>
@@ -581,11 +581,11 @@ tileObject-&gt;SetMaterial( tileMaterial );
 <aside class="onebox githubfolder">
 <header class="source">
 <img class="site-icon" height="16" src="../../../images2/0973ea8ce7121c320f68413e2a2f23ab.svg" width="16"/>
-<a href="https://github.com/urho3d/Urho3D/wiki" rel="noopener nofollow ugc" target="_blank">github.com</a>
+<a  rel="noopener nofollow ugc" target="_blank">github.com</a>
 </header>
 <article class="onebox-body">
 <img class="thumbnail onebox-full-image" height="60" src="https://avatars.githubusercontent.com/u/5592833?s=400&amp;amp;v=4" width="60"/>
-<h3><a href="https://github.com/urho3d/Urho3D/wiki" rel="noopener nofollow ugc" target="_blank">urho3d/Urho3D</a></h3>
+<h3><a  rel="noopener nofollow ugc" target="_blank">urho3d/Urho3D</a></h3>
 <p><span class="label1">Cross-platform 2D and 3D game engine. Contribute to urho3d/Urho3D development by creating an account on GitHub.</span></p>
 </article>
 <div class="onebox-metadata">

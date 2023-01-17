@@ -140,7 +140,7 @@ Armature<br/>
           <div class="post_content">
 <p>Oh I did something really similar as you seem to be doing. I did parts of a cave with bones at their openings and connected them randomly together in Urho.<br/>
 Looks like this in Blender: <a href="http://i.imgur.com/kVRdiCB.jpg" rel="nofollow noopener">i.imgur.com/kVRdiCB.jpg</a><br/>
-The project doesn’t build currently and this seems to be the only existing image: <a href="http://vignette2.wikia.nocookie.net/urho3d/images/1/19/Sus1.jpg" rel="nofollow noopener">vignette2.wikia.nocookie.net/urho3d/images/1/19/Sus1.jpg</a><br/>
+The project doesn’t build currently and this seems to be the only existing image: <a  rel="nofollow noopener">vignette2.wikia.nocookie.net/urho3d/images/1/19/Sus1.jpg</a><br/>
 You could check it out at <a href="https://github.com/damu/Spooky-Urho-Sample" rel="nofollow noopener">github.com/damu/Spooky-Urho-Sample</a> but I think it’s not building with Urho &gt;=1.5 currently.<br/>
 The bones in Blender seem to have their root/tail at the opening, yours their head. I think the tail (this is in your case in the middle of the model) is in Urho reported as the position.<br/>
 I’m loading the models as AnimatedModel’s. The interesting code for the room stuff seems to be in world_part.h, world_part.cpp and misc.h. The world is actually generated here <a href="https://github.com/damu/Spooky-Urho-Sample/blob/master/gs_playing.cpp#L127" rel="nofollow noopener">github.com/damu/Spooky-Urho-Sam … g.cpp#L127</a><br/>

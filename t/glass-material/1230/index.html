@@ -98,10 +98,10 @@ Screenshot</summary>
           <div class="post_content">
 <p>Hi,</p>
 <p>Sure but you need to source refraction from somewhere:<br/>
-<a data-bbcode="true" href="https://github.com/urho3d/Urho3D/blob/master/bin/CoreData/RenderPaths/Forward.xml" rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/bin/CoreData/RenderPaths/Forward.xml</a><br/>
+<a data-bbcode="true"  rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/bin/CoreData/RenderPaths/Forward.xml</a><br/>
 Pretty sure the water shader grabs the environment texture unit from this pass.<br/>
-<a data-bbcode="true" href="https://github.com/urho3d/Urho3D/blob/master/bin/CoreData/Techniques/Water.xml" rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/bin/CoreData/Techniques/Water.xml</a><br/>
-<a data-bbcode="true" href="https://github.com/urho3d/Urho3D/blob/master/bin/CoreData/Shaders/GLSL/Water.glsl" rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/bin/CoreData/Shaders/GLSL/Water.glsl</a><br/>
+<a data-bbcode="true"  rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/bin/CoreData/Techniques/Water.xml</a><br/>
+<a data-bbcode="true"  rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/bin/CoreData/Shaders/GLSL/Water.glsl</a><br/>
 Yep. But I think it’s an inverted camera matrix maybe, so it’s only good for perfectly flat horizontal water. You might need to re-jig the renderpath to just source the whole framebuffer result into a texture and then distort it with the normals of the sphere, yay refraction.</p>
 <p>For reflection you’ll need some cube map, maybe bound to the zone’s texture unit slot.</p>
           </div>

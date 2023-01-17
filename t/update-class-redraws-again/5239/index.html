@@ -90,13 +90,13 @@ It depends on the game, but since I figure you have no physics yet, the Update m
           <div class="user_name">jmiller</div>
           <div class="post_content">
 <p>Sample.inl is included by all samples to handle common single key events (like take screenshot).<br/>
-<a href="https://github.com/urho3d/Urho3D/blob/master/Source/Samples/Sample.inl#L92" rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/Source/Samples/Sample.inl#L92</a><br/>
-<a href="https://github.com/urho3d/Urho3D/blob/master/Source/Samples/Sample.inl#L245" rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/Source/Samples/Sample.inl#L245</a></p>
+<a  rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/Source/Samples/Sample.inl#L92</a><br/>
+<a  rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/Source/Samples/Sample.inl#L245</a></p>
 <p>More sophisticated samples like NinjaSnowWar and CharacterDemo also do <em>constant</em> input polling with <code>Input::GetKeyDown()</code> and others from class <a href="https://urho3d.github.io/documentation/HEAD/_input.html" rel="nofollow noopener">Input</a>.</p>
-<p><a href="https://github.com/urho3d/Urho3D/blob/master/Source/Samples/18_CharacterDemo/Character.h" rel="nofollow noopener">Character</a>::controls_  holds the control states like keys and mouse buttons down.<br/>
-The app clears and sets these states on normal Update event: <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Samples/18_CharacterDemo/CharacterDemo.cpp#L258" rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/Source/Samples/18_CharacterDemo/CharacterDemo.cpp#L258</a></p>
+<p><a  rel="nofollow noopener">Character</a>::controls_  holds the control states like keys and mouse buttons down.<br/>
+The app clears and sets these states on normal Update event: <a  rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/Source/Samples/18_CharacterDemo/CharacterDemo.cpp#L258</a></p>
 <p><code>Character</code> has subscribed to FixedUpdate ( with the LogicComponent <code>SetUpdateEventMask(USE_FIXEDUPDATE)</code> in Start() ) where it is continually acting on those.<br/>
-<a href="https://github.com/urho3d/Urho3D/blob/master/Source/Samples/18_CharacterDemo/Character.cpp#L84" rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/Source/Samples/18_CharacterDemo/Character.cpp#L84</a></p>
+<a  rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/Source/Samples/18_CharacterDemo/Character.cpp#L84</a></p>
 <p>Hope that helps – let us know how it is going!</p>
 <p>Offtopic <span class="mention">@codefive</span>:  I never met a language I did not like. <img alt=":slight_smile:" class="emoji" src="../../../images2/7bdd5ab4d67675d002d99e4b948c8cdb.png" title=":slight_smile:"/> (non-programming language <img alt=":laughing:" class="emoji" src="../../../images2/b0fdc4fb6086de559ad986fd4b9c7c63.png" title=":laughing:"/>)</p>
           </div>

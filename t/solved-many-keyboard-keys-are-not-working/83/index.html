@@ -137,7 +137,7 @@ That is not an exhaustive list, but for some reason SDL seems to be doing someth
           <div class="post_content">
 <p>And fixed Urho3D to handle the raw instead of silently ignoring it, but now where should I stuff it, in a field on Input that can be queried, or should I add a new field to the E_KEYDOWN and E_KEYUP events.  I did the adding a field on the variant as per this commit for now, seems simple enough:  <a href="https://github.com/OvermindDL1/Urho3D/commit/34fb88990691733ccdaedbbfb93e8f19beff7f82" rel="nofollow noopener">github.com/OvermindDL1/Urho3D/c … 19beff7f82</a></p>
 <p>If that looks good, and if others can test compile on all platforms, this should be fully backwards compatible unless anyone uses internal calls (bad bad), but if this looks good then feel free to pull the pull request, I am submitting it now in case it seems good.</p>
-<p>EDIT:  Pull request: <a href="https://github.com/urho3d/Urho3D/pull/191" rel="nofollow noopener">github.com/urho3d/Urho3D/pull/191</a><br/>
+<p>EDIT:  Pull request: <a  rel="nofollow noopener">github.com/urho3d/Urho3D/pull/191</a><br/>
 Remember, not tried compiling other platforms, but they ‘should’ compile?  Need testers.</p>
           </div>
         </div>

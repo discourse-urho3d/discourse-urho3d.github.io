@@ -35,8 +35,8 @@
 <p>Hi everyone,</p>
 <p>How can I ensure my shader has access to the depthBuffer, and is this what I want if I want to access scene depth information as a sampler2D? I’m also trying to access vert to fragment depth information using the varying vDepth = GetDepth(gl_Position) in the vertex shader. I’m implementing (someone else’s) depth of field shader, but suspect I’m not getting the right depth information because the shader behaves as if plane of focus is always 0 from the camera. Also, I am having a hard time understanding from the documentation how the various xml files work together to ensure the shader is invoked with the required information made available (such as depth). If someone could at least point me to a good explanation of how the xml works or explain it, that would be much appreicated. Thanks! Below is my confused xml.</p>
 <p>Docs I’m using in addition to the examples:<br/>
-<a class="onebox" href="http://code.google.com/p/urho3d/wiki/Shaders" rel="nofollow noopener" target="_blank">code.google.com/p/urho3d/wiki/Shaders</a><br/>
-<a class="onebox" href="http://code.google.com/p/urho3d/wiki/RenderPaths" rel="nofollow noopener" target="_blank">code.google.com/p/urho3d/wiki/RenderPaths</a></p>
+<a class="onebox"  rel="nofollow noopener" target="_blank">code.google.com/p/urho3d/wiki/Shaders</a><br/>
+<a class="onebox"  rel="nofollow noopener" target="_blank">code.google.com/p/urho3d/wiki/RenderPaths</a></p>
 <p>Shaders/DOF.xml</p>
 <pre><code class="lang-auto">&lt;shaders&gt;
     &lt;shader/&gt;
@@ -61,7 +61,7 @@
           <div class="user_name">weitjong</div>
           <div class="post_content">
 <p>Welcome to the forum. Perhaps you are confused because you are referring to outdated documentation in google-code. The latest documentation can be found in Urho3D website (the URL is in the footer of this forum).<br/>
-Incidentally Lasse (author of Urho3D) has just recently refactored the code for shaders parsing. I am afraid you will have to re-read the relevant sections in the new documentation (more specifically changes introduced in this commit <a href="https://github.com/urho3d/Urho3D/commit/383e248b44627aba1e906af2e757c895531e1246">github.com/urho3d/Urho3D/commit … 95531e1246</a>).</p>
+Incidentally Lasse (author of Urho3D) has just recently refactored the code for shaders parsing. I am afraid you will have to re-read the relevant sections in the new documentation (more specifically changes introduced in this commit <a >github.com/urho3d/Urho3D/commit … 95531e1246</a>).</p>
           </div>
         </div>
       </div>

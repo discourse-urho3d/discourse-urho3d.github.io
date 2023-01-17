@@ -92,7 +92,7 @@
 <p>I plan to make this syncing process automatically someday but with ‘Export on Save’ it works quite ok. But that might depend on your model. So an export can take some time and once you have a scene with multiple objects that might be taken even longer. For this I support Collection-Instances (formerly Group-Instances).</p>
 <p>My setup was to have 2 blends. One blend with my props and one with the scene that is using mostly blender-linked collections and are therefore not exported:</p>
 <p>prop-setup:<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/aFjgYMAyzSZMc5Y4D307ZJmXzzH.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/4/4ac134a16fafa4c6d6b865e9126bfaf1d6ff76d9.jpeg" title="image"><img alt="image" data-base62-sha1="aFjgYMAyzSZMc5Y4D307ZJmXzzH"  height="431" src="../../../images2/4d32509124018cf5cdb95359dbe697b3.jpeg"  width="690"/><div class="meta">
+<div class="lightbox-wrapper"><a class="lightbox"   title="image"><img alt="image" data-base62-sha1="aFjgYMAyzSZMc5Y4D307ZJmXzzH"  height="431" src="../../../images2/4d32509124018cf5cdb95359dbe697b3.jpeg"  width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1920×1200 567 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg>
 </div></a></div></p>
 <ol>
@@ -101,27 +101,27 @@
 <li>Here you see the assigned ComponentNodetree for the active-object. (You can assign multiple ComponentNodetrees to reuse them)</li>
 </ol>
 <p>Scene-Setup:<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/v98E6y2Di9ZaOgQxR4C1fAvLi86.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/d/da4bdfa03cac942873b17ae384c9d221f4159e76.jpeg" title="image"><img alt="image" data-base62-sha1="v98E6y2Di9ZaOgQxR4C1fAvLi86"  height="431" src="../../../images2/8b28146680800de81f1ee85d39a4972e.jpeg"  width="690"/><div class="meta">
+<div class="lightbox-wrapper"><a class="lightbox"   title="image"><img alt="image" data-base62-sha1="v98E6y2Di9ZaOgQxR4C1fAvLi86"  height="431" src="../../../images2/8b28146680800de81f1ee85d39a4972e.jpeg"  width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1920×1200 728 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg>
 </div></a></div></p>
 <p>The scene itself has not much own geometry. In this case only the landscape. Everything else is linked in blender. You can just use “File-&gt;Link-&gt;Props.blend-&gt;Collections-&gt;Cart” to link the cart collection which will from then on be available for adding “shift-a -&gt; collection-instances” (1). To export this is ultrafast because it creates basically only a scene-file.</p>
 <p>At 2) you see the cart-instance and in the outline 3) you see it is linked. In the scene it creates a <a href="https://github.com/dertom95/ggj2020/blob/master/src/Components/GroupInstance.h">“GroupInstance”-Component</a> which will load the collection when the scene is instantiated.</p>
 <p>Back to the nodetrees:<br/>
 Creating materials:<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/zIUfFWU03RcXt9ry9XaMLbwUEp4.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/f/fa5fa1263968931bd34984bcdca233f0b4aabd52.jpeg" title="image"><img alt="image" data-base62-sha1="zIUfFWU03RcXt9ry9XaMLbwUEp4"  height="431" src="../../../images2/b5c151291777ae8481a6521f583875d6.jpeg"  width="690"/><div class="meta">
+<div class="lightbox-wrapper"><a class="lightbox"   title="image"><img alt="image" data-base62-sha1="zIUfFWU03RcXt9ry9XaMLbwUEp4"  height="431" src="../../../images2/b5c151291777ae8481a6521f583875d6.jpeg"  width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1920×1200 661 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg>
 </div></a></div></p>
 <p>On the top left-viewport you see it is in rendered mode. Blender tells the urho3d-blender-runtime its viewport-data, urho3d creates a rendertexture and sends it via net ( sry, I’m using pyzmq in blender, which you need to install(super easy) ) back to blender which will draw it on the viewport. Selecting the object and seeing e.g. in Edit-Mode the mesh works. That was actually very hard to get right, especially as I’m not a math-genius and all those matrices or finding the right one or who to get what where was really painful and I almost gave up.</p>
 <p>Aditionally to the renderered model itself you can also add urho3d-gizmos to the scene. In this case the sphere is the collision-shape of its rigidbody. You can toggle phyiscs-visuals at 4).<br/>
 At 3) you see the actual nodetree. In this case very simple. I almost just used vertex color in this project. But you can also assign textures, normalmaps, and can choose all available techniques. You also have texture-preview and they get automatically updated once you put them in the resource-path<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/t7oPQJABUhio4bCRqFpQhf4W1Iz.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/c/cc1534941d1a9e4acfaea9e699d1bce8227a519f.png" title="image"><img alt="image" data-base62-sha1="t7oPQJABUhio4bCRqFpQhf4W1Iz"  height="431" src="../../../images2/0fac30af5f49a88278694556a38c743d.png"  width="690"/><div class="meta">
+<div class="lightbox-wrapper"><a class="lightbox"   title="image"><img alt="image" data-base62-sha1="t7oPQJABUhio4bCRqFpQhf4W1Iz"  height="431" src="../../../images2/0fac30af5f49a88278694556a38c743d.png"  width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1920×1200 488 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg>
 </div></a></div></p>
 <p>Component-Nodetrees:</p>
 <p>To use component-trees you need to select the exported json manually. For this go to one node-editor. e.g. materials or Blender-Compositing-View and select ‘JSON-Nodetree’ on the sidebar and set it in path2. (Path1 is reserved for the materialtree. The checkbox indicates autploading when the file is modified…)<br/>
 <img alt="image" data-base62-sha1="9yKTu8Lj0Nq755RpUZ19Afc2Dbt" height="458" src="../../../images2/1525f8c632ca20a8c1965fa2b63029b7.png" width="610"/></p>
 <p>In this case the cart-logic:<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/bssI8Mtrkm9q9fnFMzgNdqsJydk.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/5/504f96448f673b703be1ecf3c0955595ca598a9a.png" title="image"><img alt="image" data-base62-sha1="bssI8Mtrkm9q9fnFMzgNdqsJydk"  height="431" src="../../../images2/c85a8c69aa6f08f89fe7e1d1051ea6b2.png"  width="690"/><div class="meta">
+<div class="lightbox-wrapper"><a class="lightbox"   title="image"><img alt="image" data-base62-sha1="bssI8Mtrkm9q9fnFMzgNdqsJydk"  height="431" src="../../../images2/c85a8c69aa6f08f89fe7e1d1051ea6b2.png"  width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1920×1200 822 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg>
 </div></a></div></p>
 <ol>
@@ -174,7 +174,7 @@ At 3) you see the actual nodetree. In this case very simple. I almost just used 
 </li>
 <li>
 <p>All(?) of those options can be turned off in cmake (at the moment not done automatically in build)<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/1xHVclqCvzp63pj0qiiSIR4XtVJ.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/0/0ad1a363d3b1e20d818259efc2677651dd8c4437.jpeg" title="image"><img alt="image" data-base62-sha1="1xHVclqCvzp63pj0qiiSIR4XtVJ"  height="431" src="../../../images2/a6893303edca66c9784d0296e1705200.jpeg"  width="690"/><div class="meta">
+<div class="lightbox-wrapper"><a class="lightbox"   title="image"><img alt="image" data-base62-sha1="1xHVclqCvzp63pj0qiiSIR4XtVJ"  height="431" src="../../../images2/a6893303edca66c9784d0296e1705200.jpeg"  width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1920×1200 746 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg>
 </div></a></div></p>
 </li>

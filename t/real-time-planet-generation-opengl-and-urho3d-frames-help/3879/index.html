@@ -104,7 +104,7 @@
         <div class="post">
           <div class="user_name">JTippetts</div>
           <div class="post_content">
-<p>I did a quick skim of the project source and PDF in question, and it looks like they’re generating the actual vertex geometry on the CPU, but they also generate a heightmap texture (mimicking the technique used on the CPU to generate the geometry, as a fragment program) and normalmap texture to be used for coloration and lighting. These heightmap and normalmap textures are created using basic render-to-texture; the texture is bound as the render target, a vertex and fragment shader are bound, and a full-screen rectangle is drawn to fill the texture with data. This is easily enough done in Urho3D, as shown in the <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Samples/10_RenderToTexture/RenderToTexture.cpp" rel="nofollow noopener">Render to Texture Sample</a>.</p>
+<p>I did a quick skim of the project source and PDF in question, and it looks like they’re generating the actual vertex geometry on the CPU, but they also generate a heightmap texture (mimicking the technique used on the CPU to generate the geometry, as a fragment program) and normalmap texture to be used for coloration and lighting. These heightmap and normalmap textures are created using basic render-to-texture; the texture is bound as the render target, a vertex and fragment shader are bound, and a full-screen rectangle is drawn to fill the texture with data. This is easily enough done in Urho3D, as shown in the <a  rel="nofollow noopener">Render to Texture Sample</a>.</p>
           </div>
         </div>
       </div>

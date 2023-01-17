@@ -36,11 +36,11 @@
 <p>I have a shader which scales Text in Screenspace to control size (keeping it readable at all ranges - we increase/decrease size slowly as you get closer/further away).</p>
 <p>However, in the View3D and also when we use Render-To-Texture to capture a Screenshot, the result is that the Y-Axis in ScreenSpace is inverted, and our Text ends up Upside-Down.   Everything else about the rendering is correct; the only defect is Y-Axis ScreenSpace is inverted.</p>
 <p>Here is a screenshot from our GPS App:  (TOP = Correct;   BOTTOM = Y-Inverted)</p>
-<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/bt783sNAsnafIA5hV8DijJ5oS3V.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/5/506273b200a2f3337a69438a7989218d599e587b.png" rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="bt783sNAsnafIA5hV8DijJ5oS3V"  height="500" src="../../../images2/c3e08ae2d30bce25bac966d7e1aa8e59.png"  width="402"/><div class="meta">
+<p><div class="lightbox-wrapper"><a class="lightbox"   rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="bt783sNAsnafIA5hV8DijJ5oS3V"  height="500" src="../../../images2/c3e08ae2d30bce25bac966d7e1aa8e59.png"  width="402"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">847×1053 198 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
 </div></a></div></p>
 <p>And from our Game, still with crude graphics, but the Font, rendered inside a View3D, the ScreenSpace is inverted:<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/y5KnLf3siZJoKmVuiafdYAfi6Wb.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/e/eef041704840cf005f8e43253333e7abe3f54d8f.png" rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="y5KnLf3siZJoKmVuiafdYAfi6Wb"  height="500" src="../../../images2/1eda341063e4ae249d5c4b70f41cba5e.png" width="570"/><div class="meta">
+<div class="lightbox-wrapper"><a class="lightbox"   rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="y5KnLf3siZJoKmVuiafdYAfi6Wb"  height="500" src="../../../images2/1eda341063e4ae249d5c4b70f41cba5e.png" width="570"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">687×602 17.5 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
 </div></a></div></p>
 <p>===<br/>
@@ -238,7 +238,7 @@ I think you should attach a small example here.  So some experts can help you.</
         <div class="post">
           <div class="user_name">justanotherdev</div>
           <div class="post_content">
-<p>I believe this may be expected behavior for the OpenGL backend to achieve consistent UV space between OpenGL/DirectX. When the renderer detects that the viewport target is a texture it will flip the camera’s Y axis so that the produced texture can be addressed in the same UV space regardless of whether DirectX or OpenGL is being used, <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Graphics/View.cpp#L599" rel="noopener nofollow ugc">see here</a>.</p>
+<p>I believe this may be expected behavior for the OpenGL backend to achieve consistent UV space between OpenGL/DirectX. When the renderer detects that the viewport target is a texture it will flip the camera’s Y axis so that the produced texture can be addressed in the same UV space regardless of whether DirectX or OpenGL is being used, <a  rel="noopener nofollow ugc">see here</a>.</p>
           </div>
         </div>
       </div>

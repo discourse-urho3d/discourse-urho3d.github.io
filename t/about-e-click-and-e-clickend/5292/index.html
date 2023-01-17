@@ -80,7 +80,7 @@ The events are sent in a generic UI function and looks like apply to all UIeleme
           <div class="post_content">
 <p>Button inherits BorderImage which inherits UIElement.<br/>
 But latter one doesn’t implement UIElement::OnKey() , so yes, it’s intentional.</p>
-<p><a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/UI/Button.cpp#L149" rel="nofollow noopener">Button::OnKey();</a></p>
+<p><a  rel="nofollow noopener">Button::OnKey();</a></p>
 <pre><code>void Button::OnKey(Key key, MouseButtonFlags buttons, QualifierFlags qualifiers)
 {
     if (HasFocus() &amp;&amp; (key == KEY_RETURN || key == KEY_RETURN2 || key == KEY_KP_ENTER || key == KEY_SPACE))
@@ -245,7 +245,7 @@ Thanks for nice explanation <img alt=":+1:" class="emoji" src="../../../images2/
         <div class="post">
           <div class="user_name">Virgo</div>
           <div class="post_content">
-<p><img alt=":innocent:" class="emoji" src="../../../images2/c3dafed216ce260e661f953035333f50.png" title=":innocent:"/> bro i think you got something wrong, there is no receiver here, <code>endElement-&gt;SendEvent()</code> called here is actually <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Core/Object.cpp#L297" rel="nofollow noopener"><code>Urho3D::Object::SendEvent()</code></a> that sends the event (just a guess, there is way too much source code to read, i gave up).</p>
+<p><img alt=":innocent:" class="emoji" src="../../../images2/c3dafed216ce260e661f953035333f50.png" title=":innocent:"/> bro i think you got something wrong, there is no receiver here, <code>endElement-&gt;SendEvent()</code> called here is actually <a  rel="nofollow noopener"><code>Urho3D::Object::SendEvent()</code></a> that sends the event (just a guess, there is way too much source code to read, i gave up).</p>
           </div>
         </div>
       </div>

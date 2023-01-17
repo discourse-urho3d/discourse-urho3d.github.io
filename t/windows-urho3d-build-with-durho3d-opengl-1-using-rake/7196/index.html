@@ -123,8 +123,8 @@ rake clean build install
           <div class="user_name">weitjong</div>
           <div class="post_content">
 <p>I don’t know what exactly happened to your case, but I can confirm that setting the “URHO3D_OPENGL” env-var to 1 in the last CI/CD build on the main branch still does the build with expected build combination.</p>
-<p><a href="https://github.com/urho3d/Urho3D/runs/5191218365?check_suite_focus=true#step:4:141">CI cmake step</a><br/>
-<a href="https://github.com/urho3d/Urho3D/runs/5191218365?check_suite_focus=true#step:5:2333">CI build step</a></p>
+<p><a >CI cmake step</a><br/>
+<a >CI build step</a></p>
 <p>Our CI/CD uses the new rake build system, so it should work. Make sure you don’t have something like “URHO3D_D3D11” env-var defined globally. Also, when in doubt, there is no harm to try to clear the CMake-cache or try build with a new build tree.</p>
           </div>
         </div>

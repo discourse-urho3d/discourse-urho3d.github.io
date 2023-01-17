@@ -111,7 +111,7 @@
 <p>Can you show what exactly you did to have 2 samplers? It’s hard to debug code in browser, but it’s even harder to debug words.</p>
 <p>On the topic, I would say you create second fake texture with the sampler you want, and you just hack dx11 shaders to use it. I mean, like <code>tDiffMap.Sample(sNormalMap, iTexCoords.xy)</code>. It sucks, but I cannot come up with anything else.</p>
 <p>You may need to patch DX11 backend so it doesn’t ignore second texture as unused, e.g. by adding additional scan here:<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/qtNfbaBtaQz1FJCeE6CVa3v0Xyp.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/b/b996b7ece8cb25115ffe8f873da60eddddf483d1.png" rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="qtNfbaBtaQz1FJCeE6CVa3v0Xyp"  height="194" src="../../../images2/2630a29b9ac59487eb3cd8cf1ecbbcfe.png" width="690"/><div class="meta">
+<div class="lightbox-wrapper"><a class="lightbox"   rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="qtNfbaBtaQz1FJCeE6CVa3v0Xyp"  height="194" src="../../../images2/2630a29b9ac59487eb3cd8cf1ecbbcfe.png" width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">758×214 9.74 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg>
 </div></a></div></p>
           </div>

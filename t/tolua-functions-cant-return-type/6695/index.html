@@ -75,10 +75,10 @@ class vector
 <p>With a bit of digging I found the lines responsible here:</p>
 <aside class="onebox githubblob">
 <header class="source">
-<a href="https://github.com/urho3d/Urho3D/blob/44220053a992aa574fa0aa6de3f47ef06b339346/Source/ThirdParty/toluapp/src/bin/lua/declaration.lua#L470" rel="noopener nofollow ugc" target="_blank">github.com</a>
+<a  rel="noopener nofollow ugc" target="_blank">github.com</a>
 </header>
 <article class="onebox-body">
-<h4><a href="https://github.com/urho3d/Urho3D/blob/44220053a992aa574fa0aa6de3f47ef06b339346/Source/ThirdParty/toluapp/src/bin/lua/declaration.lua#L470" rel="noopener nofollow ugc" target="_blank">urho3d/Urho3D/blob/44220053a992aa574fa0aa6de3f47ef06b339346/Source/ThirdParty/toluapp/src/bin/lua/declaration.lua#L470</a></h4>
+<h4><a  rel="noopener nofollow ugc" target="_blank">urho3d/Urho3D/blob/44220053a992aa574fa0aa6de3f47ef06b339346/Source/ThirdParty/toluapp/src/bin/lua/declaration.lua#L470</a></h4>
 <pre class="onebox"><code class="lang-lua"><ol class="start lines" start="460" style="counter-reset: li-counter 459 ;">
 <li>else</li><li>	tmpdef = ''</li><li>end</li><li>if kind == "var" then</li><li> -- check the form: void</li><li> if s == '' or s == 'void' then</li><li>  return _Declaration{type = 'void', kind = kind, is_parameter = is_parameter}</li><li> end</li><li>end</li><li></li><li class="selected">-- check the form: mod type*&amp; name</li><li>local t = split_c_tokens(s,'%*%s*&amp;')</li><li>if t.n == 2 then</li><li> if kind == 'func' then</li><li>  error("#invalid function return type: "..s)</li><li> end</li><li> --local m = split(t[1],'%s%s*')</li><li> local m = split_c_tokens(t[1],'%s+')</li><li> return _Declaration{</li><li>  name = t[2]..tmpdef,</li><li>  ptr = '*',</li>
 </ol></code></pre>

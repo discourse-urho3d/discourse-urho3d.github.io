@@ -46,7 +46,7 @@ The IK solver is capable of solving an entire scene graph in one pass, so it wou
 <p>I could insert a new event called something like E_INVERSEKINEMATICUPDATE which is sent just before E_SCENEDRAWABLEUPDATEFINISHED. This begs the question: Do we even need an IK update event? Is this the way I should go, or is there a better way I can insert myself into the engine?</p>
 <p><span class="bbcode-b">2) Build system</span><br/>
 Should I add a CMake option URHO3D_IK to include/exclude the IK solver, or should it be something that is always available?</p>
-<p>That’s all of the questions I have for now. I’ll post updates in this thread as this project evolves. You can test my progress by checking out the branch InverseKinematics from here: <a data-bbcode="true" href="https://github.com/thecomet93/urho3d/tree/InverseKinematics" rel="nofollow noopener">https://github.com/thecomet93/urho3d/tree/InverseKinematics</a> (currently there’s not much IK functionality).</p>
+<p>That’s all of the questions I have for now. I’ll post updates in this thread as this project evolves. You can test my progress by checking out the branch InverseKinematics from here: <a data-bbcode="true"  rel="nofollow noopener">https://github.com/thecomet93/urho3d/tree/InverseKinematics</a> (currently there’s not much IK functionality).</p>
           </div>
         </div>
       </div>
@@ -802,7 +802,7 @@ These should be very fast to compute and speed things up a lot.</p>
 <p>I’m happy to report the first version has been merged into master! All features you’ve seen in this thread are now available.</p>
 <aside class="onebox githubpullrequest">
 <header class="source">
-<a href="https://github.com/urho3d/Urho3D/pull/1871" rel="nofollow noopener" target="_blank">github.com/urho3d/Urho3D</a>
+<a  rel="nofollow noopener" target="_blank">github.com/urho3d/Urho3D</a>
 </header>
 <article class="onebox-body">
 <div class="github-row">
@@ -811,7 +811,7 @@ These should be very fast to compute and speed things up a lot.</p>
 </div>
 <div class="github-info-container">
 <h4>
-<a href="https://github.com/urho3d/Urho3D/pull/1871" rel="nofollow noopener" target="_blank">Inverse kinematics v1.0</a>
+<a  rel="nofollow noopener" target="_blank">Inverse kinematics v1.0</a>
 </h4>
 <div class="branches">
 <code>urho3d:master</code> ← <code>TheComet:InverseKinematics</code>
@@ -827,7 +827,7 @@ These should be very fast to compute and speed things up a lot.</p>
         </a>
 </div>
 <div class="lines" title="24 commits changed 68 files with 8296 additions and 4 deletions">
-<a href="https://github.com/urho3d/Urho3D/pull/1871/files" rel="nofollow noopener" target="_blank">
+<a  rel="nofollow noopener" target="_blank">
 <span class="added">+8296</span>
 <span class="removed">-4</span>
 </a>
@@ -1485,7 +1485,7 @@ I added some debug in the loop to show node name it parses:</p>
 <p>Which looks like it parses till scene, than gets NULL and crashes.<br/>
 I wonder why it fails building tree completely. I use makehuman model for test.</p>
 <p>I created the bug</p>
-<p><a class="onebox" href="https://github.com/urho3d/Urho3D/issues/1957" rel="nofollow noopener" target="_blank">https://github.com/urho3d/Urho3D/issues/1957</a></p>
+<p><a class="onebox"  rel="nofollow noopener" target="_blank">https://github.com/urho3d/Urho3D/issues/1957</a></p>
 <p>to indicate the issue.</p>
           </div>
         </div>
@@ -1668,13 +1668,13 @@ which I did not debug fully yet as I have no time. But this one happens quite a 
           <div class="post_content">
 <p>Here are a list of things that I still need to fix for 1.7:</p>
 <ul>
-<li>The interface Urho &lt;-&gt; ik lib needs to use local positions and rotations instead of global positions and rotations. This will fix a major oversight where updating the position of the root node won’t affect the chain positions, effectively “locking” the object in place. I believe this is the root cause of the “0,0,0 effector” issue (<a href="https://github.com/urho3d/Urho3D/issues/2054" rel="nofollow noopener">#2054</a>). The mechanisms for this fix are already in place, it’s just a matter of doing the work.</li>
+<li>The interface Urho &lt;-&gt; ik lib needs to use local positions and rotations instead of global positions and rotations. This will fix a major oversight where updating the position of the root node won’t affect the chain positions, effectively “locking” the object in place. I believe this is the root cause of the “0,0,0 effector” issue (<a  rel="nofollow noopener">#2054</a>). The mechanisms for this fix are already in place, it’s just a matter of doing the work.</li>
 <li>IKEffector INHERIT_PARENT_SCOPE isn’t implemented yet.</li>
 <li>Finish writing documentation in Reference.dox</li>
 </ul>
 <p>Here’s a list of changes in the currently pending PR:</p>
 <ul>
-<li>It’s now possible to have IKSolver components that share the same subtrees (<a href="https://github.com/urho3d/Urho3D/issues/2058" rel="nofollow noopener">#2058</a>).</li>
+<li>It’s now possible to have IKSolver components that share the same subtrees (<a  rel="nofollow noopener">#2058</a>).</li>
 <li>Urho avoids the call to abort() by not calling ik_solver_solve() if the tree is invalid.</li>
 <li>Fixed a bug in solver_FABRIK_solve() where the root position was incorrectly being set to the original root node position instead of the active root node position. This bug made it impossible to move the root node if USE_ORIGINAL_POSE was disabled.</li>
 <li>Added a chain tree iterator, which allows Urho to iterate over only the nodes that are affected by the solver instead of having to iterate over all nodes in the tree.</li>
@@ -1729,7 +1729,7 @@ which I did not debug fully yet as I have no time. But this one happens quite a 
 <p>Alright, fixed the joint rotations. Now that the tree is specified in local space rather than global space, it fixes an issue where if you were to move a parent node of the solver’s node, the pose wouldn’t inherit that position (or rotation).</p>
 <p>You can see me moving the base node first, then move a parent node of that base node, and also rotate the base node.</p>
 <p><img alt="cool" height="300" src="../../../images2/992e8f09120b068142fdd72f7bffa350.gif" width="500"/></p>
-<p><span class="mention">@slapin</span> I believe this fixes the 0,0,0 effector issues. I would be happy if you could pull and verify if this is the case or not: <a href="https://github.com/thecomet93/urho3d/tree/IK1.7" rel="nofollow noopener">https://github.com/thecomet93/urho3d/tree/IK1.7</a></p>
+<p><span class="mention">@slapin</span> I believe this fixes the 0,0,0 effector issues. I would be happy if you could pull and verify if this is the case or not: <a  rel="nofollow noopener">https://github.com/thecomet93/urho3d/tree/IK1.7</a></p>
           </div>
         </div>
       </div>
@@ -1983,7 +1983,7 @@ Date:   Sun Aug 6 17:30:27 2017 +0200</p>
         <div class="post">
           <div class="user_name">TheComet</div>
           <div class="post_content">
-<p>There are more of those in my <a href="https://github.com/thecomet/urho3d/tree/IK" rel="nofollow noopener">IK branch</a>. It’s WIP.</p>
+<p>There are more of those in my <a  rel="nofollow noopener">IK branch</a>. It’s WIP.</p>
           </div>
         </div>
       </div>
@@ -2050,7 +2050,7 @@ I’ve looked a little closer into the Mass-Spring-Damper approach as presented 
           <div class="user_name">AironCheung</div>
           <div class="post_content">
 <p>I found that I couldn’t do many of these cool things in my editor(Version1.7 of Urho3D in Github)， I don’t know whether it’s the cause of the IK algorithm or the reason for the editor. It made me sad. Can you give me an editor that you used here?<br/>
-<a class="onebox" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/1X/4d21dbe461d6d89aa22a9b9f55e1097649feaee9.gif" rel="nofollow noopener" target="_blank">
+<a class="onebox"  rel="nofollow noopener" target="_blank">
 <img height="300" src="../../../images2/992e8f09120b068142fdd72f7bffa350.gif" width="500"/>
 </a>
 </p>

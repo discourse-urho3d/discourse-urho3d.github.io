@@ -75,7 +75,7 @@
           <div class="user_name">Miegamicis</div>
           <div class="post_content">
 <p>I think I managed to trace down the problem.<br/>
-Could you please test it against this branch: <a href="https://github.com/urho3d/Urho3D/tree/network-replication-fix" rel="nofollow noopener">https://github.com/urho3d/Urho3D/tree/network-replication-fix</a> ?</p>
+Could you please test it against this branch: <a  rel="nofollow noopener">https://github.com/urho3d/Urho3D/tree/network-replication-fix</a> ?</p>
           </div>
         </div>
       </div>
@@ -117,7 +117,7 @@ Could you please test it against this branch: <a href="https://github.com/urho3d
           <div class="user_name">Miegamicis</div>
           <div class="post_content">
 <p>But replicated node/component means that it should be handled by the server only. In the described scenario this is not the case and I don’t think that it should be done manually.<br/>
-When server creates scene on the fly and sends it to clients, client connection will automatically remove all replicated nodes from the scene that was assigned to connection: <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Network/Connection.cpp#L1530" rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Network/Connection.cpp#L1530</a></p>
+When server creates scene on the fly and sends it to clients, client connection will automatically remove all replicated nodes from the scene that was assigned to connection: <a  rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Network/Connection.cpp#L1530</a></p>
 <p>This issue appears only for the server scenes which are loaded from the files, filename is also passed to the clients and they try to load the same scene from their local filesystem. I guess someone just forgot to clear the scene afterwards so that’s what I did in the fix.</p>
           </div>
         </div>
@@ -166,7 +166,7 @@ When server creates scene on the fly and sends it to clients, client connection 
         <div class="post">
           <div class="user_name">Miegamicis</div>
           <div class="post_content">
-<p>Did you manage to test out with the fix provided? <a href="https://github.com/urho3d/Urho3D/tree/network-replication-fix" rel="nofollow noopener">https://github.com/urho3d/Urho3D/tree/network-replication-fix</a></p>
+<p>Did you manage to test out with the fix provided? <a  rel="nofollow noopener">https://github.com/urho3d/Urho3D/tree/network-replication-fix</a></p>
 <p>Just so I know if I can close the ticket</p>
           </div>
         </div>

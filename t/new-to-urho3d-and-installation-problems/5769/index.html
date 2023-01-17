@@ -56,7 +56,7 @@ I thought I would have to run that and compile it and everything would work. How
           <div class="post_content">
 <p>Hello and welcome to the forum! <img alt=":confetti_ball:" class="emoji" src="../../../images2/8cc1133d965c492d26cc2ba425a80ea1.png" title=":confetti_ball:"/></p>
 <p>I’m unfamiliar with <a href="https://github.com/BlueMagnificent/Urho3D_CodeBlocks_Wizard">Urho3D_CodeBlocks_Wizard</a> but it is a community contribution last updated  *edit: today. <img alt=":slight_smile:" class="emoji" src="../../../images2/7bdd5ab4d67675d002d99e4b948c8cdb.png" title=":slight_smile:"/></p>
-<p>As a general rule (edit: without considering anyone’s requirements or issues; also 1.7.1 is current) I recommend the master repository <a href="https://github.com/urho3d/Urho3D">https://github.com/urho3d/Urho3D</a> which has an excellent stability record, and can also generate CodeBlocks projects.<br/>
+<p>As a general rule (edit: without considering anyone’s requirements or issues; also 1.7.1 is current) I recommend the master repository <a >https://github.com/urho3d/Urho3D</a> which has an excellent stability record, and can also generate CodeBlocks projects.<br/>
 Official build docs: <a href="https://urho3d.github.io/documentation/HEAD/_building.html">https://urho3d.github.io/documentation/HEAD/_building.html</a></p>
 <p>If all else fails, a Makefile project (vs. IDE-specific) works most anywhere.<br/>
 HTH</p>
@@ -231,10 +231,10 @@ add_subdirectory given source “Docs” which is not an existing directory.</p>
 <p>I suspect your problem started at the first highlighted line below and causing a variable to left unset/undefined, ultimately the CMake command in last highligted line failed and it could not recover itself.</p>
 <aside class="onebox githubblob">
 <header class="source">
-<a href="https://github.com/urho3d/Urho3D/blob/master/CMake/Modules/GetUrhoRevision.cmake#L33-L43" target="_blank">github.com</a>
+<a  target="_blank">github.com</a>
 </header>
 <article class="onebox-body">
-<h4><a href="https://github.com/urho3d/Urho3D/blob/master/CMake/Modules/GetUrhoRevision.cmake#L33-L43" target="_blank">urho3d/Urho3D/blob/master/CMake/Modules/GetUrhoRevision.cmake#L33-L43</a></h4>
+<h4><a  target="_blank">urho3d/Urho3D/blob/master/CMake/Modules/GetUrhoRevision.cmake#L33-L43</a></h4>
 <pre class="onebox"><code class="lang-cmake"><ol class="start lines" start="33" style="counter-reset: li-counter 32 ;">
 <li>execute_process (COMMAND git describe ${ARG} RESULT_VARIABLE GIT_EXIT_CODE OUTPUT_VARIABLE LIB_REVISION ERROR_QUIET OUTPUT_STRIP_TRAILING_WHITESPACE)</li>
 <li>if (NOT GIT_EXIT_CODE EQUAL 0)</li>
@@ -337,7 +337,7 @@ Then it starts building and I get a few errors<br/>
 eg.<br/>
 error: unknown type name ‘WAVEOUTCAPS2W’</p>
 <p>So I am closer on getting it compile but not there yet. Please check out my image for the errors I am getting.<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/oEOlTF1BPQJRpJCOMzItcEVFMDH.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/a/acd13582c6d7e02476db375895eb28433f108525.jpeg" rel="nofollow noopener" title="urhoERROR"><img alt="urhoERROR" data-base62-sha1="oEOlTF1BPQJRpJCOMzItcEVFMDH"  height="374" src="../../../images2/c78f7776ed86ae399bfa4234a37969be.jpeg"  width="690"/><div class="meta">
+<div class="lightbox-wrapper"><a class="lightbox"   rel="nofollow noopener" title="urhoERROR"><img alt="urhoERROR" data-base62-sha1="oEOlTF1BPQJRpJCOMzItcEVFMDH"  height="374" src="../../../images2/c78f7776ed86ae399bfa4234a37969be.jpeg"  width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">urhoERROR</span><span class="informations">1600×868 266 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg>
 </div></a></div></p>
           </div>
@@ -478,7 +478,7 @@ This created a folder called build in my source folder.</p>
 <p>Opened a cmd window in that folder.<br/>
 I then run mingw32-make -f makefile install<br/>
 I was expecting a folder to appear in my C drive called Urho3d_home, but that didn’t happen. I was guessing that is why you used the prefix to say where it is installed to. However I got errors in my command window. I have pasted a screen shot as it was easier than trying to type them here. Looking at the errors they seem to be the same errors I got when I tried to compile in codeblocks, but I could be wrong.<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/3GGY6QK4SKihkZEHBG9b5XFi0qp.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/1/19d9fc67cc7856b8873a721c64ae8ba7a989f7c5.jpeg" rel="nofollow noopener" title="urhoErrors2"><img alt="urhoErrors2" data-base62-sha1="3GGY6QK4SKihkZEHBG9b5XFi0qp"  height="374" src="../../../images2/284e52fe3a51660af8b317221deee722.jpeg"  width="690"/><div class="meta">
+<div class="lightbox-wrapper"><a class="lightbox"   rel="nofollow noopener" title="urhoErrors2"><img alt="urhoErrors2" data-base62-sha1="3GGY6QK4SKihkZEHBG9b5XFi0qp"  height="374" src="../../../images2/284e52fe3a51660af8b317221deee722.jpeg"  width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">urhoErrors2</span><span class="informations">1600×868 493 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg>
 </div></a></div></p>
           </div>
@@ -615,7 +615,7 @@ I was expecting a folder to appear in my C drive called Urho3d_home, but that di
 Well I have now installed mingw-64 and tested it with a few of my older projects, and good news is that my older projects still run. I had to change a couple of path variables in codeblocks and I had to change the path variable in the environment as well, as the new mingw put the mingw32 inside a sub folder, so that wasn’t too hard. Also had to update the executable names too as the new mingw changed the name to i686-w64-mingw32-g++.exe as well.</p>
 <p>So this time as you suggested I run mingw32-make -f makefile and it gives me an error.<br/>
 It is looking for a file called SDL_winm.c.obj in the winnm folder. Now the folder exists, but the file is not there. Good news is that my mingw32-make is working after updating the environment. Bad news is that I don’t know why the file is not there.<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/b3VLSA1XRezve8zlOAbOGULpBYr.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/4/4d89b18b88da8d294776697c4c23776d9f118cdf.jpeg" rel="nofollow noopener" title="urhoAudioFail"><img alt="urhoAudioFail" data-base62-sha1="b3VLSA1XRezve8zlOAbOGULpBYr"  height="147" src="../../../images2/19e890d7a0657c6bbe36197382e181c9.jpeg" width="690"/><div class="meta">
+<div class="lightbox-wrapper"><a class="lightbox"   rel="nofollow noopener" title="urhoAudioFail"><img alt="urhoAudioFail" data-base62-sha1="b3VLSA1XRezve8zlOAbOGULpBYr"  height="147" src="../../../images2/19e890d7a0657c6bbe36197382e181c9.jpeg" width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">urhoAudioFail</span><span class="informations">1049×225 73.4 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg>
 </div></a></div></p>
           </div>
@@ -695,7 +695,7 @@ I just followed Bluemoons instructions and used the following line to build it.<
 <p>Then I did this<br/>
 mingw32-make -f makefile<br/>
 and I copied all the files to my engines directory and pointed Bluemoons wizard to the folder which created some of the code.<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/y7UftHJ7mD4zmnOyXTr0zkuEqPX.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/e/ef2ebcc060f7ffc596611f398a0685e5a358aadd.jpeg" rel="nofollow noopener" title="buildProb"><img alt="buildProb" data-base62-sha1="y7UftHJ7mD4zmnOyXTr0zkuEqPX"  height="388" src="../../../images2/7f8c2007f183df3c25802ff2e3c1aed9.jpeg"  width="690"/><div class="meta">
+<div class="lightbox-wrapper"><a class="lightbox"   rel="nofollow noopener" title="buildProb"><img alt="buildProb" data-base62-sha1="y7UftHJ7mD4zmnOyXTr0zkuEqPX"  height="388" src="../../../images2/7f8c2007f183df3c25802ff2e3c1aed9.jpeg"  width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">buildProb</span><span class="informations">1600×900 220 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg>
 </div></a></div><br/>
 Because I am new to the engine I followed blindly and not knowing what it would do, or how to set it to debug or release.<br/>
@@ -1205,7 +1205,7 @@ CoreData and Data.</p>
         <div class="post">
           <div class="user_name">Modanung</div>
           <div class="post_content">
-<p>Most of the documentation can be found <a href="https://urho3d.github.io/documentation/HEAD/">here</a>. <img alt=":gift:" class="emoji" src="../../../images2/01521f3dec44d36e63187f1583bbfc3e.png" title=":gift:"/> There’s also a - somewhat messy - <a href="https://github.com/urho3d/urho3d/wiki">wiki</a>, that you’re free to improve of course. <img alt=":star2:" class="emoji" src="../../../images2/fd87d4013d0aefea8b71c0c0b6c2d372.png" title=":star2:"/> And be sure to have a look at the <a href="https://github.com/urho3d/Urho3D/tree/master/Source/Samples">samples</a> that come with the engine, they can be quite informative. <img alt=":christmas_tree:" class="emoji" src="../../../images2/9cfb54d81a7a797ea480ff73cfb887c9.png" title=":christmas_tree:"/><br/>
+<p>Most of the documentation can be found <a href="https://urho3d.github.io/documentation/HEAD/">here</a>. <img alt=":gift:" class="emoji" src="../../../images2/01521f3dec44d36e63187f1583bbfc3e.png" title=":gift:"/> There’s also a - somewhat messy - <a >wiki</a>, that you’re free to improve of course. <img alt=":star2:" class="emoji" src="../../../images2/fd87d4013d0aefea8b71c0c0b6c2d372.png" title=":star2:"/> And be sure to have a look at the <a >samples</a> that come with the engine, they can be quite informative. <img alt=":christmas_tree:" class="emoji" src="../../../images2/9cfb54d81a7a797ea480ff73cfb887c9.png" title=":christmas_tree:"/><br/>
 If at any time QtCreator might catch your interest as an IDE, rest assured, there’s <a href="https://discourse.urho3d.io/t/wrench-class-and-project-wizards-for-qtcreator/2076">wizards</a> for that too. <img alt=":snowman:" class="emoji" src="../../../images2/9f8d1b3b05fd26a2c289d849b6255dc5.png" title=":snowman:"/></p>
           </div>
         </div>

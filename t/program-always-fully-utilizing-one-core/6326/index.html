@@ -63,9 +63,9 @@ Are you sure it’s the engine code and not GPU driver during VSync?</p>
 <p>VSync basically blocks program execution until the monitor is ready to take your next GPU frame. That is the case in DX9, that is also why most PC “pro” gamers tend to avoid it, it adds latency to your input,  which usually works in the same thread as the renderer. I’m not sure about DX11, I think it works similar, that is, the GPU driver waits your monitor scanline to go to the last line in the bottom and then consumes the frame you pass. You can easily check that if you turn on the Urho3D profiler, most time spent will be in Present.</p>
 <p>You can fix that if you set engine FPS limit to 60 (or your monitor refresh rate), it will call ApplyFramerateLimit() on every frame, which will relax your CPU. I do that in my app with DX9, GL3 on linux and GLES on ARM devices.</p>
 <p>No framerate limit:<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/p4nQgsZ9fPKk3N3eTRlBLAkB6yZ.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/a/afb53b23fcd33156af076ba30e0e591d132b9d69.png" rel="nofollow noopener" title="image"><img alt="image" data-base62-sha1="p4nQgsZ9fPKk3N3eTRlBLAkB6yZ"  height="500" src="../../../images2/a5e188739300b855fac57775d45ef7fe.png" width="638"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">681×533 53.3 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<div class="lightbox-wrapper"><a class="lightbox"   rel="nofollow noopener" title="image"><img alt="image" data-base62-sha1="p4nQgsZ9fPKk3N3eTRlBLAkB6yZ"  height="500" src="../../../images2/a5e188739300b855fac57775d45ef7fe.png" width="638"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">681×533 53.3 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
 <p>Framerate limit:<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/4BGRy2RT7S6jIqfU9gIzWBmoJlo.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/2/204b6b490f9aa29fb458a9e359321f93634f2de2.png" rel="nofollow noopener" title="image"><img alt="image" data-base62-sha1="4BGRy2RT7S6jIqfU9gIzWBmoJlo"  height="500" src="../../../images2/d39c05e11fff8c5debf712a3d93e6bb9.png" width="626"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">678×541 52.6 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<div class="lightbox-wrapper"><a class="lightbox"   rel="nofollow noopener" title="image"><img alt="image" data-base62-sha1="4BGRy2RT7S6jIqfU9gIzWBmoJlo"  height="500" src="../../../images2/d39c05e11fff8c5debf712a3d93e6bb9.png" width="626"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">678×541 52.6 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
 <p>Notice Total time spent in Present when no framerate limit is applied is almost 800ms, that is 80% of the CPU time.</p>
           </div>
         </div>
@@ -118,10 +118,10 @@ engineParameters_[EP_REFRESH_RATE] = 60;</li>
           <div class="post_content">
 <aside class="onebox githubblob">
 <header class="source">
-<a href="https://github.com/urho3d/Urho3D/blob/23a6d24ac0852b71ac38cad37e10aac3c3f32b4d/Source/Urho3D/Engine/Engine.h#L58" rel="nofollow noopener" target="_blank">github.com</a>
+<a  rel="nofollow noopener" target="_blank">github.com</a>
 </header>
 <article class="onebox-body">
-<h4><a href="https://github.com/urho3d/Urho3D/blob/23a6d24ac0852b71ac38cad37e10aac3c3f32b4d/Source/Urho3D/Engine/Engine.h#L58" rel="nofollow noopener" target="_blank">urho3d/Urho3D/blob/23a6d24ac0852b71ac38cad37e10aac3c3f32b4d/Source/Urho3D/Engine/Engine.h#L58</a></h4>
+<h4><a  rel="nofollow noopener" target="_blank">urho3d/Urho3D/blob/23a6d24ac0852b71ac38cad37e10aac3c3f32b4d/Source/Urho3D/Engine/Engine.h#L58</a></h4>
 <pre class="onebox"><code class="lang-h"><ol class="start lines" start="48" style="counter-reset: li-counter 47 ;">
 <li>bool InitializeResourceCache(const VariantMap&amp; parameters, bool removeOld = true);
 </li>

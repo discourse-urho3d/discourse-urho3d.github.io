@@ -151,9 +151,9 @@ This makes me think that CMake is finding doxygen and graphviz correctly, but th
           <div class="post_content">
 <p>The doxygen path is not hardcoded (see here <a href="http://urho3d.github.io/documentation/HEAD/_building.html#Building_Docs">urho3d.github.io/documentation/H … lding_Docs</a>).</p>
 <p>To further troubleshoot your document generation problem on Windows host, you may wan to check these lines in the <a href="http://Doxyfile.in">Doxyfile.in</a>.<br/>
-<a href="https://github.com/urho3d/Urho3D/blob/master/Docs/Doxyfile.in#L1029">github.com/urho3d/Urho3D/blob/m … e.in#L1029</a><br/>
-<a href="https://github.com/urho3d/Urho3D/blob/master/Docs/Doxyfile.in#L1596">github.com/urho3d/Urho3D/blob/m … e.in#L1596</a><br/>
-<a href="https://github.com/urho3d/Urho3D/blob/master/Docs/Doxyfile.in#L1740">github.com/urho3d/Urho3D/blob/m … e.in#L1740</a><br/>
+<a >github.com/urho3d/Urho3D/blob/m … e.in#L1029</a><br/>
+<a >github.com/urho3d/Urho3D/blob/m … e.in#L1596</a><br/>
+<a >github.com/urho3d/Urho3D/blob/m … e.in#L1740</a><br/>
 Especially the first one which has a hard-coded reference to where the hhc.exe. As I have explained before, when these entries were made, the testing was only done thoroughly on Linux host for Eclipse IDE’s help (the one being used by its tester, me). Those entries were not filled previously, i.e. we didn’t generate help files for specific IDE previously. It looks like the path should be “C:\Program Files (x86)\HTML Help Workshop” as you pointed out earlier. Not sure. You have to test that out yourself whether it works by making the change to the <a href="http://Doxyfile.in">Doxyfile.in</a> file. This is as explicit as I would like to go now to help you.</p>
 <p>Beware that the generated online documentation and those that shipped by our binary packages are all generated using Linux host CI servers. It uses OpenGL as its graphics backend instead of Direct3D9 or Direct3D11. So, that documentation probably is sub-optimal to you.</p>
 <p>EDIT: I made a mistake in my last statement. I totally forgot that we do have MinGW CI build with D3D9! So, if you use the doc generated from that build then you should be good.</p>

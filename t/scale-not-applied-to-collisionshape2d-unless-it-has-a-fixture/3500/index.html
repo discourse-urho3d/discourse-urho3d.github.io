@@ -38,7 +38,7 @@
 <li>scale node N</li>
 <li>create collision body in node N</li>
 </ol>
-<p>Some superficial testing seems to indicate this can be fixed by removing line <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Urho2D/CollisionShape2D.cpp#L323" rel="nofollow noopener">CollisionShape2D.cpp:323</a></p>
+<p>Some superficial testing seems to indicate this can be fixed by removing line <a  rel="nofollow noopener">CollisionShape2D.cpp:323</a></p>
 <p>Does anyone know of a reason why that shouldn’t be done? Notice that the fixture is still checked for nullptr whenever it would be affected. Having the check outside prevents the shape from being updated though.</p>
           </div>
         </div>

@@ -61,7 +61,7 @@ ProcSky::SetRenderSize(unsigned size) {
 <p>Full source <a href="https://github.com/carnalis/ProcSky/blob/master/ProcSky.cc">github.com/carnalis/ProcSky/blo … ProcSky.cc</a></p>
 <p>Maybe I was not using the proper way to accomplish RTT.<br/>
 Maybe a recent change requires one of my own?<br/>
-Only this recent commit stands out: <a href="https://github.com/urho3d/Urho3D/commit/1ba0958fa70a4042bfbc84958a9b7b54913455c8">github.com/urho3d/Urho3D/commit … 54913455c8</a><br/>
+Only this recent commit stands out: <a >github.com/urho3d/Urho3D/commit … 54913455c8</a><br/>
 Any advice is welcome.</p>
           </div>
         </div>
@@ -178,10 +178,10 @@ cmake -G "MinGW Makefiles" -D CMAKE_BUILD_TYPE=Debug -D CMAKE_CXX_FLAGS_DEBUG="-
           <div class="post_content">
 <p>Found it.</p>
 <p>OGLGraphics.cpp<br/>
-<a href="https://github.com/urho3d/Urho3D/commit/3f861d67dd684d4ca9dbdbdcdbd6dfe9ec701407#diff-878294995c200c1ad22be2b31d26cdf5">github.com/urho3d/Urho3D/commit … b31d26cdf5</a></p>
+<a >github.com/urho3d/Urho3D/commit … b31d26cdf5</a></p>
 <p>There have been problems with <span class="bbcode-b">GL_TEXTURE_CUBE_MAP_SEAMLESS</span> (OpenGL 3.2) on some hardware; e.g., GeForce 9800 GT, 9600 GM</p>
 <p>In these cases the vertex shader falls back to software and aborts, leaving only black.</p>
-<p>I have created an issue on GitHub: <a href="https://github.com/urho3d/Urho3D/issues/1380">github.com/urho3d/Urho3D/issues/1380</a></p>
+<p>I have created an issue on GitHub: <a >github.com/urho3d/Urho3D/issues/1380</a></p>
 <p>State of affairs:<br/>
 Application developers can disable the extension in Urho’s Graphics cpp implementations, and if they have fixes that are clean enough they can be PR’d.</p>
           </div>

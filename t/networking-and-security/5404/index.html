@@ -62,11 +62,11 @@ Ok, about executing scripts on the client via udp?!? That would only be possible
 <p>Still, I think as an online developer you should have to secure personal data and credentials at all costs.<br/>
 <span class="mention">@TheComet</span> Have a look at  this PR. Maybe this gets you at a better starting point:</p>
 <ul>
-<li>SLikeNet libcat security: <a href="https://github.com/urho3d/Urho3D/pull/2464" rel="nofollow noopener">https://github.com/urho3d/Urho3D/pull/2464</a>
+<li>SLikeNet libcat security: <a  rel="nofollow noopener">https://github.com/urho3d/Urho3D/pull/2464</a>
 </li>
 </ul>
 <p>Very optional:<br/>
-Also have a look at the <a href="https://github.com/urho3d/Urho3D/tree/civetweb-update" rel="nofollow noopener">civetweb-update-branch</a> in which <span class="mention">@Miegamicis</span> is adding https support. Maybe you could manage the critical data via https and a dedicated ‘lobby’.webserver, which would handle logins/account data and such and create then some kind of session-token for login in to the server-connection once you want to start a game… The uncritical game-data transmissions would then still be unencrypted…make this sense?</p>
+Also have a look at the <a  rel="nofollow noopener">civetweb-update-branch</a> in which <span class="mention">@Miegamicis</span> is adding https support. Maybe you could manage the critical data via https and a dedicated ‘lobby’.webserver, which would handle logins/account data and such and create then some kind of session-token for login in to the server-connection once you want to start a game… The uncritical game-data transmissions would then still be unencrypted…make this sense?</p>
           </div>
         </div>
       </div>

@@ -70,7 +70,7 @@ In Renderer::Update() this code suppose to ensure that the viewport with the low
 <p>RenderSurface::QueueUpdate() calls Renderer::QueueRenderSurface() which directly uses Renderer::QueueViewport(). That means RenderSurface::QueueUpdate() isn’t added to viewports_ and therefore skips the viewport ordering.<br/>
 That means it would be at the beginning of queuedViewports_, that means it renders after all of the elements in viewports_ because of the reveresed order.</p>
 <p>Assuming this is a bug, a possible solution would be to collect all the render surface viewports in Renderer::QueueRenderSurface(), and push them to queuedViewports_ in Renderer::Update() only after the main views are added, so they’re rendered first.</p>
-<p>Reported as a bug: <a href="https://github.com/urho3d/Urho3D/issues/1171" rel="nofollow noopener">github.com/urho3d/Urho3D/issues/1171</a></p>
+<p>Reported as a bug: <a  rel="nofollow noopener">github.com/urho3d/Urho3D/issues/1171</a></p>
           </div>
         </div>
       </div>

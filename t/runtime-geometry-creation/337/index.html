@@ -185,7 +185,7 @@ object-&gt;SetModel(model);</code></pre>
 <p>Easy way to display one unique object with unindexed geometry. Can be used from scripting. Create a CustomGeometry component to a scene node; you don’t need other components. (In this case, do not try to use the CustomGeometry’s geometry to build a Model resource. It may work, but is unsupported)</p>
 </li>
 <li>
-<p>The hard way, but allows more freedom. Unindexed or indexed geometry. C++ only. Create a Model, fill vertex + index buffers. Use eg. StaticModel component to show it. There’s a from-scratch example now in <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Samples/34_DynamicGeometry/DynamicGeometry.cpp">github.com/urho3d/Urho3D/blob/m … ometry.cpp</a>. Note that you need an updated master branch for the example to work as is; previously you needed to call model-&gt;SetNumGeometryLodLevels() for each geometry, now 1 LOD level is assumed and you no longer require the call in that case.</p>
+<p>The hard way, but allows more freedom. Unindexed or indexed geometry. C++ only. Create a Model, fill vertex + index buffers. Use eg. StaticModel component to show it. There’s a from-scratch example now in <a >github.com/urho3d/Urho3D/blob/m … ometry.cpp</a>. Note that you need an updated master branch for the example to work as is; previously you needed to call model-&gt;SetNumGeometryLodLevels() for each geometry, now 1 LOD level is assumed and you no longer require the call in that case.</p>
 </li>
 </ol>
           </div>

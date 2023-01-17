@@ -315,7 +315,7 @@ finalColor += Sample2D(EmissiveMap, iTexCoord2).rgb * cAmbientColor.rgb * diffCo
 As for Your “code first approach”, this not a way to go with this error. <a href="https://urho3d.github.io/documentation/HEAD/_vertex_buffers.html" rel="noopener nofollow ugc">Here is the list </a> of vertex elements and before that there is important, in this case, sentence: " Each of the following elements may or may not be present". Error under discussion means that shader require element that is not present. If You want to fix it only from code, here is what You should do to make this sample work as it supposed to: calculate uv coordinates for every vertex of each geometry (this model have 3 of them) and place them in right place in vertex buffers. It can be done, but good luck with that (ok, in this particular case it may not be that hard, since You’d propably want to use same coordinates as UV1).<br/>
 Now, here are realistic and much simpler  solutions: don’t use this technique, since it’s not suitable for this model, modify shader to use only one UV or use 3d modelling software to add missing vertex elements. You can also remove all "defines=“AO” from “DiffAO” technique xml, but then it will be the same as “Diff.xml” technique.<br/>
 To make it even more clear: nornal map can be another example - using normal map require tangent vertex element, if it’s not present You’ll get the same error on DirectX and on OpenGL material will be displayed without normal map.<br/>
-And for the reference, here is how this material look on model with second UV:<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/luIxM9IyBHyrGwVXKOc1aV3fsq.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/0/026e0ab51033c00ac2ac6679e3b0e689f43e5796.png" rel="noopener nofollow ugc" title="Screenshot_Sun_Jan_27_02_39_13_2019"><img alt="Screenshot_Sun_Jan_27_02_39_13_2019" data-base62-sha1="luIxM9IyBHyrGwVXKOc1aV3fsq"  height="356" src="../../../images2/cfca73199fb1d409392ce00d56738a05.png"  width="690"/><div class="meta">
+And for the reference, here is how this material look on model with second UV:<div class="lightbox-wrapper"><a class="lightbox"   rel="noopener nofollow ugc" title="Screenshot_Sun_Jan_27_02_39_13_2019"><img alt="Screenshot_Sun_Jan_27_02_39_13_2019" data-base62-sha1="luIxM9IyBHyrGwVXKOc1aV3fsq"  height="356" src="../../../images2/cfca73199fb1d409392ce00d56738a05.png"  width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">Screenshot_Sun_Jan_27_02_39_13_2019</span><span class="informations">1366×705 86 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
 </div></a></div></p>
           </div>
@@ -367,13 +367,13 @@ And for the reference, here is how this material look on model with second UV:<d
 &lt;/material&gt;
 </code></pre>
 <p><a href="https://urho3d.github.io/documentation/HEAD/_vertex_buffers.html" rel="noopener nofollow ugc">Read the link provided</a>, and checked the vertex buffers of a model that is working:<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/131GwPqeoKY4rbD4so79MgZFjy5.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/0/0759c697d67b05847cd3f546f57594ee5bcb0795.png" rel="noopener nofollow ugc" title="VertexBuffersOfWorkingModel"><img alt="VertexBuffersOfWorkingModel" data-base62-sha1="131GwPqeoKY4rbD4so79MgZFjy5"  height="393" src="../../../images2/51aae94d046b3cb93c593b4a18c56b82.png" width="690"/><div class="meta">
+<div class="lightbox-wrapper"><a class="lightbox"   rel="noopener nofollow ugc" title="VertexBuffersOfWorkingModel"><img alt="VertexBuffersOfWorkingModel" data-base62-sha1="131GwPqeoKY4rbD4so79MgZFjy5"  height="393" src="../../../images2/51aae94d046b3cb93c593b4a18c56b82.png" width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">VertexBuffersOfWorkingModel</span><span class="informations">1601×913 22.5 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
 </div></a></div></p>
 <p>Not sure how visible it is, there  is a single buffer.</p>
 <p>The element mask is Position | Normal | Color | TexCoord1 | Tangent.</p>
 <p>Here’s the same for a not working model, same model, but on UWP platform, and not working:<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/roXOSqthJkzhtJ41y2u4LcP4IkP.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/c/c00d231e6971d305660b02dd2947a74d2def730b.png" rel="noopener nofollow ugc" title="NotWorkingModelWithAO"><img alt="NotWorkingModelWithAO" data-base62-sha1="roXOSqthJkzhtJ41y2u4LcP4IkP"  height="388" src="../../../images2/05ac8f1b4195b7ac39f8521f98243703.png" width="690"/><div class="meta">
+<div class="lightbox-wrapper"><a class="lightbox"   rel="noopener nofollow ugc" title="NotWorkingModelWithAO"><img alt="NotWorkingModelWithAO" data-base62-sha1="roXOSqthJkzhtJ41y2u4LcP4IkP"  height="388" src="../../../images2/05ac8f1b4195b7ac39f8521f98243703.png" width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">NotWorkingModelWithAO</span><span class="informations">1620×911 21.9 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
 </div></a></div></p>
           </div>
@@ -483,7 +483,7 @@ As for the model, I cannot upload it to the forum directly, but it’s just a sp
 <p>here is what You should do to make this sample work as it supposed to: calculate uv coordinates for every vertex of each geometry (this model have 3 of them) and place them in right place in vertex buffers. It can be done, but good luck with that (ok, in this particular case it may not be that hard, since You’d propably want to use same coordinates as UV1).</p>
 </blockquote>
 </aside>
-<p><a href="https://github.com/urho3d/Urho3D/wiki/How-to-define-3D-object-in-code" rel="noopener nofollow ugc">So following the code as shown here</a> … what I’d need to do is define another TexCoord on each vertex?</p>
+<p><a  rel="noopener nofollow ugc">So following the code as shown here</a> … what I’d need to do is define another TexCoord on each vertex?</p>
 <p>Is that what will fix the model?</p>
           </div>
         </div>
@@ -639,7 +639,7 @@ The thing about ambient occlusion texture is that it shouldn’t be using overla
 </blockquote>
 </aside>
 <p>Just to be clear - it’s not this line causing error, it’s wrong model, but this solution should work  just fine. I would also suggest using <a href="https://earthobservatory.nasa.gov/features/NightLights" rel="noopener nofollow ugc"> different AO texture </a>, to make it look better (I’ve used default sphere and shader modified same way as You did):<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/tJUihMWVJ5Hr1I0DuSGZuqnJHC8.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/d/d06f8b2a7a33ab6d929b38bccce6890da06cb9b0.jpeg" rel="noopener nofollow ugc" title="Screenshot_Tue_Feb__5_02_51_03_2019"><img alt="Screenshot_Tue_Feb__5_02_51_03_2019" data-base62-sha1="tJUihMWVJ5Hr1I0DuSGZuqnJHC8"  height="356" src="../../../images2/f8d8de5ce29d157c2e3b32b681125a5c.jpeg"  width="690"/><div class="meta">
+<div class="lightbox-wrapper"><a class="lightbox"   rel="noopener nofollow ugc" title="Screenshot_Tue_Feb__5_02_51_03_2019"><img alt="Screenshot_Tue_Feb__5_02_51_03_2019" data-base62-sha1="tJUihMWVJ5Hr1I0DuSGZuqnJHC8"  height="356" src="../../../images2/f8d8de5ce29d157c2e3b32b681125a5c.jpeg"  width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">Screenshot_Tue_Feb__5_02_51_03_2019</span><span class="informations">1366×705 65.3 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
 </div></a></div></p>
 <aside class="quote no-group" data-post="26" data-topic="4810" data-username="I3DB">

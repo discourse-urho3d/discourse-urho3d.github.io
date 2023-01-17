@@ -593,7 +593,7 @@ I guess this line is the culpirit</p>
         <div class="post">
           <div class="user_name">weitjong</div>
           <div class="post_content">
-<p>I made a line comment in the GitHub on these lines of code: <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Navigation/DetourCrowdManager.cpp#L504-L507">github.com/urho3d/Urho3D/blob/m … #L504-L507</a>. In my opinion, I think navigation should not depend on physics. Any objection to change the event type from E_PHYSICSPRESTEP (fixed-rate timestep) to, say, E_SCENESUBSYSTEMUPDATE (variable-rate timestep)? It not only decouples Detour crowd navigation from Physics subsystem but also makes crowd manager to update at the same (variable) rate as the DynamicNavigationMesh component. If there is no objection then I will include this change in my next commit which mainly consists of minor code cleanup due to code convention.</p>
+<p>I made a line comment in the GitHub on these lines of code: <a >github.com/urho3d/Urho3D/blob/m … #L504-L507</a>. In my opinion, I think navigation should not depend on physics. Any objection to change the event type from E_PHYSICSPRESTEP (fixed-rate timestep) to, say, E_SCENESUBSYSTEMUPDATE (variable-rate timestep)? It not only decouples Detour crowd navigation from Physics subsystem but also makes crowd manager to update at the same (variable) rate as the DynamicNavigationMesh component. If there is no objection then I will include this change in my next commit which mainly consists of minor code cleanup due to code convention.</p>
           </div>
         </div>
       </div>
@@ -2347,7 +2347,7 @@ Thanks for the reply. Yes, I have understood that much. I could almost conclude 
           <div class="user_name">weitjong</div>
           <div class="post_content">
 <p>Just a head up. I am still in refactoring mode or mood, so expect more changes to come. Although I agree with you that we have to be careful not to flood the network when agents are being updated, we should also at the same time keep all the crowd managers in the network to update the crowd agents in a deterministic way. So, IMHO, in order to achieve this then all the agent’s attributes and parameters must be in sync across the network.</p>
-<p>I have a few questions (not related to the above). It looks to me there may be a copy-paste error here. <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Navigation/DetourCrowdManager.cpp#L343-L373">github.com/urho3d/Urho3D/blob/m … #L343-L373</a>. I have to admit I have no experience with DetourCrowd before so I don’t know what is the sensible settings for low, medium, and high navigation quality. I suppose the “obstacleAvoidanceType” setting should be different in each case. At the moment it always stays at 3 (because it is also initialized to 3 when the agent is added initially). Line 355 appears to be redundant. And with that line removed then the “updateFlags” is effectively the same between low and medium[?]</p>
+<p>I have a few questions (not related to the above). It looks to me there may be a copy-paste error here. <a >github.com/urho3d/Urho3D/blob/m … #L343-L373</a>. I have to admit I have no experience with DetourCrowd before so I don’t know what is the sensible settings for low, medium, and high navigation quality. I suppose the “obstacleAvoidanceType” setting should be different in each case. At the moment it always stays at 3 (because it is also initialized to 3 when the agent is added initially). Line 355 appears to be redundant. And with that line removed then the “updateFlags” is effectively the same between low and medium[?]</p>
           </div>
         </div>
       </div>
@@ -2577,7 +2577,7 @@ This is certainly due to the Detour parameters of the function (dtQueryFilter an
         <div class="post">
           <div class="user_name">Mike</div>
           <div class="post_content">
-<p>EDIT: has been fixed by this <a data-bbcode="true" href="https://github.com/urho3d/Urho3D/commit/ae0544291afb5a01e26ecc6429c161515aeb8375">commit</a>.</p>
+<p>EDIT: has been fixed by this <a data-bbcode="true" >commit</a>.</p>
           </div>
         </div>
       </div>

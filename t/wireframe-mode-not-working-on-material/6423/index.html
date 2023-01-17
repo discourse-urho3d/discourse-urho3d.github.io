@@ -49,9 +49,9 @@
 	}
 </code></pre>
 <p>This is what I’m trying to get:</p>
-<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/yLo9LOztVeamShxOYPXJYIqxiyg.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/f/f3a54a402d2090e8250e68f52ad90e75440a822c.jpeg" rel="noopener nofollow ugc" title="B5D85DAE-EA7A-497E-8A52-4B8314D97E7B_1_105_c"><img alt="B5D85DAE-EA7A-497E-8A52-4B8314D97E7B_1_105_c" data-base62-sha1="yLo9LOztVeamShxOYPXJYIqxiyg"  height="500" src="../../../images2/04d129f904cea11c292da72d7a7f4306.jpeg"  width="666"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">B5D85DAE-EA7A-497E-8A52-4B8314D97E7B_1_105_c</span><span class="informations">1024×768 120 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox"   rel="noopener nofollow ugc" title="B5D85DAE-EA7A-497E-8A52-4B8314D97E7B_1_105_c"><img alt="B5D85DAE-EA7A-497E-8A52-4B8314D97E7B_1_105_c" data-base62-sha1="yLo9LOztVeamShxOYPXJYIqxiyg"  height="500" src="../../../images2/04d129f904cea11c292da72d7a7f4306.jpeg"  width="666"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">B5D85DAE-EA7A-497E-8A52-4B8314D97E7B_1_105_c</span><span class="informations">1024×768 120 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
 <p>This is what the above code yields.  Is there something else I need to set?</p>
-<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/lcrF8zCin39NtzZVcz5oVlZvzZw.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/9/9495d31e2ad9ee086e6e76e013ccf91c341bfeea.jpeg" rel="noopener nofollow ugc" title="C9C63F8E-08F1-4B39-8221-84DF332CBCDD_1_105_c"><img alt="C9C63F8E-08F1-4B39-8221-84DF332CBCDD_1_105_c" data-base62-sha1="lcrF8zCin39NtzZVcz5oVlZvzZw"  height="500" src="../../../images2/43f08412f6f4dbcf78ae1f0d36aa20ab.jpeg" width="666"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">C9C63F8E-08F1-4B39-8221-84DF332CBCDD_1_105_c</span><span class="informations">1024×768 59.1 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox"   rel="noopener nofollow ugc" title="C9C63F8E-08F1-4B39-8221-84DF332CBCDD_1_105_c"><img alt="C9C63F8E-08F1-4B39-8221-84DF332CBCDD_1_105_c" data-base62-sha1="lcrF8zCin39NtzZVcz5oVlZvzZw"  height="500" src="../../../images2/43f08412f6f4dbcf78ae1f0d36aa20ab.jpeg" width="666"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">C9C63F8E-08F1-4B39-8221-84DF332CBCDD_1_105_c</span><span class="informations">1024×768 59.1 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
           </div>
         </div>
       </div>
@@ -138,7 +138,7 @@ Maybe there’s another way but I don’t know about.</p>
         <div class="post">
           <div class="user_name">Lys0gen</div>
           <div class="post_content">
-<p>I think he means you will have to create your model from a custom geometry with Vertex/IndexBuffers. See <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Samples/34_DynamicGeometry/DynamicGeometry.cpp" rel="noopener nofollow ugc">sample 34</a>. Instead of using tris with</p>
+<p>I think he means you will have to create your model from a custom geometry with Vertex/IndexBuffers. See <a  rel="noopener nofollow ugc">sample 34</a>. Instead of using tris with</p>
 <pre><code>    geom-&gt;SetDrawRange(TRIANGLE_LIST, 0, numVertices);
 </code></pre>
 <p>you would use a LINE_LIST to define the geometry</p>
@@ -188,7 +188,7 @@ You may get C#-specific issues tho.</p>
 	}
 </code></pre>
 <p>I don’t really understand what SetDrawRange does, but the above code does yield this.</p>
-<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/llBMz03TVVZNqJ5WteEDsz3N2Oj.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/9/959efe1eef27a5e9ce6c8c92d92368ebc5531eff.jpeg" rel="noopener nofollow ugc" title="FB18E1A5-EC09-495D-8951-D06B6B918199_1_105_c"><img alt="FB18E1A5-EC09-495D-8951-D06B6B918199_1_105_c" data-base62-sha1="llBMz03TVVZNqJ5WteEDsz3N2Oj"  height="500" src="../../../images2/f7f4d8c8e450ba03b0393bdad2734661.jpeg"  width="666"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">FB18E1A5-EC09-495D-8951-D06B6B918199_1_105_c</span><span class="informations">1024×768 241 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox"   rel="noopener nofollow ugc" title="FB18E1A5-EC09-495D-8951-D06B6B918199_1_105_c"><img alt="FB18E1A5-EC09-495D-8951-D06B6B918199_1_105_c" data-base62-sha1="llBMz03TVVZNqJ5WteEDsz3N2Oj"  height="500" src="../../../images2/f7f4d8c8e450ba03b0393bdad2734661.jpeg"  width="666"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">FB18E1A5-EC09-495D-8951-D06B6B918199_1_105_c</span><span class="informations">1024×768 241 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
 <p>Obviously the lines it is using are not really right, but it does give a type of wireframe sphere.</p>
 <p>Is there some modification of this that might get the wireframes looking correct?</p>
           </div>
@@ -290,7 +290,7 @@ The easiest modification is for each (a b c) triplet in index buffer create thre
 	}
 </code></pre>
 <p>Here is what it looks like:</p>
-<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/oeSq7uhJLG3kA5v3c72LUw7FRsU.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/a/a9e2b65749ae38b2fa6a49a61f8e738bcc43237c.jpeg" rel="noopener nofollow ugc" title="1B070475-EB11-446D-8C16-29327FF70E0D_1_105_c"><img alt="1B070475-EB11-446D-8C16-29327FF70E0D_1_105_c" data-base62-sha1="oeSq7uhJLG3kA5v3c72LUw7FRsU"  height="500" src="../../../images2/9a96107327b5f6a5e18119748865b733.jpeg"  width="666"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">1B070475-EB11-446D-8C16-29327FF70E0D_1_105_c</span><span class="informations">1024×768 180 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox"   rel="noopener nofollow ugc" title="1B070475-EB11-446D-8C16-29327FF70E0D_1_105_c"><img alt="1B070475-EB11-446D-8C16-29327FF70E0D_1_105_c" data-base62-sha1="oeSq7uhJLG3kA5v3c72LUw7FRsU"  height="500" src="../../../images2/9a96107327b5f6a5e18119748865b733.jpeg"  width="666"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">1B070475-EB11-446D-8C16-29327FF70E0D_1_105_c</span><span class="informations">1024×768 180 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
 <p>I don’t necessarily like the way this is tessellated compared to SceneKit’s way (see image in initial posting), but I can live with it.</p>
 <p>Thanks again for the help.  I couldn’t have done this without you.</p>
           </div>
@@ -382,7 +382,7 @@ The easiest modification is for each (a b c) triplet in index buffer create thre
           <div class="user_name">btschumy</div>
           <div class="post_content">
 <p>Sorry, you are right.  It was called SourceAssets.</p>
-<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/kVKwQg3QdgDYEWfJhV5rypTgEbF.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/9/92b2adf2f45412c43c7f1185d48d16c0328c1143.png" rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="kVKwQg3QdgDYEWfJhV5rypTgEbF"  height="500" src="../../../images2/971e6485c1a97431d72786b3674782ef.png"  width="545"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1296×1188 242 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox"   rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="kVKwQg3QdgDYEWfJhV5rypTgEbF"  height="500" src="../../../images2/971e6485c1a97431d72786b3674782ef.png"  width="545"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1296×1188 242 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
 <p>So what is the name of the UVSphere and how is it accessed?</p>
           </div>
         </div>
@@ -413,11 +413,11 @@ The easiest modification is for each (a b c) triplet in index buffer create thre
 <aside class="onebox allowlistedgeneric">
 <header class="source">
 <img class="site-icon" height="16" src="../../../images2/0973ea8ce7121c320f68413e2a2f23ab.svg" width="16"/>
-<a href="https://github.com/urho3d/Urho3D/tree/master/bin/Data/Models" rel="noopener" target="_blank">GitHub</a>
+<a  rel="noopener" target="_blank">GitHub</a>
 </header>
 <article class="onebox-body">
 <img class="thumbnail onebox-avatar" height="60" src="https://avatars1.githubusercontent.com/u/5592833?s=400&amp;v=4" width="60"/>
-<h3><a href="https://github.com/urho3d/Urho3D/tree/master/bin/Data/Models" rel="noopener" target="_blank">urho3d/Urho3D</a></h3>
+<h3><a  rel="noopener" target="_blank">urho3d/Urho3D</a></h3>
 <p>Cross-platform 2D and 3D game engine. Contribute to urho3d/Urho3D development by creating an account on GitHub.</p>
 </article>
 <div class="onebox-metadata">
@@ -471,9 +471,9 @@ AssetImporter tool or Blender plugin is usually used to convert models into nati
           <div class="post_content">
 <p>Well, the plugin that seems recommended is here: <a href="https://github.com/reattiva/Urho3D-Blender" rel="noopener nofollow ugc">https://github.com/reattiva/Urho3D-Blender</a></p>
 <p>Following the instructions, I installed the plugin but get a warning that I need to update to Blender 2.8.x (I am on 2.90.1)</p>
-<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/wl7eoESRZVjnaiPjftap5EA24hO.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/e/e2a8a58e7cf743054bbb533a31baa5a0a5941c50.png" rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="wl7eoESRZVjnaiPjftap5EA24hO"  height="500" src="../../../images2/b7ea09b9175aee5c545352950c3fd9b6.png"  width="602"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1332×1106 96.3 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox"   rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="wl7eoESRZVjnaiPjftap5EA24hO"  height="500" src="../../../images2/b7ea09b9175aee5c545352950c3fd9b6.png"  width="602"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1332×1106 96.3 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
 <p>Despite the warning, I enabled it with the checkbox.  However, I don’t see any export options in the Render Properties page (which is where the instruction say it should be).  Maybe this doesn’t work on Mac?</p>
-<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/4ny4Vvxh28cb4cp2k15nyLN5iwf.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/1/1eb22eda820ce16ee6f315e81b2c2968637ea61f.png" rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="4ny4Vvxh28cb4cp2k15nyLN5iwf"  height="500" src="../../../images2/964723dbad14c2913bc9323299b885d1.png"  width="363"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">439×604 31.5 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox"   rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="4ny4Vvxh28cb4cp2k15nyLN5iwf"  height="500" src="../../../images2/964723dbad14c2913bc9323299b885d1.png"  width="363"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">439×604 31.5 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
 <p>As far as the AssetImporter tool, I don’t see how to use that.  Do I need to compile it?  Is it a command line tool?</p>
           </div>
         </div>
@@ -579,7 +579,7 @@ I suppose you could manually calculate the normals based on the old tri vertices
 <p>Well, the plugin that seems recommended is here: <a href="https://github.com/reattiva/Urho3D-Blender">https://github.com/reattiva/Urho3D-Blender</a></p>
 </blockquote>
 </aside>
-<p>FYI: <span class="mention">@dertom</span>’s exporter continues to work here (Blender 2.90.1 (L)), and I updated the <a href="https://github.com/urho3d/Urho3D/wiki">wiki</a> editors a bit.  <a class="inline-onebox" href="https://discourse.urho3d.io/t/blender-2-8-exporter-with-additonal-features-e-g-urho3d-materialnodes-and-components/5240">Blender 2.8-Exporter with additonal features(e.g. urho3d-materialnodes and components)</a></p>
+<p>FYI: <span class="mention">@dertom</span>’s exporter continues to work here (Blender 2.90.1 (L)), and I updated the <a >wiki</a> editors a bit.  <a class="inline-onebox" href="https://discourse.urho3d.io/t/blender-2-8-exporter-with-additonal-features-e-g-urho3d-materialnodes-and-components/5240">Blender 2.8-Exporter with additonal features(e.g. urho3d-materialnodes and components)</a></p>
           </div>
         </div>
       </div>

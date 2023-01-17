@@ -259,7 +259,7 @@ Very nice to hear from you!!!</p>
 <p>I modified 45_InverseKinematics so it would spawn 25 Jacks instead of just 1. Here, have a play around with it.<br/>
 <a class="onebox" href="https://pastebin.com/zvqxBd9K" rel="nofollow noopener" target="_blank">https://pastebin.com/zvqxBd9K</a></p>
 <p>Multiple solvers appear to work fine.</p>
-<p><div class="lightbox-wrapper"><a class="lightbox" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/1X/0c1d07ced0c719683a8a547fc20c9bda4401dc53.jpg" rel="nofollow noopener" title="1.jpg"><img alt="1"  height="500" src="../../../images2/6bd4ecf95144b75d79c437c7cc43d16b.jpg"  width="661"/><div class="meta">
+<p><div class="lightbox-wrapper"><a class="lightbox"  rel="nofollow noopener" title="1.jpg"><img alt="1"  height="500" src="../../../images2/6bd4ecf95144b75d79c437c7cc43d16b.jpg"  width="661"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">1.jpg</span><span class="informations">1000×756 255 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg>
 </div></a></div></p>
           </div>
@@ -393,7 +393,7 @@ no difference at all.</p>
 <p>It’s definitely a feature worth considering. It will require some non-trivial changes to the IK library, specifically in how the chain tree is built and how the segment lengths are calculated.</p>
 <p>I think you’ll have a better time adjusting the skeleton so it has two bones rather than trying to force the IK library into special cases where it occasionally skips bones and stuff.</p>
 <p>You can add two dummy bones to the skeleton like so</p>
-<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/hpvcCcBMA5m8jeiACByHpluwTP.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/1X/01f7dac0574f29f1ff24f40ad85d93fb37b37405.png" rel="noopener nofollow ugc" title="1"><img alt="1" data-base62-sha1="hpvcCcBMA5m8jeiACByHpluwTP"  height="500" src="../../../images2/5471d2896ee7813fcd4afcb321f4ff1f.png" width="310"/><div class="meta">
+<p><div class="lightbox-wrapper"><a class="lightbox"   rel="noopener nofollow ugc" title="1"><img alt="1" data-base62-sha1="hpvcCcBMA5m8jeiACByHpluwTP"  height="500" src="../../../images2/5471d2896ee7813fcd4afcb321f4ff1f.png" width="310"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">1</span><span class="informations">405×652 59.6 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
 </div></a></div></p>
 <p>Attach the IKEffectors to the end of these hidden bones, Solve(), then copy the rotations to the actual bones that matter.</p>
@@ -491,7 +491,7 @@ With my skeleton usage setting targetPososition to any value seems to have no vi
 Yeah, you’ve run into exactly the thing I mentioned with two solvers fighting over who’s right. In the <code>45_InverseKinematics</code> example, the solver is attached to “Bip01_Spine”. This node is a parent of “Bip01_Head” (to which you are also attaching a solver). So when you add the effectors, the first solver will build a chain for the legs and neck while the second solver also builds a chain for the neck.</p>
 <p>Because the first solver is set to TWO_BONE, in debug mode, it will call abort() because the neck doesn’t have two bones (only one). That’s why it segfaults. You have two options to fix this: 1) Don’t add the second solver and instead set the first solver’s algorithm to FABRIK. Then it will solve for the neck and the legs, or 2) attach the first solver to a bone that is not a parent of the neck bone.</p>
 <p>This seems like an oversight on my part. I think the more appropriate behaviour would be for the first solver to ignore the second solver’s subtree.</p>
-<p>I opened an issue here: <a href="https://github.com/urho3d/Urho3D/issues/2058" rel="nofollow noopener">https://github.com/urho3d/Urho3D/issues/2058</a></p>
+<p>I opened an issue here: <a  rel="nofollow noopener">https://github.com/urho3d/Urho3D/issues/2058</a></p>
           </div>
         </div>
       </div>

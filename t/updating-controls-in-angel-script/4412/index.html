@@ -52,7 +52,7 @@ Why it’s so? And what is the difference?</p>
           <div class="user_name">jmiller</div>
           <div class="post_content">
 <p>Hi Bananaft,</p>
-<p><a data-bbcode="true" href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Core/Object.h#L113">SubscribeToEvent() has overloads</a> to subscribe to events sent by a specific <code>Object</code>, e.g.</p>
+<p><a data-bbcode="true" >SubscribeToEvent() has overloads</a> to subscribe to events sent by a specific <code>Object</code>, e.g.</p>
 <pre><code class="lang-auto">SubscribeToEvent(node_, E_NODECOLLISION, URHO3D_HANDLER(Character, HandleNodeCollision));</code></pre>
 <p>E_UPDATE is the application-wide variable timestep update event you know.<br/>
 On E_UPDATE, the Scene sends E_SCENEUPDATE (Urho3D/Scene/SceneEvents.h) only if the scene is enabled.</p>
@@ -71,7 +71,7 @@ On E_UPDATE, the Scene sends E_SCENEUPDATE (Urho3D/Scene/SceneEvents.h) only if 
           <div class="post_content">
 <p>Hi, thank you for reply, <span class="mention">@jmiller</span>.</p>
 <p>I did some tests with frame number logging. Fascinating finding, If my main game script subscribes to plain update, it happens last in the frame, after all other objects already updated. If it subscribes to scene update, just like Ninja Snow War does, update happens first in the frame. But I’m not sure If I can rely on this order, since I was able to squeeze player’s update before it, by creating player object before subscribing game script to this events, also disabling and reenabling components changes this order.<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/98nzjweUk3gnbHSNVGnVEyw7vvA.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/4/400612b4801cd1739523b295ccf70d469812302a.png" rel="noopener nofollow ugc" title="ReAKsHA.png"><img  height="464" src="../../../images2/989ff0a2a83d586e8c25da0e559de6f5.png" width="690"/><div class="meta">
+<div class="lightbox-wrapper"><a class="lightbox"   rel="noopener nofollow ugc" title="ReAKsHA.png"><img  height="464" src="../../../images2/989ff0a2a83d586e8c25da0e559de6f5.png" width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">ReAKsHA.png</span><span class="informations">1103×743 172 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
 </div></a></div></p>
 <aside class="quote no-group" data-post="2" data-topic="4412" data-username="jmiller">

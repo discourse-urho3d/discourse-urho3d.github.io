@@ -92,8 +92,8 @@ Also note that SDL_WINDOW_ALLOW_HIGHDPI is now mandatory for any retina display 
         <div class="post">
           <div class="user_name">valera_rozuvan</div>
           <div class="post_content">
-<p>My effort to get Urho3D to use SDL 2.0.4: <a href="https://github.com/urho3d/Urho3D/pull/1172" rel="nofollow noopener">github.com/urho3d/Urho3D/pull/1172</a> .</p>
-<p>Also, I see that there is already a similar effort under way: <a href="https://github.com/urho3d/Urho3D/pull/1123" rel="nofollow noopener">github.com/urho3d/Urho3D/pull/1123</a> .</p>
+<p>My effort to get Urho3D to use SDL 2.0.4: <a  rel="nofollow noopener">github.com/urho3d/Urho3D/pull/1172</a> .</p>
+<p>Also, I see that there is already a similar effort under way: <a  rel="nofollow noopener">github.com/urho3d/Urho3D/pull/1123</a> .</p>
 <p>I did a quick diff between Urho3D SDL 2.0.3 and Official SDL 2.0.3. You can check it out here: <a href="https://github.com/valera-rozuvan/SDL_203/pull/1" rel="nofollow noopener">github.com/valera-rozuvan/SDL_203/pull/1</a> (under <span class="bbcode-b">Files changed</span>).</p>
           </div>
         </div>
@@ -154,7 +154,7 @@ Personally I am not in favor of automating the patching as you have suggested. T
 </blockquote>
 </aside>
 <p>Is the GitHub repository <a href="http://hg.libsdl.org/SDL" rel="nofollow noopener">hg.libsdl.org/SDL</a> ? If so, then if you really intend to use it as a submodule, you will have to apply a patch every time you try to build Urho3D using that submodule. For example, in the file:</p>
-<p><a data-bbcode="true" href="https://github.com/urho3d/Urho3D/blob/master/Source/ThirdParty/SDL/src/main/android/SDL_android_main.c" rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/Source/ThirdParty/SDL/src/main/android/SDL_android_main.c</a></p>
+<p><a data-bbcode="true"  rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/Source/ThirdParty/SDL/src/main/android/SDL_android_main.c</a></p>
 <p>There exists a line:</p>
 <pre><code class="lang-auto"></code></pre>
 <p>But in the official SDL file:</p>
@@ -832,7 +832,7 @@ I need to sleep on it.</p>
         <div class="post">
           <div class="user_name">weitjong</div>
           <div class="post_content">
-<p>I believe the branch is now ready to be merged. It is not yet perfect but I figure that I would never have enough time to make everything perfect. I will put all those remaining in my TODO list in <a href="https://github.com/urho3d/Urho3D/issues/1046">github.com/urho3d/Urho3D/issues/1046</a> later. Notably changes on iOS platform after having this detection logic working are:</p>
+<p>I believe the branch is now ready to be merged. It is not yet perfect but I figure that I would never have enough time to make everything perfect. I will put all those remaining in my TODO list in <a >github.com/urho3d/Urho3D/issues/1046</a> later. Notably changes on iOS platform after having this detection logic working are:</p>
 <p>[ol][li]There is now a new option to enable DLOPEN for iOS when the deployment target is 8.0 or higher. The default value of the option is true. In the past the pre-generated SDL_config_ihoneos.h always have this disabled. Let me know should I make this option off by default even when targeting 8.0+.[/li]<br/>
 [li]The SDL_AUDIO_DRIVER_DISK is also now enabled.[/li][/ol]<br/>
 Otherwise, there is actually not much gain there. Most of the gain are actually on Linux platform, we have now a number of audio and video drivers to choose from. Personally I also learn a lot from this exercise. Besides targeting tvOS (which is already possible in my other local branch), I feel like we could target more platforms if we really want to. PowerPC or PS3  <img alt=":wink:" class="emoji" src="../../../images2/95940790c23d98635b2a6d3f22657158.png" title=":wink:"/> anyone?</p>

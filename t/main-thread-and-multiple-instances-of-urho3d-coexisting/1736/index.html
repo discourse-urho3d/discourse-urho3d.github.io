@@ -50,7 +50,7 @@ And the thread class needs to take a context as an explicit or implicit paramete
           <div class="user_name">thebluefish</div>
           <div class="post_content">
 <p>Yes, it is definitely possible.</p>
-<p>You will run into issues with OpenGL with multiple GL contexts. <a data-bbcode="true" href="https://github.com/urho3d/Urho3D/commit/c3d5df1ea41d98f55a6fe1c70a5517d35777acd6" rel="nofollow noopener">I submitted a PR a while back</a> exposing a public property to allow you to properly use SDL_GL_MakeCurrent to handle this case. Used in the right spots, there should be no issues.</p>
+<p>You will run into issues with OpenGL with multiple GL contexts. <a data-bbcode="true"  rel="nofollow noopener">I submitted a PR a while back</a> exposing a public property to allow you to properly use SDL_GL_MakeCurrent to handle this case. Used in the right spots, there should be no issues.</p>
 <p>Subsystems, events, etc… are “global” to the Context only. Each Context can therefore have an Engine, Renderer, etc… without running into conflicts.</p>
 <p>You should be able to create the Urho3D Context on its own thread, but I haven’t tested this.</p>
           </div>

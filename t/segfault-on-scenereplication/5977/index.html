@@ -64,7 +64,7 @@ The sample is very simple, just a ball. So I <em>guess</em> I could slowly move 
         <div class="post">
           <div class="user_name">Miegamicis</div>
           <div class="post_content">
-<p>Did you subscribe to the correct event? Is the scene_ actually set at that point? Here’s the event description <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Network/NetworkEvents.h#L51" rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Network/NetworkEvents.h#L51</a></p>
+<p>Did you subscribe to the correct event? Is the scene_ actually set at that point? Here’s the event description <a  rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Network/NetworkEvents.h#L51</a></p>
 <p>Mu guess would be that this handler is subscribed to the wrong event which doesn’t have “Connection” parameter.</p>
           </div>
         </div>
@@ -170,7 +170,7 @@ When I try to instantiate the vehicle (using the raycast vehicle script object) 
         <div class="post">
           <div class="user_name">evolgames</div>
           <div class="post_content">
-<p>I took a look <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Physics/RaycastVehicle.cpp#L228" rel="nofollow noopener">here</a> and it looks like it’s here:</p>
+<p>I took a look <a  rel="nofollow noopener">here</a> and it looks like it’s here:</p>
 <pre><code class="lang-auto">if (!wheelNode)
 {
     URHO3D_LOGERROR("RaycastVehicle: Incorrect node id = " + String(node_id) + " index: " + String(index));
@@ -335,7 +335,7 @@ end
 <pre><code class="lang-auto">local raycastVehicle = node:CreateComponent("RaycastVehicle")
 raycastVehicle:Init()
 </code></pre>
-<p>Check the <a href="https://github.com/urho3d/Urho3D/blob/master/bin/Data/LuaScripts/46_RaycastVehicleDemo.lua#L294-L295" rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/bin/Data/LuaScripts/46_RaycastVehicleDemo.lua#L294-L295</a> for more details</p>
+<p>Check the <a  rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/bin/Data/LuaScripts/46_RaycastVehicleDemo.lua#L294-L295</a> for more details</p>
           </div>
         </div>
       </div>

@@ -74,13 +74,13 @@
           <div class="user_name">Modanung</div>
           <div class="post_content">
 <p>UrhoSharp <em>is</em> a defect. <img alt=":smirk:" class="emoji" src="../../../images2/25fadc682a4d3273aaccbef0a244569e.png" title=":smirk:"/></p>
-<p>Starting my dive in QtCreator at /Source/Urho3D/UI/Text3D.h, I used Ctrl+Shift+U to find all occurrences of <code>material_</code>. I then noticed several <code>if (!material_)</code> lines which seemed worth investigating. This brought me to <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/UI/Text3D.cpp#L628"><code>Text3D::UpdateTextMaterials</code></a>:</p>
+<p>Starting my dive in QtCreator at /Source/Urho3D/UI/Text3D.h, I used Ctrl+Shift+U to find all occurrences of <code>material_</code>. I then noticed several <code>if (!material_)</code> lines which seemed worth investigating. This brought me to <a ><code>Text3D::UpdateTextMaterials</code></a>:</p>
 <aside class="onebox githubblob">
 <header class="source">
-<a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/UI/Text3D.cpp#L647" rel="noopener" target="_blank">github.com</a>
+<a  rel="noopener" target="_blank">github.com</a>
 </header>
 <article class="onebox-body">
-<h4><a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/UI/Text3D.cpp#L647" rel="noopener" target="_blank">urho3d/Urho3D/blob/master/Source/Urho3D/UI/Text3D.cpp#L647</a></h4>
+<h4><a  rel="noopener" target="_blank">urho3d/Urho3D/blob/master/Source/Urho3D/UI/Text3D.cpp#L647</a></h4>
 <pre class="onebox"><code class="lang-cpp"><ol class="start lines" start="637" style="counter-reset: li-counter 636 ;">
 <li>{
 </li>
@@ -170,10 +170,10 @@
 <p>If you set custom material, you should be able to configure it however you want.<br/>
 If you were doing C++, it wouldn’t be a problem to configure render order here:</p><aside class="onebox githubblob" data-onebox-src="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/UI/Text3D.cpp#L659">
 <header class="source">
-<a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/UI/Text3D.cpp#L659" rel="noopener nofollow ugc" target="_blank">github.com</a>
+<a  rel="noopener nofollow ugc" target="_blank">github.com</a>
 </header>
 <article class="onebox-body">
-<h4><a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/UI/Text3D.cpp#L659" rel="noopener nofollow ugc" target="_blank">urho3d/Urho3D/blob/master/Source/Urho3D/UI/Text3D.cpp#L659</a></h4>
+<h4><a  rel="noopener nofollow ugc" target="_blank">urho3d/Urho3D/blob/master/Source/Urho3D/UI/Text3D.cpp#L659</a></h4>
 <pre class="onebox">    <code class="lang-cpp">
       <ol class="start lines" start="649" style="counter-reset: li-counter 648 ;">
           <li>}
@@ -295,10 +295,10 @@ It’s just C# that misses bindings.</p>
 <p>That code snippet was for non-SDF text. Check the code below for SDF fonts, probably you need that one. I guess you have to add this one line:<br/>
 <aside class="onebox githubblob">
 <header class="source">
-<a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/UI/Text3D.cpp#L683" rel="nofollow noopener" target="_blank">github.com</a>
+<a  rel="nofollow noopener" target="_blank">github.com</a>
 </header>
 <article class="onebox-body">
-<h4><a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/UI/Text3D.cpp#L683" rel="nofollow noopener" target="_blank">urho3d/Urho3D/blob/master/Source/Urho3D/UI/Text3D.cpp#L683</a></h4>
+<h4><a  rel="nofollow noopener" target="_blank">urho3d/Urho3D/blob/master/Source/Urho3D/UI/Text3D.cpp#L683</a></h4>
 <pre class="onebox"><code class="lang-cpp"><ol class="start lines" start="673" style="counter-reset: li-counter 672 ;">
 <li>// Note: custom defined material is assumed to have right shader defines; they aren't modified here
 </li>

@@ -33,7 +33,7 @@
           <div class="user_name">Kest</div>
           <div class="post_content">
 <p>Hello again, I bring an issue that’s recently come up. So I’ve been working on my mesh importer and everything is working properly, except for defining normals. I’ve calculated the normals automatically and they seem to be right, but one issue is that when I apply them to the Vertex Data, it spawns this.</p>
-<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/1qPuplVG1BYmueVmwLuOM3T6SoK.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/0/0a0a9a3dc40a56fb224dc7ab3b9b167551b57cb6.png" rel="noopener nofollow ugc" title="fdgfsd"><img alt="fdgfsd" data-base62-sha1="1qPuplVG1BYmueVmwLuOM3T6SoK"  height="500" src="../../../images2/e8fdcf334345d03b51e8dc67b9d22912.png" width="593"/><div class="meta">
+<p><div class="lightbox-wrapper"><a class="lightbox"   rel="noopener nofollow ugc" title="fdgfsd"><img alt="fdgfsd" data-base62-sha1="1qPuplVG1BYmueVmwLuOM3T6SoK"  height="500" src="../../../images2/e8fdcf334345d03b51e8dc67b9d22912.png" width="593"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">fdgfsd</span><span class="informations">1114×939 8.62 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
 </div></a></div></p>
 <p>I have this defining the features of the model.</p>
@@ -235,7 +235,7 @@ Maybe trying with renderdoc could give a hint about whats going on.</p>
           <div class="user_name">Eugene</div>
           <div class="post_content">
 <p>This is default order of elements:<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/sZRf5wVohcFRX2vIs2lykpX2jfl.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/c/cb3af53dad26fcc45affc2f43b1bdf255278a883.png" rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="sZRf5wVohcFRX2vIs2lykpX2jfl"  height="262" src="../../../images2/d385a44f0f641c6ad954618ee92d2841.png" width="690"/><div class="meta">
+<div class="lightbox-wrapper"><a class="lightbox"   rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="sZRf5wVohcFRX2vIs2lykpX2jfl"  height="262" src="../../../images2/d385a44f0f641c6ad954618ee92d2841.png" width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">760×289 30.5 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
 </div></a></div><br/>
 So you need to shuffle your write code according to it.</p>
@@ -259,10 +259,10 @@ You are writing your generated normal at the end (in the vertData) , but it must
 <p><span class="mention">@Eugene</span>  is right , the order and byte size and Element mask must reflect your model .</p>
 <p>You can look at these links for reference.</p><aside class="onebox githubblob" data-onebox-src="https://github.com/urho3d/Urho3D/blob/master/Source/Tools/AssetImporter/AssetImporter.cpp#L2476">
 <header class="source">
-<a href="https://github.com/urho3d/Urho3D/blob/master/Source/Tools/AssetImporter/AssetImporter.cpp#L2476" rel="noopener nofollow ugc" target="_blank">github.com</a>
+<a  rel="noopener nofollow ugc" target="_blank">github.com</a>
 </header>
 <article class="onebox-body">
-<h4><a href="https://github.com/urho3d/Urho3D/blob/master/Source/Tools/AssetImporter/AssetImporter.cpp#L2476" rel="noopener nofollow ugc" target="_blank">urho3d/Urho3D/blob/master/Source/Tools/AssetImporter/AssetImporter.cpp#L2476</a></h4>
+<h4><a  rel="noopener nofollow ugc" target="_blank">urho3d/Urho3D/blob/master/Source/Tools/AssetImporter/AssetImporter.cpp#L2476</a></h4>
 <pre class="onebox">      <code class="lang-cpp">
         <ol class="start lines" start="2466" style="counter-reset: li-counter 2465 ;">
             <li>        for (unsigned i = 0; i &lt; 4; ++i)
@@ -317,10 +317,10 @@ You are writing your generated normal at the end (in the vertData) , but it must
 </aside>
 <aside class="onebox githubblob" data-onebox-src="https://github.com/urho3d/Urho3D/blob/master/Source/Tools/AssetImporter/AssetImporter.cpp#L2406">
 <header class="source">
-<a href="https://github.com/urho3d/Urho3D/blob/master/Source/Tools/AssetImporter/AssetImporter.cpp#L2406" rel="noopener nofollow ugc" target="_blank">github.com</a>
+<a  rel="noopener nofollow ugc" target="_blank">github.com</a>
 </header>
 <article class="onebox-body">
-<h4><a href="https://github.com/urho3d/Urho3D/blob/master/Source/Tools/AssetImporter/AssetImporter.cpp#L2406" rel="noopener nofollow ugc" target="_blank">urho3d/Urho3D/blob/master/Source/Tools/AssetImporter/AssetImporter.cpp#L2406</a></h4>
+<h4><a  rel="noopener nofollow ugc" target="_blank">urho3d/Urho3D/blob/master/Source/Tools/AssetImporter/AssetImporter.cpp#L2406</a></h4>
 <pre class="onebox">      <code class="lang-cpp">
         <ol class="start lines" start="2396" style="counter-reset: li-counter 2395 ;">
             <li>void WriteLargeIndices(unsigned*&amp; dest, aiMesh* mesh, unsigned index, unsigned offset)
@@ -376,10 +376,10 @@ You are writing your generated normal at the end (in the vertData) , but it must
 <p>In addition for each VertexBuffer  you create/write , you must set both the vertices count and element mask</p>
 <p>See</p><aside class="onebox githubblob" data-onebox-src="https://github.com/urho3d/Urho3D/blob/master/Source/Tools/AssetImporter/AssetImporter.cpp#L1032">
 <header class="source">
-<a href="https://github.com/urho3d/Urho3D/blob/master/Source/Tools/AssetImporter/AssetImporter.cpp#L1032" rel="noopener nofollow ugc" target="_blank">github.com</a>
+<a  rel="noopener nofollow ugc" target="_blank">github.com</a>
 </header>
 <article class="onebox-body">
-<h4><a href="https://github.com/urho3d/Urho3D/blob/master/Source/Tools/AssetImporter/AssetImporter.cpp#L1032" rel="noopener nofollow ugc" target="_blank">urho3d/Urho3D/blob/master/Source/Tools/AssetImporter/AssetImporter.cpp#L1032</a></h4>
+<h4><a  rel="noopener nofollow ugc" target="_blank">urho3d/Urho3D/blob/master/Source/Tools/AssetImporter/AssetImporter.cpp#L1032</a></h4>
 <pre class="onebox">      <code class="lang-cpp">
         <ol class="start lines" start="1022" style="counter-reset: li-counter 1021 ;">
             <li>unsigned startVertexOffset = 0;
@@ -434,10 +434,10 @@ You are writing your generated normal at the end (in the vertData) , but it must
 </aside>
 <aside class="onebox githubblob" data-onebox-src="https://github.com/urho3d/Urho3D/blob/master/Source/Tools/AssetImporter/AssetImporter.cpp#L1046">
 <header class="source">
-<a href="https://github.com/urho3d/Urho3D/blob/master/Source/Tools/AssetImporter/AssetImporter.cpp#L1046" rel="noopener nofollow ugc" target="_blank">github.com</a>
+<a  rel="noopener nofollow ugc" target="_blank">github.com</a>
 </header>
 <article class="onebox-body">
-<h4><a href="https://github.com/urho3d/Urho3D/blob/master/Source/Tools/AssetImporter/AssetImporter.cpp#L1046" rel="noopener nofollow ugc" target="_blank">urho3d/Urho3D/blob/master/Source/Tools/AssetImporter/AssetImporter.cpp#L1046</a></h4>
+<h4><a  rel="noopener nofollow ugc" target="_blank">urho3d/Urho3D/blob/master/Source/Tools/AssetImporter/AssetImporter.cpp#L1046</a></h4>
 <pre class="onebox">      <code class="lang-cpp">
         <ol class="start lines" start="1036" style="counter-reset: li-counter 1035 ;">
             <li>
@@ -492,10 +492,10 @@ You are writing your generated normal at the end (in the vertData) , but it must
 </aside>
 <aside class="onebox githubblob" data-onebox-src="https://github.com/urho3d/Urho3D/blob/master/Source/Tools/AssetImporter/AssetImporter.cpp#L1057">
 <header class="source">
-<a href="https://github.com/urho3d/Urho3D/blob/master/Source/Tools/AssetImporter/AssetImporter.cpp#L1057" rel="noopener nofollow ugc" target="_blank">github.com</a>
+<a  rel="noopener nofollow ugc" target="_blank">github.com</a>
 </header>
 <article class="onebox-body">
-<h4><a href="https://github.com/urho3d/Urho3D/blob/master/Source/Tools/AssetImporter/AssetImporter.cpp#L1057" rel="noopener nofollow ugc" target="_blank">urho3d/Urho3D/blob/master/Source/Tools/AssetImporter/AssetImporter.cpp#L1057</a></h4>
+<h4><a  rel="noopener nofollow ugc" target="_blank">urho3d/Urho3D/blob/master/Source/Tools/AssetImporter/AssetImporter.cpp#L1057</a></h4>
 <pre class="onebox">      <code class="lang-cpp">
         <ol class="start lines" start="1047" style="counter-reset: li-counter 1046 ;">
             <li>    ib = new IndexBuffer(context_);

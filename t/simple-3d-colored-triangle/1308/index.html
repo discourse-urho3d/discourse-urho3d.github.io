@@ -207,7 +207,7 @@ S.</p>
           <div class="post_content">
 <p>I think part of the problem is that you are pushing the color (Color::RED.ToUInt()) into a float Vector. This involves an implicit cast from unsigned int to float, which changes the bit representation of the value. Later, when this float value is re-interpreted as 4 separate unsigned char, the values are not the same.</p>
 <p>Color::RED as an unsigned int (4 bytes combined from r,g,b,a) has the value of 4278190335 which, if re-interpreted as byte-sized color components, gives you r=255, g=0, b=0, a=255. However, casting to a float then interpreting that float as unsigned int gives you an unsigned value of 1333723137 which unpacks to r=79 g=127 b=0 a=1.</p>
-<p>The usual method for building a vertex stream like this is to pack it into an unsigned char buffer rather than a float buffer. See the dynamic geometry sample ( <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Samples/34_DynamicGeometry/DynamicGeometry.cpp#L111" rel="nofollow noopener">github.com/urho3d/Urho3D/blob/m … y.cpp#L111</a> ) for what this can look like. (In the sample, you are locking an existing vertex stream as an unsigned buffer, but the process of creating a stream is similar.)</p>
+<p>The usual method for building a vertex stream like this is to pack it into an unsigned char buffer rather than a float buffer. See the dynamic geometry sample ( <a  rel="nofollow noopener">github.com/urho3d/Urho3D/blob/m … y.cpp#L111</a> ) for what this can look like. (In the sample, you are locking an existing vertex stream as an unsigned buffer, but the process of creating a stream is similar.)</p>
 <p>I haven’t tried your code to see if this is the actual issue or not, but perhaps it will help.</p>
           </div>
         </div>

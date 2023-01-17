@@ -36,7 +36,7 @@
 <p>In 2D, what approach would you suggest to flip a character whose collision shape is not symmetrical?</p>
 <p><code>SetFlip</code> only applies to sprites, but other components may need to reflect the flip (e.g. non-centered trail particles).</p>
 <p>Therefore, I am trying to go with a negative scale of the character’s node: <code>node-&gt;Scale2D(Vector2{1.f,-1.f});</code>. However, the collision shape does not seem to see the scale at all! It stays just the same… Is this somehow to be expected for some reason I am missing?</p>
-<p>It looks like a <em>bug</em> to me, so I opened <a href="https://github.com/urho3d/Urho3D/issues/1926" rel="nofollow noopener">#1926</a>. I am on a linux/gcc config here. Can anyone confirm they see the same? To reproduce, just add the following to <code>Urho2DConstraints::HandleUpdate</code> (sample 32) before running it and pressing <kbd>F</kbd></p>
+<p>It looks like a <em>bug</em> to me, so I opened <a  rel="nofollow noopener">#1926</a>. I am on a linux/gcc config here. Can anyone confirm they see the same? To reproduce, just add the following to <code>Urho2DConstraints::HandleUpdate</code> (sample 32) before running it and pressing <kbd>F</kbd></p>
 <pre><code class="lang-auto">  if(input-&gt;GetKeyPress(KEY_F))
       scene_-&gt;GetChild("Polygon")-&gt;Scale2D(Vector2{1,-1});
 </code></pre>

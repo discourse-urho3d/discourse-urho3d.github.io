@@ -32,7 +32,7 @@
         <div class="post">
           <div class="user_name">I3DB</div>
           <div class="post_content">
-<p>The difference between these two, codewise, is one runs <a href="https://github.com/urho3d/Urho3D/blob/05db29f6357ba1b409d7a61d04380f9d213dc62d/bin/CoreData/Shaders/HLSL/Water.hlsl#L1" rel="nofollow noopener">the hlsl water shader</a>, and the other <a href="https://github.com/urho3d/Urho3D/blob/05db29f6357ba1b409d7a61d04380f9d213dc62d/bin/CoreData/Shaders/GLSL/Water.glsl#L1" rel="nofollow noopener">the glsl water shader.</a></p>
+<p>The difference between these two, codewise, is one runs <a  rel="nofollow noopener">the hlsl water shader</a>, and the other <a  rel="nofollow noopener">the glsl water shader.</a></p>
 <p>When run on D3D11 water is black.<br/>
 <img alt="PNG" height="500" src="//cdck-file-uploads-global.s3.dualstack.us-west-2.amazonaws.com/standard17/uploads/urho3d/original/2X/f/f9bb833568ab913cc48118b3e86f98fb1b780cf7.jpeg" width="545"/></p>
 <p>Here it is run on openGL with urhosharp bindings to winforms platform and the water is clear.<br/>
@@ -92,11 +92,11 @@ It’s absolutely not correct, but it looks nice <img alt=":slight_smile:" class
 <strong>Something is not correct here, and it’s affecting numerous HLSL shaders</strong>.</p>
 <p>So here in this thread, I point out Water, Shadows, Outline … all working INCORRECTLY on D3D11 platforms.</p>
 <p>For shadows, here is UWP sample<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/jZtLphyTnqHDOLKCSrUttWclTf8.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/8/8c1c6f029c2bea39435429eefb701259ea51601e.jpeg" rel="noopener nofollow ugc" title="PNG"><img alt="PNG" data-base62-sha1="jZtLphyTnqHDOLKCSrUttWclTf8"  height="500" src="../../../images2/2130b0a804fddba43d4ae2d92e269d77.jpeg"  width="548"/><div class="meta">
+<div class="lightbox-wrapper"><a class="lightbox"   rel="noopener nofollow ugc" title="PNG"><img alt="PNG" data-base62-sha1="jZtLphyTnqHDOLKCSrUttWclTf8"  height="500" src="../../../images2/2130b0a804fddba43d4ae2d92e269d77.jpeg"  width="548"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">PNG</span><span class="informations">1249×1138 392 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
 </div></a></div></p>
 <p>Here is the winForms (opengl) sample<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/eVVOqWYoRl8XYxZG4hy4su5aiT9.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/6/68aae6fe92c7b7337607bfaf0193af080d5ddae3.png" rel="noopener nofollow ugc" title="WinFormsWithShadows"><img alt="WinFormsWithShadows" data-base62-sha1="eVVOqWYoRl8XYxZG4hy4su5aiT9"  height="399" src="../../../images2/2efb6601bc5834f56af92a978776f31b.png"  width="690"/><div class="meta">
+<div class="lightbox-wrapper"><a class="lightbox"   rel="noopener nofollow ugc" title="WinFormsWithShadows"><img alt="WinFormsWithShadows" data-base62-sha1="eVVOqWYoRl8XYxZG4hy4su5aiT9"  height="399" src="../../../images2/2efb6601bc5834f56af92a978776f31b.png"  width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">WinFormsWithShadows</span><span class="informations">930×538 275 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
 </div></a></div></p>
           </div>
@@ -168,11 +168,11 @@ System.Exception: Failed to create blend state (HRESULT 80070057).</p>
 <p>The Decode: <strong><code>E_INVALIDARG</code> :</strong>  One or more arguments are not valid ( <code>0x80070057</code> )</p>
 <p><a href="https://discourse.urho3d.io/t/litsolid-ao-missing-vertex-element/4810/9">I saw this error on another issue</a>, where the second UV map was missing. <span class="mention">@lezak</span> pointed out the underlying issue, the text of the message was different though, and it pointed out missing vertex elements, but this one doesn’t have that just the blend state failure.</p>
 <p>The result is shown, the NoTextureMultiply on UWP:<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/gsm4r4Leylknra2Zetkwqd4uYtO.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/7/73575b8162172bb635813f53d5cb6a5973ce2858.jpeg" rel="noopener nofollow ugc" title="PNG"><img alt="PNG" data-base62-sha1="gsm4r4Leylknra2Zetkwqd4uYtO"  height="227" src="../../../images2/5ed38aa616798c2a69b030a0c9860e26.jpeg"  width="690"/><div class="meta">
+<div class="lightbox-wrapper"><a class="lightbox"   rel="noopener nofollow ugc" title="PNG"><img alt="PNG" data-base62-sha1="gsm4r4Leylknra2Zetkwqd4uYtO"  height="227" src="../../../images2/5ed38aa616798c2a69b030a0c9860e26.jpeg"  width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">PNG</span><span class="informations">1423×469 127 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
 </div></a></div></p>
 <p>But on winForms looks like it works, and no errors:<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/ojckvhP5ScvwLkvYTUWxNQP3PqW.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/a/aa5fc211a28add103b2d1fb1d2159210812113aa.png" rel="noopener nofollow ugc" title="winFormsNoTextureMultiplyWorks"><img alt="winFormsNoTextureMultiplyWorks" data-base62-sha1="ojckvhP5ScvwLkvYTUWxNQP3PqW"  height="166" src="../../../images2/935eef2df0f8803d12b7a62147996f6c.png"  width="690"/><div class="meta">
+<div class="lightbox-wrapper"><a class="lightbox"   rel="noopener nofollow ugc" title="winFormsNoTextureMultiplyWorks"><img alt="winFormsNoTextureMultiplyWorks" data-base62-sha1="ojckvhP5ScvwLkvYTUWxNQP3PqW"  height="166" src="../../../images2/935eef2df0f8803d12b7a62147996f6c.png"  width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">winFormsNoTextureMultiplyWorks</span><span class="informations">927×224 80.9 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
 </div></a></div></p>
 <p>I suspect there is something going on that is common amongst all these D3D11 shaders, such as blend state. But I have too little experience to know where to look next.</p>
@@ -195,7 +195,7 @@ System.Exception: Failed to create blend state (HRESULT 80070057).</p>
 <p>That’s being sourced from an environmental map,</p>
 </blockquote>
 </aside>
-<p>I thought that too, and perhaps it is. <a href="https://github.com/urho3d/Urho3D/blob/05db29f6357ba1b409d7a61d04380f9d213dc62d/Source/Samples/23_Water/Water.cpp#L200" rel="noopener nofollow ugc">But the sample setup uses a reflection camera</a> and a reflection plane, and there is nowhere an environmental map is specified looking through the material, technique and shader files. Also, if I mix a couple of the samples, for instance mix the animating scene with the water sample, the floating cubes from the animating scene are visible in the reflection, so conclude an environmental map isn’t used.</p>
+<p>I thought that too, and perhaps it is. <a  rel="noopener nofollow ugc">But the sample setup uses a reflection camera</a> and a reflection plane, and there is nowhere an environmental map is specified looking through the material, technique and shader files. Also, if I mix a couple of the samples, for instance mix the animating scene with the water sample, the floating cubes from the animating scene are visible in the reflection, so conclude an environmental map isn’t used.</p>
 <p>No … <a href="https://github.com/xamarin/urho-samples/blob/b72d055a424d0e6be825c0239683c225d29ee723/FeatureSamples/Assets/Data/Sample43/MatWater.xml#L3" rel="noopener nofollow ugc">I’m wrong. Actually environment is used as described by this comment.</a> This also explains another reason porting the water sample to a stereo application has been so hard. As per the sample code, I’ve only been creating a single refraction camera, but suspect I need two, and they must be working in stereo mode, so the refract pass might (hopefully) get it correct.</p>
 <aside class="quote no-group" data-post="3" data-topic="4944" data-username="Leith">
 <div class="title">
@@ -297,8 +297,8 @@ System.Exception: Failed to create blend state (HRESULT 80070057).</p>
 </aside>
 <p>Doing this is when I found that whatever is in CoreData.pak is always chosen when there. So when I edited various hlsl files I had, those were always ignored in favor of choosing the unedited original in CoreData.pak. I had to rename techniques and shaders to get them to be loaded.</p>
 <p><a href="https://github.com/xamarin/urho/tree/master/Urho3D/CoreData/Shaders/HLSL" rel="nofollow noopener">The urhosharp project forked urho3d 1.7, and those coredata shaders haven’t been changed in 3 years</a>.</p>
-<p>So for instance the <a href="https://github.com/xamarin/urho/blob/master/Urho3D/CoreData/Shaders/HLSL/Water.hlsl" rel="nofollow noopener">urhosharp water.hlsl shade</a>r, is identical to the current <a href="https://github.com/urho3d/Urho3D/blob/master/bin/CoreData/Shaders/HLSL/Water.hlsl" rel="nofollow noopener">urho3d shader</a>.</p>
-<p>In a loosely related issue, I found a missing hlsl custom shader, and rewrote it from glsl and had fairly good success, but my rewrite wasn’t quite correct, it seemed to change when moving camera from left to right in a stereo application. Eventually I found there was a D3D11 conversion from glsl that I’d missed.<a href="https://github.com/urho3d/Urho3D/blob/05db29f6357ba1b409d7a61d04380f9d213dc62d/bin/CoreData/Shaders/HLSL/Water.hlsl#L19" rel="nofollow noopener">A pattern for it shown in the water.hlsl shader</a>. The cbuffer pattern specifically. I put this into the custom shader rewrite and it fixed it. This particular pattern is briefly mentioned, but not in a useful way for this on <a href="https://docs.microsoft.com/en-us/windows/uwp/gaming/glsl-to-hlsl-reference" rel="nofollow noopener">microsoft’s page about hlsl conversion from glsl</a>.</p>
+<p>So for instance the <a href="https://github.com/xamarin/urho/blob/master/Urho3D/CoreData/Shaders/HLSL/Water.hlsl" rel="nofollow noopener">urhosharp water.hlsl shade</a>r, is identical to the current <a  rel="nofollow noopener">urho3d shader</a>.</p>
+<p>In a loosely related issue, I found a missing hlsl custom shader, and rewrote it from glsl and had fairly good success, but my rewrite wasn’t quite correct, it seemed to change when moving camera from left to right in a stereo application. Eventually I found there was a D3D11 conversion from glsl that I’d missed.<a  rel="nofollow noopener">A pattern for it shown in the water.hlsl shader</a>. The cbuffer pattern specifically. I put this into the custom shader rewrite and it fixed it. This particular pattern is briefly mentioned, but not in a useful way for this on <a href="https://docs.microsoft.com/en-us/windows/uwp/gaming/glsl-to-hlsl-reference" rel="nofollow noopener">microsoft’s page about hlsl conversion from glsl</a>.</p>
           </div>
         </div>
       </div>
@@ -351,7 +351,7 @@ System.Exception: Failed to create blend state (HRESULT 80070057).</p>
 </blockquote>
 </aside>
 <p>Using this <a href="https://github.com/xamarin/urho" rel="noopener nofollow ugc">latest github version of urho3d</a> that downloads on clone.</p>
-<p><a href="https://github.com/urho3d/Urho3D/issues/2232" rel="noopener nofollow ugc">And assume this is the issue 2232</a>.</p>
+<p><a  rel="noopener nofollow ugc">And assume this is the issue 2232</a>.</p>
 <p>The file that I’m using has the changes in that commit. If you’re saying these introduced changes caused the issue, then it’s not been fixed.</p>
 <p>I’m using urhosharp, but will revert that change and see what happens.</p>
 <hr/>
@@ -364,7 +364,7 @@ The reason it has no effect is because on the testing I’ve done so far, the mu
 <p>Haven’t solved the issue at all.</p>
 <ol>
 <li>The bug referenced by <span class="mention">@cosar</span> is for a specific case that isn’t happening on the platforms I’m testing.</li>
-<li>Additionally, the urho 1.7 branch I’m using has additional code related to the urhosharp implementation of UWP and Hololens. For example compare this <a href="https://github.com/xamarin/Urho3D/blob/4862691d18c0ed40895ba532dd7ba6f17cd2c763/Source/Urho3D/Graphics/Direct3D11/D3D11Graphics.cpp" rel="noopener nofollow ugc">urhosharp urho3d file</a>, with the <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Graphics/Direct3D11/D3D11Graphics.cpp" rel="noopener nofollow ugc">urho3d C++ file,</a> and search on UWP to see some of the changes, or note they differ by over 100 lines. But <span class="mention">@lezak</span> is correct in that it’s an urhosharp problem.</li>
+<li>Additionally, the urho 1.7 branch I’m using has additional code related to the urhosharp implementation of UWP and Hololens. For example compare this <a href="https://github.com/xamarin/Urho3D/blob/4862691d18c0ed40895ba532dd7ba6f17cd2c763/Source/Urho3D/Graphics/Direct3D11/D3D11Graphics.cpp" rel="noopener nofollow ugc">urhosharp urho3d file</a>, with the <a  rel="noopener nofollow ugc">urho3d C++ file,</a> and search on UWP to see some of the changes, or note they differ by over 100 lines. But <span class="mention">@lezak</span> is correct in that it’s an urhosharp problem.</li>
 <li>I did back out the changes as per the bug fix, but it has zero effect on the cases I’m looking at, running on both an x64 and an x86 win10 UWP platforms and one is a hololens. Both behave identically meaning both paint water black in this case and neither produces shadows.</li>
 </ol>
 <p>Since this issue is closed here, I’ll try to keep it updated on xamarin once solved.</p>
@@ -393,7 +393,7 @@ The reason it has no effect is because on the testing I’ve done so far, the mu
 </blockquote>
 </aside>
 <p>Using this <a href="https://github.com/xamarin/urho" rel="noopener nofollow ugc">latest github version of urho3d</a> that downloads on clone.</p>
-<p><a href="https://github.com/urho3d/Urho3D/issues/2232" rel="noopener nofollow ugc">And assume this is the issue 2232</a>.</p>
+<p><a  rel="noopener nofollow ugc">And assume this is the issue 2232</a>.</p>
 </blockquote>
 </aside>
 <p>That is the issue.<br/>

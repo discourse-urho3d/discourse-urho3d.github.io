@@ -97,7 +97,7 @@
           <div class="post_content">
 <p>It’s mostly a matter of preference and tradition; Urho started using XML.</p>
 <p>The JSON API in Urho is a bit cumbersome and should ideally be refactored to just use composition (either array or object) of the supported JSON data types. Compare</p>
-<p><a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Resource/JSONValue.h">github.com/urho3d/Urho3D/blob/m … SONValue.h</a><br/>
+<p><a >github.com/urho3d/Urho3D/blob/m … SONValue.h</a><br/>
 with<br/>
 <a href="https://github.com/cadaver/turso3d/blob/master/Turso3D/IO/JSONValue.h">github.com/cadaver/turso3d/blob … SONValue.h</a></p>
 <p>And codingmonkey is right, for performance binary is the optimal. In my measurements the performance hotspot in both JSON and XML reading has been the parsing of floating-point values from text, not the overhead from the XML/JSON structure or memory allocation.</p>

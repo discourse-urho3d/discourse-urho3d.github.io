@@ -35,10 +35,10 @@
 <p>Shadow flickering is occurring whenever the camera is looking exactly 90 degrees down at a shadow of an out of view object.</p>
 <p>Which led me to this function:</p><aside class="onebox githubblob">
 <header class="source">
-<a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Math/Frustum.h#L154" rel="noopener nofollow ugc" target="_blank">github.com</a>
+<a  rel="noopener nofollow ugc" target="_blank">github.com</a>
 </header>
 <article class="onebox-body">
-<h4><a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Math/Frustum.h#L154" rel="noopener nofollow ugc" target="_blank">urho3d/Urho3D/blob/master/Source/Urho3D/Math/Frustum.h#L154</a></h4>
+<h4><a  rel="noopener nofollow ugc" target="_blank">urho3d/Urho3D/blob/master/Source/Urho3D/Math/Frustum.h#L154</a></h4>
 <pre class="onebox"><code class="lang-h"><ol class="start lines" start="144" style="counter-reset: li-counter 143 ;">
 <li>Intersection IsInsideFast(const BoundingBox&amp; box) const
 </li>
@@ -216,10 +216,10 @@ This bug happens <em>only</em> if you literally have just flat plane perpendicul
 The difference between minZ_ and maxZ_ is too small and something breaks.</p>
 <p>Just do something like maxZ_ += 1 if minZ_ and maxZ_ are too close around here:</p><aside class="onebox githubblob">
 <header class="source">
-<a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Graphics/View.cpp#L952" rel="noopener nofollow ugc" target="_blank">github.com</a>
+<a  rel="noopener nofollow ugc" target="_blank">github.com</a>
 </header>
 <article class="onebox-body">
-<h4><a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Graphics/View.cpp#L952" rel="noopener nofollow ugc" target="_blank">urho3d/Urho3D/blob/master/Source/Urho3D/Graphics/View.cpp#L952</a></h4>
+<h4><a  rel="noopener nofollow ugc" target="_blank">urho3d/Urho3D/blob/master/Source/Urho3D/Graphics/View.cpp#L952</a></h4>
 <pre class="onebox"><code class="lang-cpp"><ol class="start lines" start="942" style="counter-reset: li-counter 941 ;">
 <li>        // If just 1 thread, copy the results directly
 </li>

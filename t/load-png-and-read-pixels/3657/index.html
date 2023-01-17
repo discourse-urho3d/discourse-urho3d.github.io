@@ -54,8 +54,8 @@ yourImage_-&gt;SetAlignment(HA_LEFT,VA_TOP);
 yourImage_-&gt;SetPosition(0,0);
 uiRoot_-&gt;AddChild(yourImage_);
 </code></pre>
-<p>To load a PNG image as a sprite, check the samples <a href="https://github.com/urho3d/Urho3D/tree/master/Source/Samples/24_Urho2DSprite" rel="nofollow noopener">24_Urho2DSprite</a> and <a href="https://github.com/urho3d/Urho3D/tree/master/Source/Samples/36_Urho2DTileMap" rel="nofollow noopener">36_Urho2DTileMap</a>.</p>
-<p>And to load a PNG image as an “object” on the 3D space, I guess you could load it on a plane object (similar to how it was done on sample <a href="https://github.com/urho3d/Urho3D/tree/master/Source/Samples/38_SceneAndUILoad" rel="nofollow noopener">38_SceneAndUILoad</a>), maybe like this:</p>
+<p>To load a PNG image as a sprite, check the samples <a  rel="nofollow noopener">24_Urho2DSprite</a> and <a  rel="nofollow noopener">36_Urho2DTileMap</a>.</p>
+<p>And to load a PNG image as an “object” on the 3D space, I guess you could load it on a plane object (similar to how it was done on sample <a  rel="nofollow noopener">38_SceneAndUILoad</a>), maybe like this:</p>
 <pre><code>Node* planeNode_ = scene_-&gt;CreateChild("Plane");
 planeNode_-&gt;SetScale(Vector3(2.0f, 2.0f, 2.0f));
 planeNode_-&gt;SetRotation(Quaternion(-90.0f, 0.0f, 0.0f));
@@ -88,7 +88,7 @@ Something imagePixels = imageFile.Read();</code></pre>
         <div class="post">
           <div class="user_name">JTippetts</div>
           <div class="post_content">
-<p>You can use <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Resource/Image.h" rel="nofollow noopener">Image</a> to load a PNG and read pixels. Pass a Deserializer (such as a <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/IO/File.h" rel="nofollow noopener">File</a> ) to the Load method. You can then call GetPixel() on the image.</p>
+<p>You can use <a  rel="nofollow noopener">Image</a> to load a PNG and read pixels. Pass a Deserializer (such as a <a  rel="nofollow noopener">File</a> ) to the Load method. You can then call GetPixel() on the image.</p>
           </div>
         </div>
       </div>
