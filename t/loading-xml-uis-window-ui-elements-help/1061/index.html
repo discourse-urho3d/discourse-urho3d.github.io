@@ -105,7 +105,7 @@
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/weitjong/40/4_1.png" width="20"/> weitjong:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/5dc21abd616a69d8b82c2d56dfa657a5.png" width="20"/> weitjong:</div>
 <blockquote>
 <p>I don’t think at the moment you can create nested Window UI-element in the manner you have constructed. The only nested Window UI-element that actually works that I know of is only when it is being nested in a DropDownList UI-element. Although in theory you can nest any UI-element inside another UI-element, in practice I believe you only need one top level Window UI-element as the container of all your UI-elements which can be nested in any way you like.</p>
 </blockquote>
@@ -151,7 +151,7 @@
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/weitjong/40/4_1.png" width="20"/> weitjong:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/5dc21abd616a69d8b82c2d56dfa657a5.png" width="20"/> weitjong:</div>
 <blockquote>
 <p>You can have a look at how the Editor’s attribute inspector window or the material editor window are being constructed. Basically, it is a single Window UI-element containing multiple “panels” or “panes” or whatever you want to call them. The panel itself is an UI-element which is being used as container to further nest more child UI-elements. In your example, you can construct a left panel and a right panel first then subdivide the panel with even more panels before "“filling” the subpanels accordingly with other nested UI-elements (divide et impera). You can control whether the panels should be layered out horizontally or vertically (See LayoutMode). If you look at the UI subsystem class diagram (<a href="http://urho3d.github.io/documentation/1.4/class_urho3_d_1_1_u_i_element__inherit__graph_org.svg" rel="nofollow noopener">urho3d.github.io/documentation/1 … ph_org.svg</a>), you may think that only the concrete descendant classes of UIElement are usable in the UI layout construction. However, actually the base UIElement class itself is an invaluable class in constructing complex UI layout. I usually think of it as a generic “container”. This is how the the “panels” in our Editor are being implemented by the way. I am sorry I can only give you this pointer instead of providing the actual UI layout XML file.</p>
 </blockquote>
@@ -244,7 +244,7 @@ So, for example hitting F10 loads this specific panel.  The panel is stored so i
 <aside class="quote no-group" data-username="Mike">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/m/58f4c7/40.png" width="20"/> Mike:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/ffc8d24cecba4d07683b8100d0de8b79.png" width="20"/> Mike:</div>
 <blockquote>
 <p>Sometimes it’s good to have nested Windows to cleanly layout your UIElements.</p>
 </blockquote>

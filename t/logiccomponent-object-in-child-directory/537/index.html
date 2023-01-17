@@ -49,7 +49,7 @@ I need a advice. I have a Application inherited object in the project root direc
           <div class="post_content">
 <p>Ok, maybe I should write it more simple. What I need is to to put a LogicComponent object into project subdirectory, but when I do this I get a error:</p>
 <pre><code class="lang-auto"></code></pre>
-<p>Can anybody please help me ?  <img alt=":cry:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/cry.png?v=5" title=":cry:"/></p>
+<p>Can anybody please help me ?  <img alt=":cry:" class="emoji" src="../../../images2/c49dd3f49418024d1f7a2b845f88a7bf.png" title=":cry:"/></p>
           </div>
         </div>
       </div>
@@ -66,7 +66,7 @@ I need a advice. I have a Application inherited object in the project root direc
 <p>Back to your issue. I think there are two ways to solve it.<br/>
 [ol][li] More advance. Use the scoping. Configure the empty CMakeLists.txt in the subdir and then add the child CMakeLists.txt into the parent CMakeLists.txt in your project’s main Source dir by using CMake’s add_subdirectory() command.[/li]<br/>
 [li] For simple project. Just configure your main CMakeLists.txt to “see” the source and header files in the “HUD” subdir by including them manually when you call CMake’s add_executable() command. You probably also need to configure your header search path to include “HUD”. See CMake’s include_directories() command.[/li][/ol]<br/>
-Now, if you use our Urho3D-CMake-common.cmake module then you can use our macro define_source_files() in conjunction with setup_executable() to do that. By default the former just “globs” C++ implementation and header files without taking subdirs into considerations. But you can pass extra arguments to change this behavior. And the latter macro uses the found source files to setup the executable target. Unfortunately we don’t have any documentation pages on this. So you will have to study the macro itself and read the comments yourself on how to use it. You may want to refer to Source/Engine/Graphics/CMakeLists.txt as an example. This example kinds of doing both of the above <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/> which is not exactly what you need but I hope you get the idea. Note the macro does not take care of the header search path, so it still needs to be done by yourself if it is required.</p>
+Now, if you use our Urho3D-CMake-common.cmake module then you can use our macro define_source_files() in conjunction with setup_executable() to do that. By default the former just “globs” C++ implementation and header files without taking subdirs into considerations. But you can pass extra arguments to change this behavior. And the latter macro uses the found source files to setup the executable target. Unfortunately we don’t have any documentation pages on this. So you will have to study the macro itself and read the comments yourself on how to use it. You may want to refer to Source/Engine/Graphics/CMakeLists.txt as an example. This example kinds of doing both of the above <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/> which is not exactly what you need but I hope you get the idea. Note the macro does not take care of the header search path, so it still needs to be done by yourself if it is required.</p>
           </div>
         </div>
       </div>

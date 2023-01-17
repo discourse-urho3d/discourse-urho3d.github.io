@@ -50,7 +50,7 @@
 <p>Keep your bullet holes in a list, once you surpass your desired upper limit (let’s say 100) you take the oldest in the list (new one are added on top, so oldest are the last entries) and artificially decrease their <em>lifetime variable</em> that is responsible for fading and getting rid of them.</p>
 <p>Basically as you pass the max limit the oldest holes are forced to instantly fade faster. I had it set up to take away 10% of the <em>starting livetime variabe</em>, so that i had 110 max holes - the last 10 being subjected to the forced faster fading, getting faded 1/10th with each additional decal created.</p>
 <p>You can of course play with how high your max decals should be, how many get forced to fade faster and how much each of those gets reduced (all the same? linear, older ones more? etc.)</p>
-<p>Hope that gives you some idea <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=6" title=":wink:"/></p>
+<p>Hope that gives you some idea <img alt=":wink:" class="emoji" src="../../../images2/54580715256ddb71bd695c5ac97f8802.png" title=":wink:"/></p>
           </div>
         </div>
       </div>
@@ -102,12 +102,12 @@
           <div class="post_content">
 <p><span class="mention">@smellymumbler</span><br/>
 Now i am not sure how you do that in Urho3D - since i am new to it, but you can usually get the hit face and it’s vertices. Then you read out the vertices uv coords (if that is not returned as well) and from that you can get the textures pixel pretty easily using Barycentrics.<br/>
-Found an example for Unity (C#) - the math should be the same <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=6" title=":wink:"/><br/>
+Found an example for Unity (C#) - the math should be the same <img alt=":wink:" class="emoji" src="../../../images2/54580715256ddb71bd695c5ac97f8802.png" title=":wink:"/><br/>
 <a class="onebox" href="https://answers.unity.com/questions/1105729/find-uv-coordinates-of-mesh-without-a-raycast.html" rel="nofollow noopener" target="_blank">https://answers.unity.com/questions/1105729/find-uv-coordinates-of-mesh-without-a-raycast.html</a></p>
 <p>Since uvs are normalized it should be as simple as rounding VU*texture dimensions. Use modulo or fraction if you, go beyond uv1,1.</p>
 <p>If you draw to a texture you would lerp texture.rgb to decal.rgb by decal.alpha. That should handle transparency if it is not automatic…</p>
 <p>One concern that i’d have with that approach though would be the (v)ram consumption.<br/>
-If i am not missing a unknown technique, that would mean you either use a 2nd world space mapped set of uvs and a second texture (empty, transparent except for decals - overdraw²). Or you would have to make sure you have no tiling or otherwise overlapping/repeating textures and copy textures for each hit object. That sounds like the ram usage will explode during fire fight, not come down afterwards and highly depend on player behavior and situation. That makes predictions about performance impossible and basically limits what graphics card can even sustain fire fights to begin with… I’m sure you can make it work by cleverly using an atlas and whatnot - sounds super not easy/fun though - maybe i work too much on hand held devices <img alt=":stuck_out_tongue:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/stuck_out_tongue.png?v=6" title=":stuck_out_tongue:"/></p>
+If i am not missing a unknown technique, that would mean you either use a 2nd world space mapped set of uvs and a second texture (empty, transparent except for decals - overdraw²). Or you would have to make sure you have no tiling or otherwise overlapping/repeating textures and copy textures for each hit object. That sounds like the ram usage will explode during fire fight, not come down afterwards and highly depend on player behavior and situation. That makes predictions about performance impossible and basically limits what graphics card can even sustain fire fights to begin with… I’m sure you can make it work by cleverly using an atlas and whatnot - sounds super not easy/fun though - maybe i work too much on hand held devices <img alt=":stuck_out_tongue:" class="emoji" src="../../../images2/489a6aca1acdb089d71c6bb5fe9c9aa8.png" title=":stuck_out_tongue:"/></p>
 <p><span class="mention">@Modanung</span><br/>
 Yeah absolutely right, i use Vertex alpha and Shaders for blending.</p>
           </div>

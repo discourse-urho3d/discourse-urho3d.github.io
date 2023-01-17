@@ -80,7 +80,7 @@ The weak pointer points to an object from someone else, and it does not prevent 
 [li] In this case, CarTracker should continue to hold a SharedPtr since it “owns” the Car.[/li]<br/>
 [li] Highway should instead hold a WeakPtr. This way if CarTracker removes the Car, the Car should be gone.[/li]<br/>
 [li] If the Car is gone and Highway still references the Car, then Highway will simply get a NULL value when attempting to access the pointer. This way we safely know when we no longer have a Car to track and can take appropriate action.[/li][/ul]</p>
-<p>Let me know if you have any more questions and I will do my best to clear things up for you <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/></p>
+<p>Let me know if you have any more questions and I will do my best to clear things up for you <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/></p>
           </div>
         </div>
       </div>
@@ -107,7 +107,7 @@ The weak pointer points to an object from someone else, and it does not prevent 
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/friesencr/40/827_1.png" width="20"/> friesencr:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/70bcc47748c28f7bda94e891e8db727b.png" width="20"/> friesencr:</div>
 <blockquote>
 <p>What is the purpose of a WeakPtr over a normal pointer.</p>
 </blockquote>
@@ -140,7 +140,7 @@ The weak pointer points to an object from someone else, and it does not prevent 
 <aside class="quote no-group" data-username="lexx">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/l/df705f/40.png" width="20"/> lexx:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/6e6242a6efbb971acb090e14faa5d4ca.png" width="20"/> lexx:</div>
 <blockquote>
 <p> Still I wonder, should I use always SharedPtr myObj;  or ie void *myObj;  Do you C++ programmers use always shared/weak pointers and forgot these “raw” pointers?</p>
 </blockquote>
@@ -175,7 +175,7 @@ The weak pointer points to an object from someone else, and it does not prevent 
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/cadaver/40/3_1.png" width="20"/> cadaver:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/17ea6233fe86521c2e3179bd3849d219.png" width="20"/> cadaver:</div>
 <blockquote>
 <p>What you should watch out that creating a SharedPtr manipulates the refcount, and for performance reasons this is not made thread-safe. So at least when you work with threads, you should rather use raw pointers.</p>
 </blockquote>
@@ -196,7 +196,7 @@ The weak pointer points to an object from someone else, and it does not prevent 
 <aside class="quote no-group" data-username="thebluefish">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/t/f04885/40.png" width="20"/> thebluefish:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/bf1ad5330f9831ec6d82214e91751e5d.png" width="20"/> thebluefish:</div>
 <blockquote>
 <p>[quote=“cadaver”]What you should watch out that creating a SharedPtr manipulates the refcount, and for performance reasons this is not made thread-safe. So at least when you work with threads, you should rather use raw pointers.</p>
 </blockquote>

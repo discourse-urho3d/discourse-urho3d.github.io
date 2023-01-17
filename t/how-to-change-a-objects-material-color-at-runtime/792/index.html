@@ -79,7 +79,7 @@
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/weitjong/40/4_1.png" width="20"/> weitjong:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/5dc21abd616a69d8b82c2d56dfa657a5.png" width="20"/> weitjong:</div>
 <blockquote>
 <p>Just a thought. How about changing the color in a custom shader instead? Just use the shader parameter to “seed” the randomness.</p>
 </blockquote>
@@ -147,7 +147,7 @@
 ...
 </code></p>
 <p>Loads a ‘template’ material, clones material for each StaticModel and varies some shader parameters for each.[/quote]</p>
-<p>Awesome! I think we got it  <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/></p>
+<p>Awesome! I think we got it  <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/></p>
 <p>Those 3 lines of your code made complete sence to me but in Lua I don’t know how ( or if we can, can we? ) to create a “local” variable of a specific class ( C++ you do <span class="bbcode-b"><span class="bbcode-u">ClassName variableName</span></span> )</p>
 <p>I tinkered around for a while with the Lua script and I ended up with:</p>
 <p>[code]-- NOTE: This first line is required in order to “load in” the material – otherwise you get a Nil reference error on the following lines<br/>
@@ -157,7 +157,7 @@ local mat = boxObject:GetMaterial(0):Clone(cache:GetResource("Material", "Materi
 boxObject:SetMaterial(0,mat)
 </code></pre>
 <p>boxObject:GetMaterial(0):SetShaderParameter(“MatDiffColor”, Variant(Vector4((math.random(100)<em>.01),(math.random(100)</em>.01),(math.random(100)*.01),1)))[/code]</p>
-<p>Many Thanks for your help there!!!  <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/></p>
+<p>Many Thanks for your help there!!!  <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/></p>
           </div>
         </div>
       </div>

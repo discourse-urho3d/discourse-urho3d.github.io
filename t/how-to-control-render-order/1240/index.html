@@ -108,7 +108,7 @@ A use case for example is an FPS game. You don’t want the player’s gun to cl
 <blockquote>
 <p>your gun might appear shadowed when inside a wall</p>
 </blockquote>
-<p>It is very noticeable <img alt=":frowning:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/frowning.png?v=5" title=":frowning:"/></p>
+<p>It is very noticeable <img alt=":frowning:" class="emoji" src="../../../images2/2506cac83464f3f86e257fa414340d4c.png" title=":frowning:"/></p>
 <blockquote>
 <p>Therefore another approach is to create a second camera &amp; viewport for your firstperson objects, and tweak the view masks in the cameras &amp; objects to make the gun not render in the normal “world” viewport, but only in the “firstperson” viewport.</p>
 </blockquote>
@@ -127,7 +127,7 @@ A use case for example is an FPS game. You don’t want the player’s gun to cl
 <aside class="quote no-group">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/cadaver/40/3_2.png" width="20"/> cadaver:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/b36d360b4fce73300b0e56f725288d21.png" width="20"/> cadaver:</div>
 <blockquote>
 <p>In master branch, a 8-bit render order specifier has been added to materials (Material::SetRenderOrder()). This allows to override both state &amp; distance sorting within a pass: default order value is 128 and smaller values render first, larger values render later.</p>
 <p>Meaning that you could do the FPS gun by setting the gun material’s renderOrder to e.g. 129. You still need to touch the technique for disabling depth test.</p>
@@ -321,7 +321,7 @@ Is there a way to have world shadows with it? At least the directional light’s
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/gawag/40/68_1.png" width="20"/> gawag:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/000e83ce255afd88a5c3fef7c5cdf302.png" width="20"/> gawag:</div>
 <blockquote>
 <p>Works perfectly with my solution. It could also have a better performance.</p>
 </blockquote>
@@ -342,7 +342,7 @@ Is there a way to have world shadows with it? At least the directional light’s
 <aside class="quote no-group">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/enhex/40/81_2.png" width="20"/> Enhex:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/2c165096ad375255e0c52a6a81137cd8.png" width="20"/> Enhex:</div>
 <blockquote>
 <p>But it isn’t suitable for FPS game.</p>
 </blockquote>
@@ -395,7 +395,7 @@ I wonder if codingmonkey’s method can work with urho, and what it takes to imp
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/weitjong/40/4_1.png" width="20"/> weitjong:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/5dc21abd616a69d8b82c2d56dfa657a5.png" width="20"/> weitjong:</div>
 <blockquote>
 <p>If you are using OpenGL, may be you could use glDepthRange() to specify different depth range  between world objects and your weapon such that your weapon always has the preferred z.</p>
 </blockquote>

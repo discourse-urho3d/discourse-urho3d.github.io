@@ -95,7 +95,7 @@ model-&gt;SetVertexBuffers(model_vertexRangeStarts, morphRangeCounts);
 </code></pre>
 <p>So, is it only me not totally understanding the logic here, or do we have an inconsistency in the engine? What I see as illogical is having 2 ways to contain the Vertex/Index buffers (through Model and through containing Geometries).</p>
 <p>The thing is, I can get away with passing vertex/index buffers through Geometries only, but then Model::SaveFile saves  nothing.</p>
-<p>Thanks for reading it to the end <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=9" title=":slight_smile:"/> Will be thankful for any leads on this.</p>
+<p>Thanks for reading it to the end <img alt=":slight_smile:" class="emoji" src="../../../images2/7bdd5ab4d67675d002d99e4b948c8cdb.png" title=":slight_smile:"/> Will be thankful for any leads on this.</p>
           </div>
         </div>
       </div>
@@ -147,7 +147,7 @@ model-&gt;SetVertexBuffers(model_vertexRangeStarts, morphRangeCounts);
           <div class="user_name">restless</div>
           <div class="post_content">
 <p>The file format description and the Model::SaveFile kinda confirms that the primary place to store buffers is Model. So then, when we refer to them in Geometry, we could use indexes, just as we do in .mdl file format.</p>
-<p>So I take it as if Geometry::Set*Buffer() taking pointer to buffer is a convenience/shortcut? I think it would help a lot if we put some note into Geometry API that each supplied Buffer pointer should also be stored in Model directly… I donno, I am still confused a bit <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=9" title=":smiley:"/></p>
+<p>So I take it as if Geometry::Set*Buffer() taking pointer to buffer is a convenience/shortcut? I think it would help a lot if we put some note into Geometry API that each supplied Buffer pointer should also be stored in Model directly… I donno, I am still confused a bit <img alt=":smiley:" class="emoji" src="../../../images2/94dd27e9c6c243335d29229e02e34e9d.png" title=":smiley:"/></p>
           </div>
         </div>
       </div>

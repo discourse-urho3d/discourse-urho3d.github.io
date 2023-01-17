@@ -134,12 +134,12 @@ Any idea how to solve this ? I searched the Renderer class but couldn’t find a
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/cadaver/40/3_1.png" width="20"/> cadaver:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/17ea6233fe86521c2e3179bd3849d219.png" width="20"/> cadaver:</div>
 <blockquote>
 <p>Sortkey is 64bit, so 0x80000000 isn’t the MSB. The base pass flag should already be entered into the “shader key” part, which should end up in the highest bits.</p>
 </blockquote>
 </aside>
-<p>Yes… i didn’t noticed the unsigned long longs… which is funny as there are 3 of them in the same line <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/> And yes ((unsigned long long)shaderID) &lt;&lt; 48) should do that already</p>
+<p>Yes… i didn’t noticed the unsigned long longs… which is funny as there are 3 of them in the same line <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/> And yes ((unsigned long long)shaderID) &lt;&lt; 48) should do that already</p>
 <p>[quote=“cadaver”]If the outputted geometry positions are the same, the result should be deterministic according to the order in which the draw calls are issued, and according to the depth test settings. I recommend debugging with PIX or the like to see the exact order of the draw calls, and if something ends up rejected due to a test.</p>
 <p>For typical crude (male) hair meshes, using alpha test can be easier, as that allows to render as opaque geometry.[/quote]</p>
 <p>How to enable the alpha test ? I tried with a dds texture (DXT5) and the result is the same… do i need to set some other parameters in the material/technique to use alpha test ?</p>

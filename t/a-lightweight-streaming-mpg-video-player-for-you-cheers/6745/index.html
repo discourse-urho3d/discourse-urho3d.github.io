@@ -40,7 +40,7 @@ The MpgVideo.h/cpp defines a new type of Resource. It uses <a href="https://gith
 The VideoPlayer.h/cpp defines a new type of component. It uses MpgVideo to play the video.</li>
 </ol>
 <p>The problem with video playback is that decoding takes a lot of time and memory space.<br/>
-For a 1280 X 900 mpg video that lasts 18 seconds, which is pretty common, it will take several seconds to fully decode, and the fully decoded video frames will take 1280x900x3x30x18 = 1780MB! <img alt=":scream:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/scream.png?v=9" title=":scream:"/><br/>
+For a 1280 X 900 mpg video that lasts 18 seconds, which is pretty common, it will take several seconds to fully decode, and the fully decoded video frames will take 1280x900x3x30x18 = 1780MB! <img alt=":scream:" class="emoji" src="../../../images2/b3142e93d493345e2e37dfc0a589df99.png" title=":scream:"/><br/>
 So here comes the idea of streaming. Only decode when we need a new frame, aka decode as you watch(`). Throw out played frames to keep memory small, aka discard as you watch(``). Streaming makes the code neat and keeps performance high.</p>
 <p>` This is true ONLY IF you have a powerful CPU. the CPU needs to decode video frame to raw pixel, format it to Urho3D::Sprite2D, and show it on screen within one Urho3D::Update. The good news is that you can expect it to work for modern CPU.<br/>
 `` The code achieves this by not keeping the Sprite2D in resource cache. BUT after rendering on screen, the render will hold a SharedPtr to the resource, so it can’t be released automatically. To solve this check this <a href="https://discourse.urho3d.io/t/dynamic-loaded-sprite-leaks-memory/6149/3">post</a>. Also see discussion below.</p>
@@ -111,7 +111,7 @@ Also, I thought I’d point out that there is a way to play Theora videos with c
 <aside class="quote" data-post="14" data-topic="2144">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/l/8491ac/40.png" width="20"/>
+<img alt="" class="avatar" height="20" src="../../../images2/b3b294bc4454bf21e07a40d7aa09761d.png" width="20"/>
 <a href="https://discourse.urho3d.io/t/theora-video-playback/2144/14">Theora video playback</a> <a class="badge-wrapper bullet" href="/c/showcase/code-exchange/13"><span class="badge-category-parent-bg" style="background-color: #F1592A;"></span><span class="badge-category-bg" style="background-color: #231F20;"></span><span class="badge-category clear-badge" data-drop-close="true" style="" title="Share your helpful Urho3D code snippets, samples and tutorials here.">Code Exchange</span></a>
 </div>
 <blockquote>

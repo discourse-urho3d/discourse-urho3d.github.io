@@ -79,7 +79,7 @@ You’ll still have to initialize any unserialized members yourself, but at leas
         <div class="post">
           <div class="user_name">dertom</div>
           <div class="post_content">
-<p>I’m not sure what you are doing? Are you writing an object-class without setting the object values to proper values in the constructor? If yes, don’t you have a bad feeling about this in the first place? <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=6" title=":wink:"/></p>
+<p>I’m not sure what you are doing? Are you writing an object-class without setting the object values to proper values in the constructor? If yes, don’t you have a bad feeling about this in the first place? <img alt=":wink:" class="emoji" src="../../../images2/54580715256ddb71bd695c5ac97f8802.png" title=":wink:"/></p>
 <p>I’m not that much of an urho3d power user, but I think the usual “method” is to have constants with the default values in your object’s .cpp-file that you use to initialize the value in the constructor(!) and(!) to use in the attribute-definition.<br/>
 What I think is that the attribute’s default-value is mainly to dermine if you need to serialize this value rather than setting it. It is more like, “I’m sure that the default value is exactly this value so I can skip writing this to file when the value is exactly the default value at the moment”.  Not 100% sure though…</p>
           </div>
@@ -108,7 +108,7 @@ What I think is that the attribute’s default-value is mainly to dermine if you
         <div class="post">
           <div class="user_name">Leith</div>
           <div class="post_content">
-<p>I wasn’t aware I needed to call ApplyAttributes, given there are no changes that can’t be applied immediately, and given that the object is new, and so not part of any scene yet <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=6" title=":wink:"/></p>
+<p>I wasn’t aware I needed to call ApplyAttributes, given there are no changes that can’t be applied immediately, and given that the object is new, and so not part of any scene yet <img alt=":wink:" class="emoji" src="../../../images2/54580715256ddb71bd695c5ac97f8802.png" title=":wink:"/></p>
           </div>
         </div>
       </div>

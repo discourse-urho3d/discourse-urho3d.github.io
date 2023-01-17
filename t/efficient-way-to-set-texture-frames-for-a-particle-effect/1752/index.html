@@ -49,7 +49,7 @@ Right now it requires manually normalizing the min and max points of a frame to 
 this is from unity example with some fixes.</p>
 <p>let’s say<br/>
 you got this texture:<br/>
-<a data-bbcode="true" href="http://savepic.net/7702466.htm"><img alt="" height="" src="http://savepic.net/7702466m.png" width=""/></a></p>
+<a data-bbcode="true" href="http://savepic.net/7702466.htm"><img alt="" height="" src="../../../images2/6684a71588d4fda201209a6da813fd76.png" width=""/></a></p>
 <p>this shader UnlitAnim</p>
 <p>[code]<span class="hashtag">#include</span> “Uniforms.glsl”<br/>
 <span class="hashtag">#include</span> “Samplers.glsl”<br/>
@@ -143,7 +143,7 @@ vec4 diffColor = cMatDiffColor;<br/>
 &lt;/technique&gt;</code></p>
 <p>create material with this tech and add few uniform for shader (as show on picture bellow)<br/>
 then try change animTime<br/>
-<a data-bbcode="true" href="http://savepic.net/7670722.htm"><img alt="" height="" src="http://savepic.net/7670722m.png" width=""/></a></p>
+<a data-bbcode="true" href="http://savepic.net/7670722.htm"><img alt="" height="" src="../../../images2/3a0b6a41e0224994d4267ab07ad95e3f.png" width=""/></a></p>
 <p>Probably you may try use this anim technique for animate particles:<br/>
 I guess you need put into shader the arrays of uniforms or TBO (with personal particles data - frame(or time)) and fetch it by particle index.<br/>
 Or just extends(or use free element masks) vertex structure with additional data for each particle(+float time), I guess particles system feed one common VBO for all particles(per emitter) on cpu side every frame.</p>
@@ -159,7 +159,7 @@ Or just extends(or use free element masks) vertex structure with additional data
           <div class="user_name">Enhex</div>
           <div class="post_content">
 <p>I’m talking about Urho’s ParticleEffect frames, and the particle editor.<br/>
-<div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/rIbqVJj.jpg" rel="nofollow noopener" title=""><img alt="" height="500" src="http://i.imgur.com/rIbqVJj.jpg" width="645"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">1040×806</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/rIbqVJj.jpg" rel="nofollow noopener" title=""><img alt="" height="500" src="../../../images2/30c71451de0c051491e28f76b87e329e.jpg" width="645"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">1040×806</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
 <p>Perhaps a visual tool for defining frame sets for sprite sheets could improve the workflow. Such tool can be generic.<br/>
 Urho’s editor will need an option to load frames from such frame set file.</p>
           </div>

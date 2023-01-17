@@ -47,7 +47,7 @@
 <p>I’ve put this up in this state as I don’t have much more time to spend on it in the near term and I thought others might be interested in helping. I would have created a pull request but I don’t know if it’s in a acceptable state of functionality yet and I would need some help rebasing it to HEAD and getting it to work with the new build system.</p>
 <p>Most of the changes to the engine source are quite simple and are separated by <span class="hashtag">#if</span> defined(EMSCRIPTEN) directives. I had to move the files Controls.cpp and Controls.h from the Source/Engine/Network directory to Source/Engine/Input but this move doesn’t seem to affect any of the rest of Urho so I assume it’s an acceptable change.</p>
 <p>If this is acceptable for a pull request, let me know here and I’ll create one.</p>
-<p>Enjoy <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/></p>
+<p>Enjoy <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/></p>
           </div>
         </div>
       </div>
@@ -182,7 +182,7 @@ I think you should recreate your build tree from scratch. The Assimp library (on
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/friesencr/40/827_1.png" width="20"/> friesencr:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/70bcc47748c28f7bda94e891e8db727b.png" width="20"/> friesencr:</div>
 <blockquote>
 <p>I also noticed that the emscripten build doesn’t respect the folder specified in the build.  It always targets the root folder.</p>
 </blockquote>
@@ -227,7 +227,7 @@ I think you should recreate your build tree from scratch. The Assimp library (on
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/friesencr/40/827_1.png" width="20"/> friesencr:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/70bcc47748c28f7bda94e891e8db727b.png" width="20"/> friesencr:</div>
 <blockquote>
 <p>I should be been clearer.  This is on master.  I needed to build the packaging tool so i could bundle the Data/CoreData pak files with the emscripten stuff.  I reset/deleted everything and am still getting the same error.</p>
 </blockquote>
@@ -260,7 +260,7 @@ I think you should recreate your build tree from scratch. The Assimp library (on
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/weitjong/40/4_1.png" width="20"/> weitjong:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/5dc21abd616a69d8b82c2d56dfa657a5.png" width="20"/> weitjong:</div>
 <blockquote>
 <p>Which generator did you choose when generating the project using cmake-gui? I have added cmake_emscripten.bat yesterday to specifically instructs CMake to choose “MinGW Makefiles” generator. But you are correct to say that at the moment I mainly tested my changes on main workstation running on Linux. You are all welcome to test the branch on other host systems and contribute to make the change. I think we should get there faster if all work together.</p>
 </blockquote>
@@ -270,7 +270,7 @@ I think you should recreate your build tree from scratch. The Assimp library (on
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/friesencr/40/827_1.png" width="20"/> friesencr:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/70bcc47748c28f7bda94e891e8db727b.png" width="20"/> friesencr:</div>
 <blockquote>
 <p>I also had to move my ~/.emscripten_cache/ports-builds/sdl2/include/sdl2 folder to get the compile to work.  Package managers seem to prefer the SDL2 folder.  I would bet things like the steam runtime would look there too.  It might not be a bad move to use the &lt;SDL/SDL2&gt; path to make it easier to dropin different sdls.  Hopefully we can use vanilla sdl someday.</p>
 </blockquote>
@@ -332,7 +332,7 @@ Assertion failed: you need to wait for the runtime to be ready (e.g. wait for ma
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/friesencr/40/827_1.png" width="20"/> friesencr:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/70bcc47748c28f7bda94e891e8db727b.png" width="20"/> friesencr:</div>
 <blockquote>
 <p>I also had to move my ~/.emscripten_cache/ports-builds/sdl2/include/sdl2 folder to get the compile to work.  Package managers seem to prefer the SDL2 folder.  I would bet things like the steam runtime would look there too.  It might not be a bad move to use the &lt;SDL/SDL2&gt; path to make it easier to dropin different sdls.  Hopefully we can use vanilla sdl someday.</p>
 </blockquote>
@@ -354,12 +354,12 @@ I have to temporarily remove that Emscripten-specific compiler flag first in ord
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/friesencr/40/827_1.png" width="20"/> friesencr:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/70bcc47748c28f7bda94e891e8db727b.png" width="20"/> friesencr:</div>
 <blockquote>
 <p>when running make against the samples the output doesn’t have an extension.</p>
 </blockquote>
 </aside>
-<p>I am aware of that. I only said the branch is ready for “early” testing. I did not say the work has completed.  <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/></p>
+<p>I am aware of that. I only said the branch is ready for “early” testing. I did not say the work has completed.  <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/></p>
           </div>
         </div>
       </div>
@@ -388,12 +388,12 @@ I have to temporarily remove that Emscripten-specific compiler flag first in ord
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/friesencr/40/827_1.png" width="20"/> friesencr:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/70bcc47748c28f7bda94e891e8db727b.png" width="20"/> friesencr:</div>
 <blockquote>
 <p>EDIT: the reason i was confused is because the docs say to go look in the bin folder for html files.</p>
 </blockquote>
 </aside>
-<p>Ah I see. What has been documented is the end goal. Kind of like a “technical specification”.  <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/></p>
+<p>Ah I see. What has been documented is the end goal. Kind of like a “technical specification”.  <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/></p>
           </div>
         </div>
       </div>
@@ -418,7 +418,7 @@ I have to temporarily remove that Emscripten-specific compiler flag first in ord
         <div class="post">
           <div class="user_name">hdunderscore</div>
           <div class="post_content">
-<p>Well I found out why I got the errors that I was getting-- turns out the suffix was important in the toolchain file. I pushed the change… but also with something extra, ahem  <img alt=":blush:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/blush.png?v=5" title=":blush:"/></p>
+<p>Well I found out why I got the errors that I was getting-- turns out the suffix was important in the toolchain file. I pushed the change… but also with something extra, ahem  <img alt=":blush:" class="emoji" src="../../../images2/f5e2a5ef6206a15962e2ec428f87e9a2.png" title=":blush:"/></p>
 <p>Now I’m getting some issues when building, relating to ar:<br/>
 [gist]<a href="https://gist.github.com/hdunderscore/b1441caf45341b1fc3d1%5B/gist%5D" rel="nofollow noopener">https://gist.github.com/hdunderscore/b1441caf45341b1fc3d1[/gist]</a></p>
           </div>
@@ -643,7 +643,7 @@ I intend to follow the pattern for the other areas of input, so if you see somet
         <div class="post">
           <div class="user_name">GoogleBot42</div>
           <div class="post_content">
-<p>Great work so far!   <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/></p>
+<p>Great work so far!   <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/></p>
           </div>
         </div>
       </div>
@@ -834,7 +834,7 @@ That is an unintended side effect. Originally I had setup all the main executabl
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/weitjong/40/4_1.png" width="20"/> weitjong:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/5dc21abd616a69d8b82c2d56dfa657a5.png" width="20"/> weitjong:</div>
 <blockquote>
 <p>I have attempted to enable the CI build for the Emscripten. See <a href="https://travis-ci.org/urho3d/Urho3D/builds/50074852" rel="nofollow noopener">travis-ci.org/urho3d/Urho3D/builds/50074852</a>. It failed, I think due to concurrent build which tried to download sdl2 port in three different threads and overwriting the downloaded zip file. Anyone knows how to pre-download the sdl2 port into the emcc cache? If that could be done then sdl2 will be downloaded first before the Urho3D build starts. Thanks.</p>
 </blockquote>
@@ -853,7 +853,7 @@ That is an unintended side effect. Originally I had setup all the main executabl
         <div class="post">
           <div class="user_name">weitjong</div>
           <div class="post_content">
-<p>The SDL2 port concurrent fetching issue has been resolved. It is easier than I thought. I could not find any other way to tell Emscripten to fetch the SDL2 port and intended to create another dummy custom target to force the compiler to fetch the SDL2 port then it strikes me that we already have a custom target for SDL in Emscripten build, so I just added the fetching step there.  <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/></p>
+<p>The SDL2 port concurrent fetching issue has been resolved. It is easier than I thought. I could not find any other way to tell Emscripten to fetch the SDL2 port and intended to create another dummy custom target to force the compiler to fetch the SDL2 port then it strikes me that we already have a custom target for SDL in Emscripten build, so I just added the fetching step there.  <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/></p>
 <p>While researching for the answer, I actually find another useful Emscripten feature. It has its own packaging tool which the emcc/em++ compiler calls when processing “–preload-file” flag. From what I understand, we can use this tool to separate the processes between packaging the resource pak (the data) and linking the executable (the html+js). The linking phase in Emscripten is notoriously slow. So, we will get a big win when any assets changes would only trigger a “repackage” using Emcripten packaging tool instead of triggering a full re-link. I believe it is doable but I will do this more advance build setup when time permits.</p>
           </div>
         </div>
@@ -881,7 +881,7 @@ That is an unintended side effect. Originally I had setup all the main executabl
           <div class="user_name">weitjong</div>
           <div class="post_content">
 <p>I also propose to merge this topic branch to the master branch now although it is not yet 100% complete. Like Lasse has said before, we could mark somewhere that Emscripten port of Urho3D is still experimental. Only after merging to master branch, we can truly verify that those changes we have made for Emscripten platform do not cause any regression issues in other platforms.</p>
-<p>The Emscripten-CI will be up and running soon too. I plan to conclude this before I am out of town for “Chinese New Year” holiday.  <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/></p>
+<p>The Emscripten-CI will be up and running soon too. I plan to conclude this before I am out of town for “Chinese New Year” holiday.  <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/></p>
           </div>
         </div>
       </div>
@@ -932,7 +932,7 @@ The -g4 flag is now set for Debug configuration build (only). I verify that it p
         <div class="post">
           <div class="user_name">GoogleBot42</div>
           <div class="post_content">
-<p>Awesome!!!  Support is being added really quick!   <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/>  Amazing job!</p>
+<p>Awesome!!!  Support is being added really quick!   <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/>  Amazing job!</p>
           </div>
         </div>
       </div>
@@ -960,7 +960,7 @@ The -g4 flag is now set for Debug configuration build (only). I verify that it p
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/weitjong/40/4_1.png" width="20"/> weitjong:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/5dc21abd616a69d8b82c2d56dfa657a5.png" width="20"/> weitjong:</div>
 <blockquote>
 <p>We have a first successful Emscripten-CI build today. I have manually uploaded the build artifacts to Urho3D main website. The HTML5 samples link can be found here: <a href="http://urho3d.github.io/pages.html" rel="nofollow noopener">urho3d.github.io/pages.html</a>. If I have more time, I could automate this upload to take place each time new Emscripten build artifacts are available.</p>
 </blockquote>
@@ -1026,7 +1026,7 @@ I don’t think any of us are working on that angle at the moment – this work 
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/friesencr/40/827_1.png" width="20"/> friesencr:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/70bcc47748c28f7bda94e891e8db727b.png" width="20"/> friesencr:</div>
 <blockquote>
 <p>Audio is working.</p>
 </blockquote>
@@ -1059,7 +1059,7 @@ I don’t think any of us are working on that angle at the moment – this work 
         <div class="post">
           <div class="user_name">devrich</div>
           <div class="post_content">
-<p>Well even still; that’s pretty awesome to be able to have C++11 Urho3D projects export to HTML5/webGL for many reasons <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/></p>
+<p>Well even still; that’s pretty awesome to be able to have C++11 Urho3D projects export to HTML5/webGL for many reasons <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/></p>
 <p>The two biggest I can think of for instance:</p>
 <ul>
 <li>
@@ -1141,7 +1141,7 @@ No objections.</p>
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/cadaver/40/3_1.png" width="20"/> cadaver:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/17ea6233fe86521c2e3179bd3849d219.png" width="20"/> cadaver:</div>
 <blockquote>
 <p>No objections.</p>
 </blockquote>
@@ -1158,7 +1158,7 @@ No objections.</p>
         <div class="post">
           <div class="user_name">GoogleBot42</div>
           <div class="post_content">
-<p>I got an error when building…  <img alt=":frowning:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/frowning.png?v=5" title=":frowning:"/></p>
+<p>I got an error when building…  <img alt=":frowning:" class="emoji" src="../../../images2/2506cac83464f3f86e257fa414340d4c.png" title=":frowning:"/></p>
 <p><span class="spoiler">googlebot@comp ~/Desktop/Urho3D (git)-[master] % make clean<br/>
 googlebot@comp ~/Desktop/Urho3D (git)-[master] % ./cmake_emscripten.sh -D URHO3D_LUA=1 -D URHO3D_LUAJIT=1 -D URHO3D_SAFE_LUA=1 -D URHO3D_SAMPLES=1 -D URHO3D_EXTRAS=1 .<br/>
 – Configuring done<br/>
@@ -1241,7 +1241,7 @@ I cannot build urho3d at all… same error.</p>
         <div class="post">
           <div class="user_name">badpixels</div>
           <div class="post_content">
-<p>I see this made it into master. That’s awesome!  <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/>  TYVM for that. I was totally stuck on getting it to work with the post-1.32 build system. Looks like sharing what I had was obviously the right choice so the real experts could take it further! <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/></p>
+<p>I see this made it into master. That’s awesome!  <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/>  TYVM for that. I was totally stuck on getting it to work with the post-1.32 build system. Looks like sharing what I had was obviously the right choice so the real experts could take it further! <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/></p>
           </div>
         </div>
       </div>
@@ -1253,7 +1253,7 @@ I cannot build urho3d at all… same error.</p>
         <div class="post">
           <div class="user_name">weitjong</div>
           <div class="post_content">
-<p>[quote=“GoogleBot”]I got an error when building…  <img alt=":frowning:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/frowning.png?v=5" title=":frowning:"/></p>
+<p>[quote=“GoogleBot”]I got an error when building…  <img alt=":frowning:" class="emoji" src="../../../images2/2506cac83464f3f86e257fa414340d4c.png" title=":frowning:"/></p>
 <p><span class="spoiler">googlebot@comp ~/Desktop/Urho3D (git)-[master] % make clean<br/>
 googlebot@comp ~/Desktop/Urho3D (git)-[master] % ./cmake_emscripten.sh -D URHO3D_LUA=1 -D URHO3D_LUAJIT=1 -D URHO3D_SAFE_LUA=1 -D URHO3D_SAMPLES=1 -D URHO3D_EXTRAS=1 .<br/>
 – Configuring done<br/>
@@ -1340,9 +1340,9 @@ It appears that you have reused the same build tree for desktop and emscripten b
 <aside class="quote no-group" data-username="badpixels">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/b/43a26b/40.png" width="20"/> badpixels:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/acc55da4d5846df78cbe284f952ccc15.png" width="20"/> badpixels:</div>
 <blockquote>
-<p>I see this made it into master. That’s awesome!  <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=10" title=":slight_smile:"/>  TYVM for that. I was totally stuck on getting it to work with the post-1.32 build system. Looks like sharing what I had was obviously the right choice so the real experts could take it further! <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=10" title=":smiley:"/></p>
+<p>I see this made it into master. That’s awesome!  <img alt=":slight_smile:" class="emoji" src="../../../images2/480f97b912eb537e18032299081e582a.png" title=":slight_smile:"/>  TYVM for that. I was totally stuck on getting it to work with the post-1.32 build system. Looks like sharing what I had was obviously the right choice so the real experts could take it further! <img alt=":smiley:" class="emoji" src="../../../images2/7014497b1c97c810791a011290bda7f5.png" title=":smiley:"/></p>
 </blockquote>
 </aside>
 <p>I am sorry if the new build system holds you back but the changes in the new build system are necessary to address our shortcomings in the previous build tree configuration and generation. You have made the right choice indeed. Perhaps, I should say, you also did it at the right time. Frankly speaking, some of us actually expect the contribution to the Urho3D upstream repo should have been made sooner. It is just a matter of time until one of us cannot wait any longer.</p>
@@ -1369,7 +1369,7 @@ It appears that you have reused the same build tree for desktop and emscripten b
         <div class="post">
           <div class="user_name">devrich</div>
           <div class="post_content">
-<p>Now that you have emscripten merged into master and have other major improvements in now; could the team push 1.33 out with these major changes? <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/></p>
+<p>Now that you have emscripten merged into master and have other major improvements in now; could the team push 1.33 out with these major changes? <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/></p>
           </div>
         </div>
       </div>
@@ -1381,7 +1381,7 @@ It appears that you have reused the same build tree for desktop and emscripten b
         <div class="post">
           <div class="user_name">weitjong</div>
           <div class="post_content">
-<p>Be patient, my friend. The major changes have yet to come. If you have followed the discussion in the other thread, Lasse is working on upgrading the rendering backend to support D3D11 which would open up the possibility for Windows Phone port too. <span class="mention">@Lasse</span>, no pressure.  <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=5" title=":wink:"/>  The upcoming Urho release could be the greatest of all.</p>
+<p>Be patient, my friend. The major changes have yet to come. If you have followed the discussion in the other thread, Lasse is working on upgrading the rendering backend to support D3D11 which would open up the possibility for Windows Phone port too. <span class="mention">@Lasse</span>, no pressure.  <img alt=":wink:" class="emoji" src="../../../images2/95940790c23d98635b2a6d3f22657158.png" title=":wink:"/>  The upcoming Urho release could be the greatest of all.</p>
           </div>
         </div>
       </div>
@@ -1417,7 +1417,7 @@ It appears that you have reused the same build tree for desktop and emscripten b
         <div class="post">
           <div class="user_name">GoogleBot42</div>
           <div class="post_content">
-<p>[quote=“weitjong”][quote=“GoogleBot”]I got an error when building…  <img alt=":frowning:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/frowning.png?v=5" title=":frowning:"/></p>
+<p>[quote=“weitjong”][quote=“GoogleBot”]I got an error when building…  <img alt=":frowning:" class="emoji" src="../../../images2/2506cac83464f3f86e257fa414340d4c.png" title=":frowning:"/></p>
 <p><span class="spoiler">googlebot@comp ~/Desktop/Urho3D (git)-[master] % make clean<br/>
 googlebot@comp ~/Desktop/Urho3D (git)-[master] % ./cmake_emscripten.sh -D URHO3D_LUA=1 -D URHO3D_LUAJIT=1 -D URHO3D_SAFE_LUA=1 -D URHO3D_SAMPLES=1 -D URHO3D_EXTRAS=1 .<br/>
 – Configuring done<br/>
@@ -1520,7 +1520,7 @@ An error has occured, build tree has to be provided as the first argument OR cal
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/cadaver/40/3_1.png" width="20"/> cadaver:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/17ea6233fe86521c2e3179bd3849d219.png" width="20"/> cadaver:</div>
 <blockquote>
 <p>In the new build system, you always need to specify the build tree path (like it says); to build to the source tree root, use ./cmake_emscripten.sh .</p>
 </blockquote>
@@ -1552,7 +1552,7 @@ An error has occured, build tree has to be provided as the first argument OR cal
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/cadaver/40/3_1.png" width="20"/> cadaver:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/17ea6233fe86521c2e3179bd3849d219.png" width="20"/> cadaver:</div>
 <blockquote>
 <p>Emscripten cascaded shadows are now in; just needed to add an additional shader define (WEBGL) which makes the shaders compile for 4 cascades max. On actual mobile devices it’s important to avoid selecting UV coordinates in pixel shaders, but in browsers with modern GPUs there should not be a noticeable performance impact.</p>
 </blockquote>
@@ -1593,7 +1593,7 @@ Note that, you only have one source tree but can potentially have limitless numb
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/cadaver/40/3_1.png" width="20"/> cadaver:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/17ea6233fe86521c2e3179bd3849d219.png" width="20"/> cadaver:</div>
 <blockquote>
 <p>Emscripten cascaded shadows are now in; just needed to add an additional shader define (WEBGL) which makes the shaders compile for 4 cascades max. On actual mobile devices it’s important to avoid selecting UV coordinates in pixel shaders, but in browsers with modern GPUs there should not be a noticeable performance impact.</p>
 </blockquote>
@@ -1645,7 +1645,7 @@ Date:   Sat Feb 14 23:37:48 2015 +0200</p>
           <div class="user_name">badpixels</div>
           <div class="post_content">
 <p>Ok after a git reset --hard and a git clean -f and deleting and recreating my build directory it seems to work. I guess maybe the old shader got stuck in there somehow or something.</p>
-<p>TY for the shadow fix <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/></p>
+<p>TY for the shadow fix <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/></p>
           </div>
         </div>
       </div>
@@ -1684,7 +1684,7 @@ Date:   Sat Feb 14 23:37:48 2015 +0200</p>
           <div class="post_content">
 <p>[quote=“weitjong”]It turns out that compiling Lua VM to javascript works out of the box, so the URHO3D_LUA build option is made available for Emscripten platform now. It still defaults to FALSE as the other platforms, so user will have to set the build option to TRUE to actually enable Lua in the build. Tested with 22_LuaIntegration.html and verified that the scripted rotating behavior is working correctly.</p>
 <p>I have started the work to make AngelScript scripting available for Emscripten platform too. However, I don’t think I am able to complete the manual work to finish all the generic bindings before I go on leave. Actually at this point, I still have no idea that the generic binding will work or it is in the right direction, so I will not push my partial changes on AngelScript just yet.[/quote]</p>
-<p>Hey!! Many thanks for gettig Lua scripting to work!  That will help a lot of new comers since most new comers have at some point or another used Lua or JavaScript. <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/></p>
+<p>Hey!! Many thanks for gettig Lua scripting to work!  That will help a lot of new comers since most new comers have at some point or another used Lua or JavaScript. <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/></p>
 <p>btw; umm what do you mean by “leave” ?  ( im in usa so i’m not famililar with what you mean )</p>
           </div>
         </div>
@@ -1697,7 +1697,7 @@ Date:   Sat Feb 14 23:37:48 2015 +0200</p>
         <div class="post">
           <div class="user_name">weitjong</div>
           <div class="post_content">
-<p>[quote=“devrich”]Hey!! Many thanks for gettig Lua scripting to work!  That will help a lot of new comers since most new comers have at some point or another used Lua or JavaScript. <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/></p>
+<p>[quote=“devrich”]Hey!! Many thanks for gettig Lua scripting to work!  That will help a lot of new comers since most new comers have at some point or another used Lua or JavaScript. <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/></p>
 <p>btw; umm what do you mean by “leave” ?  ( im in usa so i’m not famililar with what you mean )[/quote]<br/>
 I just want to say that I will be out of town for CNY holiday. For those who will be celebrating it, I wish you ???.</p>
           </div>
@@ -1711,7 +1711,7 @@ I just want to say that I will be out of town for CNY holiday. For those who wil
         <div class="post">
           <div class="user_name">devrich</div>
           <div class="post_content">
-<p>ohhhhh, of course!  Hey Happy New Year!! <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/></p>
+<p>ohhhhh, of course!  Hey Happy New Year!! <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/></p>
           </div>
         </div>
       </div>
@@ -1739,7 +1739,7 @@ I just want to say that I will be out of town for CNY holiday. For those who wil
           <div class="post_content">
 <p>[quote=“cadaver”]weitjong: the generic bindings approach is the right direction as far as I can tell. It will also help if we encounter another platform that has problems with the non-generic (assembly language) bindings.</p>
 <p>The most awesome would be to autogenerate both generic and non-generic bindings, but naturally that’s a lot of work, and would also need to somehow take care of the specialities we’ve written to the bindings, like conversion of vectors/maps. Here’s a C# tool written by my former co-worker for bindings generation, but don’t know if we’d want to go that route: <a href="https://github.com/juj/AngelscriptGenerator">github.com/juj/AngelscriptGenerator</a>[/quote]<br/>
-Thanks for the confirmation on the approach. I merged the “automatic wrapper functions” header file provided by AngelScript in the Addons subdir into our own existing Addons.h file. So using the WRAP_XXX macro, I can quickly bind the methods and functions using generic convention. But as you can already guess, it will still be a laborious task to actually write those macro calls for each and every existing native convention bindings. I have only completed that manually for Script array/dictionary/string, and I already begin to doubt anyone should spend his/her time this way just to maintain the bindings. I totally agree with you that we need a better way going forward to automate the binding generation. I have quickly looked at the “juj” AngelScriptGenerator. If I understand it correctly then it relies on Doxygen to produce the XMLs representing the classes, similar to EmbindGenerator. How come you didn’t say earlier that you have an Emscripten expert as your former co-worker <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=5" title=":wink:"/> . Re the automatic binding generation, not sure I have what it takes to do this but if I would spend time to tackle this perhaps I would look at LibClang.</p>
+Thanks for the confirmation on the approach. I merged the “automatic wrapper functions” header file provided by AngelScript in the Addons subdir into our own existing Addons.h file. So using the WRAP_XXX macro, I can quickly bind the methods and functions using generic convention. But as you can already guess, it will still be a laborious task to actually write those macro calls for each and every existing native convention bindings. I have only completed that manually for Script array/dictionary/string, and I already begin to doubt anyone should spend his/her time this way just to maintain the bindings. I totally agree with you that we need a better way going forward to automate the binding generation. I have quickly looked at the “juj” AngelScriptGenerator. If I understand it correctly then it relies on Doxygen to produce the XMLs representing the classes, similar to EmbindGenerator. How come you didn’t say earlier that you have an Emscripten expert as your former co-worker <img alt=":wink:" class="emoji" src="../../../images2/95940790c23d98635b2a6d3f22657158.png" title=":wink:"/> . Re the automatic binding generation, not sure I have what it takes to do this but if I would spend time to tackle this perhaps I would look at LibClang.</p>
           </div>
         </div>
       </div>
@@ -1754,12 +1754,12 @@ Thanks for the confirmation on the approach. I merged the “automatic wrapper f
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/weitjong/40/4_1.png" width="20"/> weitjong:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/5dc21abd616a69d8b82c2d56dfa657a5.png" width="20"/> weitjong:</div>
 <blockquote>
 <p>We have a first successful Emscripten-CI build today. I have manually uploaded the build artifacts to Urho3D main website. The HTML5 samples link can be found here: <a href="http://urho3d.github.io/pages.html" rel="nofollow noopener">urho3d.github.io/pages.html</a>. If I have more time, I could automate this upload to take place each time new Emscripten build artifacts are available.</p>
 </blockquote>
 </aside>
-<p><img alt=":astonished:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/astonished.png?v=5" title=":astonished:"/> nooo wayyyy woooow!!!  <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/> ---- I confirm that: <a data-bbcode="true" href="http://urho3d.github.io/samples/12_PhysicsStressTest.html" rel="nofollow noopener">http://urho3d.github.io/samples/12_PhysicsStressTest.html</a> works on my system - Linux Mint 17.1 ( 32-bit ) a bit super slow like 1 frame per several seconds <em>BUT</em> it works!!! <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/></p>
+<p><img alt=":astonished:" class="emoji" src="../../../images2/d210df802a5d9b4bc3a55c75eca07db3.png" title=":astonished:"/> nooo wayyyy woooow!!!  <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/> ---- I confirm that: <a data-bbcode="true" href="http://urho3d.github.io/samples/12_PhysicsStressTest.html" rel="nofollow noopener">http://urho3d.github.io/samples/12_PhysicsStressTest.html</a> works on my system - Linux Mint 17.1 ( 32-bit ) a bit super slow like 1 frame per several seconds <em>BUT</em> it works!!! <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/></p>
 <p>^-- But it shouldn’t xD ---- This PC is a older PC with no video card other than onboard intel chip:</p>
 <p>[quote]Graphics:  Card: Intel 82Q963/Q965 Integrated Graphics Controller<br/>
 <a href="http://X.Org" rel="nofollow noopener">X.Org</a>: 1.15.1 drivers: intel (unloaded: fbdev,vesa) Resolution: 1920x1080@60.0hz<br/>
@@ -1807,7 +1807,7 @@ GLX Renderer: Mesa DRI Intel 965Q x86/MMX/SSE2 GLX Version: 2.1 Mesa 10.1.3[/quo
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/friesencr/40/827_1.png" width="20"/> friesencr:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/70bcc47748c28f7bda94e891e8db727b.png" width="20"/> friesencr:</div>
 <blockquote>
 <p>Yes it works.  I tried it in the early stage and might have had some input issues.  If you are on android you might need a different browser, the junk stock android browser might not cut it.</p>
 </blockquote>
@@ -1825,7 +1825,7 @@ GLX Renderer: Mesa DRI Intel 965Q x86/MMX/SSE2 GLX Version: 2.1 Mesa 10.1.3[/quo
           <div class="user_name">devrich</div>
           <div class="post_content">
 <p>hmmmm actually… is there a way to pick and choose what features to use in our Urho3D-&gt;emscrpiten projects?</p>
-<p>I am really considering going all out for a smaller project I have in mind using C++ instead of scripting so that I can get it ready for browser deployment so this question is most important to me <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/></p>
+<p>I am really considering going all out for a smaller project I have in mind using C++ instead of scripting so that I can get it ready for browser deployment so this question is most important to me <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/></p>
 <p>I mean for things like “optimise for better performance at decreased rendering_options for lesser gpu_capable devices”</p>
 <p>–or–</p>
 <p>“disable some Urho3D features to make emscripten faster for slower mobiles”</p>
@@ -1871,7 +1871,7 @@ The latest master branch now supports EMSCRIPTEN_SHARE_DATA build option. When e
         <div class="post">
           <div class="user_name">hdunderscore</div>
           <div class="post_content">
-<p>I just tested it, works well – thanks for that weitjong <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/></p>
+<p>I just tested it, works well – thanks for that weitjong <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/></p>
           </div>
         </div>
       </div>
@@ -1907,7 +1907,7 @@ The latest master branch now supports EMSCRIPTEN_SHARE_DATA build option. When e
         <div class="post">
           <div class="user_name">weitjong</div>
           <div class="post_content">
-<p>I got time to take a closer look at the file_packager.py script. If I understand it correctly then the uuid is used as way to invalidate the package cache stored in the local IndexedDB. So, it does not look like a good idea to reuse the uuid as I original thought. I leave the script as it is.  <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=5" title=":wink:"/>  However, I find another way (more like a hack actually) to side step the problem. At least now I have a workflow for fast prototyping (changing scripts/assets, rebuild without triggering a relink unnecessarily, and reload browser). The hack is not that clean although it is easy to do, so I am not sure I should push it to Urho3D.</p>
+<p>I got time to take a closer look at the file_packager.py script. If I understand it correctly then the uuid is used as way to invalidate the package cache stored in the local IndexedDB. So, it does not look like a good idea to reuse the uuid as I original thought. I leave the script as it is.  <img alt=":wink:" class="emoji" src="../../../images2/95940790c23d98635b2a6d3f22657158.png" title=":wink:"/>  However, I find another way (more like a hack actually) to side step the problem. At least now I have a workflow for fast prototyping (changing scripts/assets, rebuild without triggering a relink unnecessarily, and reload browser). The hack is not that clean although it is easy to do, so I am not sure I should push it to Urho3D.</p>
           </div>
         </div>
       </div>
@@ -1933,11 +1933,11 @@ The latest master branch now supports EMSCRIPTEN_SHARE_DATA build option. When e
           <div class="post_content">
 <p>[quote=“cadaver”]There aren’t Urho features that consume performance just by being compiled in, but naturally you can use normal CMake options like -DURHO3D_URHO2D=0 or -DURHO3D_NAVIGATION=0 to exclude features you don’t need; this will reduce compile &amp; link time.</p>
 <p>Emscripten uses the OpenGL ES rendering codepaths which are already the “lowest of the low” in terms of GPU features, and in the end the content decides the performance. Things you can do is to tweak / simplify the shaders, use simple models, use as few objects onscreen as possible, use vertex lighting ( Light::SetPerVertex(true) ) instead of per-pixel lighting.[/quote]</p>
-<p>Hey many thanks, cadaver!!  your advice here was exactly what I needed to make sure I get my game idea working as best as possible <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/></p>
+<p>Hey many thanks, cadaver!!  your advice here was exactly what I needed to make sure I get my game idea working as best as possible <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/></p>
 <p>[quote=“cadaver”]Emscripten uses the OpenGL ES rendering codepaths which are already the “lowest of the low” in terms of GPU features, and in the end the content decides the performance. Things you can do is to tweak / simplify the shaders, use simple models, use as few objects onscreen as possible, use vertex lighting ( Light::SetPerVertex(true) ) instead of per-pixel lighting.</p>
 <p>But note that with mobile + emscripten you are fighting two layers of bad performance: the mobile hardware, and the browser. A dedicated mobile app will naturally perform better.[/quote]</p>
 <p>I’m giving myself a good refresher in C++ right now so sometime soon I should be up to speed enough to give it a go.  I do also prefer to build for Android App with the NDK/SDK provided by Google but having the option for some lightweight games over browser is definately a great option for a smaller game idea I have in mind.</p>
-<p>PLEASE keep supporting Urho3D_to_Android as this is a big part of my primary desired dev pipeline for my main game idea <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/></p>
+<p>PLEASE keep supporting Urho3D_to_Android as this is a big part of my primary desired dev pipeline for my main game idea <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/></p>
           </div>
         </div>
       </div>

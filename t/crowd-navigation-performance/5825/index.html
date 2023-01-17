@@ -147,7 +147,7 @@
 </code></pre>
 <p>I did see some improvement, but not a huge difference. The above code tries to split the agents instead of making them all one big group. Assuming I did it correctly.</p>
 <p>Here is a screenshot. Only 10 AI’s if they huddle at their destination the update stats climbs as high as 15 and 16. Frame-rate drops to the 40s.</p>
-<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/8OgIoAV1l2PAkgY3KFlLJUmw7OZ.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/3/3dc01bc1028b6c3357e1dfa1e9db61c6ff6cf595.jpeg" rel="nofollow noopener" title="Screenshot_Sun_Jan_19_19_05_04_2020"><img alt="Screenshot_Sun_Jan_19_19_05_04_2020" data-base62-sha1="8OgIoAV1l2PAkgY3KFlLJUmw7OZ" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/3/3dc01bc1028b6c3357e1dfa1e9db61c6ff6cf595_2_10x10.png" height="291" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/3/3dc01bc1028b6c3357e1dfa1e9db61c6ff6cf595_2_690x291.jpeg" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/3/3dc01bc1028b6c3357e1dfa1e9db61c6ff6cf595_2_690x291.jpeg, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/3/3dc01bc1028b6c3357e1dfa1e9db61c6ff6cf595_2_1035x436.jpeg 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/3/3dc01bc1028b6c3357e1dfa1e9db61c6ff6cf595_2_1380x582.jpeg 2x" width="690"/><div class="meta">
+<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/8OgIoAV1l2PAkgY3KFlLJUmw7OZ.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/3/3dc01bc1028b6c3357e1dfa1e9db61c6ff6cf595.jpeg" rel="nofollow noopener" title="Screenshot_Sun_Jan_19_19_05_04_2020"><img alt="Screenshot_Sun_Jan_19_19_05_04_2020" data-base62-sha1="8OgIoAV1l2PAkgY3KFlLJUmw7OZ" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/3/3dc01bc1028b6c3357e1dfa1e9db61c6ff6cf595_2_10x10.png" height="291" src="../../../images2/510a30821a6b55ba9bd48d0fce374815.jpeg" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/3/3dc01bc1028b6c3357e1dfa1e9db61c6ff6cf595_2_690x291.jpeg, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/3/3dc01bc1028b6c3357e1dfa1e9db61c6ff6cf595_2_1035x436.jpeg 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/3/3dc01bc1028b6c3357e1dfa1e9db61c6ff6cf595_2_1380x582.jpeg 2x" width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">Screenshot_Sun_Jan_19_19_05_04_2020</span><span class="informations">2560×1080 1.53 MB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg>
 </div></a></div></p>
 <p>UPDATE: I just tested the urho3d crowd sample and spawn 10 of the default character. It has the same problem. Once the agents reach their destination and huddle there. The frame-rate plummets. I was getting 40 fps. This is all in debug mode though. I’m not sure if it goes away in release mode.</p>
@@ -279,7 +279,7 @@
 <aside class="quote no-group quote-modified" data-post="10" data-topic="5825" data-username="Sinoid">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/s/f19dbf/40.png" width="20"/> Sinoid:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/364b15125065144cbdd62e2448806aa6.png" width="20"/> Sinoid:</div>
 <blockquote>
 <blockquote>
 <p>The setEnabled() does not seem to improve anything.</p>
@@ -329,7 +329,7 @@
 <aside class="quote no-group" data-post="12" data-topic="5825">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/jtippetts/40/357_2.png" width="20"/> JTippetts:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/3f264c270c82daf0485ab9380aad140b.png" width="20"/> JTippetts:</div>
 <blockquote>
 <p>SetEnabled removes the agent from the crowd, the same as removing the component altogether. So in that respect, they’re essentially identical.</p>
 </blockquote>
@@ -508,7 +508,7 @@ Finally, 12-15 agents seems extremely low, so I must ask the obvious - are You h
         <div class="post">
           <div class="user_name">GodMan</div>
           <div class="post_content">
-<p>Okay so I compiled in release mode and tested the crowd navigation sample. Everything seems rock solid. The update stats got to only 2.0 and then goes back down. Frame-rate never budged. Guess all my issues were debug info. I spawned 15 of them no issues. Did not even drop one frame. <img alt=":smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smile.png?v=9" title=":smile:"/> <img alt=":smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smile.png?v=9" title=":smile:"/> <img alt=":smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smile.png?v=9" title=":smile:"/></p>
+<p>Okay so I compiled in release mode and tested the crowd navigation sample. Everything seems rock solid. The update stats got to only 2.0 and then goes back down. Frame-rate never budged. Guess all my issues were debug info. I spawned 15 of them no issues. Did not even drop one frame. <img alt=":smile:" class="emoji" src="../../../images2/6c96d67462c17dd73ef2e4b512b2dc07.png" title=":smile:"/> <img alt=":smile:" class="emoji" src="../../../images2/6c96d67462c17dd73ef2e4b512b2dc07.png" title=":smile:"/> <img alt=":smile:" class="emoji" src="../../../images2/6c96d67462c17dd73ef2e4b512b2dc07.png" title=":smile:"/></p>
           </div>
         </div>
       </div>

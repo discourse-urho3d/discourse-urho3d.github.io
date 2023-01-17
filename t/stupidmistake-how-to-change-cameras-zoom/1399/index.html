@@ -37,7 +37,7 @@
 120 | Camera* camera = cameraNode_-&gt;CreateComponent&lt;Camera&gt;();
 121 | camera-&gt;SetZoom(1.0f);</code></pre>
 <p>But as no matter what value I placed in there the view was the same every time I compiled and ran that sample, here I am.<br/>
-Edit: Remembered I had changed the target name in my CMakeLists.txt file… Sorry for wasting your time.  <img alt=":blush:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/blush.png?v=5" title=":blush:"/></p>
+Edit: Remembered I had changed the target name in my CMakeLists.txt file… Sorry for wasting your time.  <img alt=":blush:" class="emoji" src="../../../images2/f5e2a5ef6206a15962e2ec428f87e9a2.png" title=":blush:"/></p>
           </div>
         </div>
       </div>
@@ -50,11 +50,11 @@ Edit: Remembered I had changed the target name in my CMakeLists.txt file… Sorr
           <div class="user_name">rasteron</div>
           <div class="post_content">
 <p>Hey Vagabond,</p>
-<p>First of, Welcome to the forums! <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=9" title=":slight_smile:"/> I have not tested this in C++, but in Angelscript it is done by:</p>
+<p>First of, Welcome to the forums! <img alt=":slight_smile:" class="emoji" src="../../../images2/7bdd5ab4d67675d002d99e4b948c8cdb.png" title=":slight_smile:"/> I have not tested this in C++, but in Angelscript it is done by:</p>
 <pre><code class="lang-auto">cameraNode = scene_.CreateChild("Camera");
 Camera@ camera = cameraNode.CreateComponent("Camera");    
 camera.zoom = 0.1f;</code></pre>
-<p><img alt="" height="248" src="http://i.imgur.com/A3tYAbS.png" width="480"/></p>
+<p><img alt="" height="248" src="../../../images2/151be823297f0c38b19d91664ae676db.png" width="480"/></p>
 <p>You should probably check if you just need to do a clean and rebuild of your executable.</p>
           </div>
         </div>

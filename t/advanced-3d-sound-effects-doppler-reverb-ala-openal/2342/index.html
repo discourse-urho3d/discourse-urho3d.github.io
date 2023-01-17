@@ -51,7 +51,7 @@ If I’d have to roll my own, what method would you suggest? A custom component?
           <div class="user_name">cadaver</div>
           <div class="post_content">
 <p>You would have to add your own implementation into the sound subsystem. You would have to expand it quite substantially, as presently there’s no effects at all. Note that contributing such work as a PR would be very welcome, if you’re up to it.</p>
-<p>Ideally Urho should be using OpenAL. However there doesn’t exist a nice permissive software implementation (OpenAL-Soft exists, but is LGPL which we can’t include without getting into potential grey areas with linking) and using the implementation tied into the OS would require repeating the linking work per platform, and would miss features on some platforms, such as Web. So using SDL audio we get problem-free linking and feature parity, with the downside that there isn’t any features to speak of <img alt=":frowning:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/frowning.png?v=5" title=":frowning:"/></p>
+<p>Ideally Urho should be using OpenAL. However there doesn’t exist a nice permissive software implementation (OpenAL-Soft exists, but is LGPL which we can’t include without getting into potential grey areas with linking) and using the implementation tied into the OS would require repeating the linking work per platform, and would miss features on some platforms, such as Web. So using SDL audio we get problem-free linking and feature parity, with the downside that there isn’t any features to speak of <img alt=":frowning:" class="emoji" src="../../../images2/2506cac83464f3f86e257fa414340d4c.png" title=":frowning:"/></p>
           </div>
         </div>
       </div>
@@ -70,7 +70,7 @@ You’re not hiding the fact you are using it, you provided the license and you 
 <p>I remember from having implemented OpenAL soft that it is indeed quite some work and you indeed have to kind of base your sound approach on the idea of “environments”.<br/>
 You don’t set audio effects on a single audio source, but more on the audio “world”.<br/>
 It wasn’t a nice thing to implement, and I’m afraid as long as my project doesn’t need it (and at least the first won’t), its more logical for me to not attempt this.</p>
-<p>Too bad SDL is limited that way <img alt=":frowning:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/frowning.png?v=5" title=":frowning:"/></p>
+<p>Too bad SDL is limited that way <img alt=":frowning:" class="emoji" src="../../../images2/2506cac83464f3f86e257fa414340d4c.png" title=":frowning:"/></p>
           </div>
         </div>
       </div>
@@ -136,7 +136,7 @@ It wasn’t a nice thing to implement, and I’m afraid as long as my project do
 <aside class="quote no-group" data-username="yushli">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/y/d6d6ee/40.png" width="20"/> yushli:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/0186b371e5e1d9b7f997845cff381132.png" width="20"/> yushli:</div>
 <blockquote>
 <p>SoLoud looks like quite interesting. Do you have workable sample code to show how to integrate it into Urho3D?</p>
 </blockquote>

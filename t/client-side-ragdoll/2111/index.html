@@ -100,7 +100,7 @@
 <p>[quote=“cadaver”]Looking at the engine code there shouldn’t be anything wrong with calling Clone() with LOCAL createmode. However obviously you need to call it on the client because it never gets replicated otherwise. At the same time the original replicated character should be hidden (disabled) from both rendering and physics. I believe you can do that on the client too, and in fact it can be necessary to do so since otherwise there could be a timing problem, if the server hides/destroys the original, but the client hadn’t cloned it yet.</p>
 <p>The server will probably continue to send updates for the “real” dead character but these shouldn’t account for much bandwidth.</p>
 <p>Alternative to Clone() is to send a custom message or remote event to the client that contains all necessary data for the ragdoll, ie. the initial positions of all bones.[/quote]</p>
-<p>Thanks Lasse. <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/> I seem to notice that almost all functions in the NSW code are handled by the server, except for the scoring part. Can you give more tips on how to properly do this with local clone and SnowWar?</p>
+<p>Thanks Lasse. <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/> I seem to notice that almost all functions in the NSW code are handled by the server, except for the scoring part. Can you give more tips on how to properly do this with local clone and SnowWar?</p>
           </div>
         </div>
       </div>

@@ -105,7 +105,7 @@ How can I successfully get Urho3D to work on RPi !!!?!?!?!?</p>
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/weitjong/40/4_1.png" width="20"/> weitjong:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/5dc21abd616a69d8b82c2d56dfa657a5.png" width="20"/> weitjong:</div>
 <blockquote>
 <p>Our RPI port has only be built and tested using GLES at the moment. Personally I haven’t tried it with OpenGL yet, so I have no idea whether it will work with OpenGL.</p>
 </blockquote>
@@ -113,7 +113,7 @@ How can I successfully get Urho3D to work on RPi !!!?!?!?!?</p>
 <p>Thanks <span class="mention">@weitjong</span> for your reply.<br/>
 But I don’t want to use OpenGL. I just want to run Urho3D ! That’s it !!<br/>
 So, what is my system’s problem !?<br/>
-Please help me solve this.  <img alt=":cry:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/cry.png?v=5" title=":cry:"/></p>
+Please help me solve this.  <img alt=":cry:" class="emoji" src="../../../images2/c49dd3f49418024d1f7a2b845f88a7bf.png" title=":cry:"/></p>
           </div>
         </div>
       </div>
@@ -127,7 +127,7 @@ Please help me solve this.  <img alt=":cry:" class="emoji" src="https://emoji.di
           <div class="post_content">
 <p>It is easier to verify that you have a working build environment by first test building a simple GLES project instead of using Urho3D. I did that when I first got my RPI. After you know for sure you can build a simple project then come back to retry to build Urho3D project. It has been awhile since the last time I build it natively on the board itself, to tell you the truth. I may try that later when I have time on my newer RPI 3. Usually just cross-compile on a Linux host and scp to the board for actual testing. I am not sure what went wrong with your build environment, but this is how I setup mine.</p>
 <p>[ul][li]For cross-compiling: just follow the steps as outlined in <a href="https://urho3d.github.io/documentation/HEAD/_building.html#Building_RaspberryPi">urho3d.github.io/documentation/ … aspberryPi</a>. The section of the text is contributed by me, so it exactly outlines what I did.[/li]<br/>
-[li]For native build on the board: install the prerequisite software as root and then build Urho3D as normal user (I hope I won’t catch you using root again, I cannot stand such mistake <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=5" title=":wink:"/> and may opt to not respond at all and let others to help you). After calling cmake, verify the generated build tree contains this file: /Source/ThirdParty/SDL/include/generated/SDL_config.h and verify this file contains entries that indicate SDL has detected the video driver for RPI and OpenGL ES 1 and 2. If not then install the missing prerequisite package and rinse &amp; repeat, each time deleting the previously generated build tree first when you are reusing a same build tree path.[/li][/ul]</p>
+[li]For native build on the board: install the prerequisite software as root and then build Urho3D as normal user (I hope I won’t catch you using root again, I cannot stand such mistake <img alt=":wink:" class="emoji" src="../../../images2/95940790c23d98635b2a6d3f22657158.png" title=":wink:"/> and may opt to not respond at all and let others to help you). After calling cmake, verify the generated build tree contains this file: /Source/ThirdParty/SDL/include/generated/SDL_config.h and verify this file contains entries that indicate SDL has detected the video driver for RPI and OpenGL ES 1 and 2. If not then install the missing prerequisite package and rinse &amp; repeat, each time deleting the previously generated build tree first when you are reusing a same build tree path.[/li][/ul]</p>
           </div>
         </div>
       </div>
@@ -141,7 +141,7 @@ Please help me solve this.  <img alt=":cry:" class="emoji" src="https://emoji.di
           <div class="post_content">
 <p>[quote=“weitjong”]It is easier to verify that you have a working build environment by first test building a simple GLES project instead of using Urho3D. I did that when I first got my RPI. After you know for sure you can build a simple project then come back to retry to build Urho3D project. It has been awhile since the last time I build it natively on the board itself, to tell you the truth. I may try that later when I have time on my newer RPI 3. Usually just cross-compile on a Linux host and scp to the board for actual testing. I am not sure what went wrong with your build environment, but this is how I setup mine.</p>
 <p>[ul][li]For cross-compiling: just follow the steps as outlined in <a href="https://urho3d.github.io/documentation/HEAD/_building.html#Building_RaspberryPi" rel="nofollow noopener">urho3d.github.io/documentation/ … aspberryPi</a>. The section of the text is contributed by me, so it exactly outlines what I did.[/li]<br/>
-[li]For native build on the board: install the prerequisite software as root and then build Urho3D as normal user (I hope I won’t catch you using root again, I cannot stand such mistake <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=5" title=":wink:"/> and may opt to not respond at all and let others to help you). After calling cmake, verify the generated build tree contains this file: /Source/ThirdParty/SDL/include/generated/SDL_config.h and verify this file contains entries that indicate SDL has detected the video driver for RPI and OpenGL ES 1 and 2. If not then install the missing prerequisite package and rinse &amp; repeat, each time deleting the previously generated build tree first when you are reusing a same build tree path.[/li][/ul][/quote]</p>
+[li]For native build on the board: install the prerequisite software as root and then build Urho3D as normal user (I hope I won’t catch you using root again, I cannot stand such mistake <img alt=":wink:" class="emoji" src="../../../images2/95940790c23d98635b2a6d3f22657158.png" title=":wink:"/> and may opt to not respond at all and let others to help you). After calling cmake, verify the generated build tree contains this file: /Source/ThirdParty/SDL/include/generated/SDL_config.h and verify this file contains entries that indicate SDL has detected the video driver for RPI and OpenGL ES 1 and 2. If not then install the missing prerequisite package and rinse &amp; repeat, each time deleting the previously generated build tree first when you are reusing a same build tree path.[/li][/ul][/quote]</p>
 <p>Thanks <span class="mention">@weitjong</span> for your reply.</p>
 <p>I solved the problem !!<br/>
 First I did:</p>
@@ -171,7 +171,7 @@ Now it works.</p>
 </blockquote>
 </aside>
 <p>i’ve been following this thread over the weekend and have had the same errors. removing mesa-common-dev also worked for me.</p>
-<p>thanks for all effort.  <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/></p>
+<p>thanks for all effort.  <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/></p>
           </div>
         </div>
       </div>
@@ -191,7 +191,7 @@ First I did:</p>
 Now it works.<br/>
 [/quote]</p>
 <p>i’ve been following this thread over the weekend and have had the same errors. removing mesa-common-dev also worked for me.</p>
-<p>thanks for all effort.  <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/>[/quote]</p>
+<p>thanks for all effort.  <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/>[/quote]</p>
 <p>It’s nice to hear that this issue is common among RPi users.<br/>
 Maybe Urho3D developers can think about a workaround.</p>
 <p>Also, I’ve faced another issue described here: <a href="http://discourse.urho3d.io/t/keyboard-keys-not-working-on-rpi-platform/2335/1">topic2447.html</a><br/>

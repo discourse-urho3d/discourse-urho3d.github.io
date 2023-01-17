@@ -36,7 +36,7 @@
 I assume that the raycast implementation uses AABB to get all the bodies it needs to test against for intersection.<br/>
 A possible way to optimize it is to segment the ray into several rays, so the sum of the volumes of the smaller AABBs is smaller than the single big AABB, so it will test against much less bodies.<br/>
 In the case of returning the closest result, when a ray segment hits something there’s no need to test the rest of the segments.<br/>
-<img alt="" height="286" src="http://i.imgur.com/On8MNSg.png" width="524"/></p>
+<img alt="" height="286" src="../../../images2/0470c46822c5b7f2231a3baa26bdae22.png" width="524"/></p>
 <p>Since it’s quite a general case (any big scene with many bodies), if I implement it would u accept a pull request?</p>
 <p>EDIT:<br/>
 I implemented it and in my case it <span class="bbcode-b">more than doubled</span> the game framerate, and the performance relation is non-linear.</p>

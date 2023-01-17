@@ -45,11 +45,11 @@
 <p>I started making a recipe. It doesn’t have all the options yet, and didn’t move the dependencies logic from CMake to Conan:<br/>
 <aside class="onebox whitelistedgeneric">
 <header class="source">
-<img class="site-icon" height="32" src="https://github.githubassets.com/favicon.ico" width="32"/>
+<img class="site-icon" height="32" src="../../../images2/298b47bcb25b5f93b2f65fdd18e4cc1a.ico" width="32"/>
 <a href="https://github.com/Enhex/conan-Urho3D" rel="nofollow noopener" target="_blank">GitHub</a>
 </header>
 <article class="onebox-body">
-<img class="thumbnail onebox-avatar" height="256" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/d/d1a43a3bd942557c448062235a2dbcb0d406783e.jpg" width="256"/>
+<img class="thumbnail onebox-avatar" height="256" src="../../../images2/5364edcfd638b8f7dbf8efa59065174d.jpg" width="256"/>
 <h3><a href="https://github.com/Enhex/conan-Urho3D" rel="nofollow noopener" target="_blank">Enhex/conan-Urho3D</a></h3>
 <p>Conan recipe for Urho3D (WIP). Contribute to Enhex/conan-Urho3D development by creating an account on GitHub.</p>
 </article>
@@ -89,7 +89,7 @@
 </header>
 <article class="onebox-body">
 <a href="https://github.com/ZaMaZaN4iK" rel="nofollow noopener">
-<img class="thumbnail onebox-avatar" height="96" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/3/3d299729cf7bad03a92723dea4b454f087197290.jpeg" width="96"/>
+<img class="thumbnail onebox-avatar" height="96" src="../../../images2/004a1f57520ec68002ed800dcbb3a800.jpeg" width="96"/>
 </a>
 <h4><a href="https://github.com/urho3d/Urho3D/issues/2234" rel="nofollow noopener" target="_blank">Issue: Conan package for Urho3D</a></h4>
 <div class="date" style="margin-top:10px;">
@@ -141,7 +141,7 @@ Conan is modern dependency manager for C++. And will be great if your library wi
 <aside class="quote no-group" data-post="4" data-topic="4444" data-username="weitjong">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/weitjong/40/4_2.png" width="20"/> weitjong:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/8c3888d68a9e52e853f0724aae6cefb6.png" width="20"/> weitjong:</div>
 <blockquote>
 <p>First of all I don’t think I would like the idea to have Conan to download prebuilt binary into my system for security reason.</p>
 </blockquote>
@@ -150,7 +150,7 @@ Conan is modern dependency manager for C++. And will be great if your library wi
 <aside class="quote no-group" data-post="4" data-topic="4444" data-username="weitjong">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/weitjong/40/4_2.png" width="20"/> weitjong:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/8c3888d68a9e52e853f0724aae6cefb6.png" width="20"/> weitjong:</div>
 <blockquote>
 <p>The combination of build options from Urho3D and SDL2 alone would already create a huge matrix, not to mention the variants due to different settings from compiler, build type, os, arch, etc.</p>
 </blockquote>
@@ -162,7 +162,7 @@ It isn’t a miracle, it’s finally a tool that get things right.</p>
 <aside class="quote no-group" data-post="4" data-topic="4444" data-username="weitjong">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/weitjong/40/4_2.png" width="20"/> weitjong:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/8c3888d68a9e52e853f0724aae6cefb6.png" width="20"/> weitjong:</div>
 <blockquote>
 <p>For example, I cannot ask Conan to exclude <code>alsa</code> , it keeps tries to insist to build <code>libalsa</code> from source[?]. Some of CMake auto-detection magic from original SDL2 CMake build system is lost or hindered by Conan.</p>
 </blockquote>
@@ -179,7 +179,7 @@ There’s nothing special about Conan recipes, it’s just a python script that 
 <aside class="quote no-group" data-post="4" data-topic="4444" data-username="weitjong">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/weitjong/40/4_2.png" width="20"/> weitjong:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/8c3888d68a9e52e853f0724aae6cefb6.png" width="20"/> weitjong:</div>
 <blockquote>
 <p>I find it to be a little bit intrusive to let the Conan’s generators to “pepper” the conan-specific macros to the CMakeLists.txt build script in order to allow the two integrate together</p>
 </blockquote>
@@ -202,7 +202,7 @@ Also it would make creating a Linux build virtually zero effort.
           <div class="post_content">
 <p>Instead of replying you point by point, I would say this. All the “good things” that you mentioned above I already known or read about them before deciding to start evaluation Conan. In theory on paper it all sounds very good. But, the devil is in detail. Have you ever try to use SDL2 Conan recipe in your project so far, specifically on Linux. For me, there are nothing wrong to use some packages built by distro maintainers, especially for those packages that deal with lower level stuffs. Bullets and SDL and Alsa and PulseAudio are all available in the system repo. But I would choose to customize and build from source only for the first two, but leave the lower level packages to the one who knows the system better than me. The point is I have the option to choose where the line is drawn and not by someone else who writes the recipe.</p>
 <p>To me the jury is still out whether Conan will be the C++ package manager. So to have my CMake build script committed to the one package manager now  is risky. Take the Android plugin for Gradle, for example, it actually just wraps around the CMake build script and not a single line in the CMake build script needs to be altered for the plugin to work. The rakefile in the GitHub Action workflow that I did also just wraps and invoke CMake. With Conan, this is not the case. The CMakeLists.txt needs to be made aware of Conan existence someway or another.</p>
-<p>At least I agree with you on one thing. It is not easy to write a recipe for a more complex library with many options. If it was easy, I think by now there will be a few people bragging to have Conan recipe for Urho3D by now. Where are they? Even the experts in the bincrafters could not come up with SDL2 recipe that meets my taste <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=9" title=":slight_smile:"/></p>
+<p>At least I agree with you on one thing. It is not easy to write a recipe for a more complex library with many options. If it was easy, I think by now there will be a few people bragging to have Conan recipe for Urho3D by now. Where are they? Even the experts in the bincrafters could not come up with SDL2 recipe that meets my taste <img alt=":slight_smile:" class="emoji" src="../../../images2/7bdd5ab4d67675d002d99e4b948c8cdb.png" title=":slight_smile:"/></p>
           </div>
         </div>
       </div>
@@ -267,7 +267,7 @@ so you have a “single source of truth” which you control directly, instead o
           <div class="user_name">Enhex</div>
           <div class="post_content">
 <p>Modules improve things regarding consuming libraries, but not getting/building/including/linking them AFAIK.</p>
-<p>I think giving Conan a test run in small personal project can demonstrate the value better, but with packages which aren’t troublesome <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=9" title=":slight_smile:"/><br/>
+<p>I think giving Conan a test run in small personal project can demonstrate the value better, but with packages which aren’t troublesome <img alt=":slight_smile:" class="emoji" src="../../../images2/7bdd5ab4d67675d002d99e4b948c8cdb.png" title=":slight_smile:"/><br/>
 Maybe trying to port such existing project to use Conan and measuring how much work it saves when setting up the project from scratch (i.e. fresh git clone).</p>
           </div>
         </div>

@@ -509,7 +509,7 @@ start Urho3DPlayer.exe <a href="http://Client.as" rel="nofollow noopener">Client
 <p>Also, why it had an index? Is it for the multiple players? </p>
 </blockquote>
 </aside>
-<p>Yes NSW is multiplayer ready, but this part searches for the animation component starting with node 0. This code is also a good example so your model’s default pose is not displayed and load your preferred idle animation instead, as commented there… <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=5" title=":wink:"/></p>
+<p>Yes NSW is multiplayer ready, but this part searches for the animation component starting with node 0. This code is also a good example so your model’s default pose is not displayed and load your preferred idle animation instead, as commented there… <img alt=":wink:" class="emoji" src="../../../images2/95940790c23d98635b2a6d3f22657158.png" title=":wink:"/></p>
 <pre><code class="lang-auto">// Start playing the idle animation immediately, even before the first physics update
         AnimationController@ animCtrl = node.children[0].GetComponent("AnimationController");
         animCtrl.PlayExclusive("Models/NinjaSnowWar/Ninja_Idle3.ani", LAYER_MOVE, true);</code></pre>

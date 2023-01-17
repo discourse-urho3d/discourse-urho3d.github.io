@@ -51,7 +51,7 @@ so MAX_IMAGE_SIZE ~256MB max.</p>
 <blockquote>
 <p>Failed to create texture.</p>
 </blockquote>
-<p>There should be a max size (width, ram) for GPU to resolve too <img alt=":frowning:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/frowning.png?v=9" title=":frowning:"/></p>
+<p>There should be a max size (width, ram) for GPU to resolve too <img alt=":frowning:" class="emoji" src="../../../images2/c383444e3b50f1554d2f21c7c206ca52.png" title=":frowning:"/></p>
           </div>
         </div>
       </div>
@@ -165,7 +165,7 @@ My texture image size is about two times larger. So I divided my image into 4 pi
 </code></pre>
 <p>This cutting-image method works fine for a smaller heightmap.<br/>
 <strong>But for my case, some textures do not show. It looks like they are unloaded automatically somehow.</strong></p>
-<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/kuGKNKvovQr0NvVExoDZzhFQjOa.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/8/8fa39571ba3760900cd2f69afc527ed175760582.jpeg" rel="nofollow noopener" title="image"><img alt="image" data-base62-sha1="kuGKNKvovQr0NvVExoDZzhFQjOa" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/8fa39571ba3760900cd2f69afc527ed175760582_2_10x10.png" height="500" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/8fa39571ba3760900cd2f69afc527ed175760582_2_676x500.jpeg" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/8fa39571ba3760900cd2f69afc527ed175760582_2_676x500.jpeg, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/8fa39571ba3760900cd2f69afc527ed175760582_2_1014x750.jpeg 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/8fa39571ba3760900cd2f69afc527ed175760582_2_1352x1000.jpeg 2x" width="676"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2044×1510 609 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/kuGKNKvovQr0NvVExoDZzhFQjOa.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/8/8fa39571ba3760900cd2f69afc527ed175760582.jpeg" rel="nofollow noopener" title="image"><img alt="image" data-base62-sha1="kuGKNKvovQr0NvVExoDZzhFQjOa" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/8fa39571ba3760900cd2f69afc527ed175760582_2_10x10.png" height="500" src="../../../images2/614bcfc71d0b007a42d06887894f57dc.jpeg" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/8fa39571ba3760900cd2f69afc527ed175760582_2_676x500.jpeg, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/8fa39571ba3760900cd2f69afc527ed175760582_2_1014x750.jpeg 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/8fa39571ba3760900cd2f69afc527ed175760582_2_1352x1000.jpeg 2x" width="676"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2044×1510 609 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
 <p>If I randomly exchange the order of heightmap in shader, for example:</p>
 <pre><code class="lang-auto">float GetHeight(vec2 pos) {
    ...
@@ -180,7 +180,7 @@ My texture image size is about two times larger. So I divided my image into 4 pi
 }
 </code></pre>
 <p><strong>Different texture images will be remained.</strong> The bottom-left is a different one.</p>
-<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/x18EcONxSp3rAnIO8VBEn8Je4CV.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/e/e768b7467d32a691ed4e66fd7a11d85eccf3ed9d.jpeg" rel="nofollow noopener" title="image"><img alt="image" data-base62-sha1="x18EcONxSp3rAnIO8VBEn8Je4CV" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/e/e768b7467d32a691ed4e66fd7a11d85eccf3ed9d_2_10x10.png" height="500" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/e/e768b7467d32a691ed4e66fd7a11d85eccf3ed9d_2_675x500.jpeg" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/e/e768b7467d32a691ed4e66fd7a11d85eccf3ed9d_2_675x500.jpeg, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/e/e768b7467d32a691ed4e66fd7a11d85eccf3ed9d_2_1012x750.jpeg 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/e/e768b7467d32a691ed4e66fd7a11d85eccf3ed9d_2_1350x1000.jpeg 2x" width="675"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2042×1512 572 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div><br/>
+<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/x18EcONxSp3rAnIO8VBEn8Je4CV.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/e/e768b7467d32a691ed4e66fd7a11d85eccf3ed9d.jpeg" rel="nofollow noopener" title="image"><img alt="image" data-base62-sha1="x18EcONxSp3rAnIO8VBEn8Je4CV" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/e/e768b7467d32a691ed4e66fd7a11d85eccf3ed9d_2_10x10.png" height="500" src="../../../images2/1a7158cd0153e9922c6032fa62776967.jpeg" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/e/e768b7467d32a691ed4e66fd7a11d85eccf3ed9d_2_675x500.jpeg, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/e/e768b7467d32a691ed4e66fd7a11d85eccf3ed9d_2_1012x750.jpeg 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/e/e768b7467d32a691ed4e66fd7a11d85eccf3ed9d_2_1350x1000.jpeg 2x" width="675"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2042×1512 572 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div><br/>
 <em>(don’t mind the edges, it’s not there yet)</em></p>
 <p><strong>So I think it’s the OpenGL automatically unloading texture if they are taking too much memory?</strong> BTW: my source heightmap texture image is ~170MB in png (size ~ 16k pixels).<br/>
 But how can I verify that and is there any way from Urho3D API to query which texture is loaded/unloaded in real time?<br/>
@@ -202,13 +202,13 @@ Or what other way should I address this problem overall?</p>
 <li>Load image in GPU video card memory for shader calculations.</li>
 </ol>
 <p>I believe all those DEBUG LOGGING is about the 1st stage, while my problem is related to the 2nd stage.<br/>
-And I can verify the <code>[...] DEBUG: Loading resource XXXX.png</code> is done successfully. Also, I cannot build QuadTree if the 1st stage is not successful <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=9" title=":slight_smile:"/></p>
+And I can verify the <code>[...] DEBUG: Loading resource XXXX.png</code> is done successfully. Also, I cannot build QuadTree if the 1st stage is not successful <img alt=":slight_smile:" class="emoji" src="../../../images2/7bdd5ab4d67675d002d99e4b948c8cdb.png" title=":slight_smile:"/></p>
 <p>As you can see from my first piece of code, I then cut the image into 4 pieces. When I set the material texture, that’s the 2nd stage.</p>
 <p><strong>As for compression</strong></p>
 <blockquote>
 <p>PNG can be compressed (like jpeg) I see 9 compression levels.</p>
 </blockquote>
-<p>If I would like to compromise to lossy compression, I probably would not need those high resolution texture images anyway <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=9" title=":slight_smile:"/></p>
+<p>If I would like to compromise to lossy compression, I probably would not need those high resolution texture images anyway <img alt=":slight_smile:" class="emoji" src="../../../images2/7bdd5ab4d67675d002d99e4b948c8cdb.png" title=":slight_smile:"/></p>
 <p><strong>Good question about</strong></p>
 <blockquote>
 <p>How big is your landscape?<br/>
@@ -242,7 +242,7 @@ If in 2004 we can preload 200k * 100k heightmap (compressed to 300M) into video 
 <p>carlifmtns_large: 48897 x 30465 heightmap with a normal map and a simple texture splatting technique;</p>
 </blockquote>
 <p>in 2010.</p>
-<p><strong>Why is it not even a piece of cake to do the same thing in 2020 ten years later?</strong> <img alt=":thinking:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/thinking.png?v=9" title=":thinking:"/> <img alt=":thinking:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/thinking.png?v=9" title=":thinking:"/> <img alt=":thinking:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/thinking.png?v=9" title=":thinking:"/></p>
+<p><strong>Why is it not even a piece of cake to do the same thing in 2020 ten years later?</strong> <img alt=":thinking:" class="emoji" src="../../../images2/95fb74f06c03358715b7b493b96f1e60.png" title=":thinking:"/> <img alt=":thinking:" class="emoji" src="../../../images2/95fb74f06c03358715b7b493b96f1e60.png" title=":thinking:"/> <img alt=":thinking:" class="emoji" src="../../../images2/95fb74f06c03358715b7b493b96f1e60.png" title=":thinking:"/></p>
           </div>
         </div>
       </div>

@@ -113,7 +113,7 @@ The other one is using nvidia proprietary driver, so it’s using its own opengl
 [   594.023] (II) AIGLX: enabled GLX_SGI_swap_control and GLX_MESA_swap_control
 </code></pre>
 <p>I think that a workaround could be to detect the native resolution, and then using a windowed mode with no borders (no window decoration), at the same resolution. I don’t know if it’s working on a MS-Windows platform (may be there’s no problem with fullscreen on MS-Windows).<br/>
-Of course, best thing would be to correct the problem <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/> Tell me if i can help.</p>
+Of course, best thing would be to correct the problem <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/> Tell me if i can help.</p>
 <p>Thank you for reading,<br/>
 Zakk.</p>
           </div>
@@ -142,8 +142,8 @@ Zakk.</p>
           <div class="user_name">zakk</div>
           <div class="post_content">
 <p>Hello Weitjong,</p>
-<p>Yes i’m not sure to understand all, so let’s make some more experiments <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/></p>
-<p>I don’t think it’s a mesa problem or a resolution too-high for a tired chipset <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=5" title=":wink:"/> . And as you said, it should work with nvidia (same problems with my nvidia card).</p>
+<p>Yes i’m not sure to understand all, so let’s make some more experiments <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/></p>
+<p>I don’t think it’s a mesa problem or a resolution too-high for a tired chipset <img alt=":wink:" class="emoji" src="../../../images2/95940790c23d98635b2a6d3f22657158.png" title=":wink:"/> . And as you said, it should work with nvidia (same problems with my nvidia card).</p>
 <p>To be sure, i tried this :</p>
 <p><code>~/sources/Urho3D-1.7-Linux-64bit-SHARED/usr/local/bin/Urho3DPlayer 01_HelloWorld.lua -x 1920 -y 1080 -borderless -v -t -w</code></p>
 <p>The <code>-v</code> and <code>-t</code> was to be as close as possible to the fullscreen mode (i didn’t knew if it forces vsync and triple buffering, so , just in case i put the options).<br/>
@@ -194,7 +194,7 @@ Zakk.</p>
 <p>Ok, i will compile a binary for my system.</p>
 <p>I will have a look to the part of code which do the fullscreen,too. Seems «fishy» (normal for Urho? :)).</p>
 <p>But how can we do for distributing binaries, then ? Without the need to recompile everything ?<br/>
-Because it can be hard to ask this to someone who just wanted to play <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/></p>
+Because it can be hard to ask this to someone who just wanted to play <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/></p>
 <p>But if i’ve well understood , fullscreen is ok with Ubuntu, so maybe it’s more a problem of DLL hell ? (a problem of versions of libs which are not the same outside of Ubuntu world ?)</p>
 <p>Thank you for reading,<br/>
 Zakk.</p>
@@ -225,7 +225,7 @@ Zakk.</p>
 The binaries are working on the machine itself, but i get a segfault with <code>illegal instruction</code> when i run on another. Usually, i can prepare Arch packages on this machine without problems.</p>
 <p>I’ve removed all my special flags (for core i5 optimization and so), and compile in pure blend mode, but still i get the <code>illegal instruction</code>. Something just after the stub of the executable. It’s hard to debug as i’m not even sure to have the proper instruction (may be with objdump ?).</p>
 <p>It’s a different issue, not related to this thread, but it shows that distributing binaries of Urho3d is not a piece of cake. (as i’ve removed all my own compilations flags, i should now look in the cmake generated makefile).</p>
-<p>So in fact, your farm of compilation is doing an excellent job <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/><br/>
+<p>So in fact, your farm of compilation is doing an excellent job <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/><br/>
 At least, binaries can be launched.</p>
 <p>Thank you for reading,<br/>
 Zakk.</p>
@@ -259,7 +259,7 @@ Zakk.</p>
 <p>cmake “$srcdir/Urho3D-$pkgver/” -DCMAKE_INSTALL_PREFIX="/usr" -DURHO3D_USE_LIB_DEB=1 -DURHO3D_DEPLOYMENT_TARGET=“generic”</p>
 </blockquote>
 <p>And i can run Urho3DPlayer in fullscreen without problems, too.</p>
-<p>Thank you <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/></p>
+<p>Thank you <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/></p>
           </div>
         </div>
       </div>

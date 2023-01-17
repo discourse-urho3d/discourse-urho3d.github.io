@@ -62,7 +62,7 @@ The only thing that appears to be different about my implementation with respect
           <div class="user_name">Leith</div>
           <div class="post_content">
 <p>Digging into the Serialization code beginning with Node::SaveXML( ), and drilling all the way down to Serializable::SaveXML( ), I could see no reason why my attribute would <em>not</em> be saved.<br/>
-The only way to know for sure, would be to trace Urho, which I’m currently pulling in as a static library built in Release mode. I’m really not inclined to set up a special project for tracing Urho internals just for this one issue, and really hoping that somebody can spot my mistake <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=6" title=":slight_smile:"/></p>
+The only way to know for sure, would be to trace Urho, which I’m currently pulling in as a static library built in Release mode. I’m really not inclined to set up a special project for tracing Urho internals just for this one issue, and really hoping that somebody can spot my mistake <img alt=":slight_smile:" class="emoji" src="../../../images2/33cb8d9bf277cdb113680cf5564b6764.png" title=":slight_smile:"/></p>
 <p>Examining the SceneLoadExample.xml file, I can see that, under certain conditions, component attributes are indeed serialized - but what are the conditions? Must we set an attribute <em>via its accessor</em> before it will be serialized? I notice in that example, one instance of StaticModel Component has two attribute serialized, while another instance has three attributes serialized - this indicates to me that they must have somehow been marked as ‘dirty’ prior to serialization - am I on the right track?</p>
           </div>
         </div>
@@ -89,7 +89,7 @@ The only way to know for sure, would be to trace Urho, which I’m currently pul
           <div class="post_content">
 <p>Never mind, I trudged back through the Serialization code a second time, and this time I noticed that there is an early-out if the attribute’s value, at the time of serialization, equals its default value (as specified via the URHO3D_ATTRIBUTE macro).</p>
 <p>I’ve since checked - it does not matter if you modify an attribute manually, or via SetAttribute, it will serialize correctly, but ONLY if the current value has changed from the default value - otherwise, it will be silently dropped from the output. This makes perfect sense to me, as it is assumed that our attributes are preset to the same values as those specified in our macro - but there is no actual CHECK for this, which gets me to thinking - why do we need to specify a default value for an attribute at all, when the “default” value (at the time we registered our attribute) can be determined via its accessor at runtime? It smells a little redundant to specify a default value at all, given it can be queried via the accessor, given the type is known. Just a thought that we might be able to eliminate one argument from that macro…</p>
-<p>Oh well, just happy that my issue was resolved <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=6" title=":slight_smile:"/></p>
+<p>Oh well, just happy that my issue was resolved <img alt=":slight_smile:" class="emoji" src="../../../images2/33cb8d9bf277cdb113680cf5564b6764.png" title=":slight_smile:"/></p>
           </div>
         </div>
       </div>
@@ -114,7 +114,7 @@ The only way to know for sure, would be to trace Urho, which I’m currently pul
           <div class="user_name">Leith</div>
           <div class="post_content">
 <p>Thanks weitjong!, yes I appreciate that attributes are mainly about working with the Editor. I don’t use the editor at this point, I was focused solely on serialization with respect to loading and saving stateful components.</p>
-<p>Your reply does help me understand the reason for a default value to be provided - initially I still could not see a reason why the macro expansion could not access the existing member value, but when I tried to write a macro that could do so, I realized the problem: we’re meant to be registering our class from a static method, prior to any instantiation of the class… the AttributeAccessor requires an object instance to query, and we don’t (and should not) have any instance to query at this stage - silly me <img alt=":blush:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/blush.png?v=6" title=":blush:"/></p>
+<p>Your reply does help me understand the reason for a default value to be provided - initially I still could not see a reason why the macro expansion could not access the existing member value, but when I tried to write a macro that could do so, I realized the problem: we’re meant to be registering our class from a static method, prior to any instantiation of the class… the AttributeAccessor requires an object instance to query, and we don’t (and should not) have any instance to query at this stage - silly me <img alt=":blush:" class="emoji" src="../../../images2/f7219af3a28b187e66a8a7d9ec923fbb.png" title=":blush:"/></p>
 <p>Well, now that I have serialization working, I think I’ll rewrite my state manager to take full advantage of it. The current stack-based implementation can’t take full advantage, because it can add and remove entire gamestates arbitrarily, meaning that they may not be around during serialization - I might have to rework it to just disable inactive states via their container node.</p>
 <p>Questions: <span class="hashtag">#1</span>, can Components be disabled? and <span class="hashtag">#2</span>, if a node (or component) is disabled, will it still be serialized? I’m sick of looking at the serializer code, but I don’t recall seeing anything about inactive nodes/components.</p>
           </div>
@@ -166,7 +166,7 @@ I can think of cases where I want to omit certain objects from serialization wit
         <div class="post">
           <div class="user_name">Leith</div>
           <div class="post_content">
-<p>You guys are a great help, thanks so much for helping me with the learn curve !!<img alt=":fist_left:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/fist_left.png?v=6" title=":fist_left:"/></p>
+<p>You guys are a great help, thanks so much for helping me with the learn curve !!<img alt=":fist_left:" class="emoji" src="../../../images2/f58fc9ede14d0ce54ed4df7592d0e436.png" title=":fist_left:"/></p>
           </div>
         </div>
       </div>

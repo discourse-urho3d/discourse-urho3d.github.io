@@ -139,7 +139,7 @@ void ScriptInstance::ReleaseObject()
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/cadaver/40/3_1.png" width="20"/> cadaver:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/17ea6233fe86521c2e3179bd3849d219.png" width="20"/> cadaver:</div>
 <blockquote>
 <p>This looks like somewhere an extra ref is being added to the asIScriptObject, and by releasing twice you ensure correct release. Do you ever see this happening by using just ScriptInstance? If yes, it’s an Urho bug. If not, then it’s likely the culprit is your code.</p>
 </blockquote>
@@ -171,7 +171,7 @@ void ScriptInstance::ReleaseObject()
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/cadaver/40/3_1.png" width="20"/> cadaver:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/17ea6233fe86521c2e3179bd3849d219.png" width="20"/> cadaver:</div>
 <blockquote>
 <p>Double-check any AS bindings that you’ve added; auto handles ( @+ ) mean the script engine handles refcounts automatically when a raw pointer is passed to/from C++. Normal handles ( @ ) assume you will manage the refcount manually in the bound code, as necessary. If you get these wrong there could either be extra refs added, or too early release. I never remember the rules, see <a href="http://www.angelcode.com/angelscript/sdk/docs/manual/doc_obj_handle.html" rel="nofollow noopener">angelcode.com/angelscript/sd … andle.html</a> for reference.</p>
 </blockquote>

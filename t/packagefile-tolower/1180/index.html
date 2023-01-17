@@ -57,7 +57,7 @@
         <div class="post">
           <div class="user_name">JimMarlowe</div>
           <div class="post_content">
-<p>Tell the windows platform to cowboy up  <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/><br/>
+<p>Tell the windows platform to cowboy up  <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/><br/>
 This is my use case. I have created a scene, a map for a game, like I would expect users to be able to do. It is constructed to include all files to successfully render the scene, there are Materials, Models, Textures, Scenes. The filenames are mixed case, much like what exists in the Data and CoreData directories. I take my collection, and use PackageTool to make a pak file. Then in the game, the open the pak file, use Packagefile.GetEntryNames() to find out the names of the scene xml files, and make the call cache.GetResource(“XMLFile”, “MyMap/Scenes/MyScene.xml” ); On windows, it loads without issue, but will fail on most other platforms. Replicating a pak file from a windows server would be a latent problem for non-windows clients.<br/>
 I can make all directory and file names lowercase, but it would be an high cost to using PackageFiles, when other parts of the system are still case sensitive. Wouldn’t the windows platform be unaffected if you didn’t lowercase everything?</p>
           </div>

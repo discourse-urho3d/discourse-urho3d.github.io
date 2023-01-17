@@ -74,7 +74,7 @@
 <li>It opens up possibilities of cheating</li>
 </ul>
 <p>There also used to be client prediction in an earlier version of Urho3D, when it used a different physics engine. It actually created a private physics world for rewinding just the local player and applying server corrections over your latest input. But this is not a performance-scalable solution and I don’t think it can be done well with Bullet. The reason why the Source and Unreal engines can rather easily perform client prediction is because the player characters don’t move using rigid body dynamics, rather they use a “character controller” which essentially moves against a completely static world. In that case rewinding and applying server corrections is easier.</p>
-<p>I believe you should be able to implement client-&gt;server character updates using remote events or custom network messages; at the moment I’m not convinced Urho should do it for you. I’m definitely aware that lack of client prediction makes Urho’s networking system quite not what you’d expect of a professional-grade game engine, however if you figure out how to perform client prediction &amp; rewinds performantly in a rigid body-simulated world, please do tell me <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=5" title=":wink:"/></p>
+<p>I believe you should be able to implement client-&gt;server character updates using remote events or custom network messages; at the moment I’m not convinced Urho should do it for you. I’m definitely aware that lack of client prediction makes Urho’s networking system quite not what you’d expect of a professional-grade game engine, however if you figure out how to perform client prediction &amp; rewinds performantly in a rigid body-simulated world, please do tell me <img alt=":wink:" class="emoji" src="../../../images2/95940790c23d98635b2a6d3f22657158.png" title=":wink:"/></p>
           </div>
         </div>
       </div>
@@ -88,7 +88,7 @@
           <div class="post_content">
 <p>Thanks for the links. After reading the first one, two questions come to my mind.<br/>
 [ol]<br/>
-[li] I understand why the server needs to have the authoritative role in maintaining the critical game states to prevent any cheating. What I don’t understand is, why does it have to do it alone without taking the advantage of the computing power of the networked clients? For example, can’t the server just validating a “hit” claimed by a client as oppose to validating each shoot event/message sent by all the clients to see if they “hit”. The bogus “hit” sent by a cheating client would still got caught while the server doesn’t have to do that much work. That way, it should not cause serious calculation lags when lots of people are shooting at the same time, right? Not unless they are all cheaters claiming hits all the times <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/>.[/li]<br/>
+[li] I understand why the server needs to have the authoritative role in maintaining the critical game states to prevent any cheating. What I don’t understand is, why does it have to do it alone without taking the advantage of the computing power of the networked clients? For example, can’t the server just validating a “hit” claimed by a client as oppose to validating each shoot event/message sent by all the clients to see if they “hit”. The bogus “hit” sent by a cheating client would still got caught while the server doesn’t have to do that much work. That way, it should not cause serious calculation lags when lots of people are shooting at the same time, right? Not unless they are all cheaters claiming hits all the times <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/>.[/li]<br/>
 [li] On the flip side of the coin, it briefly mentioned “man-in-the-middle” attack is being foiled by not letting client to alter critical game state. But what if there is a technically inclined cheater who can create a “cheat proxy” that actually listens to all the events/messages in the game world, and in the split second can calculate the precise position of the other player in the cheater vicinity, and send a network package stating the cheater shot in that calculated position. Now, how would the server know the difference and prevent such attack?[/li][/ol]</p>
           </div>
         </div>
@@ -157,13 +157,13 @@ return successfulHit;[/code]</p>
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/weitjong/40/4_1.png" width="20"/> weitjong:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/5dc21abd616a69d8b82c2d56dfa657a5.png" width="20"/> weitjong:</div>
 <blockquote>
 <p>Let’s use some some number to explain my first question. Let’s say there are 100 clients sending a shoot message. … So, say, 1 out these 100  clients, claims “hit”. The server only need to perform the rewind time and check for the hit for this one message only.</p>
 </blockquote>
 </aside>
 <p>There wouldn’t be 100 clients sending the shoot message (in a client / server architecture). Only the client that is shooting will send the shoot message to the server, then the server essentially forwards it to the other clients, and they try to retroactively apply it.</p>
-<p>Cadaver answered your second question.  <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/></p>
+<p>Cadaver answered your second question.  <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/></p>
           </div>
         </div>
       </div>
@@ -178,7 +178,7 @@ return successfulHit;[/code]</p>
 <aside class="quote no-group" data-username="izackp">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/i/9de053/40.png" width="20"/> izackp:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/48b1be5f4a955781f3689c18beb162e5.png" width="20"/> izackp:</div>
 <blockquote>
 <p>[quote=“weitjong”]Let’s use some some number to explain my first question. Let’s say there are 100 clients sending a shoot message. … So, say, 1 out these 100  clients, claims “hit”. The server only need to perform the rewind time and check for the hit for this one message only.</p>
 </blockquote>
@@ -215,7 +215,7 @@ return successfulHit;[/code]</p>
 <aside class="quote no-group" data-username="izackp">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/i/9de053/40.png" width="20"/> izackp:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/48b1be5f4a955781f3689c18beb162e5.png" width="20"/> izackp:</div>
 <blockquote>
 <p>When you have the client make the decisions you’re going to lead into ‘conflicts’. Let’s say you have 8 different people connected to the server and 2 of them decide the opposite outcome then you end up with a ‘conflict’. At this point, they must be resolved which can take some time and extra communication between clients. </p>
 </blockquote>
@@ -234,9 +234,9 @@ return successfulHit;[/code]</p>
         <div class="post">
           <div class="user_name">weitjong</div>
           <div class="post_content">
-<p>Finally! You understand my question. I am beginning to doubt my English  <img alt=":laughing:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/laughing.png?v=5" title=":laughing:"/> .</p>
+<p>Finally! You understand my question. I am beginning to doubt my English  <img alt=":laughing:" class="emoji" src="../../../images2/f1b3f4dd9f845d1069864c322071dffe.png" title=":laughing:"/> .</p>
 <p>I have no prior experience of Source Engine. I expect there must be a technical difficulty or drawback that I am not aware of in designing it as I described. Hence I am asking the question. Since I have no prior experience, what it am about to say next may be just nonsense. I am agree with you that the hit test calculation could be complex but it should not be more complex than the same test carried out on the server (which could do them many times and still manages to keep the game ticks). If I could do it my way then the shot is fired, client could check for potential hit locally in real time, send a package to server containing the shoot message + a “hit” message (if client claims it). These two messages could arrive in just one network package. When I referred to distributed computing earlier, I didn’t mean another round trip communication between server and client. So I believe this extra hit test on the client side could be done much faster than what you stated.</p>
-<p>As for the cheating scenario you are afraid of, it won’t happen because the shoot message is sent by user firing the shot which is more eager to claim a hit rather than not. Obviously, server does not care what the user being shot at says  <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=5" title=":wink:"/> .</p>
+<p>As for the cheating scenario you are afraid of, it won’t happen because the shoot message is sent by user firing the shot which is more eager to claim a hit rather than not. Obviously, server does not care what the user being shot at says  <img alt=":wink:" class="emoji" src="../../../images2/95940790c23d98635b2a6d3f22657158.png" title=":wink:"/> .</p>
           </div>
         </div>
       </div>
@@ -263,7 +263,7 @@ return successfulHit;[/code]</p>
 <aside class="quote no-group" data-username="thebluefish">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/t/f04885/40.png" width="20"/> thebluefish:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/bf1ad5330f9831ec6d82214e91751e5d.png" width="20"/> thebluefish:</div>
 <blockquote>
 <p>TBH this isn’t the hardest part to solve. When a physics engine is 100% deterministic (like Box2D for instance), then all clients which are regularly synchronized with the main server should see the exact same events play out. This is how AAA games like Halo and Call of Duty are able to get away with player-to-player collision.</p>
 </blockquote>
@@ -295,7 +295,7 @@ _controlfp(_RC_NEAR, _MCW_RC)</p>
 <p>Also, every tick we assert that these fpu settings are still set:</p>
 <p>gpAssert( (_controlfp(0, 0) &amp; _MCW_PC) == _PC_24 );<br/>
 gpAssert( (_controlfp(0, 0) &amp; _MCW_RC) == _RC_NEAR );[/quote]</p>
-<p>There’s plenty of documentation available online regarding client-side prediction and methods available for it. Currently I’m WAY too swamped to get familiar enough to make the necessary changes, but I’m hoping a solution might crop up  <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/></p>
+<p>There’s plenty of documentation available online regarding client-side prediction and methods available for it. Currently I’m WAY too swamped to get familiar enough to make the necessary changes, but I’m hoping a solution might crop up  <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/></p>
           </div>
         </div>
       </div>
@@ -307,7 +307,7 @@ gpAssert( (_controlfp(0, 0) &amp; _MCW_RC) == _RC_NEAR );[/quote]</p>
         <div class="post">
           <div class="user_name">izackp</div>
           <div class="post_content">
-<p>Awesome.  <img alt=":nerd:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/nerd.png?v=5" title=":nerd:"/></p>
+<p>Awesome.  <img alt=":nerd:" class="emoji" src="../../../images2/28085048ffc362b3f95854290ad125e3.png" title=":nerd:"/></p>
 <p>Using floats is still scary though lol</p>
           </div>
         </div>
@@ -323,7 +323,7 @@ gpAssert( (_controlfp(0, 0) &amp; _MCW_RC) == _RC_NEAR );[/quote]</p>
 <aside class="quote no-group" data-username="thebluefish">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/t/f04885/40.png" width="20"/> thebluefish:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/bf1ad5330f9831ec6d82214e91751e5d.png" width="20"/> thebluefish:</div>
 <blockquote>
 <p>[*]HardControl - Allow the client to update the character locally. These updates are then sent to the server to propagate to the other clients.</p>
 </blockquote>
@@ -345,7 +345,7 @@ gpAssert( (_controlfp(0, 0) &amp; _MCW_RC) == _RC_NEAR );[/quote]</p>
 <aside class="quote no-group" data-username="izackp">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/i/9de053/40.png" width="20"/> izackp:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/48b1be5f4a955781f3689c18beb162e5.png" width="20"/> izackp:</div>
 <blockquote>
 <p>Using floats is still scary though lol</p>
 </blockquote>
@@ -365,7 +365,7 @@ gpAssert( (_controlfp(0, 0) &amp; _MCW_RC) == _RC_NEAR );[/quote]</p>
 <aside class="quote no-group" data-username="thebluefish">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/t/f04885/40.png" width="20"/> thebluefish:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/bf1ad5330f9831ec6d82214e91751e5d.png" width="20"/> thebluefish:</div>
 <blockquote>
 <p>I would rather stray away from P2P if possible.</p>
 </blockquote>
@@ -374,7 +374,7 @@ gpAssert( (_controlfp(0, 0) &amp; _MCW_RC) == _RC_NEAR );[/quote]</p>
 <aside class="quote no-group" data-username="thebluefish">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/t/f04885/40.png" width="20"/> thebluefish:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/bf1ad5330f9831ec6d82214e91751e5d.png" width="20"/> thebluefish:</div>
 <blockquote>
 <p>Big thing is that the server can then choose to do server-side enforcement to prevent cheating. This is especially true once you want to have a player interacting with the server world…</p>
 </blockquote>
@@ -383,7 +383,7 @@ gpAssert( (_controlfp(0, 0) &amp; _MCW_RC) == _RC_NEAR );[/quote]</p>
 <aside class="quote no-group" data-username="thebluefish">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/t/f04885/40.png" width="20"/> thebluefish:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/bf1ad5330f9831ec6d82214e91751e5d.png" width="20"/> thebluefish:</div>
 <blockquote>
 <p>[*]SoftControl - Allow the client to update the character locally. The server will still have ultimate authority, and can make corrections to the client-side as necessary.</p>
 </blockquote>
@@ -403,7 +403,7 @@ gpAssert( (_controlfp(0, 0) &amp; _MCW_RC) == _RC_NEAR );[/quote]</p>
 <aside class="quote no-group" data-username="izackp">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/i/9de053/40.png" width="20"/> izackp:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/48b1be5f4a955781f3689c18beb162e5.png" width="20"/> izackp:</div>
 <blockquote>
 <p>[quote=“thebluefish”]Big thing is that the server can then choose to do server-side enforcement to prevent cheating. This is especially true once you want to have a player interacting with the server world…</p>
 </blockquote>
@@ -429,11 +429,11 @@ Player X entered Area Z.</p>
 <p>Once you send those to the server it responds appropriately:<br/>
 Monster Y takes 23 Damage<br/>
 Spawn Monsters A, B, C(Rare) in Area Z</p>
-<p>I suppose in this example the player is a ‘hard control’ node. I’m not entirely sure how you would accomplish this without ‘events’ and only through replication. I’ve tried picturing a few scenarios… but I can’t think of a scenario that works.  All of this is just pure speculation anyways  <img alt=":laughing:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/laughing.png?v=5" title=":laughing:"/> .</p>
+<p>I suppose in this example the player is a ‘hard control’ node. I’m not entirely sure how you would accomplish this without ‘events’ and only through replication. I’ve tried picturing a few scenarios… but I can’t think of a scenario that works.  All of this is just pure speculation anyways  <img alt=":laughing:" class="emoji" src="../../../images2/f1b3f4dd9f845d1069864c322071dffe.png" title=":laughing:"/> .</p>
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/cadaver/40/3_1.png" width="20"/> cadaver:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/17ea6233fe86521c2e3179bd3849d219.png" width="20"/> cadaver:</div>
 <blockquote>
 <p>The reason why the Source and Unreal engines can rather easily perform client prediction is because the player characters don’t move using rigid body dynamics, rather they use a “character controller”</p>
 </blockquote>
@@ -452,7 +452,7 @@ Spawn Monsters A, B, C(Rare) in Area Z</p>
           <div class="user_name">cadaver</div>
           <div class="post_content">
 <p>Yes, there are pros/cons to both rigidbodies and character controllers. Like you said, using controllers means implementing almost every physics interaction manually: pushing objects, riding on moving platforms etc.</p>
-<p>In regard to networking and physics, many design choices taken in Urho equal to taking something that is suboptimal, but works in a predictable and mostly correct way without game-specific tweaks. Why is this? Well, we don’t have the manpower of Unreal or Source <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=5" title=":wink:"/> When making a specific game and finding that Urho’s ready solution falls short of your goals, you can always proceed to substitute your own (assuming that you have the skill.) The documentation should probably stress this more. Unfortunately, in many cases this may require tearing down existing subsystem code &amp; practically making a fork.</p>
+<p>In regard to networking and physics, many design choices taken in Urho equal to taking something that is suboptimal, but works in a predictable and mostly correct way without game-specific tweaks. Why is this? Well, we don’t have the manpower of Unreal or Source <img alt=":wink:" class="emoji" src="../../../images2/95940790c23d98635b2a6d3f22657158.png" title=":wink:"/> When making a specific game and finding that Urho’s ready solution falls short of your goals, you can always proceed to substitute your own (assuming that you have the skill.) The documentation should probably stress this more. Unfortunately, in many cases this may require tearing down existing subsystem code &amp; practically making a fork.</p>
           </div>
         </div>
       </div>
@@ -467,7 +467,7 @@ Spawn Monsters A, B, C(Rare) in Area Z</p>
 <aside class="quote no-group" data-username="izackp">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/i/9de053/40.png" width="20"/> izackp:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/48b1be5f4a955781f3689c18beb162e5.png" width="20"/> izackp:</div>
 <blockquote>
 <p>I once ran into a problem using Box2D where I had almost everything perfect for a platform game. Slopes, hanging on walls, ducking, ect. But then I tried implementing jump-through platforms and teleportation… it didn’t work out well. Especially with multiple players. However, that was a long time ago and I don’t know if Box2D has been updated to make this easier or what constraints bullet imposes so this is just more speculation xD.</p>
 </blockquote>

@@ -34,18 +34,18 @@
           <div class="post_content">
 <p>Hello everyone!</p>
 <p>As the subject said, I’m implementing motion blur on Urho. This thread will track my progress.<br/>
-I’m planning to implement camera-based, object-based, and if I had enough brain, I will implement bone deformation-based motion blur too.  <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=9" title=":wink:"/></p>
+I’m planning to implement camera-based, object-based, and if I had enough brain, I will implement bone deformation-based motion blur too.  <img alt=":wink:" class="emoji" src="../../../images2/537e3e653d641df5b9858e75faf3862a.png" title=":wink:"/></p>
 <p>Actually, I’ve already implementing camera-based motion blur. The code still messed up and GLSL only, but it’s already produce this screenshots:</p>
 <p><a class="onebox" href="http://i.minus.com/ibo0VDLzwGP7uM.jpg" rel="nofollow noopener" target="_blank">http://i.minus.com/ibo0VDLzwGP7uM.jpg</a><br/>
 <a class="onebox" href="http://i.minus.com/iYXZDeKuz6Zel.jpg" rel="nofollow noopener" target="_blank">http://i.minus.com/iYXZDeKuz6Zel.jpg</a></p>
 <p>FPS capped to 30fps to exaggerate the effects. The implementation is based from:<br/>
 <aside class="onebox whitelistedgeneric">
 <header class="source">
-<img class="site-icon" height="32" src="http://john-chapman-graphics.blogspot.com/favicon.ico" width="32"/>
+<img class="site-icon" height="32" src="../../../images2/d476379b1a73d61362caad6a3ee2a98c.ico" width="32"/>
 <a href="http://john-chapman-graphics.blogspot.com/2013/01/what-is-motion-blur-motion-pictures-are.html" rel="nofollow noopener" target="_blank">john-chapman-graphics.blogspot.com</a>
 </header>
 <article class="onebox-body">
-<div class="aspect-image" style="--aspect-ratio:630/331;"><img class="thumbnail" height="331" src="http://2.bp.blogspot.com/-q5ewqKlGaBc/UP1S50prxhI/AAAAAAAAAYE/nc2HWRgtJak/w1200-h630-p-k-no-nu/fig2.jpg" width="630"/></div>
+<div class="aspect-image" style="--aspect-ratio:630/331;"><img class="thumbnail" height="331" src="../../../images2/961ad0a809cba4c0ac21e913dc6b14f8.jpg" width="630"/></div>
 <h3><a href="http://john-chapman-graphics.blogspot.com/2013/01/what-is-motion-blur-motion-pictures-are.html" rel="nofollow noopener" target="_blank">Motion Blur Tutorial</a></h3>
 <p>Originally posted on 21/04/2011   What is motion blur?  Motion pictures are made up of a series of still images displayed in quick successio...</p>
 </article>
@@ -54,7 +54,7 @@ I’m planning to implement camera-based, object-based, and if I had enough brai
 <div style="clear: both"></div>
 </aside>
 </p>
-<p>Code and more stuff coming soon!  <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=9" title=":slight_smile:"/></p>
+<p>Code and more stuff coming soon!  <img alt=":slight_smile:" class="emoji" src="../../../images2/7bdd5ab4d67675d002d99e4b948c8cdb.png" title=":slight_smile:"/></p>
           </div>
         </div>
       </div>
@@ -97,9 +97,9 @@ It was my reason to limit fps to 30. If I unlock fps, the blur will unnoticeable
 <p>It’s tricky to implement object motion blur on Urho3D because it still can’t pass per-object custom uniform. I ended up modifying Urho3D source code and add previous frame matrix attribute to Node object.<br/>
 It updated every UpdateBatches() function is called. For now it can only passed to shader if the object isn’t instanced. I will upload these changes my Github branch, I haven’t got time do it yet.</p>
 <p>For now, these are the screenshots:<br/>
-<img alt="" height="" src="http://i.minus.com/ibo9skWqLl1oL2.jpg" width=""/></p>
+<img alt="" height="" src="../../../images2/f94e403e5eab48c695a60d840258d0b3.jpg" width=""/></p>
 <p>Sample vehicle drifting<br/>
-<img alt="" height="" src="http://i.minus.com/ivJGSfnHFoWST.jpg" width=""/></p>
+<img alt="" height="" src="../../../images2/ff358f32c8257e072f8202fc19a93446.jpg" width=""/></p>
           </div>
         </div>
       </div>
@@ -155,7 +155,7 @@ It updated every UpdateBatches() function is called. For now it can only passed 
 <aside class="quote no-group" data-username="Azalrion">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/a/f04885/40.png" width="20"/> Azalrion:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/8de72b55bef11c23598deba7062c5e8d.png" width="20"/> Azalrion:</div>
 <blockquote>
 <p>[quote]It’s tricky to implement object motion blur on Urho3D because it still can’t pass per-object custom uniform.</p>
 </blockquote>
@@ -176,7 +176,7 @@ It updated every UpdateBatches() function is called. For now it can only passed 
 <p>Thanks for all the comments.</p>
 <p>I have create <a data-bbcode="true" href="https://github.com/ucupumar/Urho3D/tree/motion-blur" rel="nofollow noopener">motion blur branch</a> if you want to test this. It’s still OpenGL only and don’t support instancing.<br/>
 To see motion blur in action, just see sample 98_ObjectMotionBlur. It will produce scene like this:<br/>
-<img alt="" height="" src="http://i.minus.com/jqfkSUNmqTwzX.jpg" width=""/><br/>
+<img alt="" height="" src="../../../images2/b6201065d76afba94b4a7c37eda475a2.jpg" width=""/><br/>
 If you look closely, it looks somewhat weird and teapot don’t look blended to background. That’s happen because velocity buffer only store it’s own pixel velocity. Surrounding background pixels didn’t have velocity data, so it don’t get blurred. There are some solutions to solve this problem, the common method used in other engines are from this <a data-bbcode="true" href="http://graphics.cs.williams.edu/papers/MotionBlurI3D12/" rel="nofollow noopener">paper</a>. I plan to look into this too.</p>
 <p>Anyway, if you want to use motion blur to other samples or your projects, just add this before set your viewport:</p>
 <p>[code]<br/>
@@ -186,11 +186,11 @@ engine-&gt;SetMaxFps(30);</p>
 <p>ResourceCache* cache = GetSubsystem();<br/>
 Renderer* renderer = GetSubsystem();<br/>
 renderer-&gt;SetDynamicInstancing(false);<br/>
-renderer-&gt;SetDefaultRenderPath(cache-&gt;GetResource(“RenderPaths/ForwardMotionBlur.xml”));[/code]Hope this will be useful.  <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=9" title=":smiley:"/></p>
+renderer-&gt;SetDefaultRenderPath(cache-&gt;GetResource(“RenderPaths/ForwardMotionBlur.xml”));[/code]Hope this will be useful.  <img alt=":smiley:" class="emoji" src="../../../images2/94dd27e9c6c243335d29229e02e34e9d.png" title=":smiley:"/></p>
 <aside class="quote no-group" data-username="weitjong">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/weitjong/40/4_2.png" width="20"/> weitjong:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/8c3888d68a9e52e853f0724aae6cefb6.png" width="20"/> weitjong:</div>
 <blockquote>
 <p>[quote=“Azalrion”][quote]It’s tricky to implement object motion blur on Urho3D because it still can’t pass per-object custom uniform.</p>
 </blockquote>
@@ -213,7 +213,7 @@ In my implementation, I passed previous frame camera and object matrix at Update
 <aside class="quote no-group" data-username="ucupumar">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/u/ccd318/40.png" width="20"/> ucupumar:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/9360c7745657778a51cfb432b7648c2b.png" width="20"/> ucupumar:</div>
 <blockquote>
 <p>[quote=“weitjong”][quote=“Azalrion”]Didn’t primitive add per drawable shader parameters a week or two back?</p>
 </blockquote>

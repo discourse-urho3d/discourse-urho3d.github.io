@@ -156,7 +156,7 @@ void Game::HandleKeyUp(StringHash eventType, VariantMap&amp; eventData)
           <div class="user_name">Leith</div>
           <div class="post_content">
 <p>That’s certainly a valid approach. Internally, Urho’s Input class contains a member called KeyDown_, which is indeed a HashSet, but unfortunately it’s private, and you’re expected to call GetKeyDown() in order to access that array. You’re duplicating an existing array, but the standard practice seems to be to query the state of a specific subset of possible keys, and to cache the results in your program, so your solution is slightly more costly, but a lot more flexible, than the typical implementation.<br/>
-HashSet is a sparse unordered container, which means that queries/lookups require a search of the keyspace - I don’t remember the numerical range of SDL keycodes, but it seems to me, it might be more efficient to use a flat array of booleans? Anyway, glad you found a solution that works for you <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=9" title=":slight_smile:"/></p>
+HashSet is a sparse unordered container, which means that queries/lookups require a search of the keyspace - I don’t remember the numerical range of SDL keycodes, but it seems to me, it might be more efficient to use a flat array of booleans? Anyway, glad you found a solution that works for you <img alt=":slight_smile:" class="emoji" src="../../../images2/7bdd5ab4d67675d002d99e4b948c8cdb.png" title=":slight_smile:"/></p>
           </div>
         </div>
       </div>

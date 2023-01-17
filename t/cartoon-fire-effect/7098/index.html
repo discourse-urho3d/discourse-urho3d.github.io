@@ -35,7 +35,7 @@
 <p>Hello, I am looking to achieve a nice looking cartoon fire effect. Similar to what was done in this video for the flame on Charizard.</p>
 <div class="onebox lazyYT lazyYT-container" data-parameters="feature=oembed&amp;wmode=opaque" data-youtube-id="bykTkjPfKsw" data-youtube-title="How to Fix the Flames on Fire-Type Pokémon using Blender 3D - Set 1: (Charizard, Braixen, Blaziken)">
 <a href="https://www.youtube.com/watch?v=bykTkjPfKsw" rel="noopener nofollow ugc" target="_blank">
-<img class="ytp-thumbnail-image" height="360" src="https://img.youtube.com/vi/bykTkjPfKsw/hqdefault.jpg" title="How to Fix the Flames on Fire-Type Pokémon using Blender 3D - Set 1: (Charizard, Braixen, Blaziken)" width="480"/>
+<img class="ytp-thumbnail-image" height="360" src="../../../images2/c166127106001e671e49b4b5da7372a9.jpg" title="How to Fix the Flames on Fire-Type Pokémon using Blender 3D - Set 1: (Charizard, Braixen, Blaziken)" width="480"/>
 </a>
 </div>
 <p>I believe I could implement that effect in Urho by using the stencil buffer - does anyone have any tips/code for how that can be done? Or any suggestions about how else a similar quality effect could be achieved? It doesn’t need to be super realistic, it just has to be fairly performant (e.g. 50000 particles for one fire is a no) and it should look nice on more than just a black background (a lot of particle fire effects seem to rely on having a dark background).</p>
@@ -65,7 +65,7 @@ In short: Write a shader.</p>
           <div class="user_name">Modanung</div>
           <div class="post_content">
 <p>A texture to experiment with:</p>
-<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/7B8fWhrJDywOs0DYeffk7RFqaG0.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/3/3541c9d9ac1fbb4dbe72612c2cacb13602b66634.png" rel="noopener nofollow ugc" title="Plasma"><img alt="Plasma" data-base62-sha1="7B8fWhrJDywOs0DYeffk7RFqaG0" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/3/3541c9d9ac1fbb4dbe72612c2cacb13602b66634_2_10x10.png" height="500" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/3/3541c9d9ac1fbb4dbe72612c2cacb13602b66634_2_500x500.png" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/3/3541c9d9ac1fbb4dbe72612c2cacb13602b66634_2_500x500.png, https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/3/3541c9d9ac1fbb4dbe72612c2cacb13602b66634.png 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/3/3541c9d9ac1fbb4dbe72612c2cacb13602b66634.png 2x" width="500"/><div class="meta">
+<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/7B8fWhrJDywOs0DYeffk7RFqaG0.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/3/3541c9d9ac1fbb4dbe72612c2cacb13602b66634.png" rel="noopener nofollow ugc" title="Plasma"><img alt="Plasma" data-base62-sha1="7B8fWhrJDywOs0DYeffk7RFqaG0" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/3/3541c9d9ac1fbb4dbe72612c2cacb13602b66634_2_10x10.png" height="500" src="../../../images2/db62cc8bb88cbd8181274ac5dcf1dcef.png" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/3/3541c9d9ac1fbb4dbe72612c2cacb13602b66634_2_500x500.png, https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/3/3541c9d9ac1fbb4dbe72612c2cacb13602b66634.png 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/3/3541c9d9ac1fbb4dbe72612c2cacb13602b66634.png 2x" width="500"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">Plasma</span><span class="informations">512×512 613 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
 </div></a></div></p>
 <p>Hereby CC0’d.</p>
@@ -111,7 +111,7 @@ In short: Write a shader.</p>
           <div class="user_name">SirNate0</div>
           <div class="post_content">
 <p>Not exactly what the original was, but I think I’m liking it.<br/>
-<img alt="FX-Flame" class="animated" data-base62-sha1="qxWTrLzkltsa6ZLP7h6AzafHq6f" height="156" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/b/ba0ef9b905b36c2acd2b0f675e220b57e8e75603.gif" width="116"/></p>
+<img alt="FX-Flame" class="animated" data-base62-sha1="qxWTrLzkltsa6ZLP7h6AzafHq6f" height="156" src="../../../images2/4a41849a31f90e3309315324368d9b94.gif" width="116"/></p>
 <p>The shader, if anyone wants it (it’s basically just Unlit.glsl)</p>
 <pre><code class="lang-auto">#include "Uniforms.glsl"
 #include "Samplers.glsl"

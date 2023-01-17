@@ -71,7 +71,7 @@
             _sprite-&gt;SetSize(_texture-&gt;GetWidth(),_texture-&gt;GetHeight());
     }</code></pre>
 <p>Is there a more direct way to draw on the screen (over a 3D scene)? Any other optimization idea? The performance impact seems kinda high for such a simple thing. I guess I could redraw my image and copy the pixels in another thread but that seems kinda odd.</p>
-<p>Also these Sprites in the GUI don’t seem to draw semi transparent pixel? (even with _texture-&gt;SetData(_image,true)<img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=5" title=":wink:"/></p>
+<p>Also these Sprites in the GUI don’t seem to draw semi transparent pixel? (even with _texture-&gt;SetData(_image,true)<img alt=":wink:" class="emoji" src="../../../images2/95940790c23d98635b2a6d3f22657158.png" title=":wink:"/></p>
           </div>
         </div>
       </div>
@@ -199,7 +199,7 @@ So I got rid of all multiplications, unnecessary operations and object creations
 <aside class="quote no-group" data-username="OvermindDL1">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/o/a8b319/40.png" width="20"/> OvermindDL1:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/27c7eec9541e095f992a59a34eadafd3.png" width="20"/> OvermindDL1:</div>
 <blockquote>
 <p>Are copying the entire thing over every frame, or are you only sending updates to locations that have changed as they change?</p>
 </blockquote>

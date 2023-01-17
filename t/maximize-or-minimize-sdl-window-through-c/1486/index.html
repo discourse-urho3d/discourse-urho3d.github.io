@@ -38,10 +38,10 @@ so I’ve put this code in begining of my <span class="bbcode-b">Application::St
 GraphicsImpl* gfximpl = gfx-&gt;GetImpl();
 SDL_Window* sdlwnd = gfximpl-&gt;GetWindow();
 SDL_MaximizeWindow( sdlwnd );</code></p>
-<p>P.S. Out-of-box Editor app already has maximized window, so I’m not sure if this approach is non-redundant. It looks like workaround, but it’s working. <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=5" title=":wink:"/></p>
+<p>P.S. Out-of-box Editor app already has maximized window, so I’m not sure if this approach is non-redundant. It looks like workaround, but it’s working. <img alt=":wink:" class="emoji" src="../../../images2/95940790c23d98635b2a6d3f22657158.png" title=":wink:"/></p>
 <p><span class="bbcode-b">[EDIT]</span></p>
 <p>After some research I’ve found the method <span class="bbcode-b">Graphics::Maximize()</span>. Final version:<br/>
-<img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/></p>
+<img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/></p>
 <p><code>Graphics* gfx = GetSubsystem&lt;Graphics&gt;();
 gfx-&gt;Maximize();</code></p>
           </div>

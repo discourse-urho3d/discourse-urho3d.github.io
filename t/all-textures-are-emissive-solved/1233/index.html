@@ -34,7 +34,7 @@
           <div class="post_content">
 <p>Hello, in blender, the model has diffuse, normal, specular, emission and ambient occlusion maps.  The urho exporter didn’t export the ambient occlusion map.  It also set the technique to use to be DiffNormalEmissive, is it possible to have DiffNormalEmissiveSpecularAmbientOcclusion?  I don’t see an Ambient Occlusion texture slot, is that what the Environment slot is for?</p>
 <p>Regardless of all of the above, some techniques make the model all white and the DiffNormalEmissive makes all of the diffuse emit.  Thanks for any help.</p>
-<p><img alt="" height="" src="http://img.ctrlv.in/img/15/08/03/55bfd018cfd8e.png" width=""/></p>
+<p><img alt="" height="" src="../../../images2/f3e735ab0964f7d63211760a18c0cc20.png" width=""/></p>
           </div>
         </div>
       </div>
@@ -96,7 +96,7 @@ Added ambient occlusion LitSolid permutations. These read the emissive texture a
           <div class="user_name">codingmonkey</div>
           <div class="post_content">
 <p>You need joint terryD.png and terryD_a.png into one texture. Use terryD_a.png as overlay on terryD.png and you got one texture diffTexture with AO affects on it.<br/>
-<a data-bbcode="true" href="http://savepic.net/7104904.htm"><img alt="" height="" src="http://savepic.net/7104904m.png" width=""/></a></p>
+<a data-bbcode="true" href="http://savepic.net/7104904.htm"><img alt="" height="" src="../../../images2/649b3f45c86a9d23c43c9e619c61f730.png" width=""/></a></p>
 <p>I guessing that the thing is, that in the shader AO and Emissive (also LIGHTMAP) use the same TextureUnit and that’s why they working are exclusive or you use AO or you use Emissive not in same time.</p>
 <p><code>
         #ifdef AO
@@ -135,9 +135,9 @@ Added ambient occlusion LitSolid permutations. These read the emissive texture a
           <div class="user_name">codingmonkey</div>
           <div class="post_content">
 <p>The thing is that PSShader use RGB channels of EmissiveMap and you put to it RGBA. A - alpha is ignored in this case by Shader, it grab RGB values from texture and work with it, but you see that image fine and you see only emission regions in texture. But actually there are still white color that discarded by alpha in gimp or ps. You better for this use only RGB or BW images and make non-emission part of texture with full black color.</p>
-<p><a data-bbcode="true" href="http://savepic.net/7128530.htm"><img alt="" height="" src="http://savepic.net/7128530m.png" width=""/></a></p>
+<p><a data-bbcode="true" href="http://savepic.net/7128530.htm"><img alt="" height="" src="../../../images2/2d82021c432c6ddb6c7b1a351ca11e3b.png" width=""/></a></p>
 <p>EmissiveMap<br/>
-<a data-bbcode="true" href="http://savepic.net/7119314.htm"><img alt="" height="" src="http://savepic.net/7119314m.png" width=""/></a></p>
+<a data-bbcode="true" href="http://savepic.net/7119314.htm"><img alt="" height="" src="../../../images2/4aee286768948c760c21b04aae909583.png" width=""/></a></p>
 <blockquote>
 <p>Are you using the latest blender-urho exporter?<br/>
 Yes, actually I have a fork of this exporter with my additional functionality. But there still need to do material setup in Urho3D editor.</p>
@@ -163,7 +163,7 @@ Yes, actually I have a fork of this exporter with my additional functionality. B
           <div class="user_name">practicing01</div>
           <div class="post_content">
 <p>Thanks!  Changing the alpha to black did the trick:<br/>
-<img alt="" height="" src="http://img.ctrlv.in/img/15/08/09/55c690e25dbc6.png" width=""/></p>
+<img alt="" height="" src="../../../images2/4516d7a0b9d51916661c3640cb09bccb.png" width=""/></p>
           </div>
         </div>
       </div>

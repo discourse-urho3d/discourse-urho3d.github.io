@@ -80,7 +80,7 @@ for(int i=0; i&lt;40000; i++)
           <div class="user_name">vivienneanthony</div>
           <div class="post_content">
 <p>There has to be a more efficient way of doing this to create grass. I made a lower poly version of the grass. Also I’m thinking anything in the distance can be a billboard grass.</p>
-<p><div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/peUwStp.png" rel="nofollow noopener" title=""><img alt="" height="431" src="http://i.imgur.com/peUwStp.png" width="690"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">1440×900</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/peUwStp.png" rel="nofollow noopener" title=""><img alt="" height="431" src="../../../images2/441b3482bfc0d190683a998b51df5c70.png" width="690"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">1440×900</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
 <p>[code]  /// Create life -  Move this to a funcion</p>
 <pre><code>/// Define random point variables
 int Spotx;
@@ -185,7 +185,7 @@ for(int i=0; i&lt;1000; i++)
           <div class="post_content">
 <p>Still  high for only 100,000 plants but I think they are super clumped.  4 minutes to start.</p>
 <p><a href="http://i.imgur.com/nZlT3km.png" rel="nofollow noopener">i.imgur.com/nZlT3km.png</a></p>
-<p><div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/nZlT3km.png" rel="nofollow noopener" title=""><img alt="" height="431" src="http://i.imgur.com/nZlT3km.png" width="690"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">1440×900</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/nZlT3km.png" rel="nofollow noopener" title=""><img alt="" height="431" src="../../../images2/2a36e82e783effc8dad19e9e9530cfbb.png" width="690"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">1440×900</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
           </div>
         </div>
       </div>
@@ -212,7 +212,7 @@ for(int i=0; i&lt;1000; i++)
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/weitjong/40/4_1.png" width="20"/> weitjong:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/5dc21abd616a69d8b82c2d56dfa657a5.png" width="20"/> weitjong:</div>
 <blockquote>
 <p>I think you should seriously consider to use Billboard instead.</p>
 </blockquote>
@@ -245,7 +245,7 @@ for(int i=0; i&lt;1000; i++)
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/weitjong/40/4_1.png" width="20"/> weitjong:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/5dc21abd616a69d8b82c2d56dfa657a5.png" width="20"/> weitjong:</div>
 <blockquote>
 <p>I don’t think what you plan to do is currently supported by Urho out of the box. What you describing is similar to asking a component to somehow dynamically change its type from StaticModel to Billboard based on the camera distance in the runtime. Although I believe if you really insist on doing so, it should be doable but at what cost. I don’t think your players would pay attention on the grass anyway. I have played a number of AAA games in the past and I see them get away with it just by using billboard.</p>
 </blockquote>
@@ -289,7 +289,7 @@ for(int i=0; i&lt;1000; i++)
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/friesencr/40/827_1.png" width="20"/> friesencr:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/70bcc47748c28f7bda94e891e8db727b.png" width="20"/> friesencr:</div>
 <blockquote>
 <p>I don’t know exactly what you are doing but each of those objects still needs to be tested for occlusion and sorted/batched.  You can use a static model group which reduces this.  I did this in on my little dungeon games.  I did static model groups in patches.  You can play around with your settings to trade off batches for over drawn vertices.  Start of with 50x50 meters or something.  I found that very simple geometry was not very sensitive to vertex count.  So sending those extra vertices will waste vertex shader resources then should get clipped before fragment shading.  It took me a while rewrite my code for this kind of batching.  Be sure to set draw distance too.  For static model groups the master node is in charge of being occluded.  So if it gets hidden the whole patch does.</p>
 </blockquote>
@@ -310,13 +310,13 @@ for(int i=0; i&lt;1000; i++)
 <aside class="quote no-group" data-username="weitjong">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/weitjong/40/4_2.png" width="20"/> weitjong:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/8c3888d68a9e52e853f0724aae6cefb6.png" width="20"/> weitjong:</div>
 <blockquote>
 <p>I don’t think what you plan to do is currently supported by Urho out of the box. What you describing is similar to asking a component to somehow dynamically change its type from StaticModel to Billboard based on the camera distance in the runtime. Although I believe if you really insist on doing so, it should be doable but at what cost. I don’t think your players would pay attention on the grass anyway. I have played a number of AAA games in the past and I see them get away with it just by using billboard.</p>
 </blockquote>
 </aside>
 <p>I changed the method to billboard from the example code. I’m getting some weird transparency issues.</p>
-<p><div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/kyW69Hm.png" rel="nofollow noopener" title=""><img alt="" height="431" src="http://i.imgur.com/kyW69Hm.png" width="690"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">1440×900</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/kyW69Hm.png" rel="nofollow noopener" title=""><img alt="" height="431" src="../../../images2/d5d90aaed0f808276ac7aad69cd113ba.png" width="690"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">1440×900</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
 <p>[code]/// Define random point variables<br/>
 int Spotx;<br/>
 int Spotz;</p>
@@ -374,7 +374,7 @@ billboardObject-&gt;SetSorted(true);</p>
         <div class="post">
           <div class="user_name">vivienneanthony</div>
           <div class="post_content">
-<p><div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/HImRo3B.png" rel="nofollow noopener" title=""><img alt="" height="172" src="http://i.imgur.com/HImRo3B.png" width="690"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">1024×256</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/HImRo3B.png" rel="nofollow noopener" title=""><img alt="" height="172" src="../../../images2/0ca26eaf25a95dec746acdbfe349acbc.png" width="690"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">1024×256</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
           </div>
         </div>
       </div>
@@ -416,7 +416,7 @@ You can also try other cutouts, for example those of the “Yo Frankie!” proje
 <p>[quote=“Mike”]Try DiffUnlitAlphaMask instead of DiffUnlitAlpha.<br/>
 You can also try other cutouts, for example those of the “Yo Frankie!” project give good results <a data-bbcode="true" href="https://svn.blender.org/svnroot/yofrankie/trunk/textures/" rel="nofollow noopener">https://svn.blender.org/svnroot/yofrankie/trunk/textures/</a>[/quote]</p>
 <p>I’ll try that tomorrow. I added a .dds plugin to Gimp which I was able to get better results. Still the color is off and material weird.</p>
-<p><div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/0sXSpvS.png" rel="nofollow noopener" title=""><img alt="" height="431" src="http://i.imgur.com/0sXSpvS.png" width="690"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">1440×900</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/0sXSpvS.png" rel="nofollow noopener" title=""><img alt="" height="431" src="../../../images2/ed2102dfa7bdea19efd727fda9b5f636.png" width="690"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">1440×900</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
           </div>
         </div>
       </div>

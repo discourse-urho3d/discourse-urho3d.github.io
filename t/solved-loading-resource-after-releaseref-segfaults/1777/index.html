@@ -113,7 +113,7 @@ assert(refCount_-&gt;refs_ &gt; 0); // refCount_ is 0x642f74656d6f002f (this is 
 <p>[quote] XMLFile* f = cache-&gt;GetResource(“UI/DefaultStyle.xml”);<br/>
 f-&gt;ReleaseRef();[/quote]<br/>
 This is wrong since the only ref is stored by the ResourceCache and you releasing it.</p>
-<p>It was my fault…<img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/> in the other topic i didn’t explaied Urho’s ref counting very well.<br/>
+<p>It was my fault…<img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/> in the other topic i didn’t explaied Urho’s ref counting very well.<br/>
 So</p>
 <ol>
 <li>Call ReleaseRef() only if you AddRef() previously.</li>

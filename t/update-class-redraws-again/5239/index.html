@@ -51,7 +51,7 @@ To prevent this, you can disable individual components, their parent scene nodes
 <p>The component update method is not what you want for drawing stuff - it’s meant for logic updates, at full frame rate.</p>
 <p>Stuff that you draw tends to derive from Drawable.</p>
 <p>If you elaborate on what you’re trying to achieve, I might be able to help further - I’ve worked a lot with node hierarchies, including Urho’s scene hierarchy, and custom node hierarchies too.</p>
-<p>Hope that’s helpful <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=9" title=":slight_smile:"/></p>
+<p>Hope that’s helpful <img alt=":slight_smile:" class="emoji" src="../../../images2/7bdd5ab4d67675d002d99e4b948c8cdb.png" title=":slight_smile:"/></p>
           </div>
         </div>
       </div>
@@ -98,7 +98,7 @@ The app clears and sets these states on normal Update event: <a href="https://gi
 <p><code>Character</code> has subscribed to FixedUpdate ( with the LogicComponent <code>SetUpdateEventMask(USE_FIXEDUPDATE)</code> in Start() ) where it is continually acting on those.<br/>
 <a href="https://github.com/urho3d/Urho3D/blob/master/Source/Samples/18_CharacterDemo/Character.cpp#L84" rel="nofollow noopener">https://github.com/urho3d/Urho3D/blob/master/Source/Samples/18_CharacterDemo/Character.cpp#L84</a></p>
 <p>Hope that helps – let us know how it is going!</p>
-<p>Offtopic <span class="mention">@codefive</span>:  I never met a language I did not like. <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=9" title=":slight_smile:"/> (non-programming language <img alt=":laughing:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/laughing.png?v=9" title=":laughing:"/>)</p>
+<p>Offtopic <span class="mention">@codefive</span>:  I never met a language I did not like. <img alt=":slight_smile:" class="emoji" src="../../../images2/7bdd5ab4d67675d002d99e4b948c8cdb.png" title=":slight_smile:"/> (non-programming language <img alt=":laughing:" class="emoji" src="../../../images2/b0fdc4fb6086de559ad986fd4b9c7c63.png" title=":laughing:"/>)</p>
           </div>
         </div>
       </div>
@@ -127,7 +127,7 @@ Yes !! I was looking right now at the CharacterDemo sample, and i think i will d
 <p>subNode_-&gt;Translate(Vector3::LEFT * 0.2f);</p>
 <p>for the left movement and</p>
 <p>subNode_-&gt;Translate(Vector3::RIGHT * 0.2f);</p>
-<p>for the right movement, however i cant succed to move it down, perhaps i can add some gravity ? or why doesnt Vector3::DOWN seem to work ? Thank you again <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=9" title=":slight_smile:"/></p>
+<p>for the right movement, however i cant succed to move it down, perhaps i can add some gravity ? or why doesnt Vector3::DOWN seem to work ? Thank you again <img alt=":slight_smile:" class="emoji" src="../../../images2/7bdd5ab4d67675d002d99e4b948c8cdb.png" title=":slight_smile:"/></p>
           </div>
         </div>
       </div>
@@ -142,7 +142,7 @@ Yes !! I was looking right now at the CharacterDemo sample, and i think i will d
 <aside class="quote no-group" data-post="7" data-topic="5239">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/codefive/40/2319_2.png" width="20"/> codefive:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/4f7a0e46c0308651ada96e0936f158aa.png" width="20"/> codefive:</div>
 <blockquote>
 <p>subNode_-&gt;Translate(Vector3::LEFT * 0.2f);</p>
 </blockquote>
@@ -212,7 +212,7 @@ Also be aware that Translate() is performed in local space by default.</p>
 <aside class="quote no-group" data-full="true" data-post="9" data-topic="5239">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/codefive/40/2319_2.png" width="20"/> codefive:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/4f7a0e46c0308651ada96e0936f158aa.png" width="20"/> codefive:</div>
 <blockquote>
 <p>Then will SetPosition would be a better solution?</p>
 </blockquote>
@@ -256,7 +256,7 @@ Also be aware that Translate() is performed in local space by default.</p>
 <aside class="quote no-group" data-full="true" data-post="13" data-topic="5239">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/codefive/40/2319_2.png" width="20"/> codefive:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/4f7a0e46c0308651ada96e0936f158aa.png" width="20"/> codefive:</div>
 <blockquote>
 <p>Oh such a precious information, and those constants TS_WORLD and such as what name i cant find them in Urho documentation? Are more like those? I think now im starting to understand</p>
 </blockquote>
@@ -326,7 +326,7 @@ I probably should look further into them.</p>
         <div class="post">
           <div class="user_name">codefive</div>
           <div class="post_content">
-<p>Could anybody help me to apply a Rigidbody to a node that has 3 sub-nodes ? When i try to do it i make the Engine crash <img alt=":frowning:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/frowning.png?v=9" title=":frowning:"/> Well infact it crashes when i add a ApplyImpulse to that rigid body, and i dont know why</p>
+<p>Could anybody help me to apply a Rigidbody to a node that has 3 sub-nodes ? When i try to do it i make the Engine crash <img alt=":frowning:" class="emoji" src="../../../images2/c383444e3b50f1554d2f21c7c206ca52.png" title=":frowning:"/> Well infact it crashes when i add a ApplyImpulse to that rigid body, and i dont know why</p>
           </div>
         </div>
       </div>
@@ -537,7 +537,7 @@ You may find the explanation for the null pointer by observing the data structur
         <div class="post">
           <div class="user_name">codefive</div>
           <div class="post_content">
-<p><span class="mention">@Leith</span> i cant seem to debug under Linux, Netbeans says it cant find the “Linux executable” even though i provided the path <img alt=":thinking:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/thinking.png?v=9" title=":thinking:"/></p>
+<p><span class="mention">@Leith</span> i cant seem to debug under Linux, Netbeans says it cant find the “Linux executable” even though i provided the path <img alt=":thinking:" class="emoji" src="../../../images2/95fb74f06c03358715b7b493b96f1e60.png" title=":thinking:"/></p>
           </div>
         </div>
       </div>

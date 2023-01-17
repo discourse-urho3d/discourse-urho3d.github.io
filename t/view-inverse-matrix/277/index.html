@@ -50,7 +50,7 @@ The problem is I want to transform view space position back to world space but I
 <p><code>Matrix4 viewInverseMatrix = Matrix4() * MainCamera-&gt;GetView(); // GetView() returns Matrix3x4, so on default it cannot do transpose
 viewInverseMatrix = viewInverseMatrix.Transpose().Inverse();</code><br/>
 I’ve tested on my shader and it works. So, viewMatrix is transpose of Camera-&gt;GetView() and viewInverseMatrix is transpose inverse of Camera-&gt;GetView().<br/>
-I’m not math expert but why we need to transpose to get real view matrix?  <img alt=":question:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/question.png?v=5" title=":question:"/></p>
+I’m not math expert but why we need to transpose to get real view matrix?  <img alt=":question:" class="emoji" src="../../../images2/9d18a4af1b80a213847028173bea831e.png" title=":question:"/></p>
           </div>
         </div>
       </div>

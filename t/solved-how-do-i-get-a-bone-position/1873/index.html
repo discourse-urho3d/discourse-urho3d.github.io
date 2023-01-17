@@ -78,9 +78,9 @@ boxObject-&gt;SetModel(cache-&gt;GetResource&lt;Urho3D::Model&gt;("Data/Models/r
         moduleObject-&gt;SetModel(cache-&gt;GetResource&lt;Model&gt;(modulePath));
         moduleObject-&gt;SetMaterial(cache-&gt;GetResource&lt;Material&gt;(moduleTexturePath));</code></pre>
 <p>with the commented StaticModel :<br/>
-<a data-bbcode="true" href="http://www.hostingpics.net/viewer.php?id=460007staticmodel.png" rel="nofollow noopener"><img alt="" height="" src="http://img15.hostingpics.net/pics/460007staticmodel.png" width=""/></a></p>
+<a data-bbcode="true" href="http://www.hostingpics.net/viewer.php?id=460007staticmodel.png" rel="nofollow noopener"><img alt="" height="" src="../../../images2/4783b25dc6bca68e9d67c0810ee94b4f.png" width=""/></a></p>
 <p>with the AnimatedModel :<br/>
-<a data-bbcode="true" href="http://www.hostingpics.net/viewer.php?id=831747animatedmodel.png" rel="nofollow noopener"><img alt="" height="" src="http://img15.hostingpics.net/pics/831747animatedmodel.png" width=""/></a></p>
+<a data-bbcode="true" href="http://www.hostingpics.net/viewer.php?id=831747animatedmodel.png" rel="nofollow noopener"><img alt="" height="" src="../../../images2/2c5ee9fc870cfbb8d514a33b0fc78b09.png" width=""/></a></p>
           </div>
         </div>
       </div>
@@ -107,7 +107,7 @@ Does it load in the editor?</p>
           <div class="user_name">noals</div>
           <div class="post_content">
 <p>my models are rigged like that :<br/>
-<a data-bbcode="true" href="http://www.hostingpics.net/viewer.php?id=371091rig.png" rel="nofollow noopener"><img alt="" height="" src="http://img15.hostingpics.net/pics/371091rig.png" width=""/></a><br/>
+<a data-bbcode="true" href="http://www.hostingpics.net/viewer.php?id=371091rig.png" rel="nofollow noopener"><img alt="" height="" src="../../../images2/289595b9f403da6db405a6ed5bcc748a.png" width=""/></a><br/>
 bones look like they’re on top but it is because of the x-ray view, they are well centered.<br/>
 i wasn’t sure a bone would return a position from its beginning or from its end so i rigged it like that.<br/>
 Armature<br/>
@@ -195,7 +195,7 @@ the models was just for trying stuff with programmation, it will be easy to add 
           <div class="post_content">
 <p>here are my blend files :<br/>
 <a href="http://s000.tinyupload.com/index.php?file_id=96351725697565826291" rel="nofollow noopener">s000.tinyupload.com/index.php?fi … 7565826291</a><br/>
-(and the textures  <img alt=":blush:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/blush.png?v=5" title=":blush:"/> <a href="http://s000.tinyupload.com/index.php?file_id=43763937082691415834" rel="nofollow noopener">s000.tinyupload.com/index.php?fi … 2691415834</a>)<br/>
+(and the textures  <img alt=":blush:" class="emoji" src="../../../images2/f5e2a5ef6206a15962e2ec428f87e9a2.png" title=":blush:"/> <a href="http://s000.tinyupload.com/index.php?file_id=43763937082691415834" rel="nofollow noopener">s000.tinyupload.com/index.php?fi … 2691415834</a>)<br/>
 it was the same result with the animation export so i don’t know what i did wrong.</p>
 <aside class="quote">
 <blockquote>
@@ -218,7 +218,7 @@ it was the same result with the animation export so i don’t know what i did wr
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/rasteron/40/55_1.png" width="20"/> rasteron:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/a206ef460b2be73995958e48edfb5c6d.png" width="20"/> rasteron:</div>
 <blockquote>
 <p>I think the NSW demo has an actual example where you get bone position.</p>
 </blockquote>
@@ -287,7 +287,7 @@ boxObject-&gt;SetModel(cache-&gt;GetResource&lt;Urho3D::Model&gt;("Data/Models/r
           <div class="post_content">
 <p>thx, that was it.<br/>
 everything seem to work fine now.</p>
-<p><a data-bbcode="true" href="http://www.hostingpics.net/viewer.php?id=524936exit1Pos.png" rel="nofollow noopener"><img alt="" height="" src="http://img15.hostingpics.net/pics/524936exit1Pos.png" width=""/></a></p>
+<p><a data-bbcode="true" href="http://www.hostingpics.net/viewer.php?id=524936exit1Pos.png" rel="nofollow noopener"><img alt="" height="" src="../../../images2/5407c16a9b2952b2aedbc283c6dad3c9.png" width=""/></a></p>
 <pre><code class="lang-auto">        moduleNode=my_scene-&gt;CreateChild("module");
         moduleNode-&gt;SetPosition(Vector3(0,0,0));
         AnimatedModel* moduleObject=moduleNode-&gt;CreateComponent&lt;AnimatedModel&gt;();

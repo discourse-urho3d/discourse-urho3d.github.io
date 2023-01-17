@@ -41,9 +41,9 @@ I noticed (maybe a bug?) strange behaviour:</p>
 <p>This works correctly for DX9. I tried adding a new RenderPath object for secondary viewport, still the same behaviour. With DX9, I could use single RenderPath object for 4 viewports, toggle efects on it and I affected all viewports without problems.</p>
 <p>Am I missing something with DX11 or is this a bug?</p>
 <p>Bloom ON:<br/>
-<img alt="" height="" src="http://imageshack.com/a/img910/1043/Qwf3cZ.png" width=""/></p>
+<img alt="" height="" src="../../../images2/a894e76d2d6669c31b8246abf6e9ad6b.png" width=""/></p>
 <p>Bloom OFF:<br/>
-<img alt="" height="" src="http://imageshack.com/a/img538/7049/snZ7YK.png" width=""/></p>
+<img alt="" height="" src="../../../images2/7a901881f1b9b6ded9010f9af43684ad.png" width=""/></p>
 <p>Changes in code (MultipleViewports.cpp):</p>
 <p>[code]void MultipleViewports::SetupViewports()<br/>
 {<br/>
@@ -114,7 +114,7 @@ rearViewport-&gt;SetRenderPath(effectRenderPath);                  ////// ONLY A
           <div class="user_name">Bart</div>
           <div class="post_content">
 <p>Thank you for this super quick fix!</p>
-<p>Does this mean that FXAA2 and FXAA3 shaders will not produce antialiasing, or does your remark concerns some other (built-in) AA in D3D11? Will this probably be fixed for next official release? I would like to help, but I am afraid that my knowledge about this tricky area is basically zero…   <img alt=":frowning:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/frowning.png?v=5" title=":frowning:"/></p>
+<p>Does this mean that FXAA2 and FXAA3 shaders will not produce antialiasing, or does your remark concerns some other (built-in) AA in D3D11? Will this probably be fixed for next official release? I would like to help, but I am afraid that my knowledge about this tricky area is basically zero…   <img alt=":frowning:" class="emoji" src="../../../images2/2506cac83464f3f86e257fa414340d4c.png" title=":frowning:"/></p>
 <p>Thumbs up for supporting D3D11, it gives me more than 4x higher FPS than D3D9 on my box (workstation with nVidia Quadro K2200).</p>
           </div>
         </div>

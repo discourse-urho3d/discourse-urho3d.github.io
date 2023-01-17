@@ -69,7 +69,7 @@ And how do i solve the concurrency issue in my case?</p>
           <div class="user_name">Andy51</div>
           <div class="post_content">
 <p>Oh, i just found that i was actually invoking SendEvent from one of the event handlers, that explains the concurrency effect. But i still cannot agree that sending event will interrupt the current flow to process the handler (especially when sending events to self) is expected behavior. I foresee a huge amount of frustration with a newbies like myself over such nested calls and related bugs. This would definitely cause issues in multithreaded setups also.<br/>
-Anyway, thanks for the quick reply with the newb questions again <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/> Now i have to think of the other way to somehow organize a queue of events to feed to FSM without relying on native events system…</p>
+Anyway, thanks for the quick reply with the newb questions again <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/> Now i have to think of the other way to somehow organize a queue of events to feed to FSM without relying on native events system…</p>
           </div>
         </div>
       </div>

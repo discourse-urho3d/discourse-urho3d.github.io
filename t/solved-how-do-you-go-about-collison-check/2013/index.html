@@ -34,7 +34,7 @@
           <div class="post_content">
 <p>hi,</p>
 <p>my project start to looks like something but i need to do some collision check<br/>
-<a data-bbcode="true" href="http://www.hostingpics.net/viewer.php?id=901234cooltest3.png" rel="nofollow noopener"><img alt="" height="" src="http://img15.hostingpics.net/pics/901234cooltest3.png" width=""/></a></p>
+<a data-bbcode="true" href="http://www.hostingpics.net/viewer.php?id=901234cooltest3.png" rel="nofollow noopener"><img alt="" height="" src="../../../images2/52b52ae60908f2b7f6f910025cf185b2.png" width=""/></a></p>
 <p>after checking the wiki, i think that for each of my module, i need to add this to get a precise bounding box</p>
 <pre><code class="lang-auto">//add physic        dont forget to include RigidBody and CollisionShape
         RigidBody* m_Body=moduleNode-&gt;CreateComponent&lt;RigidBody&gt;();
@@ -130,12 +130,12 @@ myobject=comp-&gt;GetNode ();</p>
 <aside class="quote no-group" data-username="noals">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/noals/40/1995_2.png" width="20"/> noals:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/a5e8b4bb38a57a1c8db086db537a8e5d.png" width="20"/> noals:</div>
 <blockquote>
 <p>your method seems a bit complicated to me but thx anyway. i didn’t tryed anything yet, i will check it out later, the SubscribeToEvent could be usefull.</p>
 </blockquote>
 </aside>
-<p>yep i try to don’t hardcode too much in my game, so i need this xml solution. You can do it with urho node variables too, or just hardcode it <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=10" title=":wink:"/></p>
+<p>yep i try to don’t hardcode too much in my game, so i need this xml solution. You can do it with urho node variables too, or just hardcode it <img alt=":wink:" class="emoji" src="../../../images2/58bcd684421190f24be1944e2a997a04.png" title=":wink:"/></p>
 <p>and yep you will need SubscribeToEvent.</p>
 <p>You can also only subscribe your mainchar and look with what he collude. (setting variables or names to the nodes to choose the trigger), but then your objects don’t interact between each other</p>
           </div>
@@ -152,7 +152,7 @@ myobject=comp-&gt;GetNode ();</p>
 <aside class="quote no-group" data-username="noals">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/noals/40/1995_2.png" width="20"/> noals:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/a5e8b4bb38a57a1c8db086db537a8e5d.png" width="20"/> noals:</div>
 <blockquote>
 <p>and by the way, i have a little question :  is there a way to get  a list of all the scene child ?</p>
 </blockquote>
@@ -190,7 +190,7 @@ PrintTree(children[i], level + 1);<br/>
           <div class="user_name">noals</div>
           <div class="post_content">
 <p>[quote=“Nerrik”]</p>
-<p>yep i try to don’t hardcode too much in my game, so i need this xml solution. You can do it with urho node variables too, or just hardcode it <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=5" title=":wink:"/></p>
+<p>yep i try to don’t hardcode too much in my game, so i need this xml solution. You can do it with urho node variables too, or just hardcode it <img alt=":wink:" class="emoji" src="../../../images2/95940790c23d98635b2a6d3f22657158.png" title=":wink:"/></p>
 <p>and yep you will need SubscribeToEvent.</p>
 <p>You can also only subscribe your mainchar and look with what he collude. (setting variables or names to the nodes to choose the trigger), but then your objects don’t interact between each other[/quote]<br/>
 i also use xml, i code so that when it is compiled, you can just change the modules at your liking with the xml. (or other things later)</p>
@@ -234,7 +234,7 @@ ah ok, so you can make a vector of children and incremente until your pointer is
           <div class="post_content">
 <p>another question, is it possible to change the color of the collision layer when i render it ? how should i do ?<br/>
 in the physic example, you can use the SPACE key to see the physic stuff so i put different layers for the first module and the others module but i can’t see the difference when rendering.</p>
-<p><a data-bbcode="true" href="http://www.hostingpics.net/viewer.php?id=646635physicstuff.png" rel="nofollow noopener"><img alt="" height="" src="http://img15.hostingpics.net/pics/646635physicstuff.png" width=""/></a></p>
+<p><a data-bbcode="true" href="http://www.hostingpics.net/viewer.php?id=646635physicstuff.png" rel="nofollow noopener"><img alt="" height="" src="../../../images2/a725b65af7194d052de355dcddb10b13.png" width=""/></a></p>
           </div>
         </div>
       </div>
@@ -335,7 +335,7 @@ and so, <span class="bbcode-b">eData[P_BODY].GetPtr()</span> point to what excat
 <aside class="quote no-group" data-username="noals">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/noals/40/1995_2.png" width="20"/> noals:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/a5e8b4bb38a57a1c8db086db537a8e5d.png" width="20"/> noals:</div>
 <blockquote>
 <p>ok, i just understood that i need to check the somethingEvents.h in the source with the <a data-bbcode="true" href="http://urho3d.github.io/documentation/1.5/_event_list.html" rel="noopener nofollow ugc">documentation</a> to see what’s going on but it’s still confusing to me.</p>
 <pre><code class="lang-auto">SubscribeToEvent(mynode, E_NODECOLLISION, HANDLER(objectevents, HandleObjectCollision)); //for every node that should trigger something on collision
@@ -392,7 +392,7 @@ yes (Also different notes to different functions)</p>
 <aside class="quote no-group" data-username="noals">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/noals/40/1995_2.png" width="20"/> noals:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/a5e8b4bb38a57a1c8db086db537a8e5d.png" width="20"/> noals:</div>
 <blockquote>
 <pre><code class="lang-auto">SubscribeToEvent(mynode, E_NODECOLLISION, HANDLER(objectevents, HandleObjectCollision)); //for every node that should trigger something on collision
 </code></pre>
@@ -928,7 +928,7 @@ what should i use ?</p>
 
         URHO3D_LOGRAW("\n nodename: " + nodename + " collide with: " + othernodename);
     }</code></pre>
-<p><a data-bbcode="true" href="http://www.hostingpics.net/viewer.php?id=605187collisiontest.png" rel="nofollow noopener"><img alt="" height="" src="http://img15.hostingpics.net/pics/605187collisiontest.png" width=""/></a></p>
+<p><a data-bbcode="true" href="http://www.hostingpics.net/viewer.php?id=605187collisiontest.png" rel="nofollow noopener"><img alt="" height="" src="../../../images2/270bbf1a8e99979d8720f1f09beccfb4.png" width=""/></a></p>
           </div>
         </div>
       </div>
@@ -1041,7 +1041,7 @@ anyway, i kinda understand a few things but with this method i’m lost, i don�
         <div class="post">
           <div class="user_name">Dave82</div>
           <div class="post_content">
-<p>Thats because you doing it wrong.Are you trying to make a wrapper or i can’t really understand what are you trying to do ? <img alt=":confused:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/confused.png?v=5" title=":confused:"/></p>
+<p>Thats because you doing it wrong.Are you trying to make a wrapper or i can’t really understand what are you trying to do ? <img alt=":confused:" class="emoji" src="../../../images2/5fc0af8f196734b5bf5c1aacdc718a17.png" title=":confused:"/></p>
 <p>You don’t have SubscribeToEvent in your class because its not derived from Urho3D::Object… Here are few advices :</p>
 <p>Get rid of these Module , Dungeon and other classes you try to implement.You don’t need them. Urho doesn’t work this way. Follow the rules that the developers <a href="http://provided.In" rel="nofollow noopener">provided.In</a> this case Component based programming.<br/>
 Instead of creating a Dungeon and other external classes , you should use Urho3d::Node and add your collision body , AnimatedModel etc components to it. Define a Corridor , and Dungeon components derived from Urho3D::LogicComponent. Now you have a valid Urho Object that can properly subscribed to events , collision checks and network updates.</p>
@@ -1142,7 +1142,7 @@ in the doc, there is only that kinda :<br/>
 and in the wiki as a “latest activity” :<br/>
 <a data-bbcode="true" href="http://urho3d.wikia.com/wiki/Creating_your_own_C%2B%2B_components" rel="nofollow noopener">http://urho3d.wikia.com/wiki/Creating_your_own_C%2B%2B_components</a><br/>
 those are not for beginner like me when i check some .cpp in the source as examples, can’t i use bullet or something directly ?</p>
-<p>there is no way to actually test if 2 RigidBody are colliding not having to write a whole urho3D object or whatever ?!  <img alt=":angry:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/angry.png?v=5" title=":angry:"/></p>
+<p>there is no way to actually test if 2 RigidBody are colliding not having to write a whole urho3D object or whatever ?!  <img alt=":angry:" class="emoji" src="../../../images2/dda96664c6d9e61674679e7c70394270.png" title=":angry:"/></p>
           </div>
         </div>
       </div>
@@ -1286,7 +1286,7 @@ i’m puzzled by how things are initialized, i need to get into it and try thing
 <aside class="quote no-group" data-username="noals">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/noals/40/1995_2.png" width="20"/> noals:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/a5e8b4bb38a57a1c8db086db537a8e5d.png" width="20"/> noals:</div>
 <blockquote>
 <p>i’m puzzled by how things are initialized, i need to get into it and try things, i will surely have more questions about it later.</p>
 </blockquote>
@@ -1361,7 +1361,7 @@ this <span class="bbcode-b">node_</span> is a member of what originally ?</p>
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/cadaver/40/3_1.png" width="20"/> cadaver:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/17ea6233fe86521c2e3179bd3849d219.png" width="20"/> cadaver:</div>
 <blockquote>
 <p>It’s a member of the Component base class, and has been initialized when the component was created to the node.</p>
 </blockquote>
@@ -1766,7 +1766,7 @@ this doesn’t do anything :</p>
 }</code></pre>
 <p>this actually return me “node set” in the log but that’s all this fucking component can do !<br/>
 in my main.cpp, if i try to move the node with the component on it with SetWorldPosition(), nothing move at all.</p>
-<p>i’m losing my time with this shit.  <img alt=":imp:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/imp.png?v=5" title=":imp:"/><br/>
+<p>i’m losing my time with this shit.  <img alt=":imp:" class="emoji" src="../../../images2/d92a6cee49a31cd20cb8144794305762.png" title=":imp:"/><br/>
 how da fuck do this shit work really ?!</p>
 <p>main</p>
 <p>[spoiler][code]//engine<br/>
@@ -2890,7 +2890,7 @@ could it be a .mdl issue ? a setting in blender, i wonder.</p>
 <aside class="quote no-group" data-username="Dave82">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/dave82/40/2369_2.png" width="20"/> Dave82:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/39fd1aeff01d89e7279fa956666af00e.png" width="20"/> Dave82:</div>
 <blockquote>
 <p>Components doesn’t have transforms , nodes do ! How do you expect your Module component to move in 3d space ? It’s not a transformable entity it is just a component ! you expect to move based on what exacly ?</p>
 </blockquote>
@@ -2899,7 +2899,7 @@ could it be a .mdl issue ? a setting in blender, i wonder.</p>
 <aside class="quote no-group" data-username="Dave82">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/dave82/40/2369_2.png" width="20"/> Dave82:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/39fd1aeff01d89e7279fa956666af00e.png" width="20"/> Dave82:</div>
 <blockquote>
 <p>your code is so overcomplicated for such a simple task you want to achive.By simplifying the code i can garantee you could get the same effect with only 10-15 lines of code…</p>
 </blockquote>
@@ -2956,7 +2956,7 @@ how would you do that because i don’t know how to organise it for the best.</p
 <aside class="quote no-group" data-username="Dave82">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/dave82/40/2369_2.png" width="20"/> Dave82:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/39fd1aeff01d89e7279fa956666af00e.png" width="20"/> Dave82:</div>
 <blockquote>
 <p>Do you understand how dynamic memory allocation/deallocation works in c++ ?</p>
 </blockquote>
@@ -2965,7 +2965,7 @@ how would you do that because i don’t know how to organise it for the best.</p
 <aside class="quote no-group" data-username="Dave82">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/dave82/40/2369_2.png" width="20"/> Dave82:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/39fd1aeff01d89e7279fa956666af00e.png" width="20"/> Dave82:</div>
 <blockquote>
 <p>This doesn’t make any sense.Why you need a separate component for this ? I would suggest you could use node-&gt;SetVar() GetVar() for parameters like these.Or simply implement them in the Element component i suggested.</p>
 </blockquote>

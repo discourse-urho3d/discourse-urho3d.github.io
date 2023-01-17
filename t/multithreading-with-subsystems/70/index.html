@@ -140,7 +140,7 @@ I think it would be pretty robust (once its implemented) and with the increasing
           <div class="user_name">cadaver</div>
           <div class="post_content">
 <p>It depends on the programming model you’re willing to take into use, and the latency you’re willing to accept. For example raycasts, are you OK with not receiving the result instantly, but instead you get a pointer to a pending raycast task which will signal itself when it has been completed. Also, you could be calculating logic ahead of time in a separate thread, but you cannot receive user input from the future, so it would actually be using old inputs and thus introducing latency.</p>
-<p>In my opinion Urho3D may already be a bit inflexible (due to the large amount of functionality it already implements) for threading model experiments, of course if you don’t mind tearing down a large part of it and rebuilding the functionality, then it’s OK <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=5" title=":wink:"/></p>
+<p>In my opinion Urho3D may already be a bit inflexible (due to the large amount of functionality it already implements) for threading model experiments, of course if you don’t mind tearing down a large part of it and rebuilding the functionality, then it’s OK <img alt=":wink:" class="emoji" src="../../../images2/95940790c23d98635b2a6d3f22657158.png" title=":wink:"/></p>
 <p>As realistic steps for better thread usage, without destroying anything from the API, I would see:</p>
 <ul>
 <li>Background loading of resources up to the point when they have to be uploaded to the GPU by the main thread</li>

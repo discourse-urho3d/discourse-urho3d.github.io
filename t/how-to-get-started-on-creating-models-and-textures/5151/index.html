@@ -57,7 +57,7 @@ I’m wondering how I can create models and textures and import them. So far I t
         <div class="post">
           <div class="user_name">Leith</div>
           <div class="post_content">
-<p>Hi wicash, Welcome to the community! <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=9" title=":slight_smile:"/></p>
+<p>Hi wicash, Welcome to the community! <img alt=":slight_smile:" class="emoji" src="../../../images2/7bdd5ab4d67675d002d99e4b948c8cdb.png" title=":slight_smile:"/></p>
 <p>Urho3D has a tool called AssetImporter which you can use to convert FBX files into MDL files.<br/>
 You can use it to import Scenes, Models and Animations from FBX into Urho3D .xml, .mdl and .ani format. It can also import materials and textures.</p>
 <p>This means you can create your 3D assets in any modelling application that can export to FBX.<br/>
@@ -101,7 +101,7 @@ So let’s say I create a scene and a few models and export them correctly. What
           <div class="user_name">Modanung</div>
           <div class="post_content">
 <p>For exporting models from Blender I’d use <a href="https://github.com/reattiva/Urho3D-Blender" rel="nofollow noopener">this exporter</a>.</p>
-<p>Also, welcome to the forums! <img alt=":confetti_ball:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/confetti_ball.png?v=9" title=":confetti_ball:"/> <img alt=":slightly_smiling_face:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slightly_smiling_face.png?v=9" title=":slightly_smiling_face:"/></p>
+<p>Also, welcome to the forums! <img alt=":confetti_ball:" class="emoji" src="../../../images2/8cc1133d965c492d26cc2ba425a80ea1.png" title=":confetti_ball:"/> <img alt=":slightly_smiling_face:" class="emoji" src="../../../images2/083e71e9976093cddc504d689025b42c.png" title=":slightly_smiling_face:"/></p>
           </div>
         </div>
       </div>
@@ -132,7 +132,7 @@ I use Urho editor sometimes to preview things and create prefabs.</p>
         <div class="post">
           <div class="user_name">wicash</div>
           <div class="post_content">
-<p>Thanks guys. <img alt=":grin:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/grin.png?v=9" title=":grin:"/></p>
+<p>Thanks guys. <img alt=":grin:" class="emoji" src="../../../images2/ab418b6a2a0bf690d1ca04fff8b57495.png" title=":grin:"/></p>
 <p>I’ve stumbled upon Edddy before. I’m not sure if this is the right place to ask this, but how can I install it? I got the files from <a href="https://gitlab.com/luckeyproductions/Edddy" rel="nofollow noopener">https://gitlab.com/luckeyproductions/Edddy</a> but I have no idea how to actually build the editor.</p>
           </div>
         </div>
@@ -145,7 +145,7 @@ I use Urho editor sometimes to preview things and create prefabs.</p>
         <div class="post">
           <div class="user_name">Modanung</div>
           <div class="post_content">
-<p>I wouldn’t call Edddy quite production-ready yet, it’s missing several essential features. <img alt=":roll_eyes:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/roll_eyes.png?v=9" title=":roll_eyes:"/><br/>
+<p>I wouldn’t call Edddy quite production-ready yet, it’s missing several essential features. <img alt=":roll_eyes:" class="emoji" src="../../../images2/20e7ad335c7d952389b4e5d4b2d1e211.png" title=":roll_eyes:"/><br/>
 But if you’d like to compile it anyway, the easiest way would be to use QtCreator to open the PRO-file after adding Urho3D (pasted or sym-linked) to your Edddy folder.</p>
           </div>
         </div>
@@ -160,7 +160,7 @@ But if you’d like to compile it anyway, the easiest way would be to use QtCrea
           <div class="post_content">
 <p>Thanks for the help. I checked out Edddy and JTippetts Terrain Editor.<br/>
 I have a few more things I’d like to ask:</p>
-<p>1.)  How do I get anything to show up in U3D Terrain Editor at all? <img alt=":confounded:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/confounded.png?v=9" title=":confounded:"/> Everything I see is this: <a href="https://i.imgur.com/qWPJqDV.png" rel="nofollow noopener">https://i.imgur.com/qWPJqDV.png</a></p>
+<p>1.)  How do I get anything to show up in U3D Terrain Editor at all? <img alt=":confounded:" class="emoji" src="../../../images2/4fcf573fd39fe8d5c6a7ebcd1ba5aba5.png" title=":confounded:"/> Everything I see is this: <a href="https://i.imgur.com/qWPJqDV.png" rel="nofollow noopener">https://i.imgur.com/qWPJqDV.png</a></p>
 <p>2.) When I want to load terrain like in the mini vehicle game or the water example, do I always need a height map?</p>
 <p>3.) When I create a landscape/terrain in Blender, what is the best way to get it into urho3D? Do I need to create a height map and export the textures individually?</p>
           </div>
@@ -174,13 +174,13 @@ I have a few more things I’d like to ask:</p>
         <div class="post">
           <div class="user_name">jmiller</div>
           <div class="post_content">
-<p>2.) It seems that without a height map, Terrain will use all zero heights. I admit I have not tested. <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=10" title=":wink:"/><br/>
+<p>2.) It seems that without a height map, Terrain will use all zero heights. I admit I have not tested. <img alt=":wink:" class="emoji" src="../../../images2/58bcd684421190f24be1944e2a997a04.png" title=":wink:"/><br/>
 <a class="inline-onebox" href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Graphics/Terrain.cpp#L895">Urho3D/Terrain.cpp at master · urho3d/Urho3D · GitHub</a></p>
 <p>3.) Many terrain editors will output a height map, and some, a weight map for blending the actual textures… roughly as described in  <a class="inline-onebox" href="https://wikipedia.org/wiki/Texture_splatting">Texture splatting - Wikipedia</a> and <a class="inline-onebox" href="https://wikipedia.org/wiki/Heightmap">Heightmap - Wikipedia</a></p>
 <p>Here some have posted ways to get a heightmap, and I link to one method generating from a mesh in Blender.</p><aside class="quote" data-post="4" data-topic="1790">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" loading="lazy" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/jmiller/40/2367_2.png" width="20"/>
+<img alt="" class="avatar" height="20" loading="lazy" src="../../../images2/2c8edf1efcc0ee8291779642129d1100.png" width="20"/>
 <a href="https://discourse.urho3d.io/t/free-terrain-editors/1790/4">Free Terrain Editors</a> <a class="badge-wrapper bullet" href="/c/showcase/artists/14"><span class="badge-category-parent-bg" style="background-color: #F1592A;"></span><span class="badge-category-bg" style="background-color: #8C6238;"></span><span class="badge-category clear-badge" data-drop-close="true" style="" title="Discuss Urho3D art-related topics (creation, import, export, troubleshooting) and share your free art.">Artists</span></a>
 </div>
 <blockquote>
@@ -203,7 +203,7 @@ A method to create and manipulate height maps by linking to a plane and renderin
         <div class="post">
           <div class="user_name">wicash</div>
           <div class="post_content">
-<p>Thanks for the fast response. <img alt=":grinning:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/grinning.png?v=9" title=":grinning:"/><br/>
+<p>Thanks for the fast response. <img alt=":grinning:" class="emoji" src="../../../images2/8255629c43f2fe9fa2eb9638b63603d8.png" title=":grinning:"/><br/>
 I managed to get a heigh map for the Terrain I created in Blender.<br/>
 Now I want to add my textures. Since the .xml files look like this</p>
 <blockquote>

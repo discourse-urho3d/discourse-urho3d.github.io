@@ -175,7 +175,7 @@ What’s going on? The one I build Existence works fine. Does anyone have any cl
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/weitjong/40/4_1.png" width="20"/> weitjong:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/5dc21abd616a69d8b82c2d56dfa657a5.png" width="20"/> weitjong:</div>
 <blockquote>
 <p>Read the updated documentation that come together with the new build system, especially on this section <a href="http://urho3d.github.io/documentation/HEAD/_building.html#Building_Native" rel="nofollow noopener">urho3d.github.io/documentation/H … ing_Native</a> regarding how to bring your assets to the executable binaries. Prior to the new build system refactoring, we had no viable way to bring asset dirs to the binaries, and so we were forced to install them together under the /usr/local/share/Urho3D. But since we have a way now to bring both together elegantly, the new build system now install the binaries to the /usr/local/bin as it should in the first place and leave the asset dirs in the /usr/local/share. As documented in the above section, there are more than one way to bring assets to the binaries, the installer does not know (or need to know) which one you would use, so after the ‘make install’ or after building the binaries in the build tree then you have to manually set this up afterwards (unless you have chosen to use URHO3D_PACKAGING build option).</p>
 </blockquote>

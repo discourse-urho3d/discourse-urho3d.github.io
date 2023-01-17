@@ -108,7 +108,7 @@ Why? How can I solve this problem?</p>
           <div class="user_name">weitjong</div>
           <div class="post_content">
 <p>Your first question is kind of misleading. Urho3D library does not actually tie to a specific Android SDK or NDK version, but in general the latest is always the better. In the master branch we have rewritten our Android/CMake toolchain file from scratch to remove all the legacy burden so the new toolchain file only works from NDK 12b onward. However, if you want to use old NDK version for any reason then you can still do so but you have to grab the old copy of toolchain file and use that instead (Urho3D release 1.6 still uses the old toolchain file). Similarly for the Android SDK, it is almost certain the latest version is the best, barring the “android update project” sub-command issue, especially when you want to target newer Android devices. Use the “android sdk” GUI to downgrade the “build tool” to lower version (I am using 25.02) which still provide that sub-command. It is not the end of world issue. You can use Gradle script to update the Android manifest XML file or even just update that file manually to use the min/target SDK version and move on.</p>
-<p>make -j without N argument simply tells make to spawn without limit. I have no idea why they have that option <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/> . You probably want to put a number closer to the number of your CPU physical cores or logical cores if your CPU supports hyperthreading.</p>
+<p>make -j without N argument simply tells make to spawn without limit. I have no idea why they have that option <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/> . You probably want to put a number closer to the number of your CPU physical cores or logical cores if your CPU supports hyperthreading.</p>
           </div>
         </div>
       </div>
@@ -200,7 +200,7 @@ Urho3D\libs\armeabi-v7a\<a href="http://libUrho3DPlayer.so" rel="nofollow noopen
 <aside class="quote no-group" data-post="8" data-topic="3124" data-username="halcyonx">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/h/a698b9/40.png" width="20"/> halcyonx:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/c7e1287940a95c63862d5f910c47da8a.png" width="20"/> halcyonx:</div>
 <blockquote>
 <p>// 1. Should I do this manually?</p>
 </blockquote>

@@ -75,7 +75,7 @@ Example: struct RenderPathCommand in RenderPath.h</p>
 <p>Not every Urho3d classes or structs are prefixed with “URHO3D_API” in the declarations.  So what happens is that certain symbols are available when linking to a static Urho3D library, but are undefined when linking to Urho3D as a .so.  And I need to add URHO3D_API to the declaration of the class/struct to make it "visible."<br/>
 Example: struct RenderPathCommand in RenderPath.h</p>
 <p>This is an inconsistency between building Urho3D statically or shared.[/quote]<br/>
-There are two ways to see this. First, If you find a struct/class that should be “rightfully” be exposed as Urho3D API, but it is not, in order to use the library in the downstream project then it is a bug. Second, if the private struct/class is not exposed intentionally then you are literally using private implementation at your own risk. Having said that, by staying within the Urho3D public API would also not guarantee you of future breakage  <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=5" title=":wink:"/> . Urho3D devs break the existing API as we see fit. If you strongly believe it is the first and it is a bug then you can log it into Urho3D issue tracker.</p>
+There are two ways to see this. First, If you find a struct/class that should be “rightfully” be exposed as Urho3D API, but it is not, in order to use the library in the downstream project then it is a bug. Second, if the private struct/class is not exposed intentionally then you are literally using private implementation at your own risk. Having said that, by staying within the Urho3D public API would also not guarantee you of future breakage  <img alt=":wink:" class="emoji" src="../../../images2/95940790c23d98635b2a6d3f22657158.png" title=":wink:"/> . Urho3D devs break the existing API as we see fit. If you strongly believe it is the first and it is a bug then you can log it into Urho3D issue tracker.</p>
           </div>
         </div>
       </div>
@@ -102,7 +102,7 @@ There are two ways to see this. First, If you find a struct/class that should be
 <aside class="quote no-group" data-username="atai">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/a/45deac/40.png" width="20"/> atai:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/e220dc1b9a8df5da721e6dde1199f38d.png" width="20"/> atai:</div>
 <blockquote>
 <p>In this case, RenderPathCommand is well documented in the documentation, and core developers even answered questions elsewhere in this forum on how to use it to achieve desired rendering effects.  I imagine it is a class for public use…</p>
 </blockquote>
@@ -122,7 +122,7 @@ There are two ways to see this. First, If you find a struct/class that should be
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/weitjong/40/4_1.png" width="20"/> weitjong:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/5dc21abd616a69d8b82c2d56dfa657a5.png" width="20"/> weitjong:</div>
 <blockquote>
 <p>[quote=“atai”]In this case, RenderPathCommand is well documented in the documentation, and core developers even answered questions elsewhere in this forum on how to use it to achieve desired rendering effects.  I imagine it is a class for public use…</p>
 </blockquote>

@@ -40,7 +40,7 @@ PC win 10 64, intel HD Graphic 530 and Urho 1.5 and 1.6 built (openGL) - graphic
 <p>At PC building process was completed without any errors, however I found some issues if its come about Urho3DPlayer.exe. Whenever I run Editor.bat / NinjaSnowWar.bat on 1.6 version I gets an information that Urho3DPlayer has stopped working. In version 1.5 player can be run but it has graphical artifacts.<br/>
 Most of samples works correctly, but some of them have an artifacts on PC.</p>
 <p>Screenshots:<br/>
-cant post link  <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/> check post bellow please.</p>
+cant post link  <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/> check post bellow please.</p>
 <p>So on PC urho v1.5 compiled samples has artifacts and Urho3DPlayer launch without error (but with artifacts as well).<br/>
 In v1.6 some samples have artifacts and Urho3DPlayer cannot be launched.<br/>
 I have no idea what is the reason, maybe some hardware issues?</p>
@@ -108,7 +108,7 @@ F:/Qt/Tools/mingw492_32/bin/../lib/gcc/i686-w64-mingw32/4.9.2/../../../../i686-w
 F:/Qt/Tools/mingw492_32/bin/../lib/gcc/i686-w64-mingw32/4.9.2/../../../../i686-w64-mingw32/bin/ld.exe: cannot find -lD3DCompiler_47
 collect2.exe: error: ld returned 1 exit status</code><br/>
 D3DCompiler_47.dll exist in system32, im going to check what will happen when i change DIRECTX_D3DCOMPILER to D3DCompiler_43.dll<br/>
-Well, i just returned to starting point <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/></p>
+Well, i just returned to starting point <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/></p>
 <h2><code>../../../lib/libUrho3D.a(SDL_windowswindow.c.obj):SDL_windowswindow.c:(.text+0x5ac): undefined reference to `WIN_GL_SetupWindow'
 collect2.exe: error: ld returned 1 exit status</code></h2>
 <p>I just compiled with opengl and i dont have artifacts, however when i try to run editor / ninja snow example or even player itself it stops running and exit with segmentation fault &gt;.&lt;</p>
@@ -126,7 +126,7 @@ collect2.exe: error: ld returned 1 exit status</code></h2>
           <div class="post_content">
 <p>I was able to find workaround and compiled engine with VS Preview 2015. For now I will use microsoft vs to play with urho but I really wanted to use QTCreator.<br/>
 Because of my lack of experience with Cmake I found some difficulties in setting environment configuration correctly to compile engine using mingw.</p>
-<p>[size=75]Sorry for multi posting, but i wanted to bump thread up, I hope you wont be angry <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/>[/size]</p>
+<p>[size=75]Sorry for multi posting, but i wanted to bump thread up, I hope you wont be angry <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/>[/size]</p>
           </div>
         </div>
       </div>
@@ -152,7 +152,7 @@ Because of my lack of experience with Cmake I found some difficulties in setting
           <div class="post_content">
 <p>I have not had any issues with compiling project since Urho v1.3 (I believe) up to v1.5 and I used to be using QT creator. That why it was my first thought that the issue I experienced has to be related to the new hardware I bought lately or windows 10.<br/>
 I will try to reinstall ide, cmake and mingw and install separately.<br/>
-Thanks for guidance  <img alt=":sunglasses:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/sunglasses.png?v=5" title=":sunglasses:"/></p>
+Thanks for guidance  <img alt=":sunglasses:" class="emoji" src="../../../images2/b11e15d62f952a3da9d0ff6e5174f0bc.png" title=":sunglasses:"/></p>
           </div>
         </div>
       </div>

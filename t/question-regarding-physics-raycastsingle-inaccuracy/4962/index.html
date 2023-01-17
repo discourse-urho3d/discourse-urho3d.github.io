@@ -113,7 +113,7 @@ I have confirmed that the correct values are being serialized, but am yet to che
 <p>Raycast is using layer (1111111), and mask = 0000010. It should ONLY be detecting collision with the “static” layer (2) - but I am detecting collision against layer 64!<br/>
 This is not meant to happen, right guys?</p>
 <p>I have carefully checked that all the values are what I expected - I have carefully applied my collision filter layers and masks - I specifically intended to omit raycast collisions against certain bodies, yet I am detecting the collision.</p>
-<p>It would be lovely if someone here would take the time to attempt to reproduce this result before I take my complaint to Erwin Coumans <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=6" title=":slight_smile:"/></p>
+<p>It would be lovely if someone here would take the time to attempt to reproduce this result before I take my complaint to Erwin Coumans <img alt=":slight_smile:" class="emoji" src="../../../images2/33cb8d9bf277cdb113680cf5564b6764.png" title=":slight_smile:"/></p>
 <ol>
 <li>Create a RigidBody (any shape will do), give it some mass, set layer to 64 and mask to 34,</li>
 <li>Cast a ray against the rigidbody, with mask set to 2</li>
@@ -238,7 +238,7 @@ staicMesh-&gt;SetCollisionLayer(CL_LEVELMESH|CL_RAYCASTABLE|CL_PLAYER);
         <div class="post">
           <div class="user_name">Leith</div>
           <div class="post_content">
-<p>That is the result I would have expected <img alt=":frowning:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/frowning.png?v=6" title=":frowning:"/> I’m using exactly the same logic, but for some reason, masking is failing. Urho is built from the current master on git. You? I’ll keep digging / adding debug spew until I find the answer, but the issue is not in my code, I’m certain. I started debugging in my own code, now I’ve moved to urho engine code, while also keeping an eye on bullet sourcecode. Working my way from the bottom up. I’m a digital electronic engineer among other hats, I think I have a strong grip on binary logic.<br/>
+<p>That is the result I would have expected <img alt=":frowning:" class="emoji" src="../../../images2/51ea35e7c47bd75b6fa0d425ad2d734f.png" title=":frowning:"/> I’m using exactly the same logic, but for some reason, masking is failing. Urho is built from the current master on git. You? I’ll keep digging / adding debug spew until I find the answer, but the issue is not in my code, I’m certain. I started debugging in my own code, now I’ve moved to urho engine code, while also keeping an eye on bullet sourcecode. Working my way from the bottom up. I’m a digital electronic engineer among other hats, I think I have a strong grip on binary logic.<br/>
 Actually maybe you can tell me something useful - did we use the btcollisionshape userpointer to point at our urho collisionshape, so we can cast back from a bullet collisionobject to an urho collisionshape for debug purposes?</p>
           </div>
         </div>
@@ -290,7 +290,7 @@ Actually maybe you can tell me something useful - did we use the btcollisionshap
 <aside class="quote no-group" data-full="true" data-post="12" data-topic="4962" data-username="Leith">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/leith/40/2384_2.png" width="20"/> Leith:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/344277caf39f87861709d8bd9d77ec6d.png" width="20"/> Leith:</div>
 <blockquote>
 <p>The only difference between your stuff and mine, as I see it, is that I am using bit 1 (value 2), while your stuff is using bit 0 (value 1).</p>
 </blockquote>
@@ -396,7 +396,7 @@ no<br/>
 <aside class="quote no-group" data-full="true" data-post="21" data-topic="4962" data-username="Leith">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/leith/40/2384_2.png" width="20"/> Leith:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/344277caf39f87861709d8bd9d77ec6d.png" width="20"/> Leith:</div>
 <blockquote>
 <p>Dave, as an experiment, would you mind grabbing the latest build from the repo? I’ll send you my codeblocks project, you can confirm or deny the issue based on me telling you where to set the breakpoint, it would help me immensely to sleep at night knowing im right</p>
 </blockquote>

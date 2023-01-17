@@ -66,7 +66,7 @@ There is a solution provided at end of this thread. To test that proposed soluti
           <div class="post_content">
 <p>This is very strange - I suspect the issue is the refractColor term, but the code appears to have the same output for glsl and hlsl. I mean, you’re getting reflections, so it’s not the fresnel term, and it’s not the reflection term, it has to be about refraction term by pure deduction. That’s being sourced from an environmental map, so it looks like the problem is narrowed down to a failure on environmental probe to render to (I assume) a cubemap. This is boilerplate code, it should “just work”. I agree, we need to see the hardware capabilities to figure out what’s going wrong.<br/>
 Also, I kind of like it - the water looks murky, it has more character than the “working” version.<br/>
-It’s absolutely not correct, but it looks nice <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=6" title=":slight_smile:"/></p>
+It’s absolutely not correct, but it looks nice <img alt=":slight_smile:" class="emoji" src="../../../images2/33cb8d9bf277cdb113680cf5564b6764.png" title=":slight_smile:"/></p>
           </div>
         </div>
       </div>
@@ -81,7 +81,7 @@ It’s absolutely not correct, but it looks nice <img alt=":slight_smile:" class
 <aside class="quote no-group" data-post="2" data-topic="4944" data-username="Sinoid">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/s/f19dbf/40.png" width="20"/> Sinoid:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/364b15125065144cbdd62e2448806aa6.png" width="20"/> Sinoid:</div>
 <blockquote>
 <p>you’re probably sunk on Win10</p>
 </blockquote>
@@ -92,11 +92,11 @@ It’s absolutely not correct, but it looks nice <img alt=":slight_smile:" class
 <strong>Something is not correct here, and it’s affecting numerous HLSL shaders</strong>.</p>
 <p>So here in this thread, I point out Water, Shadows, Outline … all working INCORRECTLY on D3D11 platforms.</p>
 <p>For shadows, here is UWP sample<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/jZtLphyTnqHDOLKCSrUttWclTf8.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/8/8c1c6f029c2bea39435429eefb701259ea51601e.jpeg" rel="noopener nofollow ugc" title="PNG"><img alt="PNG" data-base62-sha1="jZtLphyTnqHDOLKCSrUttWclTf8" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/8c1c6f029c2bea39435429eefb701259ea51601e_2_10x10.png" height="500" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/8c1c6f029c2bea39435429eefb701259ea51601e_2_548x500.jpeg" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/8c1c6f029c2bea39435429eefb701259ea51601e_2_548x500.jpeg, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/8c1c6f029c2bea39435429eefb701259ea51601e_2_822x750.jpeg 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/8c1c6f029c2bea39435429eefb701259ea51601e_2_1096x1000.jpeg 2x" width="548"/><div class="meta">
+<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/jZtLphyTnqHDOLKCSrUttWclTf8.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/8/8c1c6f029c2bea39435429eefb701259ea51601e.jpeg" rel="noopener nofollow ugc" title="PNG"><img alt="PNG" data-base62-sha1="jZtLphyTnqHDOLKCSrUttWclTf8" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/8c1c6f029c2bea39435429eefb701259ea51601e_2_10x10.png" height="500" src="../../../images2/2130b0a804fddba43d4ae2d92e269d77.jpeg" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/8c1c6f029c2bea39435429eefb701259ea51601e_2_548x500.jpeg, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/8c1c6f029c2bea39435429eefb701259ea51601e_2_822x750.jpeg 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/8c1c6f029c2bea39435429eefb701259ea51601e_2_1096x1000.jpeg 2x" width="548"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">PNG</span><span class="informations">1249×1138 392 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
 </div></a></div></p>
 <p>Here is the winForms (opengl) sample<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/eVVOqWYoRl8XYxZG4hy4su5aiT9.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/6/68aae6fe92c7b7337607bfaf0193af080d5ddae3.png" rel="noopener nofollow ugc" title="WinFormsWithShadows"><img alt="WinFormsWithShadows" data-base62-sha1="eVVOqWYoRl8XYxZG4hy4su5aiT9" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/6/68aae6fe92c7b7337607bfaf0193af080d5ddae3_2_10x10.png" height="399" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/6/68aae6fe92c7b7337607bfaf0193af080d5ddae3_2_690x399.png" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/6/68aae6fe92c7b7337607bfaf0193af080d5ddae3_2_690x399.png, https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/6/68aae6fe92c7b7337607bfaf0193af080d5ddae3.png 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/6/68aae6fe92c7b7337607bfaf0193af080d5ddae3.png 2x" width="690"/><div class="meta">
+<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/eVVOqWYoRl8XYxZG4hy4su5aiT9.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/6/68aae6fe92c7b7337607bfaf0193af080d5ddae3.png" rel="noopener nofollow ugc" title="WinFormsWithShadows"><img alt="WinFormsWithShadows" data-base62-sha1="eVVOqWYoRl8XYxZG4hy4su5aiT9" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/6/68aae6fe92c7b7337607bfaf0193af080d5ddae3_2_10x10.png" height="399" src="../../../images2/2efb6601bc5834f56af92a978776f31b.png" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/6/68aae6fe92c7b7337607bfaf0193af080d5ddae3_2_690x399.png, https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/6/68aae6fe92c7b7337607bfaf0193af080d5ddae3.png 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/6/68aae6fe92c7b7337607bfaf0193af080d5ddae3.png 2x" width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">WinFormsWithShadows</span><span class="informations">930×538 275 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
 </div></a></div></p>
           </div>
@@ -113,7 +113,7 @@ It’s absolutely not correct, but it looks nice <img alt=":slight_smile:" class
 <aside class="quote no-group" data-post="2" data-topic="4944" data-username="Sinoid">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/s/f19dbf/40.png" width="20"/> Sinoid:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/364b15125065144cbdd62e2448806aa6.png" width="20"/> Sinoid:</div>
 <blockquote>
 <p>Please enumerate the machine specifications.</p>
 </blockquote>
@@ -138,7 +138,7 @@ Adapter Description	Intel(R) HD Graphics 4600</p>
 <aside class="quote no-group" data-post="2" data-topic="4944" data-username="Sinoid">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/s/f19dbf/40.png" width="20"/> Sinoid:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/364b15125065144cbdd62e2448806aa6.png" width="20"/> Sinoid:</div>
 <blockquote>
 <p>you’re probably sunk on Win10 in GL.</p>
 </blockquote>
@@ -158,7 +158,7 @@ Adapter Description	Intel(R) HD Graphics 4600</p>
 <aside class="quote no-group" data-post="2" data-topic="4944" data-username="Sinoid">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/s/f19dbf/40.png" width="20"/> Sinoid:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/364b15125065144cbdd62e2448806aa6.png" width="20"/> Sinoid:</div>
 <blockquote>
 <p>the blend-states</p>
 </blockquote>
@@ -168,11 +168,11 @@ System.Exception: Failed to create blend state (HRESULT 80070057).</p>
 <p>The Decode: <strong><code>E_INVALIDARG</code> :</strong>  One or more arguments are not valid ( <code>0x80070057</code> )</p>
 <p><a href="https://discourse.urho3d.io/t/litsolid-ao-missing-vertex-element/4810/9">I saw this error on another issue</a>, where the second UV map was missing. <span class="mention">@lezak</span> pointed out the underlying issue, the text of the message was different though, and it pointed out missing vertex elements, but this one doesn’t have that just the blend state failure.</p>
 <p>The result is shown, the NoTextureMultiply on UWP:<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/gsm4r4Leylknra2Zetkwqd4uYtO.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/7/73575b8162172bb635813f53d5cb6a5973ce2858.jpeg" rel="noopener nofollow ugc" title="PNG"><img alt="PNG" data-base62-sha1="gsm4r4Leylknra2Zetkwqd4uYtO" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/7/73575b8162172bb635813f53d5cb6a5973ce2858_2_10x10.png" height="227" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/7/73575b8162172bb635813f53d5cb6a5973ce2858_2_690x227.jpeg" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/7/73575b8162172bb635813f53d5cb6a5973ce2858_2_690x227.jpeg, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/7/73575b8162172bb635813f53d5cb6a5973ce2858_2_1035x340.jpeg 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/7/73575b8162172bb635813f53d5cb6a5973ce2858_2_1380x454.jpeg 2x" width="690"/><div class="meta">
+<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/gsm4r4Leylknra2Zetkwqd4uYtO.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/7/73575b8162172bb635813f53d5cb6a5973ce2858.jpeg" rel="noopener nofollow ugc" title="PNG"><img alt="PNG" data-base62-sha1="gsm4r4Leylknra2Zetkwqd4uYtO" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/7/73575b8162172bb635813f53d5cb6a5973ce2858_2_10x10.png" height="227" src="../../../images2/5ed38aa616798c2a69b030a0c9860e26.jpeg" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/7/73575b8162172bb635813f53d5cb6a5973ce2858_2_690x227.jpeg, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/7/73575b8162172bb635813f53d5cb6a5973ce2858_2_1035x340.jpeg 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/7/73575b8162172bb635813f53d5cb6a5973ce2858_2_1380x454.jpeg 2x" width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">PNG</span><span class="informations">1423×469 127 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
 </div></a></div></p>
 <p>But on winForms looks like it works, and no errors:<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/ojckvhP5ScvwLkvYTUWxNQP3PqW.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/a/aa5fc211a28add103b2d1fb1d2159210812113aa.png" rel="noopener nofollow ugc" title="winFormsNoTextureMultiplyWorks"><img alt="winFormsNoTextureMultiplyWorks" data-base62-sha1="ojckvhP5ScvwLkvYTUWxNQP3PqW" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/a/aa5fc211a28add103b2d1fb1d2159210812113aa_2_10x10.png" height="166" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/a/aa5fc211a28add103b2d1fb1d2159210812113aa_2_690x166.png" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/a/aa5fc211a28add103b2d1fb1d2159210812113aa_2_690x166.png, https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/a/aa5fc211a28add103b2d1fb1d2159210812113aa.png 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/a/aa5fc211a28add103b2d1fb1d2159210812113aa.png 2x" width="690"/><div class="meta">
+<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/ojckvhP5ScvwLkvYTUWxNQP3PqW.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/a/aa5fc211a28add103b2d1fb1d2159210812113aa.png" rel="noopener nofollow ugc" title="winFormsNoTextureMultiplyWorks"><img alt="winFormsNoTextureMultiplyWorks" data-base62-sha1="ojckvhP5ScvwLkvYTUWxNQP3PqW" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/a/aa5fc211a28add103b2d1fb1d2159210812113aa_2_10x10.png" height="166" src="../../../images2/935eef2df0f8803d12b7a62147996f6c.png" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/a/aa5fc211a28add103b2d1fb1d2159210812113aa_2_690x166.png, https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/a/aa5fc211a28add103b2d1fb1d2159210812113aa.png 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/a/aa5fc211a28add103b2d1fb1d2159210812113aa.png 2x" width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">winFormsNoTextureMultiplyWorks</span><span class="informations">927×224 80.9 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
 </div></a></div></p>
 <p>I suspect there is something going on that is common amongst all these D3D11 shaders, such as blend state. But I have too little experience to know where to look next.</p>
@@ -190,7 +190,7 @@ System.Exception: Failed to create blend state (HRESULT 80070057).</p>
 <aside class="quote no-group" data-post="3" data-topic="4944" data-username="Leith">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/leith/40/2384_2.png" width="20"/> Leith:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/344277caf39f87861709d8bd9d77ec6d.png" width="20"/> Leith:</div>
 <blockquote>
 <p>That’s being sourced from an environmental map,</p>
 </blockquote>
@@ -200,7 +200,7 @@ System.Exception: Failed to create blend state (HRESULT 80070057).</p>
 <aside class="quote no-group" data-post="3" data-topic="4944" data-username="Leith">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/leith/40/2384_2.png" width="20"/> Leith:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/344277caf39f87861709d8bd9d77ec6d.png" width="20"/> Leith:</div>
 <blockquote>
 <p>the water looks murky, it has more character than the “working” version.</p>
 </blockquote>
@@ -313,7 +313,7 @@ System.Exception: Failed to create blend state (HRESULT 80070057).</p>
 <aside class="quote no-group" data-post="11" data-topic="4944" data-username="I3DB">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/i/3ec8ea/40.png" width="20"/> I3DB:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/08ac2a702e042b87fc3e2def689b323c.png" width="20"/> I3DB:</div>
 <blockquote>
 <p>Are there any clues you could give me on how to narrow this down in the urhosharp implementation?</p>
 </blockquote>
@@ -345,7 +345,7 @@ System.Exception: Failed to create blend state (HRESULT 80070057).</p>
 <aside class="quote no-group" data-post="15" data-topic="4944" data-username="cosar">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/c/94ad74/40.png" width="20"/> cosar:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/37e135996e9e3d4955f04a80bf198e50.png" width="20"/> cosar:</div>
 <blockquote>
 <p>Are you using the latest version or 1.7 release</p>
 </blockquote>
@@ -382,12 +382,12 @@ The reason it has no effect is because on the testing I’ve done so far, the mu
 <aside class="quote no-group quote-modified" data-full="true" data-post="16" data-topic="4944" data-username="I3DB">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/i/3ec8ea/40.png" width="20"/> I3DB:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/08ac2a702e042b87fc3e2def689b323c.png" width="20"/> I3DB:</div>
 <blockquote>
 <aside class="quote no-group" data-post="15" data-topic="4944" data-username="cosar">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/c/94ad74/40.png" width="20"/> cosar:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/37e135996e9e3d4955f04a80bf198e50.png" width="20"/> cosar:</div>
 <blockquote>
 <p>Are you using the latest version or 1.7 release</p>
 </blockquote>

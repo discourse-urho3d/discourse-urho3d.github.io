@@ -109,7 +109,7 @@ Attempting to do Texture2D’s SetData function with only an image as an arg thr
         <div class="post">
           <div class="user_name">Victor</div>
           <div class="post_content">
-<p>I was a bit hesitant to give that solution. I recently had an issue where I had to set the size first.  <img alt=":frowning:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/frowning.png?v=5" title=":frowning:"/> Not sure if that’s a new issue or not.</p>
+<p>I was a bit hesitant to give that solution. I recently had an issue where I had to set the size first.  <img alt=":frowning:" class="emoji" src="../../../images2/2506cac83464f3f86e257fa414340d4c.png" title=":frowning:"/> Not sure if that’s a new issue or not.</p>
           </div>
         </div>
       </div>
@@ -149,7 +149,7 @@ tex-&gt;SetNumLevels(1);
 tex-&gt;SetData(texture);
 </code></pre>
 <p>This for some reason throws an exception on line 227 of OGLTexture2D.cpp (on the “switch (components)”)</p>
-<p>EDIT: After trying to call  SavePNG to the image and being unable to open it, it looks like the problem lies in the image itself <img alt=":thinking:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/thinking.png?v=5" title=":thinking:"/></p>
+<p>EDIT: After trying to call  SavePNG to the image and being unable to open it, it looks like the problem lies in the image itself <img alt=":thinking:" class="emoji" src="../../../images2/82a9651f7660764b4331d6a14d303910.png" title=":thinking:"/></p>
 <p>If it matters this is how I get the pixels</p>
 <pre><code>	std::vector&lt;unsigned char&gt; imgData;
 		unsigned width, height;
@@ -198,7 +198,7 @@ tex-&gt;SetData(texture);
         <div class="post">
           <div class="user_name">ppsychrite</div>
           <div class="post_content">
-<p>Still doesn’t seem to work. <img alt=":confused:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/confused.png?v=5" title=":confused:"/><br/>
+<p>Still doesn’t seem to work. <img alt=":confused:" class="emoji" src="../../../images2/5fc0af8f196734b5bf5c1aacdc718a17.png" title=":confused:"/><br/>
 The png file created is 73 bytes long, when the actual file is around 21 kb.</p>
 <p>Alright. I’m confused now, I tried using ResourceCache to get the http requested image and now it works perfectly fine. I’m not sure how it started working fine now. Just yesterday it was complaining that it couldn’t read the .png.</p>
 <p>Anyways, thanks for your help guys!</p>

@@ -69,7 +69,7 @@
 <a href="https://docs.microsoft.com/en-us/windows/uwp/gaming/glsl-to-hlsl-reference" rel="nofollow noopener" target="_blank">docs.microsoft.com</a>
 </header>
 <article class="onebox-body">
-<img class="thumbnail onebox-avatar" height="400" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/0/046bc4e1c9cc27618d0390eaf9e35705a1a77356.png" width="400"/>
+<img class="thumbnail onebox-avatar" height="400" src="../../../images2/085ebe63bc7da53860ce43e2b2246307.png" width="400"/>
 <h3><a href="https://docs.microsoft.com/en-us/windows/uwp/gaming/glsl-to-hlsl-reference" rel="nofollow noopener" target="_blank">GLSL-to-HLSL reference - Windows UWP applications</a></h3>
 <p>You port your OpenGL Shader Language (GLSL) code to Microsoft High Level Shader Language (HLSL) code when you port your graphics architecture from OpenGL ES 2.0 to Direct3D 11 to create a game for Universal Windows Platform (UWP).</p>
 </article>
@@ -92,7 +92,7 @@
 <aside class="quote no-group" data-full="true" data-post="2" data-topic="4810" data-username="GodMan">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/g/e79b87/40.png" width="20"/> GodMan:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/ec6d74ff2472bced6f12da93c20c296f.png" width="20"/> GodMan:</div>
 <blockquote>
 <p>So do you need someone to convert that opengl shader to hlsl?</p>
 </blockquote>
@@ -196,7 +196,7 @@ ApplicationOptions: args -w -nolimit -x 1268 -y 720 -p "CoreData;Data" -touch -h
 <aside class="quote no-group" data-post="9" data-topic="4810" data-username="I3DB">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/i/3ec8ea/40.png" width="20"/> I3DB:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/08ac2a702e042b87fc3e2def689b323c.png" width="20"/> I3DB:</div>
 <blockquote>
 <p>4:) [Fri Jan 25 17:25:28 2019] ERROR: Failed to create input layout for shader LitSolid(AO) due to missing vertex element(s) (HRESULT 80070057)</p>
 </blockquote>
@@ -265,7 +265,7 @@ finalColor += Sample2D(EmissiveMap, iTexCoord2).rgb * cAmbientColor.rgb * diffCo
 <aside class="quote no-group" data-post="11" data-topic="4810" data-username="I3DB">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/i/3ec8ea/40.png" width="20"/> I3DB:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/08ac2a702e042b87fc3e2def689b323c.png" width="20"/> I3DB:</div>
 <blockquote>
 <p>Ok. But not sure what to do to fix that.</p>
 </blockquote>
@@ -306,7 +306,7 @@ finalColor += Sample2D(EmissiveMap, iTexCoord2).rgb * cAmbientColor.rgb * diffCo
 <aside class="quote no-group" data-post="13" data-topic="4810" data-username="I3DB">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/i/3ec8ea/40.png" width="20"/> I3DB:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/08ac2a702e042b87fc3e2def689b323c.png" width="20"/> I3DB:</div>
 <blockquote>
 <p>So apparently the DiffAO works only on OpenGL, and there must be some difference in the HLSL file or there is something else missing.</p>
 </blockquote>
@@ -315,7 +315,7 @@ finalColor += Sample2D(EmissiveMap, iTexCoord2).rgb * cAmbientColor.rgb * diffCo
 As for Your “code first approach”, this not a way to go with this error. <a href="https://urho3d.github.io/documentation/HEAD/_vertex_buffers.html" rel="noopener nofollow ugc">Here is the list </a> of vertex elements and before that there is important, in this case, sentence: " Each of the following elements may or may not be present". Error under discussion means that shader require element that is not present. If You want to fix it only from code, here is what You should do to make this sample work as it supposed to: calculate uv coordinates for every vertex of each geometry (this model have 3 of them) and place them in right place in vertex buffers. It can be done, but good luck with that (ok, in this particular case it may not be that hard, since You’d propably want to use same coordinates as UV1).<br/>
 Now, here are realistic and much simpler  solutions: don’t use this technique, since it’s not suitable for this model, modify shader to use only one UV or use 3d modelling software to add missing vertex elements. You can also remove all "defines=“AO” from “DiffAO” technique xml, but then it will be the same as “Diff.xml” technique.<br/>
 To make it even more clear: nornal map can be another example - using normal map require tangent vertex element, if it’s not present You’ll get the same error on DirectX and on OpenGL material will be displayed without normal map.<br/>
-And for the reference, here is how this material look on model with second UV:<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/luIxM9IyBHyrGwVXKOc1aV3fsq.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/0/026e0ab51033c00ac2ac6679e3b0e689f43e5796.png" rel="noopener nofollow ugc" title="Screenshot_Sun_Jan_27_02_39_13_2019"><img alt="Screenshot_Sun_Jan_27_02_39_13_2019" data-base62-sha1="luIxM9IyBHyrGwVXKOc1aV3fsq" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/0/026e0ab51033c00ac2ac6679e3b0e689f43e5796_2_10x10.png" height="356" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/0/026e0ab51033c00ac2ac6679e3b0e689f43e5796_2_690x356.png" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/0/026e0ab51033c00ac2ac6679e3b0e689f43e5796_2_690x356.png, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/0/026e0ab51033c00ac2ac6679e3b0e689f43e5796_2_1035x534.png 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/0/026e0ab51033c00ac2ac6679e3b0e689f43e5796.png 2x" width="690"/><div class="meta">
+And for the reference, here is how this material look on model with second UV:<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/luIxM9IyBHyrGwVXKOc1aV3fsq.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/0/026e0ab51033c00ac2ac6679e3b0e689f43e5796.png" rel="noopener nofollow ugc" title="Screenshot_Sun_Jan_27_02_39_13_2019"><img alt="Screenshot_Sun_Jan_27_02_39_13_2019" data-base62-sha1="luIxM9IyBHyrGwVXKOc1aV3fsq" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/0/026e0ab51033c00ac2ac6679e3b0e689f43e5796_2_10x10.png" height="356" src="../../../images2/cfca73199fb1d409392ce00d56738a05.png" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/0/026e0ab51033c00ac2ac6679e3b0e689f43e5796_2_690x356.png, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/0/026e0ab51033c00ac2ac6679e3b0e689f43e5796_2_1035x534.png 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/0/026e0ab51033c00ac2ac6679e3b0e689f43e5796.png 2x" width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">Screenshot_Sun_Jan_27_02_39_13_2019</span><span class="informations">1366×705 86 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
 </div></a></div></p>
           </div>
@@ -351,7 +351,7 @@ And for the reference, here is how this material look on model with second UV:<d
 <aside class="quote no-group" data-post="14" data-topic="4810" data-username="lezak">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/l/b38774/40.png" width="20"/> lezak:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/6ef2f82e83bb3859852dc241e102e0b3.png" width="20"/> lezak:</div>
 <blockquote>
 <p>And for the reference, here is how this material look on model with second UV:</p>
 </blockquote>
@@ -367,13 +367,13 @@ And for the reference, here is how this material look on model with second UV:<d
 &lt;/material&gt;
 </code></pre>
 <p><a href="https://urho3d.github.io/documentation/HEAD/_vertex_buffers.html" rel="noopener nofollow ugc">Read the link provided</a>, and checked the vertex buffers of a model that is working:<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/131GwPqeoKY4rbD4so79MgZFjy5.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/0/0759c697d67b05847cd3f546f57594ee5bcb0795.png" rel="noopener nofollow ugc" title="VertexBuffersOfWorkingModel"><img alt="VertexBuffersOfWorkingModel" data-base62-sha1="131GwPqeoKY4rbD4so79MgZFjy5" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/0/0759c697d67b05847cd3f546f57594ee5bcb0795_2_10x10.png" height="393" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/0/0759c697d67b05847cd3f546f57594ee5bcb0795.png" width="690"/><div class="meta">
+<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/131GwPqeoKY4rbD4so79MgZFjy5.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/0/0759c697d67b05847cd3f546f57594ee5bcb0795.png" rel="noopener nofollow ugc" title="VertexBuffersOfWorkingModel"><img alt="VertexBuffersOfWorkingModel" data-base62-sha1="131GwPqeoKY4rbD4so79MgZFjy5" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/0/0759c697d67b05847cd3f546f57594ee5bcb0795_2_10x10.png" height="393" src="../../../images2/51aae94d046b3cb93c593b4a18c56b82.png" width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">VertexBuffersOfWorkingModel</span><span class="informations">1601×913 22.5 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
 </div></a></div></p>
 <p>Not sure how visible it is, there  is a single buffer.</p>
 <p>The element mask is Position | Normal | Color | TexCoord1 | Tangent.</p>
 <p>Here’s the same for a not working model, same model, but on UWP platform, and not working:<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/roXOSqthJkzhtJ41y2u4LcP4IkP.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/c/c00d231e6971d305660b02dd2947a74d2def730b.png" rel="noopener nofollow ugc" title="NotWorkingModelWithAO"><img alt="NotWorkingModelWithAO" data-base62-sha1="roXOSqthJkzhtJ41y2u4LcP4IkP" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/c/c00d231e6971d305660b02dd2947a74d2def730b_2_10x10.png" height="388" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/c/c00d231e6971d305660b02dd2947a74d2def730b.png" width="690"/><div class="meta">
+<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/roXOSqthJkzhtJ41y2u4LcP4IkP.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/c/c00d231e6971d305660b02dd2947a74d2def730b.png" rel="noopener nofollow ugc" title="NotWorkingModelWithAO"><img alt="NotWorkingModelWithAO" data-base62-sha1="roXOSqthJkzhtJ41y2u4LcP4IkP" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/c/c00d231e6971d305660b02dd2947a74d2def730b_2_10x10.png" height="388" src="../../../images2/05ac8f1b4195b7ac39f8521f98243703.png" width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">NotWorkingModelWithAO</span><span class="informations">1620×911 21.9 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
 </div></a></div></p>
           </div>
@@ -405,7 +405,7 @@ And for the reference, here is how this material look on model with second UV:<d
 <aside class="quote no-group" data-full="true" data-post="2" data-topic="4810" data-username="GodMan">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/g/e79b87/40.png" width="20"/> GodMan:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/ec6d74ff2472bced6f12da93c20c296f.png" width="20"/> GodMan:</div>
 <blockquote>
 <p>So do you need someone to convert that opengl shader to hlsl?</p>
 </blockquote>
@@ -414,7 +414,7 @@ And for the reference, here is how this material look on model with second UV:<d
 <aside class="quote no-group" data-post="17" data-topic="4810" data-username="I3DB">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/i/3ec8ea/40.png" width="20"/> I3DB:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/08ac2a702e042b87fc3e2def689b323c.png" width="20"/> I3DB:</div>
 <blockquote>
 <p>I propose the LitSolid.HLSL shader does not work with AO. That it is faulty.</p>
 </blockquote>
@@ -448,7 +448,7 @@ As for the model, I cannot upload it to the forum directly, but it’s just a sp
 <aside class="quote no-group" data-post="19" data-topic="4810" data-username="lezak">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/l/b38774/40.png" width="20"/> lezak:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/6ef2f82e83bb3859852dc241e102e0b3.png" width="20"/> lezak:</div>
 <blockquote>
 <p>Screenshot of Your “working” version just confirms that, because the material is not displayed correctly.</p>
 </blockquote>
@@ -458,7 +458,7 @@ As for the model, I cannot upload it to the forum directly, but it’s just a sp
 <aside class="quote no-group" data-post="14" data-topic="4810" data-username="lezak">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/l/b38774/40.png" width="20"/> lezak:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/6ef2f82e83bb3859852dc241e102e0b3.png" width="20"/> lezak:</div>
 <blockquote>
 <p>modify shader to use only one UV</p>
 </blockquote>
@@ -478,7 +478,7 @@ As for the model, I cannot upload it to the forum directly, but it’s just a sp
 <aside class="quote no-group" data-post="14" data-topic="4810" data-username="lezak">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/l/b38774/40.png" width="20"/> lezak:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/6ef2f82e83bb3859852dc241e102e0b3.png" width="20"/> lezak:</div>
 <blockquote>
 <p>here is what You should do to make this sample work as it supposed to: calculate uv coordinates for every vertex of each geometry (this model have 3 of them) and place them in right place in vertex buffers. It can be done, but good luck with that (ok, in this particular case it may not be that hard, since You’d propably want to use same coordinates as UV1).</p>
 </blockquote>
@@ -528,7 +528,7 @@ As for the model, I cannot upload it to the forum directly, but it’s just a sp
 <aside class="quote no-group" data-post="20" data-topic="4810" data-username="I3DB">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/i/3ec8ea/40.png" width="20"/> I3DB:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/08ac2a702e042b87fc3e2def689b323c.png" width="20"/> I3DB:</div>
 <blockquote>
 <p>modify shader to use only one UV</p>
 </blockquote>
@@ -561,7 +561,7 @@ As for the model, I cannot upload it to the forum directly, but it’s just a sp
 <aside class="quote no-group" data-post="25" data-topic="4810" data-username="Leith">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/leith/40/2384_2.png" width="20"/> Leith:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/344277caf39f87861709d8bd9d77ec6d.png" width="20"/> Leith:</div>
 <blockquote>
 <p>Modify geometry to have two UV maps sounds like what you really want.</p>
 </blockquote>
@@ -570,7 +570,7 @@ As for the model, I cannot upload it to the forum directly, but it’s just a sp
 <aside class="quote no-group" data-post="12" data-topic="4810" data-username="lezak">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/l/b38774/40.png" width="20"/> lezak:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/6ef2f82e83bb3859852dc241e102e0b3.png" width="20"/> lezak:</div>
 <blockquote>
 <p>Are You using model with second UV map? If not, don’t use technique that require second UV with model that don’t have it.</p>
 </blockquote>
@@ -578,7 +578,7 @@ As for the model, I cannot upload it to the forum directly, but it’s just a sp
 <aside class="quote no-group" data-post="14" data-topic="4810" data-username="lezak">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/l/b38774/40.png" width="20"/> lezak:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/6ef2f82e83bb3859852dc241e102e0b3.png" width="20"/> lezak:</div>
 <blockquote>
 <p>As for Your “code first approach”, this not a way to go with this error.</p>
 </blockquote>
@@ -586,7 +586,7 @@ As for the model, I cannot upload it to the forum directly, but it’s just a sp
 <aside class="quote no-group" data-post="14" data-topic="4810" data-username="lezak">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/l/b38774/40.png" width="20"/> lezak:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/6ef2f82e83bb3859852dc241e102e0b3.png" width="20"/> lezak:</div>
 <blockquote>
 <p>use 3d modelling software to add missing vertex elements</p>
 </blockquote>
@@ -595,7 +595,7 @@ As for the model, I cannot upload it to the forum directly, but it’s just a sp
 <aside class="quote no-group" data-post="20" data-topic="4810" data-username="I3DB">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/i/3ec8ea/40.png" width="20"/> I3DB:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/08ac2a702e042b87fc3e2def689b323c.png" width="20"/> I3DB:</div>
 <blockquote>
 <p>I’m not ready to learn blender yet.</p>
 </blockquote>
@@ -603,7 +603,7 @@ As for the model, I cannot upload it to the forum directly, but it’s just a sp
 <aside class="quote no-group" data-post="13" data-topic="4810" data-username="I3DB">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/i/3ec8ea/40.png" width="20"/> I3DB:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/08ac2a702e042b87fc3e2def689b323c.png" width="20"/> I3DB:</div>
 <blockquote>
 <p>I’m coming at this from a code first approach</p>
 </blockquote>
@@ -632,20 +632,20 @@ The thing about ambient occlusion texture is that it shouldn’t be using overla
 <aside class="quote no-group" data-post="23" data-topic="4810" data-username="I3DB">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/i/3ec8ea/40.png" width="20"/> I3DB:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/08ac2a702e042b87fc3e2def689b323c.png" width="20"/> I3DB:</div>
 <blockquote>
 <p><a href="https://github.com/xamarin/urho/blob/050fdf9943b154549e7928b32f398e727191202a/Urho3D/CoreData/Shaders/HLSL/LitSolid.hlsl#L19" rel="noopener nofollow ugc">This is the line causing that error message to appear </a>.</p>
 <p>If TEXCOORD1 is changed to TEXCOORD0, it will successfully paint the object, but the result is apparently is not proper AO.</p>
 </blockquote>
 </aside>
 <p>Just to be clear - it’s not this line causing error, it’s wrong model, but this solution should work  just fine. I would also suggest using <a href="https://earthobservatory.nasa.gov/features/NightLights" rel="noopener nofollow ugc"> different AO texture </a>, to make it look better (I’ve used default sphere and shader modified same way as You did):<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/tJUihMWVJ5Hr1I0DuSGZuqnJHC8.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/d/d06f8b2a7a33ab6d929b38bccce6890da06cb9b0.jpeg" rel="noopener nofollow ugc" title="Screenshot_Tue_Feb__5_02_51_03_2019"><img alt="Screenshot_Tue_Feb__5_02_51_03_2019" data-base62-sha1="tJUihMWVJ5Hr1I0DuSGZuqnJHC8" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/d/d06f8b2a7a33ab6d929b38bccce6890da06cb9b0_2_10x10.png" height="356" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/d/d06f8b2a7a33ab6d929b38bccce6890da06cb9b0_2_690x356.jpeg" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/d/d06f8b2a7a33ab6d929b38bccce6890da06cb9b0_2_690x356.jpeg, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/d/d06f8b2a7a33ab6d929b38bccce6890da06cb9b0_2_1035x534.jpeg 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/d/d06f8b2a7a33ab6d929b38bccce6890da06cb9b0.jpeg 2x" width="690"/><div class="meta">
+<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/tJUihMWVJ5Hr1I0DuSGZuqnJHC8.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/d/d06f8b2a7a33ab6d929b38bccce6890da06cb9b0.jpeg" rel="noopener nofollow ugc" title="Screenshot_Tue_Feb__5_02_51_03_2019"><img alt="Screenshot_Tue_Feb__5_02_51_03_2019" data-base62-sha1="tJUihMWVJ5Hr1I0DuSGZuqnJHC8" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/d/d06f8b2a7a33ab6d929b38bccce6890da06cb9b0_2_10x10.png" height="356" src="../../../images2/f8d8de5ce29d157c2e3b32b681125a5c.jpeg" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/d/d06f8b2a7a33ab6d929b38bccce6890da06cb9b0_2_690x356.jpeg, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/d/d06f8b2a7a33ab6d929b38bccce6890da06cb9b0_2_1035x534.jpeg 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/d/d06f8b2a7a33ab6d929b38bccce6890da06cb9b0.jpeg 2x" width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">Screenshot_Tue_Feb__5_02_51_03_2019</span><span class="informations">1366×705 65.3 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
 </div></a></div></p>
 <aside class="quote no-group" data-post="26" data-topic="4810" data-username="I3DB">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/i/3ec8ea/40.png" width="20"/> I3DB:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/08ac2a702e042b87fc3e2def689b323c.png" width="20"/> I3DB:</div>
 <blockquote>
 <p>It would be great if all the samples just worked on all the platforms.</p>
 </blockquote>
@@ -665,7 +665,7 @@ The thing about ambient occlusion texture is that it shouldn’t be using overla
 <aside class="quote no-group" data-post="27" data-topic="4810" data-username="lezak">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/l/b38774/40.png" width="20"/> lezak:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/6ef2f82e83bb3859852dc241e102e0b3.png" width="20"/> lezak:</div>
 <blockquote>
 <p>I would also suggest using <a href="https://earthobservatory.nasa.gov/features/NightLights" rel="noopener nofollow ugc"> different AO texture </a>,</p>
 </blockquote>
@@ -772,7 +772,7 @@ ERROR: Failed to create blend state (HRESULT 80070057)</p>
 <aside class="quote no-group" data-post="29" data-topic="4810" data-username="I3DB">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/i/3ec8ea/40.png" width="20"/> I3DB:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/08ac2a702e042b87fc3e2def689b323c.png" width="20"/> I3DB:</div>
 <blockquote>
 <p>The HLSL shader code is:</p>
 </blockquote>

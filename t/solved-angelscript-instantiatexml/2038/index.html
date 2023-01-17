@@ -33,11 +33,11 @@
           <div class="user_name">Cpl.Bator</div>
           <div class="post_content">
 <p>Hi, i try to create myself a mini-game like this : <a href="https://habrahabr.ru/post/265749/" rel="nofollow noopener">habrahabr.ru/post/265749/</a> from 1vanK ( thank for that )</p>
-<p><a data-bbcode="true" href="http://www.hostingpics.net/viewer.php?id=464162shoot.png" rel="nofollow noopener"><img alt="" height="" src="http://img11.hostingpics.net/thumbs/mini_464162shoot.png" width=""/></a></p>
+<p><a data-bbcode="true" href="http://www.hostingpics.net/viewer.php?id=464162shoot.png" rel="nofollow noopener"><img alt="" height="" src="../../../images2/02919542d82476304399acfae5d510cf.png" width=""/></a></p>
 <p>and i’ve got a problem when i call inside my script :</p>
 <pre><code class="lang-auto">Node@ newNodeParticle = scene.InstantiateXML(smoke_xml, position, Quaternion(0.0f, yaw, pitch));</code></pre>
 <p>i call this method when i shoot a bullet , but, i noticed a small freeze when i use particle. but not when i use the bullet only without particle.<br/>
-the problem is the same with the 1vank’s demo ( only for the first bullet , me , for all bullet… <img alt=":confused:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/confused.png?v=9" title=":confused:"/> )</p>
+the problem is the same with the 1vank’s demo ( only for the first bullet , me , for all bullet… <img alt=":confused:" class="emoji" src="../../../images2/7678bd25c0e19b3a45e5d0b2348a29ef.png" title=":confused:"/> )</p>
 <p>it is possible to “preload”  the xml file to prevent the freeze ?</p>
 <p>the complete script :</p>
 <p>[code]class Canon : ScriptObject{</p>
@@ -160,7 +160,7 @@ but, there is no way to pre-load all xml in memory and instanciate particle / wh
 <p>You can not use instaniate for particles, just add particle effect componet</p>
 </blockquote>
 </aside>
-<p>yes, it’s good idea , but my particle object have a script for remove itself. i will try this way. but, my first question still valid <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/></p>
+<p>yes, it’s good idea , but my particle object have a script for remove itself. i will try this way. but, my first question still valid <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/></p>
           </div>
         </div>
       </div>

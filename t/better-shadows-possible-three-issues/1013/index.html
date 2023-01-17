@@ -33,12 +33,12 @@
           <div class="user_name">gawag</div>
           <div class="post_content">
 <p>There are three things about Urho’s shadows that or bugging me:</p>
-<p><img alt="" height="180" src="http://vignette3.wikia.nocookie.net/urho3d/images/b/b6/USP_terrain-mesh_vertex_colors.jpg/revision/latest/scale-to-width/320" width="320"/><br/>
+<p><img alt="" height="180" src="../../../images2/8cae50d066c24da65c65c442c70dc8df.jpg" width="320"/><br/>
 <a data-bbcode="true" href="http://vignette2.wikia.nocookie.net/urho3d/images/b/b6/USP_terrain-mesh_vertex_colors.jpg/revision/latest?cb=20150422212706" rel="nofollow noopener">http://vignette2.wikia.nocookie.net/urho3d/images/b/b6/USP_terrain-mesh_vertex_colors.jpg/revision/latest?cb=20150422212706</a></p>
 <ul>
 <li>there is some blocky flickering when the shadow is close to the shadow caster, as can be seen in this image on the orange mountain edge in the lower part of the screen. This is typical for self shadowing. Here it’s also causing some stripes. This seems to have to do with the fifth(?) parameter of CascadeParameters that sets the shadow starting distance, but I want the shadows to start close.</li>
 </ul>
-<p><img alt="" height="180" src="http://vignette3.wikia.nocookie.net/urho3d/images/e/ec/USP_terrain-mesh_vertex_colors3.jpg/revision/latest/scale-to-width/320" width="320"/><br/>
+<p><img alt="" height="180" src="../../../images2/05f75861cc1ec15095d26d2326f8d255.jpg" width="320"/><br/>
 <a data-bbcode="true" href="http://vignette3.wikia.nocookie.net/urho3d/images/e/ec/USP_terrain-mesh_vertex_colors3.jpg/revision/latest?cb=20150422215037" rel="nofollow noopener">http://vignette3.wikia.nocookie.net/urho3d/images/e/ec/USP_terrain-mesh_vertex_colors3.jpg/revision/latest?cb=20150422215037</a></p>
 <ul>
 <li>
@@ -105,7 +105,7 @@ light-&gt;SetShadowResolution(1.0);</code></pre>
 </ul>
 <p>Can the shadow resolution be increased? Or set (globally) somewhere else? That would make more cascades less important.</p>
 <p>Is there really no way of making these artifacts less bad? I mean these blocky stripes left of the player at the column:<br/>
-<img alt="" height="300" src="http://oi60.tinypic.com/zwhv6p.jpg" width="300"/><br/>
+<img alt="" height="300" src="../../../images2/cb530d5515a416f9f0831ffdca73419f.jpg" width="300"/><br/>
 Big: <a data-bbcode="true" href="http://i.imgur.com/Kcyh4Tp.jpg" rel="nofollow noopener">http://i.imgur.com/Kcyh4Tp.jpg</a></p>
 <aside class="quote no-group">
 <blockquote>
@@ -152,7 +152,7 @@ It could be made optional/adjustable like most games are offering settings to ad
         <div class="post">
           <div class="user_name">gawag</div>
           <div class="post_content">
-<p>Oh that’s a very interesting topic   <img alt=":laughing:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/laughing.png?v=5" title=":laughing:"/></p>
+<p>Oh that’s a very interesting topic   <img alt=":laughing:" class="emoji" src="../../../images2/f1b3f4dd9f845d1069864c322071dffe.png" title=":laughing:"/></p>
 <p>The shadow maps default size seems to be 1024. Settings it to 4096 made the shadows super sharp and everything much better.  :mrgreen: (and still 60 FPS)<br/>
 Increasing it to 16384 increased the loading time I think but I couldn’t see any further improvement (still 60FPS).</p>
 <p>Also found a Renderer::SetShadowQuality setting and tried values like 0.1, 1 and 10 and could not see any difference?</p>

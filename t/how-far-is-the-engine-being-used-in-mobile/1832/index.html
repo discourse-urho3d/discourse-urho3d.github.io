@@ -66,7 +66,7 @@ Manuel</p>
 <p>1 - 2D like - <a href="https://vimeo.com/102913389" rel="nofollow noopener">vimeo.com/102913389</a></p>
 <p>2 - 3D - <a href="https://vimeo.com/157421323" rel="nofollow noopener">vimeo.com/157421323</a></p>
 <p>We are currently trying to build a 3D player of stories based on Urho and, of course, getting texture data is crucial to encode videos.<br/>
-As for Android and hw compatibility, yes we know it well! <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/></p>
+As for Android and hw compatibility, yes we know it well! <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/></p>
 <p>cheers<br/>
 Manuel</p>
           </div>
@@ -82,7 +82,7 @@ Manuel</p>
           <div class="post_content">
 <p>Hello,</p>
 <p>A possible workaround is to use glReadPixels, it’ll cause a massive bubble in the CPU/GPU pipeline though. I had a mode where you can take a photo of the screen and it paused the screen for a solid 1 second on Android and iOS (probably because the GPUs on there are heavily pipelined, more so than desktop GPUs).</p>
-<p>There are extensions and EGL ones too which can get around this, but it’s all different on every hardware, I don’t recommend that rabbit hole… <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/> ES 3.x fortunately supports Pixel Buffer Objects which can probably get around this quite well.</p>
+<p>There are extensions and EGL ones too which can get around this, but it’s all different on every hardware, I don’t recommend that rabbit hole… <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/> ES 3.x fortunately supports Pixel Buffer Objects which can probably get around this quite well.</p>
 <p>I’m rendering to an S6 here, I’ve found that it renders for like 2 seconds and freezes the frame, and I need to use the task manager to go to another app, then back to Urho and then it works fine. I recommend you try this (I haven’t investigated the solution yet). Once SDL 2.0.4 lands I also have ES 3.x patches to apply, which I’ve tested on an S6.</p>
           </div>
         </div>
@@ -111,7 +111,7 @@ To have a better notion of what can be causing issues like the one we’ve been 
 <aside class="quote no-group" data-username="mcosta">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/m/6a8cbe/40.png" width="20"/> mcosta:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/ba757add21f744f171f2ef011e83d442.png" width="20"/> mcosta:</div>
 <blockquote>
 <p>To have a better notion of what can be causing issues like the one we’ve been experiencing in Galaxy S6 (rendering black), can you guys give us a direction where to search for it? It “smells” to an issue with a shader used by the engine.</p>
 </blockquote>

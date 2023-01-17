@@ -61,7 +61,7 @@ graphics-&gt;SetShaderParameter(VSP_PREVMODEL, *prevWorldTransform_);<br/>
 }[/code]
 </code></pre>
 <p>I don’t what happens, but it doesn’t work. I already set prevWorldTransform_ on Batch object.<br/>
-Do anyone can help me?  <img alt=":unamused:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/unamused.png?v=5" title=":unamused:"/></p>
+Do anyone can help me?  <img alt=":unamused:" class="emoji" src="../../../images2/21382c100a852239caa7667da5bafe68.png" title=":unamused:"/></p>
           </div>
         </div>
       </div>
@@ -75,7 +75,7 @@ Do anyone can help me?  <img alt=":unamused:" class="emoji" src="https://emoji.d
           <div class="post_content">
 <p>Ah, nevermind, I found it.</p>
 <p>The shader only get identity matrix because I never set them in the first place.<br/>
-Previous model matrix had to sent to batch object on UpdateBatches() function. At first, I thought I only need on set them on drawable’s UpdateBatches(), but then I found out static model has it’s own UpdateBatches() function.  <img alt=":unamused:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/unamused.png?v=5" title=":unamused:"/></p>
+Previous model matrix had to sent to batch object on UpdateBatches() function. At first, I thought I only need on set them on drawable’s UpdateBatches(), but then I found out static model has it’s own UpdateBatches() function.  <img alt=":unamused:" class="emoji" src="../../../images2/21382c100a852239caa7667da5bafe68.png" title=":unamused:"/></p>
           </div>
         </div>
       </div>

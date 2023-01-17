@@ -34,7 +34,7 @@
           <div class="post_content">
 <p>Hello,</p>
 <p><a href="https://urho3d.github.io/documentation/1.4/_main_loop.html" rel="nofollow noopener">According to the documention of main loop</a>, <em>Initialize()</em> is a class called when Urho3d is started, before entering the main loop.</p>
-<p><a href="https://urho3d.github.io/documentation/1.4/class_urho3_d_1_1_engine.html" rel="nofollow noopener">Clicking on <em>Initialize()</em> on the above link lead here</a>. I don’t see functions related to <em>RenderPath</em> changing. I’m confused from the start <img alt=":confused:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/confused.png?v=5" title=":confused:"/> .</p>
+<p><a href="https://urho3d.github.io/documentation/1.4/class_urho3_d_1_1_engine.html" rel="nofollow noopener">Clicking on <em>Initialize()</em> on the above link lead here</a>. I don’t see functions related to <em>RenderPath</em> changing. I’m confused from the start <img alt=":confused:" class="emoji" src="../../../images2/5fc0af8f196734b5bf5c1aacdc718a17.png" title=":confused:"/> .</p>
 <p><code>Urho3dPlayer</code> has a number of parameters which are obviously related to <em>Initialize()</em> class.</p>
 <p>Not everything is possible from the command line parameters. For example, you cannot change the default RenderPath, which is by default <em>RenderPaths/Forward.xml</em> .</p>
 <p>So what if i want to use <em>Initialize()</em> functions in a Lua script run by <code>Urho3dPlayer</code> ?</p>
@@ -56,7 +56,7 @@ viewport:SetRenderPath(effectRenderPath)</p>
 <p>I understand the code above, but is doesn’t seem related to an <em>Initialize()</em> class or function.</p>
 <p>Is <em>Initialize()</em> a function, and not a class ? How can i use it from a script ?<br/>
 Should i use <em>Viewport</em> global object for changing parameters at start, and forget about <em>Initialize()</em> ?</p>
-<p>Thank you for reading <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/><br/>
+<p>Thank you for reading <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/><br/>
 Zakk.</p>
           </div>
         </div>
@@ -155,8 +155,8 @@ end
 <p>Thank also for mentionning traps with objects use in Lua.<br/>
 I was thinking gullibly that something like img:SetPixel was just a thin wrapper to a <code>SetPixel</code> function, applied to its <code>self</code> object. I’m using Lua this way, when i come to C API. But here of course, we are talking about C++ and <code>tolua</code>.<br/>
 So i keep this in mind.</p>
-<p>I guess the correct way for texture generation would be to generate the pixel buffer with Lua, without Urho3D objects call, and then passing the whole buffer to an Urho3D texture. Of course, i would avoid doing this each frame, as in this case, we are hitting Lua limitations <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/></p>
-<p>Another annoying thing i have encountered with Lua in Urho3FD is its intensive use of userdata. I know it’s the pillar of exchanges between C and Lua , but for something like <code>function handle_update(eventType,eventData)</code> , i’d rather like to have two tables for <em>eventType</em> and <em>eventData</em>, rather than an userdata, which i cannot explore with it’s associated metatable (only standards fields in the metatable). I think doing this way (with userdate) is surely better for performances. And as i’ve found <a href="https://urho3d.github.io/documentation/HEAD/_event_list.html" rel="nofollow noopener">this</a> , there is no problem with events <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=5" title=":wink:"/></p>
+<p>I guess the correct way for texture generation would be to generate the pixel buffer with Lua, without Urho3D objects call, and then passing the whole buffer to an Urho3D texture. Of course, i would avoid doing this each frame, as in this case, we are hitting Lua limitations <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/></p>
+<p>Another annoying thing i have encountered with Lua in Urho3FD is its intensive use of userdata. I know it’s the pillar of exchanges between C and Lua , but for something like <code>function handle_update(eventType,eventData)</code> , i’d rather like to have two tables for <em>eventType</em> and <em>eventData</em>, rather than an userdata, which i cannot explore with it’s associated metatable (only standards fields in the metatable). I think doing this way (with userdate) is surely better for performances. And as i’ve found <a href="https://urho3d.github.io/documentation/HEAD/_event_list.html" rel="nofollow noopener">this</a> , there is no problem with events <img alt=":wink:" class="emoji" src="../../../images2/95940790c23d98635b2a6d3f22657158.png" title=":wink:"/></p>
 <p>About the Lua documentation, i believe i can use the Angel Script documention. As stated somewhere in the documention, Lua and AngelScript have transitive functions implementation. So i guess i can use <a href="https://urho3d.github.io/documentation/1.4/_script_a_p_i.html" rel="nofollow noopener">this reference</a> with trust.</p>
 <p>Thank you for reading,<br/>
 Zakk.</p>

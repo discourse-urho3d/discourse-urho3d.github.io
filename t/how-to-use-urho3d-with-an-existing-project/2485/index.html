@@ -141,7 +141,7 @@ if (CMAKE_BUILD_TYPE MATCHES Debug)
 else ()
     set_property(TARGET Urho3DLib PROPERTY IMPORTED_LOCATION ${URHO3DSDK_HOME}/lib/libUrho3D.a)
 endif ()</code></pre>
-<p>In my case, I’m forced to used static linking, because if you’re doing a Game.dll file, CMake (or I haven’t found out at least), doesn’t allow a target dll to import another dll… which is sad/annoying. <img alt=":frowning:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/frowning.png?v=5" title=":frowning:"/><br/>
+<p>In my case, I’m forced to used static linking, because if you’re doing a Game.dll file, CMake (or I haven’t found out at least), doesn’t allow a target dll to import another dll… which is sad/annoying. <img alt=":frowning:" class="emoji" src="../../../images2/2506cac83464f3f86e257fa414340d4c.png" title=":frowning:"/><br/>
 Now, when building your exe, you can do the following:</p>
 <pre><code class="lang-auto">project(MyGame)
 

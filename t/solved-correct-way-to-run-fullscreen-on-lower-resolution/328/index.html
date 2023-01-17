@@ -39,7 +39,7 @@ engineParameters_["Headless"]     = false;
 engineParameters_["WindowWidth"] = 1600;
 engineParameters_["WindowHeight"]  = 900;</code></pre>
 <p>The following results in vertical letterboxing, similar to the example in the middle here:<br/>
-<img alt="" height="" src="http://e2e.ti.com/resized-image.ashx/__size/550x0/__key/CommunityServer-Discussions-Components-Files/100/8737.LetterBoxing_5F00_UseCases.png" width=""/></p>
+<img alt="" height="" src="../../../images2/76176547c0870bf657de28da89bc3bc2.png" width=""/></p>
 <p>It seems that when on full screen, then the incorrect resolution is used (looks to be 4:3 instead of 16:9 as specified). The correct resolution is however used when in windowed mode (fullscreen=false).</p>
 <p>Has anybody else experienced this issue, and / or have any advice before I debug the code further?</p>
 <p>Thanks</p>
@@ -85,7 +85,7 @@ engineParameters_["WindowHeight"]  = 900;</code></pre>
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/cadaver/40/3_1.png" width="20"/> cadaver:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/17ea6233fe86521c2e3179bd3849d219.png" width="20"/> cadaver:</div>
 <blockquote>
 <p>There was an error in the “resolution error metric” calculation which would cause eg. resolution 1366x768 to be used, though 1024x768 was requested. If you check the latest master branch revision, that part should work better now.</p>
 </blockquote>

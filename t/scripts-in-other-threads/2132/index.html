@@ -33,7 +33,7 @@
           <div class="user_name">TheSHEEEP</div>
           <div class="post_content">
 <p>Hey there,</p>
-<p>I’ve been looking into various engines for an idea of mine and do find Urho (I guess “hero” sounded too generic ? <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=5" title=":wink:"/> ) very interesting.<br/>
+<p>I’ve been looking into various engines for an idea of mine and do find Urho (I guess “hero” sounded too generic ? <img alt=":wink:" class="emoji" src="../../../images2/95940790c23d98635b2a6d3f22657158.png" title=":wink:"/> ) very interesting.<br/>
 The feature set seems really impressive and it seems the engine has almost everything I would need.</p>
 <p>However, one thing I find very troubling and that is that according to documentation and this thread ( <a href="http://urho3d.prophpbb.com/topic47.html" rel="nofollow noopener">urho3d.prophpbb.com/topic47.html</a> ) it is not possible to make scripts run in sub-threads.</p>
 <p>That one is a serious drawback, as threaded scripting (or at least separating gameplay logic from rendering/physics/etc.) is a necessity for any game that has larger demands on CPU than an average shooter.<br/>
@@ -71,7 +71,7 @@ There are strategy games from 15-20 years ago running many units on a single wea
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/enhex/40/81_1.png" width="20"/> Enhex:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/2a544a080a692659db243ae9ac8c57ef.png" width="20"/> Enhex:</div>
 <blockquote>
 <p>1. You can do threaded game logic without scripts. You can read about threading restrictions here: <a href="http://urho3d.github.io/documentation/HEAD/_multithreading.html" rel="nofollow noopener">urho3d.github.io/documentation/H … ading.html</a></p>
 </blockquote>
@@ -84,7 +84,7 @@ Executing script functions</p>
 There are strategy games from 15-20 years ago running many units on a single weak CPU. I think you won’t even need multithreading for optimization at all.[/quote]<br/>
 You do not know anything about what I am planning, nor what I did already, nor what research I did on the subject, nor what experience I have.<br/>
 Yet here you go, assuming I have no clue what I am talking about and lecturing me.<br/>
-Don’t do that. Besides, do you seriously think a game like Supreme Commander or Europa Universalis is running single-threaded? <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/></p>
+Don’t do that. Besides, do you seriously think a game like Supreme Commander or Europa Universalis is running single-threaded? <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/></p>
 <p>From experience, I know that this is a detail that is almost impossible to change later on in a timely manner, once all systems are in place. Just like adding multiplayer later on would be (well, usually). So I’d rather solve a problem that is extremely likely to appear before it does. Because I know that it is problematic, I’m not guessing here.</p>
 <p>All of that said, I’ll do another project first anyway to test engine capabilities. That will already have quite an amount of logic attached (though more at a level that should be doable single-threaded).<br/>
 I’m just researching possible engines to do that with first.</p>
@@ -108,7 +108,7 @@ I’m just researching possible engines to do that with first.</p>
 </ul>
 <p>Now, this is all C++ stuff. Based on the link you posted, and a quick look at the source, it does indeed look like you can’t access the threading system via script. However, could you not expose a couple high level functions of the above C++ subsystem to script? Something like “PushAgent”, “GetAgentPaths”, “IsCalculationDone”, etc?</p>
 <p>Note that adding things to the Scene is certainly not thread safe, but raycasting is fine, as are most read operations (I think).</p>
-<p>Basically, I’m suggest the old proverb: “Anything can be fixed by adding a level of abstraction”   <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/></p>
+<p>Basically, I’m suggest the old proverb: “Anything can be fixed by adding a level of abstraction”   <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/></p>
           </div>
         </div>
       </div>
@@ -145,9 +145,9 @@ But pathfinding is something I’d mostly do in C++ anyway, I wouldn’t want th
 <p>IMO the best solution is to have the threaded worker things operate on their own data outside the scene.</p>
 </blockquote>
 </aside>
-<p>I fully agree. However, how would that even be possible with gameplay data? You can’t have each WorkItem have its own copy of the game world <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=5" title=":wink:"/><br/>
+<p>I fully agree. However, how would that even be possible with gameplay data? You can’t have each WorkItem have its own copy of the game world <img alt=":wink:" class="emoji" src="../../../images2/95940790c23d98635b2a6d3f22657158.png" title=":wink:"/><br/>
 That’s the problem with worker queues. They are just not applicable in many situations. Not for gameplay logic, at least.<br/>
-Imagine a forest where thousands of beings are just doing their business, the AI for each one calculating next steps based on information about the world, its surroundings, etc. You cannot have thousands of copies of relevant game data. Imagine the synching afterwards <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/></p>
+Imagine a forest where thousands of beings are just doing their business, the AI for each one calculating next steps based on information about the world, its surroundings, etc. You cannot have thousands of copies of relevant game data. Imagine the synching afterwards <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/></p>
 <p>But I think your suggestion to split everything into phases would solve the problem acceptably. It is really not important for gameplay calculations if they are based on 1 frame old logic. So the bird following its prey in the forest would be advancing by some space, even though the prey just got eaten by the wolf, which the bird would be noticed of only next frame. Perfectly acceptable.<br/>
 So, a very simplified game frame could look like this (assuming that there is separate set for gameplay and Urho data, which is a good idea anyway):</p>
 <ol>
@@ -207,7 +207,7 @@ But if I did that, I could not make use of the runFrame method any more, correct
           <div class="user_name">TheSHEEEP</div>
           <div class="post_content">
 <p>I see. In that case, I think could listen to E_SCENEPOSTUPDATE (or another one that happens after physics, but before most other things) and start the gameplay logic there.<br/>
-Well, that’s one problem solved (in theory, at least <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=5" title=":wink:"/> ).</p>
+Well, that’s one problem solved (in theory, at least <img alt=":wink:" class="emoji" src="../../../images2/95940790c23d98635b2a6d3f22657158.png" title=":wink:"/> ).</p>
 <p>Pathfinding would be great to do threaded as well, but that one really would count as premature optimization.</p>
           </div>
         </div>
@@ -221,7 +221,7 @@ Well, that’s one problem solved (in theory, at least <img alt=":wink:" class="
           <div class="user_name">TheSHEEEP</div>
           <div class="post_content">
 <p>Hmmm, after having a more in-depth look at the documentation and the Lua scripting, I noticed that tolua++ was used.<br/>
-That shocked me quite a bit, to be honest, as tolua++ hasn’t been maintained for years and supposedly suffers from quite a lot shortcomings (naturally, dead code usually has that habit <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/> ).<br/>
+That shocked me quite a bit, to be honest, as tolua++ hasn’t been maintained for years and supposedly suffers from quite a lot shortcomings (naturally, dead code usually has that habit <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/> ).<br/>
 Did you make changes to the library?</p>
 <p>In the end, it might be wisest for me to just roll my own LuaJIT binding, also considering that I won’t be able to use too much of the already existing one due to the threading.<br/>
 It might also make it easier to apply my game logic states to Urho’s internal components. I could do a clear separation that way.<br/>
@@ -233,7 +233,7 @@ Besides, I already used OOLUA and it worked fine for me (though I will look at o
 <p>Bonus question: If I activated LuaJIT when building Urho3D, do I have to take any additional steps to make sure LuaJIT is used instead of the slower “normal” Lua?</p>
 </blockquote>
 </aside>
-<p>Sorry for derailing my own thread, you can split this topic if you want, of course <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/><br/>
+<p>Sorry for derailing my own thread, you can split this topic if you want, of course <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/><br/>
 And finally, don’t get me wrong, I’m complaining a lot here, but I really like what I see so far (except tolua++, tz!).<br/>
 You are right that no engine should try to perfectly fit all purposes and I get the decision to stay single-threaded (it is fine for most cases, I’m sure).<br/>
 And from the looks of it, I can easily change what I have to change in order to make Urho fit my needs better.</p>
@@ -276,7 +276,7 @@ And from the looks of it, I can easily change what I have to change in order to 
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/weitjong/40/4_1.png" width="20"/> weitjong:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/5dc21abd616a69d8b82c2d56dfa657a5.png" width="20"/> weitjong:</div>
 <blockquote>
 <p>So, if you want to roll your own Lua API binding then you have to modify the build system yourself to replace this portion of the logic.</p>
 </blockquote>

@@ -101,7 +101,7 @@ My main post was not clear, I meant the 2 funcitons below:</p>
 <aside class="quote" data-post="3" data-topic="3913">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/luozhipeng/40/1204_1.png" width="20"/> LuoZHipeng:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/9cc47fd852f2b83ea9394e1b682a10db.png" width="20"/> LuoZHipeng:</div>
 <blockquote>
 <p>The multithreaded works in these functions could have data races when same they eventually call same nodes’ MarkDirty() and UpdateWorldTransform() function.</p>
 </blockquote>
@@ -187,7 +187,7 @@ Any chance we have a fix in the engine?</p>
 <aside class="quote" data-post="7" data-topic="3913">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/cadaver/40/3_1.png" width="20"/> cadaver:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/17ea6233fe86521c2e3179bd3849d219.png" width="20"/> cadaver:</div>
 <blockquote>
 <p>I remember the original intention was that MarkDirty / UpdateWorldTransform would be safe even from multiple threads simultaneously, and no dirtyings would be missed</p>
 </blockquote>
@@ -199,7 +199,7 @@ How could you get dirtying and undirtying simultaneously?</p>
 <aside class="quote" data-post="1" data-topic="3913">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/luozhipeng/40/1204_1.png" width="20"/> LuoZHipeng:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/9cc47fd852f2b83ea9394e1b682a10db.png" width="20"/> LuoZHipeng:</div>
 <blockquote>
 <p>sometimes one thread is calling MarkDirty() of that node but another thread is calling UpdateWorldTransform().</p>
 </blockquote>
@@ -232,7 +232,7 @@ How could you get dirtying and undirtying simultaneously?</p>
 <aside class="quote" data-post="10" data-topic="3913">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/cadaver/40/3_1.png" width="20"/> cadaver:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/17ea6233fe86521c2e3179bd3849d219.png" width="20"/> cadaver:</div>
 <blockquote>
 <p>which can move around scene nodes threaded</p>
 </blockquote>

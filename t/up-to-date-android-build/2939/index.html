@@ -34,7 +34,7 @@
           <div class="post_content">
 <p>I’m trying to deploy Urho for Android by using a modern, Android Studio, latest Cmake toolchain.<br/>
 To be more clear, I want to support a process decoupling the upstream Urho3d library from the downstream app building.<br/>
-As of now, the android build only support building “one-way”, that is upstream. If I use the same build on the downstream app, I end up having an upstream library rebuild in the downstream app directory, and that’s not what I want. I want a modern, decoupled, lightweight (possibly) command line building process, much in the so fashionable CI style which is current today… <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=5" title=":wink:"/><br/>
+As of now, the android build only support building “one-way”, that is upstream. If I use the same build on the downstream app, I end up having an upstream library rebuild in the downstream app directory, and that’s not what I want. I want a modern, decoupled, lightweight (possibly) command line building process, much in the so fashionable CI style which is current today… <img alt=":wink:" class="emoji" src="../../../images2/95940790c23d98635b2a6d3f22657158.png" title=":wink:"/><br/>
 More, I want it to run flawlessly in both Android Studio and gradle wrapper. Please no rake / cmake cube-enter-the-build-line-fix-it-again, I’ve already tried them all in all possible combination, there’s no way to make them work good, or at least I’m unable.<br/>
 As of now, I’ve create the cmd line utils, built the general downstream structure, and created a new Cmakefiles.txt for android studio 2.3 to work. After some troubling, Cmake appears to work generally, but maybe there’s something missing, something that’s inside the inner build process / android toolchain, because when I run gradlew assembleDebug i get a <strong>mmintrin</strong> related error as follows:</p>
 <blockquote>
@@ -148,7 +148,7 @@ Run with --stacktrace option to get the stack trace. Run with --info or --debug 
 </blockquote>
 <p>I’ve read some other topics about this but they seem different or related to building, afaiu, android upstream library without SSE.<br/>
 Is there someone who can confirm this and / or shed some light?<br/>
-I’m up to get to the end of this, and I’d like to contribute a solution for this. I don’t like being defeated by a build system whatever complicated it can be…<img alt=":sunglasses:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/sunglasses.png?v=5" title=":sunglasses:"/></p>
+I’m up to get to the end of this, and I’d like to contribute a solution for this. I don’t like being defeated by a build system whatever complicated it can be…<img alt=":sunglasses:" class="emoji" src="../../../images2/b11e15d62f952a3da9d0ff6e5174f0bc.png" title=":sunglasses:"/></p>
           </div>
         </div>
       </div>

@@ -103,7 +103,7 @@ This is especially ridiculous for ResourceCache which all it really requires is 
 <aside class="quote no-group quote-modified" data-post="2" data-topic="3994" data-username="Sinoid">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/s/f19dbf/40.png" width="20"/> Sinoid:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/364b15125065144cbdd62e2448806aa6.png" width="20"/> Sinoid:</div>
 <blockquote>
 <p>Passing String as a parameter to ResourceCache functions, node creation functions, etc, agay unnecessarily allocates, copies then deallocates temporary string of chars, just so that they get passed to a function.</p>
 <p>No. They’re almost always passed as const&amp;, nothing is allocated. Every single function in ResourceCache that takes a string does so by reference - not copy.</p>
@@ -208,7 +208,7 @@ private:
 };
 </code></pre>
 <p>And you have 32 byte (<em>regardless of architecture</em>) <code>String</code> implementation with room for 19 usable bytes. <code>std::string</code> uses <code>size_t</code> so they loose 4 bytes. but it only occupies 24 bytes on 32-bit.</p>
-<p>Or even better, have them both <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/> Gotta say it looks fun and I might even try it this week. Out of curiosity.</p>
+<p>Or even better, have them both <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/> Gotta say it looks fun and I might even try it this week. Out of curiosity.</p>
           </div>
         </div>
       </div>
@@ -519,7 +519,7 @@ Local              68 ns         68 ns    8974301
 <aside class="quote" data-full="true" data-post="15" data-topic="3994">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/qbkgames/40/646_1.png" width="20"/> QBkGames:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/e4ae08e5e9a743881d4bc05a0633aec3.png" width="20"/> QBkGames:</div>
 <blockquote>
 <p>By the way, I’m not very familiar with git, do you need some special permission to create a branch and open a pull request? I’ve cloned the repository, created a branch but I’m unable to publish it.</p>
 </blockquote>
@@ -551,7 +551,7 @@ Local              68 ns         68 ns    8974301
 <aside class="quote" data-post="18" data-topic="3994">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/s.l.c/40/1016_1.png" width="20"/> S.L.C:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/4dfc5d0fa7f66ffc42fdd6509cfc065a.png" width="20"/> S.L.C:</div>
 <blockquote>
 <p>Except you’re playing with the destructor of the base class which destroys the buffer. And boy oh boy, destruction you’ll get.</p>
 </blockquote>

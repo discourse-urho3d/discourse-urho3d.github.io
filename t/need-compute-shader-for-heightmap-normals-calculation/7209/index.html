@@ -35,7 +35,7 @@
 <p>Currently we do all of this on the CPU.   Our GPS app screen is about 1500 x 2000 pixels, and filled with Elevation map data (heightmap transferred to a GrayScale 16bit Texture).</p>
 <p>What we do on the CPU is a quite expensive calculation of Normals, so that we can do adequate shading, for a Relief map (see image below).  This is the MOST EXPENSIVE thing we do currently, and is causing hiccups as you pan the map (up 0.1 sec worst case on Android).</p>
 <p>We’d like to push these calculations onto the GPU, via a “Compute Shader”, which seems to not be supported by Urho3D, currently.</p>
-<p><img alt="image" data-base62-sha1="yJkdKFElTaCISwKlQG9fGQLmRnW" height="428" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/f/f3699392311fc006b02311f4ac539017ce2ba760.jpeg" width="662"/></p>
+<p><img alt="image" data-base62-sha1="yJkdKFElTaCISwKlQG9fGQLmRnW" height="428" src="../../../images2/9ca254c2ce5f8fe8c3e210f6a23db0cf.jpeg" width="662"/></p>
 <p>I think we might be able to do this without Compute Shaders if we could do one specific operation using regular Shaders:</p>
 <ol>
 <li>Create offscreen scene, with Orthographic Camera.</li>
@@ -63,7 +63,7 @@
 <aside class="quote no-group" data-post="1" data-topic="7209" data-username="najak3d">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" loading="lazy" src="https://avatars.discourse-cdn.com/v4/letter/n/6a8cbe/40.png" width="20"/> najak3d:</div>
+<img alt="" class="avatar" height="20" loading="lazy" src="../../../images2/767fb084bb13664b1de3b2e66227eb5f.png" width="20"/> najak3d:</div>
 <blockquote>
 <p>ghtmap transferred to a GrayScale 16bit Texture).</p>
 <p>What we do on the CPU is a quite expensive calculation of Normals, so that we can do adequate shading, for a Relief map (see image below). This is the MOST EXPENSIVE thing we do currently, and is causing hiccups as you pan the map (up 0.1 sec worst case on Android).</p>
@@ -160,7 +160,7 @@ PS:
 </code></pre>
 <p>as model iam using a flat plane grid</p>
 <p>edit: my heightmap is also some special, so you maybe have to change some calcs, let me know if you need help</p>
-<p>also let me know if you have suggestions for a improvement. <img alt=":wink:" class="emoji" height="20" loading="lazy" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=12" title=":wink:" width="20"/></p>
+<p>also let me know if you have suggestions for a improvement. <img alt=":wink:" class="emoji" height="20" loading="lazy" src="../../../images2/6b8378f75e7ad98c8993083c723d624e.png" title=":wink:" width="20"/></p>
           </div>
         </div>
       </div>
@@ -323,8 +323,8 @@ imageStore( hm_data_image, coord, hm_data );
 </code></pre>
 <p>So each Vertexcall create its own “normaldata pixel” permanent if its not happend yet (blank), what happens only in the first call - after that it uses the pixeldata from the texture without any further calculations.</p>
 <p>But i have looked into OGLGraphics and Urho3d dont do glBindImageTexture calls so there is no support for image2D.</p>
-<p>So you have to extend it <img alt=":confused:" class="emoji" height="20" loading="lazy" src="https://emoji.discourse-cdn.com/twitter/confused.png?v=12" title=":confused:" width="20"/></p>
-<p>It was just an untestet fast Idea <img alt=":wink:" class="emoji" height="20" loading="lazy" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=12" title=":wink:" width="20"/></p>
+<p>So you have to extend it <img alt=":confused:" class="emoji" height="20" loading="lazy" src="../../../images2/4baf8336eeb79aa3a8b3e07029659c08.png" title=":confused:" width="20"/></p>
+<p>It was just an untestet fast Idea <img alt=":wink:" class="emoji" height="20" loading="lazy" src="../../../images2/6b8378f75e7ad98c8993083c723d624e.png" title=":wink:" width="20"/></p>
           </div>
         </div>
       </div>

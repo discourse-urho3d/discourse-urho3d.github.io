@@ -70,9 +70,9 @@
         <div class="post">
           <div class="user_name">krstefan42</div>
           <div class="post_content">
-<p>Oh, nice! Thank you so much.  <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=9" title=":smiley:"/></p>
+<p>Oh, nice! Thank you so much.  <img alt=":smiley:" class="emoji" src="../../../images2/94dd27e9c6c243335d29229e02e34e9d.png" title=":smiley:"/></p>
 <p>I’m working on an SSAO filter and I want it to affect only the ambient lighting. Problem is, I like to use 3 directional “fill lights” in addition to an ambient term, to give some more depth to the shadows. So I wanted to render the ambient term and fill lights in one pass, apply SSAO, then render in the direct lights. Which I can do now, thanks to you. But now I have a new problem. It looks like the depth buffer is not being properly cleared with the clear command (those streaking artifacts are the result of leftover data in the depth buffer):</p>
-<p><img alt="" height="" src="https://s10.postimg.org/a03ocf3x5/Depth_Problem.jpg" width=""/></p>
+<p><img alt="" height="" src="../../../images2/e85e3a4627a85e165bf6d5124b323703.jpg" width=""/></p>
 <p>This is my RenderPath XML file.</p>
 <p><code>&lt;renderpath&gt;
     &lt;rendertarget name="albedo" sizedivisor="1 1" format="rgba" /&gt;

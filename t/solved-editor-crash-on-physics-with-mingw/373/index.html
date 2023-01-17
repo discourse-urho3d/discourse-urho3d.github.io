@@ -110,8 +110,8 @@ Disable SSE with the CMake option -DURHO3D_SSE=0 if this is not desired[/quote]<
         <div class="post">
           <div class="user_name">weitjong</div>
           <div class="post_content">
-<p>I don’t think we need to wait for too long to get a new bug report <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/>.  It appears that Urho3D does not build successfully with -msse option for Windows 32-bit platform when the build system has an older version of MinGW, like our CI build system on Travis-CI. The last commit has failed the CI build for Windows 32-bit platform. The build fails due to incorrect include in one of MinGW header file. MinGW developer has corrected the offending header file but has only committed the changes in their trunk and not on their stable branches. In which case, it means only MinGW version released after Feb 2014 will have this fix. See <a href="https://sourceforge.net/p/mingw-w64/mailman/message/31965996/">sourceforge.net/p/mingw-w64/mai … /31965996/</a>. When SSE2 is used, the compiler already has built-in function declared some how, so the offending header file still work, I guess.</p>
-<p>Tough luck. I wonder that this is exactly what the “fix” is trying to fix <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/>.</p>
+<p>I don’t think we need to wait for too long to get a new bug report <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/>.  It appears that Urho3D does not build successfully with -msse option for Windows 32-bit platform when the build system has an older version of MinGW, like our CI build system on Travis-CI. The last commit has failed the CI build for Windows 32-bit platform. The build fails due to incorrect include in one of MinGW header file. MinGW developer has corrected the offending header file but has only committed the changes in their trunk and not on their stable branches. In which case, it means only MinGW version released after Feb 2014 will have this fix. See <a href="https://sourceforge.net/p/mingw-w64/mailman/message/31965996/">sourceforge.net/p/mingw-w64/mai … /31965996/</a>. When SSE2 is used, the compiler already has built-in function declared some how, so the offending header file still work, I guess.</p>
+<p>Tough luck. I wonder that this is exactly what the “fix” is trying to fix <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/>.</p>
           </div>
         </div>
       </div>
@@ -135,7 +135,7 @@ Disable SSE with the CMake option -DURHO3D_SSE=0 if this is not desired[/quote]<
         <div class="post">
           <div class="user_name">Bluemoon</div>
           <div class="post_content">
-<p>I guess I’ll have to go with -DURHO3D_SSE=0 on the GCC 4.9.1  <img alt=":frowning:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/frowning.png?v=5" title=":frowning:"/>  I just hope I won’t miss much in terms of performance enhancement…</p>
+<p>I guess I’ll have to go with -DURHO3D_SSE=0 on the GCC 4.9.1  <img alt=":frowning:" class="emoji" src="../../../images2/2506cac83464f3f86e257fa414340d4c.png" title=":frowning:"/>  I just hope I won’t miss much in terms of performance enhancement…</p>
 <p>Thanks cadaver and weitjong for the in-depth explanations.</p>
           </div>
         </div>
@@ -160,7 +160,7 @@ Disable SSE with the CMake option -DURHO3D_SSE=0 if this is not desired[/quote]<
         <div class="post">
           <div class="user_name">Bluemoon</div>
           <div class="post_content">
-<p><img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/> I finally have it working well with the changes Lasse made… Thanks once again.</p>
+<p><img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/> I finally have it working well with the changes Lasse made… Thanks once again.</p>
           </div>
         </div>
       </div>

@@ -35,9 +35,9 @@
 <p>Our Urho app renders very simple runways, comprised of One quad, with a texture that is repeated along the V-axis, but not along the U-Axis.    This is so that we can repeat the runway lines as many times as is appropriate for the runway length.</p>
 <p>However, when you are taking off or landing (looking parallel to the runway), the runway lines smear terribly on the parts of this quad that are further away from you, and it’s not subtle.   It’s awful looking.</p>
 <p>Is there some simple fix for this?  This is using the simple Diffuse texture shader (nothing else).  It only happens when we tile the texture across this one quad in V-axis (while U-axis is non-repeating, as it’s just the runway from side-to-side).</p>
-<p><img alt="image" data-base62-sha1="p7T0SzlHpdwjsZ2GuFD15ZEVF6J" height="377" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/b/b01a984e04ad0add23813e0c2a80c54f8ed8ef1d.png" width="336"/></p>
+<p><img alt="image" data-base62-sha1="p7T0SzlHpdwjsZ2GuFD15ZEVF6J" height="377" src="../../../images2/6ad85747f7cfdf92d48c5afc6540c838.png" width="336"/></p>
 <p>Our Diffuse texture looks like this:</p>
-<p><img alt="image" data-base62-sha1="qhfGjtMqbeclAdV6SvxIG4dBIfF" height="274" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/b/b82bcb3ac7b7c9ae3dcc6d856b4457630de39e23.png" width="278"/></p>
+<p><img alt="image" data-base62-sha1="qhfGjtMqbeclAdV6SvxIG4dBIfF" height="274" src="../../../images2/0f9ddb800ade79b7bcdebba8a4b3f53a.png" width="278"/></p>
 <p>If this behavior is “normal” (inescapable), then I supposed we can just complexify-the-mesh, giving every runway segment it’s own Quad.</p>
           </div>
         </div>
@@ -55,7 +55,7 @@
 <p>I’d like to avoid this, and not sure if there is a special trick that can be used.</p>
 <p>Note, when looking at the runway more perpendicular (e.g. a top view) - it works just fine.  This only happens when you are landing or taking off, and your view is parallel to the runway itself.</p>
 <p>Here’s another view of the runway, after we got rid of the V-Repeating – here I have one Quad for each Line Segment – there is no texture tiling here, yet we’re still facing nearly the same defect.</p>
-<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/knqFd1JxvzoDvJcZ6urGHNBvuWf.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/8/8ed181750dd6f770021300ad68e47bf7b503e98b.png" rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="knqFd1JxvzoDvJcZ6urGHNBvuWf" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/8ed181750dd6f770021300ad68e47bf7b503e98b_2_10x10.png" height="339" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/8ed181750dd6f770021300ad68e47bf7b503e98b_2_690x339.png" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/8ed181750dd6f770021300ad68e47bf7b503e98b_2_690x339.png, https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/8/8ed181750dd6f770021300ad68e47bf7b503e98b.png 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/8/8ed181750dd6f770021300ad68e47bf7b503e98b.png 2x" width="690"/><div class="meta">
+<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/knqFd1JxvzoDvJcZ6urGHNBvuWf.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/8/8ed181750dd6f770021300ad68e47bf7b503e98b.png" rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="knqFd1JxvzoDvJcZ6urGHNBvuWf" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/8ed181750dd6f770021300ad68e47bf7b503e98b_2_10x10.png" height="339" src="../../../images2/ada9f061cb72ad444c6a3de6ae90ea55.png" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/8ed181750dd6f770021300ad68e47bf7b503e98b_2_690x339.png, https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/8/8ed181750dd6f770021300ad68e47bf7b503e98b.png 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/8/8ed181750dd6f770021300ad68e47bf7b503e98b.png 2x" width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">750×369 29.7 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg>
 </div></a></div></p>
           </div>
@@ -71,11 +71,11 @@
           <div class="post_content">
 <p>You could try to enable this -</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://www.pcgamer.com/pc-graphics-options-explained/3/">
 <header class="source">
-<img class="site-icon" height="32" src="https://vanilla.futurecdn.net/pcgamer/309297/favicon.ico" width="32"/>
+<img class="site-icon" height="32" src="../../../images2/d76f694084964b6913df7b59e62246cf.ico" width="32"/>
 <a href="https://www.pcgamer.com/pc-graphics-options-explained/3/" rel="noopener nofollow ugc" target="_blank" title="05:48PM - 13 March 2019">pcgamer – 13 Mar 19</a>
 </header>
 <article class="onebox-body">
-<div class="aspect-image" style="--aspect-ratio:690/388;"><img class="thumbnail" height="388" src="https://cdn.mos.cms.futurecdn.net/4erwdeJ3zkiSB4Ba5SCSa5-1200-80.jpg" width="690"/></div>
+<div class="aspect-image" style="--aspect-ratio:690/388;"><img class="thumbnail" height="388" src="../../../images2/376593535aa29fa0bd2e08c3679b6412.jpg" width="690"/></div>
 <h3><a href="https://www.pcgamer.com/pc-graphics-options-explained/3/" rel="noopener nofollow ugc" target="_blank">PC graphics options explained</a></h3>
 <p>Understand what graphics options mean, and which to choose.</p>
 </article>
@@ -106,7 +106,7 @@
 <aside class="quote quote-modified" data-post="6" data-topic="6888">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" loading="lazy" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/evolgames/40/3169_2.png" width="20"/>
+<img alt="" class="avatar" height="20" loading="lazy" src="../../../images2/82c7eb8a9632c056ab91d4b3d9c5a8c1.png" width="20"/>
 <a href="https://discourse.urho3d.io/t/textures-blurring-in-short-distance-anisotropy/6888/6">Textures Blurring in Short Distance (Anisotropy?)</a> <a class="badge-wrapper bullet" href="/c/discussions/support/10"><span class="badge-category-parent-bg" style="background-color: #25AAE2;"></span><span class="badge-category-bg" style="background-color: #92278F;"></span><span class="badge-category clear-badge" data-drop-close="true" style="" title="Someone can help you.">Support</span></a>
 </div>
 <blockquote>
@@ -138,7 +138,7 @@ I see what you mean about noise. I should note that no textures are squeezed or 
 <p>I’m embarrassed that I had long forgotten about anistrophy!   Thank you for setting me back on the track.</p>
 <p>We’re probably going to set Anistropic to 16, looks the best, and hopefully is performant enough.</p>
 <p>The current result with this set to 16 looks like this  (much better):</p>
-<p><img alt="image" data-base62-sha1="p4t6vKcOZZ95SYSoWWS2E8ABaeM" height="430" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/a/afb7afe2f307d101c7cfa31adb724478fe6e5bd4.png" width="230"/></p>
+<p><img alt="image" data-base62-sha1="p4t6vKcOZZ95SYSoWWS2E8ABaeM" height="430" src="../../../images2/02166d8f40d420618f5fddb767d5bdb5.png" width="230"/></p>
           </div>
         </div>
       </div>

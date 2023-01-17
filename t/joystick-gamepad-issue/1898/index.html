@@ -39,11 +39,11 @@ I am testing for input with:</p>
 <p><code>GetSubsystem&lt;Input&gt;()-&gt;GetJoystickByIndex(0)-&gt;GetButtonDown(i);
 GetSubsystem&lt;Input&gt;()-&gt;GetJoystickByIndex(0)-&gt;GetAxisPosition(i);</code><br/>
 My problem now; when I wanted to use the (R2) and (L2) triggers to make the camera move up and down while controlling the speed at which it did,<br/>
-<img alt=":confused:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/confused.png?v=5" title=":confused:"/>  I found out two things:<br/>
+<img alt=":confused:" class="emoji" src="../../../images2/5fc0af8f196734b5bf5c1aacdc718a17.png" title=":confused:"/>  I found out two things:<br/>
 ? Those two don’t have a ‘Button’ in Urho3D.<br/>
 ? Their ‘AxisPosition’ values either are 1 or 0.<br/>
 I understand why the axes of most buttons would be ignored by the game engine, but surely it isn’t normal that those two work that way currently?<br/>
-<img alt=":blush:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/blush.png?v=5" title=":blush:"/> Or could I be doing something wrong? I observed this with the yaourt urho3d and urho3d-git builds (Linux Manjaro).</p>
+<img alt=":blush:" class="emoji" src="../../../images2/f5e2a5ef6206a15962e2ec428f87e9a2.png" title=":blush:"/> Or could I be doing something wrong? I observed this with the yaourt urho3d and urho3d-git builds (Linux Manjaro).</p>
           </div>
         </div>
       </div>
@@ -123,7 +123,7 @@ right(x)		2				 2<br/>
 right(y)		3				 3<br/>
 L2 	  4* 			  12<br/>
 R2		5*			   13</p>
-<p>*Can only have 0 or 1 as value.[/code] I’ve confirmed this on two computers, with two PS3 controllers. I’ve also tested Urho3D with a PS4 controller and saw that there was no problem; every button, hat and axis worked as it should, including the triggers.  <img alt=":neutral_face:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/neutral_face.png?v=5" title=":neutral_face:"/></p>
+<p>*Can only have 0 or 1 as value.[/code] I’ve confirmed this on two computers, with two PS3 controllers. I’ve also tested Urho3D with a PS4 controller and saw that there was no problem; every button, hat and axis worked as it should, including the triggers.  <img alt=":neutral_face:" class="emoji" src="../../../images2/e1eb899949dd51d6ee6b6c3c153a3f33.png" title=":neutral_face:"/></p>
 <aside class="quote">
 <blockquote>
 <p>Then again… for me they do have the same values as shown in jstest-gtk.</p>

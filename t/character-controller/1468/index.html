@@ -85,7 +85,7 @@ I made a post asking for a better method on the Bullet forums and got a good ans
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/jamesk89/40/1073_1.png" width="20"/> JamesK89:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/2a366ce58feb7fa4a07f65950218f4d0.png" width="20"/> JamesK89:</div>
 <blockquote>
 <p>It’s been while since I looked at the SDK code but if I’m not mistaken Valve’s character controller in Half-Life basically does manual collision detection against the world with a kinematic body attached for interaction with dynamic objects. I’m thinking it may be the only way to get the best of both worlds if Bullet is that terrible at this.</p>
 </blockquote>
@@ -108,7 +108,7 @@ In case you don’t know what collision margins are or how they behave, you have
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/enhex/40/81_1.png" width="20"/> Enhex:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/2a544a080a692659db243ae9ac8c57ef.png" width="20"/> Enhex:</div>
 <blockquote>
 <p>using a kinematic body won’t change any of the problems I mentioned.</p>
 </blockquote>
@@ -136,7 +136,7 @@ ConvexCast : Thats a bad idea either beacuse this way the character controller t
 <p>Here’s how i did it in Infested :</p>
 <p>I modified Urho’s existing character controller :</p>
 <ol>
-<li>Set Friction to 0.0f ! This will disable the ice-skate simulator <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/>
+<li>Set Friction to 0.0f ! This will disable the ice-skate simulator <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/>
 </li>
 </ol>
 <pre><code class="lang-auto"></code></pre>
@@ -227,7 +227,7 @@ if the half height of your character is 15 this value should be 18 (you can calc
 <p>Also there is a bit of trick that should be mentioned : you have to take into account the current linear velocity when apply jumping , because the jump height while going downhill or uphill will be different due to physisc engine (To achieve the same jump height bigger force is needed when the character is going downwards and smaller if going upwards. Use the current linear velocity to calculate te required force).</p>
 <p>PS : There’s a lot of variables you have to tweak to have good result the forces , timers , dimensions , mass , etc. But i suggest to have one unique scalar variable that can change everything.<br/>
 calculate everything for characterScale = 1.0f; if your set thin value to 2.0f everything will  be recalculated (forces masses sizes etc).So you don’t need additional code to handle different size enemies/players.</p>
-<p>Stairs and slopes… the Phiscs Engines’ worst enemies <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/> So instead of writing some code to handle these situations i suggest to use some hidden helper meshes as i did<br/>
+<p>Stairs and slopes… the Phiscs Engines’ worst enemies <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/> So instead of writing some code to handle these situations i suggest to use some hidden helper meshes as i did<br/>
 Wrong Geometry : you have to plan your levels wisely ! No matter how professional  your character controller is , if the level geometry is wrong it will stuck in walls , narrow streets , invalid polygons etc.</p>
 <p>Don’t hesitate to ask if you need further help<br/>
 Regards</p>
@@ -248,7 +248,7 @@ What I meant was doing the majority of collision detections yourself <span class
 <aside class="quote no-group" data-username="Dave82">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/dave82/40/2369_2.png" width="20"/> Dave82:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/39fd1aeff01d89e7279fa956666af00e.png" width="20"/> Dave82:</div>
 <blockquote>
 <p>Kinematic Controller : It’s a bad idea , since the interaction withe the physics world won’t work properly and you will need workarounds which is a bad thing i think.<br/>
 ConvexCast : Thats a bad idea either beacuse this way the character controller tries to solve collision detection externally , and you will need hell of a lot work to get things working (manual force calculations , contact manual manifold sorting etc) and still you will have problems.</p>
@@ -256,7 +256,7 @@ ConvexCast : Thats a bad idea either beacuse this way the character controller t
 </aside>
 <p>That’s bad advice. JamesK89 mentioned he wants something like quake-based controllers and those have auto stair stepping.<br/>
 Just moving around a rigid body is trivial, but to implement something that can step over stairs is impossible using a rigid body because:<br/>
-<img alt="" height="400" src="http://i.imgur.com/Ja8IoDL.png" width="640"/><br/>
+<img alt="" height="400" src="../../../images2/091d717cb538f99d411bbf667446a7fa.png" width="640"/><br/>
 Note that Bullet can’t add time on individual bodies so you can’t split up the movement.<br/>
 The only way to achieve that is with sweeps (AKA convextCasts in urho).<br/>
 The common “workaround” is using capsule shapes, but you’ll still have a bump that will kill the player’s velocity, it’s far inferior solution.</p>
@@ -274,7 +274,7 @@ With this limitation a simple character controller will be enough.</p>
           <div class="user_name">Zaroio</div>
           <div class="post_content">
 <p>To cimb a stair user a Kinematic Body and and a leg (raycast downward). Use a Kinematic Body, it will give you more controll</p>
-<p><img alt="" height="" src="http://s2.postimg.org/cfwiq8fdl/lol.png" width=""/></p>
+<p><img alt="" height="" src="../../../images2/1ef8dc7548cf00bcf77bcb598f5e9e75.png" width=""/></p>
           </div>
         </div>
       </div>
@@ -313,7 +313,7 @@ With this limitation a simple character controller will be enough.</p>
 <aside class="quote no-group" data-username="Zaroio">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/zaroio/40/1839_2.png" width="20"/> Zaroio:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/abbe4d384a5a9ff28736062c879b1fb3.png" width="20"/> Zaroio:</div>
 <blockquote>
 <p>To cimb a stair user a Kinematic Body and and a leg (raycast downward). Use a Kinematic Body, it will give you more controll</p>
 </blockquote>
@@ -345,12 +345,12 @@ With this limitation a simple character controller will be enough.</p>
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/jamesk89/40/1073_1.png" width="20"/> JamesK89:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/2a366ce58feb7fa4a07f65950218f4d0.png" width="20"/> JamesK89:</div>
 <blockquote>
 <p>Oh dear what can of worms have I opened?</p>
 </blockquote>
 </aside>
-<p>No worry. So far, the gentlemen in this thread are well behaved. I will be watching you  <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=5" title=":wink:"/></p>
+<p>No worry. So far, the gentlemen in this thread are well behaved. I will be watching you  <img alt=":wink:" class="emoji" src="../../../images2/95940790c23d98635b2a6d3f22657158.png" title=":wink:"/></p>
           </div>
         </div>
       </div>
@@ -365,14 +365,14 @@ With this limitation a simple character controller will be enough.</p>
 <aside class="quote no-group" data-username="Enhex">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/enhex/40/81_2.png" width="20"/> Enhex:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/2c165096ad375255e0c52a6a81137cd8.png" width="20"/> Enhex:</div>
 <blockquote>
 <p>[quote=“Zaroio”]To cimb a stair user a Kinematic Body and and a leg (raycast downward). Use a Kinematic Body, it will give you more controll</p>
 </blockquote>
 </aside>
 <p>Raycasting will fail to detect ground if the character stands above a gap, or when you don’t stand directly above the higher platform. It has to be a sweep test or a ghost object.[/quote]</p>
 <p>Or more raycasts, like Lemma did: <a href="http://etodd.io/2015/04/03/poor-mans-character-controller/" rel="nofollow noopener">etodd.io/2015/04/03/poor-mans-ch … ontroller/</a></p>
-<p><div class="lightbox-wrapper"><a class="lightbox" href="http://etodd.io/assets/SuQjLaQ.png" rel="nofollow noopener" title=""><img alt="" height="388" src="http://etodd.io/assets/SuQjLaQ.png" width="690"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">960×540</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="http://etodd.io/assets/SuQjLaQ.png" rel="nofollow noopener" title=""><img alt="" height="388" src="../../../images2/e0cc05a7c0ab301b365974f9b31142b3.png" width="690"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">960×540</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
           </div>
         </div>
       </div>
@@ -384,7 +384,7 @@ With this limitation a simple character controller will be enough.</p>
         <div class="post">
           <div class="user_name">Dave82</div>
           <div class="post_content">
-<p>I still can’t get why is everyone against my sphere cast solution ?  <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/></p>
+<p>I still can’t get why is everyone against my sphere cast solution ?  <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/></p>
           </div>
         </div>
       </div>
@@ -398,25 +398,25 @@ With this limitation a simple character controller will be enough.</p>
           <div class="post_content">
 <p>[quote=“Bananaft”]<br/>
 Or more raycasts, like Lemma did: <a href="http://etodd.io/2015/04/03/poor-mans-character-controller/" rel="nofollow noopener">etodd.io/2015/04/03/poor-mans-ch … ontroller/</a></p>
-<p><div class="lightbox-wrapper"><a class="lightbox" href="http://etodd.io/assets/SuQjLaQ.png" rel="nofollow noopener" title=""><img alt="" height="388" src="http://etodd.io/assets/SuQjLaQ.png" width="690"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">960×540</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div>[/quote]</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="http://etodd.io/assets/SuQjLaQ.png" rel="nofollow noopener" title=""><img alt="" height="388" src="../../../images2/e0cc05a7c0ab301b365974f9b31142b3.png" width="690"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">960×540</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div>[/quote]</p>
 <p>You’re just bolting hacks upon hacks.<br/>
 It will always break when you only have ground where there’s no raycasts, and unless you’re going to do infinite raycasts it isn’t going to cover all cases.<br/>
 Insisting on not learning more advanced concepts has no advantages, just learn how to use sweep tests or ghost objects (AKA trigger in urho).</p>
 <aside class="quote no-group" data-username="Dave82">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/dave82/40/2369_2.png" width="20"/> Dave82:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/39fd1aeff01d89e7279fa956666af00e.png" width="20"/> Dave82:</div>
 <blockquote>
-<p>I still can’t get why is everyone against my sphere cast solution ?  <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=9" title=":smiley:"/></p>
+<p>I still can’t get why is everyone against my sphere cast solution ?  <img alt=":smiley:" class="emoji" src="../../../images2/94dd27e9c6c243335d29229e02e34e9d.png" title=":smiley:"/></p>
 </blockquote>
 </aside>
 <p>Sphere cast is the same as a sweep test. It’s fine when you’re using capsule/sphere body because it’s a specific shape.</p>
 <p>Basically it’s adding “leg extra length” at the bottom of the body and staying “step up when something touches the leg at bottom of the body”.<br/>
 You can do the same by using a trigger body and getting the highest contact point.<br/>
 This method could actually work if you don’t have low ceilings (Unless there are more failure cases I didn’t think about):<br/>
-<img alt="" height="400" src="http://i.imgur.com/1BHKj7O.png" width="640"/></p>
+<img alt="" height="400" src="../../../images2/1461a7664ef1dac738db916fa0c61c01.png" width="640"/></p>
 <p>That also means that you can’t reuse the body for hit detection, in an shooter game for example, because the rigid body hovers over the ground. So an additional body is required.</p>
-<p>Advanced character controllers are difficult! And you ain’t gonna top John Carmack’s Quake method that easily  <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=9" title=":wink:"/> (which isn’t general enough to handle Bullet’s collision margin roundness which makes it even more difficult)</p>
+<p>Advanced character controllers are difficult! And you ain’t gonna top John Carmack’s Quake method that easily  <img alt=":wink:" class="emoji" src="../../../images2/537e3e653d641df5b9858e75faf3862a.png" title=":wink:"/> (which isn’t general enough to handle Bullet’s collision margin roundness which makes it even more difficult)</p>
           </div>
         </div>
       </div>
@@ -443,7 +443,7 @@ This method could actually work if you don’t have low ceilings (Unless there a
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/enhex/40/81_1.png" width="20"/> Enhex:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/2a544a080a692659db243ae9ac8c57ef.png" width="20"/> Enhex:</div>
 <blockquote>
 <p>Actually if the leg is a spring, this could work since the body will end up in a crouching position.</p>
 </blockquote>
@@ -487,7 +487,7 @@ This method could actually work if you don’t have low ceilings (Unless there a
           <div class="user_name">JamesK89</div>
           <div class="post_content">
 <p>Here is a novel approach from an excerpt in the book, which I highly recommend; Game Coding Complete Third Edition on Page 538:<br/>
-<a data-bbcode="true" href="http://postimg.org/image/fkysr1dm1/" rel="nofollow noopener"><img alt="" height="" src="http://s4.postimg.org/fkysr1dm1/Excerpt.jpg" width=""/></a></p>
+<a data-bbcode="true" href="http://postimg.org/image/fkysr1dm1/" rel="nofollow noopener"><img alt="" height="" src="../../../images2/8dec906f6d6fd9da310b6909f84950dc.jpg" width=""/></a></p>
 <p>It seems like it would work for a variety of environments. The purposed character hull looks like a <a data-bbcode="true" href="https://en.wikipedia.org/wiki/Bacteriophage" rel="nofollow noopener">Bacteriophage virus</a> to me.</p>
           </div>
         </div>
@@ -503,7 +503,7 @@ This method could actually work if you don’t have low ceilings (Unless there a
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/jamesk89/40/1073_1.png" width="20"/> JamesK89:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/2a366ce58feb7fa4a07f65950218f4d0.png" width="20"/> JamesK89:</div>
 <blockquote>
 <p>The purposed character hull looks like a <a data-bbcode="true" href="https://en.wikipedia.org/wiki/Bacteriophage" rel="nofollow noopener">Bacteriophage virus</a> to me.</p>
 </blockquote>
@@ -562,13 +562,13 @@ From what I can tell from a preliminary standpoint is that it seems to manually 
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/enhex/40/81_1.png" width="20"/> Enhex:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/2a544a080a692659db243ae9ac8c57ef.png" width="20"/> Enhex:</div>
 <blockquote>
 <p>I implemented convex cast suspension based dynamic controller and it works fine. Though it complicates interactions since the rigidbody doesn’t span all the way to the ground so another body is required, and a way to attach it to the controller body without parenting it if u want to detect collision with inactive objects like pickups (fixed constraint may work for it).</p>
 </blockquote>
 </aside>
 <p>Sorrey for reviving this again…</p>
-<p>I’ve lost my whole hd… realy want to kill myself know  <img alt=":laughing:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/laughing.png?v=5" title=":laughing:"/></p>
+<p>I’ve lost my whole hd… realy want to kill myself know  <img alt=":laughing:" class="emoji" src="../../../images2/f1b3f4dd9f845d1069864c322071dffe.png" title=":laughing:"/></p>
 <p>[code]    btCapsuleShape foot(0.4f, 0.5f);</p>
 <pre><code>PhysicsRaycastResult ray;
 
@@ -690,7 +690,7 @@ body-&gt;SetCollisionMask(storeCollisionMask);
         <div class="post">
           <div class="user_name">Zaroio</div>
           <div class="post_content">
-<p>Thank you very very much my friend.  <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/></p>
+<p>Thank you very very much my friend.  <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/></p>
           </div>
         </div>
       </div>
@@ -756,7 +756,7 @@ E.g. try to move RB rapidly over heightmap/trimesh geometry. You may notice that
         <div class="post">
           <div class="user_name">rasteron</div>
           <div class="post_content">
-<p>Looking good! <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/></p>
+<p>Looking good! <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/></p>
           </div>
         </div>
       </div>
@@ -985,7 +985,7 @@ I haven’t tried his fps controller but have seen a youtube vid of someone usin
           <div class="user_name">darkirk</div>
           <div class="post_content">
 <p>I’ve noticed this problem when doing crouch/prone and other capsule changes:</p>
-<p><img height="416" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/1X/0f49bba670ead0b437b062a19b3f8a2cddbb6e2f.png" width="612"/></p>
+<p><img height="416" src="../../../images2/eb9f8e7e7fa7afbdba24e1ca6d14b9a2.png" width="612"/></p>
 <p>Anyone else?</p>
           </div>
         </div>

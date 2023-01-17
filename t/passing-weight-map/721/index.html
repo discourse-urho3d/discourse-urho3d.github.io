@@ -57,7 +57,7 @@
           <div class="post_content">
 <p>For example,</p>
 <p>The terrain procedual created this terrain using <span class="bbcode-b"> terrain-&gt;GenerateProceduralHeightMap(terrainrule);</span> that I can further use <span class="bbcode-b">producedHeightMapImage -&gt; SetData(terrain -&gt; GetData());</span></p>
-<p><div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/cIS0VQt.png" rel="nofollow noopener" title=""><img alt="" height="500" src="http://i.imgur.com/cIS0VQt.png" width="500"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">1024×1024</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/cIS0VQt.png" rel="nofollow noopener" title=""><img alt="" height="500" src="../../../images2/db4d384ac4ecb96474b4d22bc872ec02.png" width="500"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">1024×1024</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
 <p>I can now pass that information maybe to a texture to properly assign texture based on heightmap and many other things.</p>
 <p>If I place a charater at spot 0,0,0 and the terrain is created at 0 0. Does the player 0,0 lay center of the heightmap image??</p>
           </div>
@@ -175,9 +175,9 @@ I tried this approach
 <p>Using the heightmap image for your blendmap is unlikely to produce any interesting results. The blend map is used to determine how the 3 different detail textures are blended together, with each color component acting as a weighting factor for one of the textures. If the blend image is a greyscale image, that means each color component is the same value as the others. The weights are balanced so that they add up to 1 in the shader, so any greyscale value is going to result in equal contributions from all 3 detail textures, producing the same 1/3, 1/3, 1/3 blend all across the terrain.</p>
 <p>I am unsure exactly what you are trying to accomplish by using the heightmap texture directly. Rather, you will probably want to use the texture as part of a different process that analyzes each height sample and calculates relevant blend factors to construct a blend texture. For example, you could use the elevation to lerp between Color(1,0,0) and Color(0,1,0). This would cause the terrain to gradually fade from the first detail texture to the second based on height. Or you could use the calculated normal of the terrain at a given point, take the dot product with the vector (0,1,0) and use the result as a “steepness” factor. Test steepness against some arbitrarily chose threshold and blend from non-cliff to cliff terrain types. This is a nice filter to apply to automatically assign cliff detail to steep areas.</p>
 <p>Edit: For example, consider this screen grab from my fledgling terrain-editor-in-progress:<br/>
-<div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/b7c4vy2.png" rel="nofollow noopener" title=""><img alt="" height="388" src="http://i.imgur.com/b7c4vy2.png" width="690"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">1024×576</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/b7c4vy2.png" rel="nofollow noopener" title=""><img alt="" height="388" src="../../../images2/192665fd04676e8da8a5fadc6ff50658.png" width="690"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">1024×576</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
 <p>The associated blend texture for that terrain looks like:<br/>
-<div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/gMtDB8B.png" rel="nofollow noopener" title=""><img alt="" height="500" src="http://i.imgur.com/gMtDB8B.png" width="500"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">512×512</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/gMtDB8B.png" rel="nofollow noopener" title=""><img alt="" height="500" src="../../../images2/fefb4374770fbcc1b6dd9c34e13984bb.png" width="500"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">512×512</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
 <p>See how the different terrain types are demarcated in the blend texture by the various color components? Where there’s red, there’s dirt. Green maps to grass, and blue to stone.</p>
           </div>
         </div>
@@ -206,7 +206,7 @@ I tried this approach
         <div class="post">
           <div class="user_name">JTippetts</div>
           <div class="post_content">
-<p>It’s not over-complicated. If anything, it’s a little under-complicated due to not using the alpha channel for a 4th terrain type. Even more complicated would be to allow a second blend texture to support up to 8 terrain types. <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/></p>
+<p>It’s not over-complicated. If anything, it’s a little under-complicated due to not using the alpha channel for a 4th terrain type. Even more complicated would be to allow a second blend texture to support up to 8 terrain types. <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/></p>
 <p>The issue with using thresholds is that you don’t have sufficient control over terrain placement. If you assign, say, dirt to (0,0.3), grass to (0.3,0.6) and stone to (0.6,1) then it becomes impossible to have a smooth blend directly from dirt to stone, because any interpolation between dirt and stone is going to cross over grass territory, resulting in a narrow band of grass-ish blend in-between. Using a weighted blend, you can easily blend between dirt ® and stone (B) simply by using 0 for the grass (G) color component. IMO, thresholds are only suitable for those myriad terrain “demos” you see all over youtube, and any “serious” terrain implementation is going to implement full blending or splatting. Because, really, how often in real life do you see terrain determined solely by elevation above sea level? Never, that’s how often. It has an influence, sure, but it’s not the sole factor.</p>
           </div>
         </div>
@@ -219,7 +219,7 @@ I tried this approach
         <div class="post">
           <div class="user_name">vivienneanthony</div>
           <div class="post_content">
-<p>[quote=“JTippetts”]It’s not over-complicated. If anything, it’s a little under-complicated due to not using the alpha channel for a 4th terrain type. Even more complicated would be to allow a second blend texture to support up to 8 terrain types. <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/></p>
+<p>[quote=“JTippetts”]It’s not over-complicated. If anything, it’s a little under-complicated due to not using the alpha channel for a 4th terrain type. Even more complicated would be to allow a second blend texture to support up to 8 terrain types. <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/></p>
 <p>The issue with using thresholds is that you don’t have sufficient control over terrain placement. If you assign, say, dirt to (0,0.3), grass to (0.3,0.6) and stone to (0.6,1) then it becomes impossible to have a smooth blend directly from dirt to stone, because any interpolation between dirt and stone is going to cross over grass territory, resulting in a narrow band of grass-ish blend in-between. Using a weighted blend, you can easily blend between dirt ® and stone (B) simply by using 0 for the grass (G) color component. IMO, thresholds are only suitable for those myriad terrain “demos” you see all over youtube, and any “serious” terrain implementation is going to implement full blending or splatting. Because, really, how often in real life do you see terrain determined solely by elevation above sea level? Never, that’s how often. It has an influence, sure, but it’s not the sole factor.[/quote]</p>
 <p>I was going write a response to that but it’s too early for me to have a brain freeze.  Realistic texture on a procedural ground would require a combination of texture splatting, thresholds, elevation and steepness determination (with probably several) channels of mixing.</p>
 <p>Yea. That will be a project. It would have to be implemented in a Terrain or World(Something I have) function.</p>
@@ -234,7 +234,7 @@ I tried this approach
         <div class="post">
           <div class="user_name">vivienneanthony</div>
           <div class="post_content">
-<p>[quote=“JTippetts”]It’s not over-complicated. If anything, it’s a little under-complicated due to not using the alpha channel for a 4th terrain type. Even more complicated would be to allow a second blend texture to support up to 8 terrain types. <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/></p>
+<p>[quote=“JTippetts”]It’s not over-complicated. If anything, it’s a little under-complicated due to not using the alpha channel for a 4th terrain type. Even more complicated would be to allow a second blend texture to support up to 8 terrain types. <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/></p>
 <p>The issue with using thresholds is that you don’t have sufficient control over terrain placement. If you assign, say, dirt to (0,0.3), grass to (0.3,0.6) and stone to (0.6,1) then it becomes impossible to have a smooth blend directly from dirt to stone, because any interpolation between dirt and stone is going to cross over grass territory, resulting in a narrow band of grass-ish blend in-between. Using a weighted blend, you can easily blend between dirt ® and stone (B) simply by using 0 for the grass (G) color component. IMO, thresholds are only suitable for those myriad terrain “demos” you see all over youtube, and any “serious” terrain implementation is going to implement full blending or splatting. Because, really, how often in real life do you see terrain determined solely by elevation above sea level? Never, that’s how often. It has an influence, sure, but it’s not the sole factor.[/quote]</p>
 <p>I was basing my original idea from something lik</p>
 <p><a href="http://www.cprogramming.com/discussionarticles/texture_generation.html#whatis" rel="nofollow noopener">cprogramming.com/discussiona … tml#whatis</a></p>
@@ -289,7 +289,7 @@ Method 1</span></p>
 	
 	
 [/code]
-<p>[quote=“JTippetts”]It’s not over-complicated. If anything, it’s a little under-complicated due to not using the alpha channel for a 4th terrain type. Even more complicated would be to allow a second blend texture to support up to 8 terrain types. <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/></p>
+<p>[quote=“JTippetts”]It’s not over-complicated. If anything, it’s a little under-complicated due to not using the alpha channel for a 4th terrain type. Even more complicated would be to allow a second blend texture to support up to 8 terrain types. <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/></p>
 <p>The issue with using thresholds is that you don’t have sufficient control over terrain placement. If you assign, say, dirt to (0,0.3), grass to (0.3,0.6) and stone to (0.6,1) then it becomes impossible to have a smooth blend directly from dirt to stone, because any interpolation between dirt and stone is going to cross over grass territory, resulting in a narrow band of grass-ish blend in-between. Using a weighted blend, you can easily blend between dirt ® and stone (B) simply by using 0 for the grass (G) color component. IMO, thresholds are only suitable for those myriad terrain “demos” you see all over youtube, and any “serious” terrain implementation is going to implement full blending or splatting. Because, really, how often in real life do you see terrain determined solely by elevation above sea level? Never, that’s how often. It has an influence, sure, but it’s not the sole factor.[/quote]</p>
           </div>
         </div>
@@ -317,7 +317,7 @@ Method 1</span></p>
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/jtippetts/40/357_1.png" width="20"/> JTippetts:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/fa8323cd130f703ad0982cec8eee46b7.png" width="20"/> JTippetts:</div>
 <blockquote>
 <p>In Method 1 you’re using the DiffAlpha technique instead of the TerrainBlend technique so, yeah, you only get one texture…</p>
 </blockquote>
@@ -349,7 +349,7 @@ Method 1</span></p>
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/jtippetts/40/357_1.png" width="20"/> JTippetts:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/fa8323cd130f703ad0982cec8eee46b7.png" width="20"/> JTippetts:</div>
 <blockquote>
 <p>What’s wrong with using TerrainBlend?</p>
 </blockquote>
@@ -371,7 +371,7 @@ Method 1</span></p>
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/vivienneanthony/40/942_1.png" width="20"/> vivienneanthony:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/1508150f71fcef53ebe1d65b4e91fa85.png" width="20"/> vivienneanthony:</div>
 <blockquote>
 <p>[quote=“JTippetts”]What’s wrong with using TerrainBlend?</p>
 </blockquote>

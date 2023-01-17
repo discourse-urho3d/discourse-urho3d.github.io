@@ -120,12 +120,12 @@ Alexander</p>
           <div class="post_content">
 <p>Hi again,</p>
 <p>Thank you for your suggestions on parameters for valgrind.<br/>
-We did get valgrind running eventually, and it showed some memory leaks but nothing alarming,if that is a valid statement  <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/></p>
+We did get valgrind running eventually, and it showed some memory leaks but nothing alarming,if that is a valid statement  <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/></p>
 <p>We also got the system to make core dumps, and from those we have the line number on where it happens.<br/>
 It is at: <code>GetBaseBatches
 Source/Urho3D/Graphics/View.cpp:1182</code><br/>
 I understand the concept of “all bets are off” when memory leaks start to be a factor, but even so, i find it suspicious that the crashes keep apearing in same place in the code. Can the affected code be extra sencitive?<br/>
-We have looked at the code in question, and it seems to be copying some objects from one arry to onther. And most of the time it succeds…  <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=5" title=":wink:"/>  But then it suddenly crashes instead.</p>
+We have looked at the code in question, and it seems to be copying some objects from one arry to onther. And most of the time it succeds…  <img alt=":wink:" class="emoji" src="../../../images2/95940790c23d98635b2a6d3f22657158.png" title=":wink:"/>  But then it suddenly crashes instead.</p>
 <p>Is there something we can do to safeguard the problematic code section?</p>
 <p>Here is information from the core dump. Perhaps it can give you some clue.<br/>
 Or is there some other info we could gather that might be helpful in solving this?</p>

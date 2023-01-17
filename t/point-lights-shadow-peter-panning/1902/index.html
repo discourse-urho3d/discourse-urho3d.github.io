@@ -35,9 +35,9 @@
 <p>I noticed that point light’s shadow has less peter panning the further away it is from the end of the light’s range.<br/>
 That means that if I have shadow casting point lights with huge range, I can avoid peter panning, but that’ really expensive since they won’t be culled(?).</p>
 <p>100m range, light slipping under the door:<br/>
-<div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/Xzip8Cp.jpg" rel="nofollow noopener" title=""><img alt="" height="500" src="http://i.imgur.com/Xzip8Cp.jpg" width="666"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">800×600</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div><br/>
+<div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/Xzip8Cp.jpg" rel="nofollow noopener" title=""><img alt="" height="500" src="../../../images2/96979a3006f2960970a0752c25b1c4d0.jpg" width="666"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">800×600</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div><br/>
 300m range, same light, more accurate shadows:<br/>
-<div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/KABmUa6.jpg" rel="nofollow noopener" title=""><img alt="" height="500" src="http://i.imgur.com/KABmUa6.jpg" width="666"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">800×600</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/KABmUa6.jpg" rel="nofollow noopener" title=""><img alt="" height="500" src="../../../images2/61380b0047abd37f89151b113dc9b355.jpg" width="666"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">800×600</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
 <p>Is there a way to avoid peter panning without huge light range?</p>
           </div>
         </div>
@@ -83,7 +83,7 @@ shadowCascade is for directional light, I’m using point light.</p>
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/enhex/40/81_1.png" width="20"/> Enhex:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/2a544a080a692659db243ae9ac8c57ef.png" width="20"/> Enhex:</div>
 <blockquote>
 <p>ShadowBias is for self shadowing.</p>
 </blockquote>
@@ -119,7 +119,7 @@ static const float DEFAULT_SLOPESCALEDBIAS = 0.5f;</code></pre>
 static const float DEFAULT_CONSTANTBIAS = 0.0002f;
 static const float DEFAULT_SLOPESCALEDBIAS = 0.5f;
 </code>[/quote]</p>
-<p>set bias to (0, 0.5), this can cause artifacts, but can solve problem <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/></p>
+<p>set bias to (0, 0.5), this can cause artifacts, but can solve problem <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/></p>
           </div>
         </div>
       </div>

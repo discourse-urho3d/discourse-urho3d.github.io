@@ -151,12 +151,12 @@ I’m using the git master branch on 64-bit Linux.</p>
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/weitjong/40/4_1.png" width="20"/> weitjong:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/5dc21abd616a69d8b82c2d56dfa657a5.png" width="20"/> weitjong:</div>
 <blockquote>
 <p>Our current Lua/C++ binding does not perform reference counting like AngelScript binding does, so for now you will have to take care yourself to manage the life cycle of your objects correctly.</p>
 </blockquote>
 </aside>
-<p><img alt=":frowning:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/frowning.png?v=5" title=":frowning:"/>  That is too bad.  I while it would be nice if Lua integration was finished… I think the other features currently being worked on are much more important though.</p>
+<p><img alt=":frowning:" class="emoji" src="../../../images2/2506cac83464f3f86e257fa414340d4c.png" title=":frowning:"/>  That is too bad.  I while it would be nice if Lua integration was finished… I think the other features currently being worked on are much more important though.</p>
 <p>So magnetoid I guess you could create a wrapper table that keeps track of if the object is still valid…  You could do this nicely using metatables: <a data-bbcode="true" href="http://lua-users.org/wiki/MetamethodsTutorial" rel="nofollow noopener">http://lua-users.org/wiki/MetamethodsTutorial</a></p>
           </div>
         </div>
@@ -201,7 +201,7 @@ global_version_number = global_version_number + 1</code></pre>
 <aside class="quote no-group" data-username="Magnetoid">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/m/958977/40.png" width="20"/> Magnetoid:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/07f0f5fe5e40f58c119a00e258cce3de.png" width="20"/> Magnetoid:</div>
 <blockquote>
 <p>How hard would it be to change the Node* to a SharedPtr in the lua bindings? I imagine it’s more complicated than simply changing a few pointers. What kind of issues might I run into if I tried this?</p>
 </blockquote>
@@ -216,7 +216,7 @@ void Foo() {}<br/>
 };</p>
 <p>auto testing = SharedPtr( new Test() );[/code]</p>
 <p>This means that SharedPtr accesses the object itself to determine the ref count number of the object.  If the object is deleted this memory can now have any value…</p>
-<p>In other words… it won’t work. <img alt=":frowning:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/frowning.png?v=10" title=":frowning:"/></p>
+<p>In other words… it won’t work. <img alt=":frowning:" class="emoji" src="../../../images2/41f1d95c00f6f4a61587f9ead9747a65.png" title=":frowning:"/></p>
           </div>
         </div>
       </div>
@@ -243,12 +243,12 @@ void Foo() {}<br/>
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/weitjong/40/4_1.png" width="20"/> weitjong:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/5dc21abd616a69d8b82c2d56dfa657a5.png" width="20"/> weitjong:</div>
 <blockquote>
 <p> Lua does not know how to increase the reference count on the object then the pointer becomes bad when the child node is removed.</p>
 </blockquote>
 </aside>
-<p>Sorry this really isn’t that important but…  <img alt=":unamused:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/unamused.png?v=5" title=":unamused:"/>  Lua doesn’t reference count at all for garbage collection it uses a much more advanced method but you point still applies.  <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=5" title=":wink:"/></p>
+<p>Sorry this really isn’t that important but…  <img alt=":unamused:" class="emoji" src="../../../images2/21382c100a852239caa7667da5bafe68.png" title=":unamused:"/>  Lua doesn’t reference count at all for garbage collection it uses a much more advanced method but you point still applies.  <img alt=":wink:" class="emoji" src="../../../images2/95940790c23d98635b2a6d3f22657158.png" title=":wink:"/></p>
           </div>
         </div>
       </div>
@@ -263,7 +263,7 @@ void Foo() {}<br/>
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/weitjong/40/4_1.png" width="20"/> weitjong:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/5dc21abd616a69d8b82c2d56dfa657a5.png" width="20"/> weitjong:</div>
 <blockquote>
 <p>To the OP, I think you are pretty much asking for trouble yourself by trying to use the node object in the later part of your code after you have explicitly call node:Remove() method. … If you use node id in the table then although it is true that it won’t cause a segfault by itself when the id becomes bad but for sure scene_:GetNode(id) method would return null in the later part of the code when the node originally associated to that id has already been destroyed. I don’t think there is any easier way for you to safely get hold of a child node in this particular case because there is no way you can increase its reference count in Lua at the moment (until someone refactor our current Lua/C++ binding to move away from tolua++). If you really need the node object again after it has been “removed” from the scene then perhaps you can workaround the problem currently by simply not calling node:Remove() method, but instead by calling node:SetParent(deadNodeRoot) where deadNodeRoot is the parent of all dead node. … </p>
 </blockquote>
@@ -289,12 +289,12 @@ end</code></pre>
 <aside class="quote no-group" data-username="Magnetoid">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/m/958977/40.png" width="20"/> Magnetoid:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/07f0f5fe5e40f58c119a00e258cce3de.png" width="20"/> Magnetoid:</div>
 <blockquote>
 <p><span class="mention">@GoogleBot</span>, I was referring to Urho3D’s SharedPtr. I don’t understand why that can’t work, since it’s the same method used by the rest of the engine. If Lua held a SharedPtr, then the node and its reference count must be valid as long as that is alive. To put it another way - instead of using a SharedPtr, just increment the node’s reference value when it gets passed to lua and decrement it when lua calls the __gc metamethod.</p>
 </blockquote>
 </aside>
-<p>Sorry I am bad a communicating clearly…  <img alt=":confused:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/confused.png?v=10" title=":confused:"/>   The reason why it won’t is because the reference count number is stored in the node itself <em>not</em> in the SharedPtr.</p>
+<p>Sorry I am bad a communicating clearly…  <img alt=":confused:" class="emoji" src="../../../images2/256f55d6dee778d12c9ee3bb598de2b8.png" title=":confused:"/>   The reason why it won’t is because the reference count number is stored in the node itself <em>not</em> in the SharedPtr.</p>
 <p>All nodes and objects derive from RefCount:<br/>
 <a data-bbcode="true" href="https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Container/RefCounted.h#L47" rel="noopener nofollow ugc">https://github.com/urho3d/Urho3D/blob/master/Source/Urho3D/Container/RefCounted.h#L47</a></p>
           </div>
@@ -326,7 +326,7 @@ end</code></pre>
 <p><code>local node = scene_:GetNode(id)
 local another_ref = node</code><br/>
 Unless the Lua assignment operator and the whole Lua scripting environment also supports this concept, it is rather pointless just fixing the bindings. And unfortunately, last time I check both AddRef() and ReleaseRef() are not being exposed to scripting API, so you cannot get hold of an object and then manually increase/decrease the reference count in Lua.</p>
-<p>If you search our forums or our GitHub issues you should be able to find there were numerous previous discussions on how to fix this. However, discussing it is one thing and actually implementing it is another thing.  <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=5" title=":wink:"/></p>
+<p>If you search our forums or our GitHub issues you should be able to find there were numerous previous discussions on how to fix this. However, discussing it is one thing and actually implementing it is another thing.  <img alt=":wink:" class="emoji" src="../../../images2/95940790c23d98635b2a6d3f22657158.png" title=":wink:"/></p>
           </div>
         </div>
       </div>

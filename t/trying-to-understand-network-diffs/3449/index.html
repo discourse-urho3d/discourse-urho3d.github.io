@@ -63,7 +63,7 @@
 Everything must happen in exactly the same way for all players. Which is very much doable (even for RNG if you use same seeds) - but you have to plan for it and design your code accordingly.</p>
 <p>And if everything happens in the same way, all data you need to send around is user input.</p>
 <p>Of course, that completely circumvents any (or most) need of any Serializable for most game objects, reducing the data sent to an absolute minimum.</p>
-<p>Personally, I find that approach easier than having to worry about attribute weight of every single object. Plus, your code gets leaner as all your game objects have one less layer to worry about. You “just” have to make sure your simulation is “airtight”. But YMMV <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=5" title=":wink:"/></p>
+<p>Personally, I find that approach easier than having to worry about attribute weight of every single object. Plus, your code gets leaner as all your game objects have one less layer to worry about. You “just” have to make sure your simulation is “airtight”. But YMMV <img alt=":wink:" class="emoji" src="../../../images2/95940790c23d98635b2a6d3f22657158.png" title=":wink:"/></p>
           </div>
         </div>
       </div>
@@ -91,7 +91,7 @@ Everything must happen in exactly the same way for all players. Which is very mu
 <aside class="quote" data-full="true" data-post="4" data-topic="3449">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/thecomet/40/142_1.png" width="20"/> TheComet:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/12a1dc2eccbee0e3555e7cc3e716f46e.png" width="20"/> TheComet:</div>
 <blockquote>
 <p>Ideally this would be the way to go, agreed. However, my game uses physics simulations to interact with the tiles, and Bullet is inherently non-deterministic.</p>
 </blockquote>
@@ -112,7 +112,7 @@ I don’t think that is easily doable due to floating point shenanigans.</p>
 <aside class="quote" data-post="5" data-topic="3449">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/thesheeep/40/74_1.png" width="20"/> TheSHEEEP:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/6426f7dffe1147b9888a7457752fca5d.png" width="20"/> TheSHEEEP:</div>
 <blockquote>
 <p>Yeah, that is the largest drawback of Bullet. If you really need to use physics for game logic, I don’t even know if there is a deterministic physics engine…</p>
 </blockquote>

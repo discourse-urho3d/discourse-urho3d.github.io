@@ -44,7 +44,7 @@
         <div class="post">
           <div class="user_name">Leith</div>
           <div class="post_content">
-<p>Hi and welcome to the forum! <img alt=":confetti_ball:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/confetti_ball.png?v=9" title=":confetti_ball:"/></p>
+<p>Hi and welcome to the forum! <img alt=":confetti_ball:" class="emoji" src="../../../images2/8cc1133d965c492d26cc2ba425a80ea1.png" title=":confetti_ball:"/></p>
 <p>Showing and hiding the application window is a bit outside the scope of Urho3D, but we have access to Urho3D’s core and thirdparty api’s, so we can do almost anything, although working directly with Urho’s dependencies is not recommended in general, we can do it.<br/>
 Hopefully this gets you where you want to be (SDL can hide new windows on creation but I did not yet look into whether Urho allows us to specify window creation flags to control initial visibility).</p>
 <p>First, you need to initialize the engine as usual.</p>
@@ -70,13 +70,13 @@ SDL_ShowWindow(appwindow);</code></pre>
 <aside class="quote no-group" data-post="2" data-topic="5124" data-username="Leith">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/leith/40/2384_2.png" width="20"/> Leith:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/344277caf39f87861709d8bd9d77ec6d.png" width="20"/> Leith:</div>
 <blockquote>
 <p>The main reason that showing/hiding the window is an issue, is when Urho is running on mobile devices - generally, minimizing an app window on a mobile actually pauses the app, and we need a different way to poll for a “wakeup” event, which is operating system dependent.</p>
 </blockquote>
 </aside>
 <p><span class="mention">@Leith</span> Are you familiar with <code>Engine::SetPauseMinimized(bool)</code>?</p>
-<p><span class="mention">@Hiovita</span> Welcome! <img alt=":confetti_ball:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/confetti_ball.png?v=10" title=":confetti_ball:"/> <img alt=":slightly_smiling_face:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slightly_smiling_face.png?v=10" title=":slightly_smiling_face:"/></p>
+<p><span class="mention">@Hiovita</span> Welcome! <img alt=":confetti_ball:" class="emoji" src="../../../images2/493e34d79be55d27b0c2a9cf4449024c.png" title=":confetti_ball:"/> <img alt=":slightly_smiling_face:" class="emoji" src="../../../images2/87e0a7daec339818bcddbf25ee57347b.png" title=":slightly_smiling_face:"/></p>
           </div>
         </div>
       </div>
@@ -91,7 +91,7 @@ SDL_ShowWindow(appwindow);</code></pre>
 <aside class="quote no-group" data-post="1" data-topic="5124" data-username="Hiovita">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/h/9fc348/40.png" width="20"/> Hiovita:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/355948e35a3ebfafe6a568bb946c418c.png" width="20"/> Hiovita:</div>
 <blockquote>
 <p>I have found no examples of how to pre-make the window.</p>
 </blockquote>

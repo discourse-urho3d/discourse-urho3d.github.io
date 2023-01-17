@@ -34,7 +34,7 @@
           <div class="post_content">
 <p>I wonder if you can help me with another related thing. I am not sure why light lights up wrong side of figures.</p>
 <p>My game field is at 0,0 - 10,20 (think 2d wall). Everything is at z=0 except for light and camera.<br/>
-<img alt="" height="433" src="https://i.imgur.com/o2hU1rD.png" width="470"/></p>
+<img alt="" height="433" src="../../../images2/59a3ec72ffffa8ace1343af76d467d9d.png" width="470"/></p>
 <p>This is how i place camera:</p>
 <pre><code class="lang-auto">    auto camera = _scene-&gt;GetChild("Camera");
     auto camera_object = camera-&gt;GetComponent&lt;Camera&gt;();
@@ -53,9 +53,9 @@
         light-&gt;SetFadeDistance(500);</code></p>
 <p>As i understand light ends up at (-30, 30, -15) which is above/to the left/bit in front of game field. That means figures should have their top-left faces lit.</p>
 <p>However:<br/>
-<img alt="" height="131" src="https://i.imgur.com/mQy3qv0.png" width="114"/></p>
+<img alt="" height="131" src="../../../images2/b7b12f1e13784d71d0c90a34e9f46ee8.png" width="114"/></p>
 <p>Placing the light on (30, -30, -15) gives desired result:<br/>
-<img alt="" height="140" src="https://i.imgur.com/z4rvTht.png" width="130"/></p>
+<img alt="" height="140" src="../../../images2/2c85bae6eb726b3518e6d3fa4d1f95d3.png" width="130"/></p>
 <p>Faces facing light get darker. What did i mess here up?</p>
           </div>
         </div>

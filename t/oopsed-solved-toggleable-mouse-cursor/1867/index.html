@@ -126,13 +126,13 @@ else
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/weitjong/40/4_1.png" width="20"/> weitjong:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/5dc21abd616a69d8b82c2d56dfa657a5.png" width="20"/> weitjong:</div>
 <blockquote>
 <p>I think hd_ is correct. The cursor is just like any UI-element, so setting the cursor visibility to false should hide the cursor without calling SetCursor(0). Also take note that like OS cursor, the software-rendered cursor will also attempt to return back to its so-called normal shape.</p>
 </blockquote>
 </aside>
 <p>Oh! I didn’t see that it’s a UIElement and has a SetVisible(bool). I thought the only “sane looking option” was input-&gt;SetMouseVisible(bool).<br/>
-No Idea how I missed that.  <img alt=":blush:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/blush.png?v=5" title=":blush:"/><br/>
+No Idea how I missed that.  <img alt=":blush:" class="emoji" src="../../../images2/f5e2a5ef6206a15962e2ec428f87e9a2.png" title=":blush:"/><br/>
 Now a switch function could look like:</p>
 <pre><code class="lang-auto">if(GetSubsystem&lt;Input&gt;()-&gt;GetMouseMode()==MM_RELATIVE)
 {

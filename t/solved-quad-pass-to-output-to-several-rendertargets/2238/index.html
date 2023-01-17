@@ -44,7 +44,7 @@
   gl_FragData[1] = vec4(diffColor.rgb, 1.7 );
   gl_FragData[2] = vec4(normal * 0.5 + 0.5, 1.0);
   gl_FragData[3] = vec4(vec3(0.5), 0.0);</code></pre>
-<p>This way it says “ERROR: Array index out of bounds”. If I remove everything but gl_FragData[0], it says nothing, but also renders nothing. <img alt=":frowning:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/frowning.png?v=5" title=":frowning:"/></p>
+<p>This way it says “ERROR: Array index out of bounds”. If I remove everything but gl_FragData[0], it says nothing, but also renders nothing. <img alt=":frowning:" class="emoji" src="../../../images2/2506cac83464f3f86e257fa414340d4c.png" title=":frowning:"/></p>
           </div>
         </div>
       </div>
@@ -135,7 +135,7 @@ out vec4 fragData[1];
 <p>Here is the picture. I hacked DeferredLight.glsl to output depth. There is a single plane in scene, and depth writen by my quad command is only visible on this plane.<br/>
 <a href="http://i.imgur.com/OriHdFo.png" rel="nofollow noopener">i.imgur.com/OriHdFo.png</a></p>
 <p>I bet it has something to do with depthstencils, I tried to set stencil=“1” in CLEAR command, or add depthstencil=“0”  or “1” to my command. Every one of these changes fixed the problem but only if that “real” plane is in camera frustrum. If I turn around everything disappears.</p>
-<p>Sure I can hack my way around by ensuring there are always some real geometry in frame <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/>, but maybe there is a more civilized way?</p>
+<p>Sure I can hack my way around by ensuring there are always some real geometry in frame <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/>, but maybe there is a more civilized way?</p>
           </div>
         </div>
       </div>
@@ -190,7 +190,7 @@ out vec4 fragData[1];
 <p>[quote=“1vanK”] ???</p>
 <p>May be <code>&lt;command type="clear" color="0 0 0 0" depth="1.0" output="depth" /&gt;</code>[/quote]</p>
 <p>No, that’s does not work. 800 is the far plane value, and works for me.</p>
-<p>Boy, what an ugly hacky mess am I doing. <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/></p>
+<p>Boy, what an ugly hacky mess am I doing. <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/></p>
           </div>
         </div>
       </div>

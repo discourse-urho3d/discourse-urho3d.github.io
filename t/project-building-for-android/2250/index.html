@@ -114,7 +114,7 @@ Note that each child dircetory with sources would need an entry, but I think wit
 <p>Note that each child dircetory with sources would need an entry, but I think with the RECURSE optiion that isn’t needed (I can’t use it as I have some source files that cannot be built hidden deep within the build directory). You can also try using the ** glob pattern, though I haven’t had the best luck with it…</p>
 </blockquote>
 </aside>
-<p>The macro is basically just populating a CMake variable (SOURCE_FILES) in a list context. If you cannot work out a glob pattern and/or the recurse option produces undesired result in the list, you can always use a list operation to remove the unwanted items before calling the target setting macros.  <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=5" title=":wink:"/></p>
+<p>The macro is basically just populating a CMake variable (SOURCE_FILES) in a list context. If you cannot work out a glob pattern and/or the recurse option produces undesired result in the list, you can always use a list operation to remove the unwanted items before calling the target setting macros.  <img alt=":wink:" class="emoji" src="../../../images2/95940790c23d98635b2a6d3f22657158.png" title=":wink:"/></p>
           </div>
         </div>
       </div>

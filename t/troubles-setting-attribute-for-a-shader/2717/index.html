@@ -74,7 +74,7 @@ void PS()
 <aside class="quote" data-post="1" data-topic="2717">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/googlebot42/40/62_1.png" width="20"/> GoogleBot42:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/cc40270de3be84622a8372cfa1ab8c9a.png" width="20"/> GoogleBot42:</div>
 <blockquote>
 <p>Hello I cannot seem to set the MASK_OBJECTINDEX attribute for a shader.</p>
 </blockquote>
@@ -95,12 +95,12 @@ To prevent such errors, don’t use masks.</p>
 <aside class="quote no-group" data-post="2" data-topic="2717" data-username="Eugene">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/eugene/40/902_2.png" width="20"/> Eugene:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/ae663b3d37eca5ee603f9e0610f8f829.png" width="20"/> Eugene:</div>
 <blockquote>
 <p>Are you sure OI is float? More likely it is something interger.</p>
 </blockquote>
 </aside>
-<p>Yes. <img alt=":confused:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/confused.png?v=10" title=":confused:"/> In Transform.glsl</p>
+<p>Yes. <img alt=":confused:" class="emoji" src="../../../images2/256f55d6dee778d12c9ee3bb598de2b8.png" title=":confused:"/> In Transform.glsl</p>
 <pre><code class="lang-auto">....
     attribute vec4 iTexCoord6;
 #endif
@@ -111,14 +111,14 @@ attribute float iObjectIndex;
 <aside class="quote no-group" data-post="2" data-topic="2717" data-username="Eugene">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/eugene/40/902_2.png" width="20"/> Eugene:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/ae663b3d37eca5ee603f9e0610f8f829.png" width="20"/> Eugene:</div>
 <blockquote>
 <p>To prevent such errors, don’t use masks.</p>
 </blockquote>
 </aside>
 <p>Ok…  I guess I would use this instead?</p>
 <pre><code class="lang-auto">bool SetSize(unsigned vertexCount, const PODVector&lt;VertexElement&gt;&amp; elements, bool dynamic = false);</code></pre>
-<p>I really should be able to use the mask just fine though. The strangest thing is in similar code when I was passing UV coords and was using the MASK_TEXCOORD1 mask it was working just fine. <img alt=":unamused:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/unamused.png?v=10" title=":unamused:"/>   I guess I will look at that tomorrow but it is late where I live.</p>
+<p>I really should be able to use the mask just fine though. The strangest thing is in similar code when I was passing UV coords and was using the MASK_TEXCOORD1 mask it was working just fine. <img alt=":unamused:" class="emoji" src="../../../images2/2af753f2483bb40ec48872793c2e1855.png" title=":unamused:"/>   I guess I will look at that tomorrow but it is late where I live.</p>
 <p>Thanks for you input, I didn’t know about the other SetSize function for the vertex buffer objects.</p>
           </div>
         </div>
@@ -134,9 +134,9 @@ attribute float iObjectIndex;
 <aside class="quote" data-post="3" data-topic="2717">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/googlebot42/40/62_1.png" width="20"/> GoogleBot42:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/cc40270de3be84622a8372cfa1ab8c9a.png" width="20"/> GoogleBot42:</div>
 <blockquote>
-<p>Yes. <img alt=":confused:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/confused.png?v=5" title=":confused:"/> In Transform.glsl</p>
+<p>Yes. <img alt=":confused:" class="emoji" src="../../../images2/5fc0af8f196734b5bf5c1aacdc718a17.png" title=":confused:"/> In Transform.glsl</p>
 </blockquote>
 </aside>
 <p>It may be not enough since mask silently requires all attributes to have specified type and order. Position must be float3 and 1st, UV must be float2, color must be ubyte4… What must be ObjectIndex??<br/>

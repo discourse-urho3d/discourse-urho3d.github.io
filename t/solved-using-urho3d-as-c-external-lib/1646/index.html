@@ -266,7 +266,7 @@ Makefile:4: recipe for target 'All' failed
 </ol>
 </blockquote>
 </aside>
-<p>You can definitely use Urho3D library like this on codelite. It works for me so it should work for you too. And yes too, you can “use the URHO3D lib without having to use CMAKE” . But first are you intentionally using pre-1.5 Urho3d ?  because from the build log the MACROs lack the “URHO3D_” prefix that are present in the current version. If this is by choice then no problem <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/></p>
+<p>You can definitely use Urho3D library like this on codelite. It works for me so it should work for you too. And yes too, you can “use the URHO3D lib without having to use CMAKE” . But first are you intentionally using pre-1.5 Urho3d ?  because from the build log the MACROs lack the “URHO3D_” prefix that are present in the current version. If this is by choice then no problem <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/></p>
 <p>From all indication it seems that your include file path was not added properly. If you are using v1.4 or v1.5 you only need to include these two paths for Urho3D<br/>
 "${urho3d-installation-dir}/include" and “${urho3d-installation-dir}/include/Urho3D/ThirdParty” . For example my installation directory is “C:/Urho3D” so I only include<br/>
 "C:/Urho3D/include" and " C:/Urho3D/include/Urho3D/ThirdParty" .</p>
@@ -654,7 +654,7 @@ URHO3D_SSE
 URHO3D_URHO2D</code><br/>
 It now compile but the linker still fail. I used the same LIB that was created by CodeLite, not the one that was build by MSVC. Using the MINGW32 compiler with it. Since my project is Windows and Linux only, I prefer to use CodeLite.</p>
 <p>Here is my current configuration:<br/>
-<div class="lightbox-wrapper"><a class="lightbox" href="http://www.clavet.org/files/URHO/settingCompiler.jpg" rel="nofollow noopener" title=""><img alt="" height="475" src="http://www.clavet.org/files/URHO/settingCompiler.jpg" width="690"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">792×546</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<div class="lightbox-wrapper"><a class="lightbox" href="http://www.clavet.org/files/URHO/settingCompiler.jpg" rel="nofollow noopener" title=""><img alt="" height="475" src="../../../images2/bc23c11ad86ac7785689b9f10ba5411c.jpg" width="690"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">792×546</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
           </div>
         </div>
       </div>
@@ -679,9 +679,9 @@ ws2_32
 opengl32</code></pre>
 <p>NOTE: You don’t necessarily have to state out Urho3D library as libUrho3D.a, simply entering it as “Urho3d” can do the job. opengl32 is included there because your build uses opengl on windows.</p>
 <p>One more thing. Click the linker option field shown below :</p>
-<p><div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/Nyc0bVD.png" rel="nofollow noopener" title=""><img alt="" height="371" src="http://i.imgur.com/Nyc0bVD.png" width="690"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">819×441</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/Nyc0bVD.png" rel="nofollow noopener" title=""><img alt="" height="371" src="../../../images2/c900eb5d8af0154528d871fef607137d.png" width="690"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">819×441</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
 <p>This will bring out the linker options window, tick the checkboxes as show:</p>
-<p><div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/lnL4hNq.png" rel="nofollow noopener" title=""><img alt="" height="500" src="http://i.imgur.com/lnL4hNq.png" width="598"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">633×529</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/lnL4hNq.png" rel="nofollow noopener" title=""><img alt="" height="500" src="../../../images2/e58f55f8b09e5c5854219d806dcae6ea.png" width="598"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">633×529</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
           </div>
         </div>
       </div>

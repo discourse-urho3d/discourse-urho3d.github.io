@@ -50,7 +50,7 @@ Is there a sample demonstrating how to build and render a single polygon just on
 <aside class="quote quote-modified" data-post="1" data-topic="3192">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" loading="lazy" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/johnnycable/40/788_2.png" width="20"/>
+<img alt="" class="avatar" height="20" loading="lazy" src="../../../images2/b172fc48f4b6208a4519e86c27afb791.png" width="20"/>
 <a href="https://discourse.urho3d.io/t/draw-a-line-with-custom-geometry-in-2d/3192">Draw a line with Custom Geometry in 2D</a> <a class="badge-wrapper bullet" href="/c/discussions/support/10"><span class="badge-category-parent-bg" style="background-color: #25AAE2;"></span><span class="badge-category-bg" style="background-color: #92278F;"></span><span class="badge-category clear-badge" data-drop-close="true" style="" title="Someone can help you.">Support</span></a>
 </div>
 <blockquote>
@@ -91,7 +91,7 @@ cg-&gt;…
           <div class="user_name">Modanung</div>
           <div class="post_content">
 <p>The material assigned to a geometry determines its color and fill mode (solid or wire).</p>
-<p><span class="mention">@entretoize</span> And welcome! <img alt=":confetti_ball:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/confetti_ball.png?v=9" title=":confetti_ball:"/> <img alt=":slightly_smiling_face:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slightly_smiling_face.png?v=9" title=":slightly_smiling_face:"/></p>
+<p><span class="mention">@entretoize</span> And welcome! <img alt=":confetti_ball:" class="emoji" src="../../../images2/8cc1133d965c492d26cc2ba425a80ea1.png" title=":confetti_ball:"/> <img alt=":slightly_smiling_face:" class="emoji" src="../../../images2/083e71e9976093cddc504d689025b42c.png" title=":slightly_smiling_face:"/></p>
           </div>
         </div>
       </div>
@@ -182,7 +182,7 @@ My actual code :</p>
 <p>Welcome to the world of lighting! If we have surface normals in our model at all, they are typically only there at all for lighting purposes. Unlit materials don’t need them.</p>
 <p>Per-Vertex Lighting (performed in the Vertex Shader stage, using Vertex Normals) kind of sucks though - there is a way to remove normals from vertices in the mesh, and instead put them in a texture, which encodes surface normals for rapid per pixel lookup in the pixel (fragment) shader.<br/>
 Enter Normal Maps!</p>
-<p>These can encode the surface bumpyness from a much higher resolution mesh, baked to texture, and applied in the shader to a much lower resolution mesh. You get nice high resolution rendering at low cost, but you need to take some time to pre-bake your normal map(s). We trade some offline processing time for both faster and better looking results at runtime <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=9" title=":wink:"/></p>
+<p>These can encode the surface bumpyness from a much higher resolution mesh, baked to texture, and applied in the shader to a much lower resolution mesh. You get nice high resolution rendering at low cost, but you need to take some time to pre-bake your normal map(s). We trade some offline processing time for both faster and better looking results at runtime <img alt=":wink:" class="emoji" src="../../../images2/537e3e653d641df5b9858e75faf3862a.png" title=":wink:"/></p>
 <p>One single triangle can benefit from per pixel lighting, a single textured quad (two triangles) is a prime example. Embossing and other per pixel effects can be implemented using textures, moving the art requirement into the hands of the artists, while reducing the technical requirements for vertex data at runtime.</p>
           </div>
         </div>

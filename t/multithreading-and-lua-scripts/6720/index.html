@@ -56,7 +56,7 @@ c) …other ideas?</p>
 <p>At most you can do is create a worker that can process data separately. Assuming whatever it processes doesn’t touch the rest of the non-thread-safe code. Which is pretty much everything. This works well for loading resources and doing computationally intensive tasks like dealing with occlusion and stuff like that.</p>
 <p>So with that in mind, the same concept could probably be applied to scripts as well. You basically create a separate script state that poses as a worker and all it does is process stuff. But not touch anything from the engine. Basically it’ll be mostly empty isolated state for processing and logic only.</p>
 <p>And then you’d have to find ways to communicate between those script threads. That’s just how scripting engines have been and will continue to be. I’m not really sure how you expect it to be. There is no alternative if you’re looking for one tbh.</p>
-<p>Either way, you’ll have to get your hands dirty and do some c++ <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=9" title=":smiley:"/></p>
+<p>Either way, you’ll have to get your hands dirty and do some c++ <img alt=":smiley:" class="emoji" src="../../../images2/94dd27e9c6c243335d29229e02e34e9d.png" title=":smiley:"/></p>
           </div>
         </div>
       </div>
@@ -71,7 +71,7 @@ c) …other ideas?</p>
 <aside class="quote no-group" data-post="2" data-topic="6720" data-username="S.L.C">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/s.l.c/40/1016_2.png" width="20"/> S.L.C:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/aa1895aba5007d63790c391fb6bef3db.png" width="20"/> S.L.C:</div>
 <blockquote>
 <p>You basically create a separate script state that poses as a worker and all it does is process stuff. But not touch anything from the engine. Basically it’ll be mostly empty isolated state for processing and logic only.</p>
 </blockquote>
@@ -81,7 +81,7 @@ All the game logic is independent of Urho, pretty much the only contact points a
 <aside class="quote no-group" data-post="2" data-topic="6720" data-username="S.L.C">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/s.l.c/40/1016_2.png" width="20"/> S.L.C:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/aa1895aba5007d63790c391fb6bef3db.png" width="20"/> S.L.C:</div>
 <blockquote>
 <p>So with that in mind, the same concept could probably be applied to scripts as well. You basically create a separate script state that poses as a worker and all it does is process stuff.</p>
 </blockquote>
@@ -102,7 +102,7 @@ All the game logic is independent of Urho, pretty much the only contact points a
 <aside class="quote no-group" data-post="3" data-topic="6720" data-username="Lys0gen">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/l/57b2e6/40.png" width="20"/> Lys0gen:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/4ba69cabd3c06cbfecad5e65519f3070.png" width="20"/> Lys0gen:</div>
 <blockquote>
 <p>Now the crashes are pretty random, sometimes after 5 seconds, sometimes it runs fine for a couple of minutes. But they are definitely caused by the LUA subsystem and there must be a way around that, I’m just not sure which path would be the best to achieve that.</p>
 </blockquote>
@@ -140,7 +140,7 @@ All the game logic is independent of Urho, pretty much the only contact points a
 <aside class="quote no-group" data-post="5" data-topic="6720" data-username="JSandusky">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/jsandusky/40/3220_2.png" width="20"/> JSandusky:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/21d4babb39f9f7d59fc4987dd1566385.png" width="20"/> JSandusky:</div>
 <blockquote>
 <p>so you can have multiple lua_states in threads but not one master.</p>
 </blockquote>

@@ -52,7 +52,7 @@
 <aside class="quote no-group" data-post="1" data-topic="4732">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/dprandle/40/1400_1.png" width="20"/> dprandle:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/c32e314e605e15c8c9bbe3eaa35565dc.png" width="20"/> dprandle:</div>
 <blockquote>
 <p>From my understanding the member variables of an angelscript class that inherits from ScriptObject will have all of its members that can be converted to a Variant and that don’t start with an underscore automatically registered as attributes.</p>
 </blockquote>
@@ -65,7 +65,7 @@
 <aside class="quote no-group" data-post="1" data-topic="4732">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/dprandle/40/1400_1.png" width="20"/> dprandle:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/c32e314e605e15c8c9bbe3eaa35565dc.png" width="20"/> dprandle:</div>
 <blockquote>
 <p>Also… out of curiosity, what happens if a node is created in LOCAL mode and components for it are created in REPLICATED mode?</p>
 </blockquote>
@@ -87,7 +87,7 @@
 <aside class="quote no-group" data-post="2" data-topic="4732" data-username="Sinoid">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/s/f19dbf/40.png" width="20"/> Sinoid:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/364b15125065144cbdd62e2448806aa6.png" width="20"/> Sinoid:</div>
 <blockquote>
 <p>They are, but the automatic attributes are created with AM_FILE mode.</p>
 </blockquote>
@@ -144,7 +144,7 @@
 <aside class="quote no-group" data-post="4" data-topic="4732" data-username="Sinoid">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/s/f19dbf/40.png" width="20"/> Sinoid:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/364b15125065144cbdd62e2448806aa6.png" width="20"/> Sinoid:</div>
 <blockquote>
 <p>you could rely on a naming convention and attach the appropriate mode to the attribute-info. It should <em>just work</em> ^TM as long as you have AM_NET on the attribute and you’re calling MarkNetworkUpdate</p>
 </blockquote>
@@ -153,7 +153,7 @@
 <aside class="quote no-group" data-post="4" data-topic="4732" data-username="Sinoid">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/s/f19dbf/40.png" width="20"/> Sinoid:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/364b15125065144cbdd62e2448806aa6.png" width="20"/> Sinoid:</div>
 <blockquote>
 <p>Realistically, you’d <strong>always</strong> have to use virtual accessors ( <code>int myProperty { get; set; }</code> ) in the script-classes and call <code>MarkNetworkUpdate()</code> from in the setter since C++ side doesn’t see member changes.</p>
 </blockquote>
@@ -161,7 +161,7 @@
 <aside class="quote no-group" data-post="4" data-topic="4732" data-username="Sinoid">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/s/f19dbf/40.png" width="20"/> Sinoid:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/364b15125065144cbdd62e2448806aa6.png" width="20"/> Sinoid:</div>
 <blockquote>
 <p>that comes with consequences if you should choose to use AttributeInfo to populate a GUI or something and expect networked fields to cause dirty marking.</p>
 </blockquote>
@@ -185,7 +185,7 @@
 <aside class="quote no-group" data-post="5" data-topic="4732">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/dprandle/40/1400_1.png" width="20"/> dprandle:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/c32e314e605e15c8c9bbe3eaa35565dc.png" width="20"/> dprandle:</div>
 <blockquote>
 <p>I am wondering - theoretically - since script attributes are convertible to Variants - what if on the c++ side I checked all attributes with “sync” prefix before the script update runs and again after the update runs - and auto mark the network update flag for the node if any of those values have changed? Your thoughts?</p>
 </blockquote>

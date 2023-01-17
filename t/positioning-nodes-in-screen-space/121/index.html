@@ -38,9 +38,9 @@ It claims to “Convert normalized screen coordinates (0.0 - 1.0) and depth to a
     Vector3 playerPos = camera-&gt;ScreenToWorldPoint(Vector3(0, 0, 20));
     cubeNode_-&gt;SetPosition(playerPos);</code></pre>
 <p>When screen height is 800 and width is 600:<br/>
-<div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/m2chHaA.png" rel="nofollow noopener" title=""><img alt="" height="431" src="http://i.imgur.com/m2chHaA.png" width="690"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">1280×800</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/m2chHaA.png" rel="nofollow noopener" title=""><img alt="" height="431" src="../../../images2/284803f254d8f5a1033d6fd587cb38c4.png" width="690"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">1280×800</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
 <p>When screen height is 800 and width is 200:<br/>
-<div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/PMv2ns3.png" rel="nofollow noopener" title=""><img alt="" height="431" src="http://i.imgur.com/PMv2ns3.png" width="690"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">1280×800</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/PMv2ns3.png" rel="nofollow noopener" title=""><img alt="" height="431" src="../../../images2/be597feba3421164e09309f8d8c9038a.png" width="690"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">1280×800</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
 <p>Camera is orthographic, of course. Am I doin’ it right? :V</p>
 <p>Here’s the <a data-bbcode="true" href="https://dl.dropboxusercontent.com/s/vb1mtvrkh20cmbe/ScreenSpacePositioning.zip" rel="nofollow noopener">code</a> I used, for your perusal.</p>
           </div>
@@ -119,7 +119,7 @@ I could just overlay a black plane in front of the camera, but we’re getting i
         <div class="post">
           <div class="user_name">Kingsley</div>
           <div class="post_content">
-<p>…I could have sworn I tried that. <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=9" title=":smiley:"/></p>
+<p>…I could have sworn I tried that. <img alt=":smiley:" class="emoji" src="../../../images2/94dd27e9c6c243335d29229e02e34e9d.png" title=":smiley:"/></p>
 <p>Thanks for LogicComponent! One thing I’m noticing though, is it requires SceneUpdate to be subscribed to for DelayedStart to work. That seems like it could be confusing if someone made a component that requires only, say, DelayedStart and FixedUpdate.</p>
 <p>Maybe a delayed initialization subsystem would be a good workaround, something like this? (LogicComponent simplified for clarity).<br/>
 <aside class="onebox githubgist">

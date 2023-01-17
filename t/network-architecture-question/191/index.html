@@ -52,7 +52,7 @@ of Events to the client that explain what Models go on what Nodes?</p>
           <div class="post_content">
 <p>The NinjaSnowWar game in server mode should already run also headlessly.</p>
 <p>The idea is that you are able to load just the same objects on the client and server, a light for example exists in the scene and can change its parameters (which will be replicated to clients) but it doesn’t actually render. Meshes are loaded into CPU-side memory also on headless mode, so that physics can handle per-triangle collisions correctly. Materials and textures, on the other hand, won’t be loaded for real (the loading function just returns immediate success without doing anything), the components like StaticModel just refer to the materials so that the material information is correctly transmitted to the client.</p>
-<p>In other words everything you describe should already work without any extra effort needed, and without the server consuming unnecessary resources. Or if it doesn’t, it’s a bug and you can file an issue <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/></p>
+<p>In other words everything you describe should already work without any extra effort needed, and without the server consuming unnecessary resources. Or if it doesn’t, it’s a bug and you can file an issue <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/></p>
           </div>
         </div>
       </div>

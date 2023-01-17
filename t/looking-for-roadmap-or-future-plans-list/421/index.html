@@ -107,7 +107,7 @@ Or maybe precautions?</p>
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/cadaver/40/3_1.png" width="20"/> cadaver:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/17ea6233fe86521c2e3179bd3849d219.png" width="20"/> cadaver:</div>
 <blockquote>
 <p>it’s doubtful that a 3rd party solution can achieve as seamless and usable integration into the rest of the system as an “in-house” solution, also considering the needs of eg. scripting.</p>
 </blockquote>
@@ -116,24 +116,24 @@ Or maybe precautions?</p>
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/cadaver/40/3_1.png" width="20"/> cadaver:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/17ea6233fe86521c2e3179bd3849d219.png" width="20"/> cadaver:</div>
 <blockquote>
 <p>IMO the UI should be components in scene nodes to allow full mixing with other scene content. You’d likely have another scene for the UI so that it doesn’t disturb the game scene. Other use cases to consider are interactive “screen displays” like in Doom 3. There shouldn’t be a “singleton” -like one UI hierarchy like there is now.</p>
 </blockquote>
 </aside>
-<p>For now I’m not so familiar with Urho, but I want to be <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/></p>
+<p>For now I’m not so familiar with Urho, but I want to be <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/></p>
 <p>My intention was to fix this:</p>
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/cadaver/40/3_1.png" width="20"/> cadaver:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/17ea6233fe86521c2e3179bd3849d219.png" width="20"/> cadaver:</div>
 <blockquote>
 <p>Also, the skinnability / UI style mechanism is flaky, as there is mixing between the UI element’s “content” attributes and skin/style attributes, meaning that applying a style to UI elements can be destructive or irreversible, as it possibly overwrites some of the UI element’s content attributes.</p>
 </blockquote>
 </aside>
 <p>I was thinking about wrapping existent UI classes like UIElement and BorderImage to separate layout from style by providing new Serializables…<br/>
-I like the way urho uses Serialazable with attributes. It’s seems simple when engine uses this mechanism, but when I go deeply it’s very frustrating <img alt=":confused:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/confused.png?v=5" title=":confused:"/></p>
-<p>// and I think we should create new thread about ui <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=5" title=":wink:"/></p>
+I like the way urho uses Serialazable with attributes. It’s seems simple when engine uses this mechanism, but when I go deeply it’s very frustrating <img alt=":confused:" class="emoji" src="../../../images2/5fc0af8f196734b5bf5c1aacdc718a17.png" title=":confused:"/></p>
+<p>// and I think we should create new thread about ui <img alt=":wink:" class="emoji" src="../../../images2/95940790c23d98635b2a6d3f22657158.png" title=":wink:"/></p>
           </div>
         </div>
       </div>
@@ -148,7 +148,7 @@ I like the way urho uses Serialazable with attributes. It’s seems simple when 
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/cadaver/40/3_1.png" width="20"/> cadaver:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/17ea6233fe86521c2e3179bd3849d219.png" width="20"/> cadaver:</div>
 <blockquote>
 <p>IMO the UI should be components in scene nodes to allow full mixing with other scene content. You’d likely have another scene for the UI so that it doesn’t disturb the game scene. Other use cases to consider are interactive “screen displays” like in Doom 3. There shouldn’t be a “singleton” -like one UI hierarchy like there is now. Also, the skinnability / UI style mechanism is flaky, as there is mixing between the UI element’s “content” attributes and skin/style attributes, meaning that applying a style to UI elements can be destructive or irreversible, as it possibly overwrites some of the UI element’s content attributes.</p>
 </blockquote>

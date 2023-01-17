@@ -37,7 +37,7 @@
 <p>At the moment Clions uses cmake to create a project, there is no other way yet. You have to create a CMakeLists.txt with all necessary info in it.</p>
 <p>I set up a very simple test and it does compile, but when linking starts I get loads of ‘undefined references’ to Urho3D.</p>
 <p>I tried this first with a Urho3D-build from Visual Studio and thought this might have to do with Clion using mingW64-g++ (btw: is that idea correct?). So I build Urho3D with mingW64, but nothing changed. (and also I got a libUrho3D.a which won’t work on Windows, right?)</p>
-<p>It’s totally possible that I make a stupid mistake somewhere or it could be a problem with the IDE. Do you have an idea? Does this look like it <span class="bbcode-i">should</span> work? <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/></p>
+<p>It’s totally possible that I make a stupid mistake somewhere or it could be a problem with the IDE. Do you have an idea? Does this look like it <span class="bbcode-i">should</span> work? <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/></p>
 <p>Do I have to build Urho3D.lib with mingW64?</p>
 <p>This is the CMakeLists.txt I use:</p>
 <pre><code class="lang-auto">cmake_minimum_required(VERSION 2.8.4)
@@ -137,7 +137,7 @@ D:/dev/hvfn/cpp/Urho3D-1.31-gcc/Source/Engine/Input/InputEvents.h:38: undefined 
 <aside class="quote no-group" data-username="shu">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/s/e47c2d/40.png" width="20"/> shu:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/7a12745a8eb80eb51314af092fa0a9df.png" width="20"/> shu:</div>
 <blockquote>
 <p>Do I have to build Urho3D.lib with mingW64? </p>
 </blockquote>
@@ -164,12 +164,12 @@ This means that on Windows you can select between MinGW (or MinGW-W64) and Cygwi
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/gwald/40/168_1.png" width="20"/> gwald:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/6f792c92ed85e5a24cb31b1a415f312c.png" width="20"/> gwald:</div>
 <blockquote>
 <p>I would start from the begining and building all of Urho3D with that IDE.</p>
 </blockquote>
 </aside>
-<p>I have only the vaguest idea howto build Urho3D inside Clion… I would have to write a CMakeLists.txt for all of Urho3D. I can’t see me manage that. <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/></p>
+<p>I have only the vaguest idea howto build Urho3D inside Clion… I would have to write a CMakeLists.txt for all of Urho3D. I can’t see me manage that. <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/></p>
 <p>But I have another question: I build Urho3D with the cmake_mingw.bat on my Windows 7. Then I start ‘mingw32-make -j4’ in the Build-Directory. That works, but at the end it links a ‘libUrho3D.a’ - File. But I think I need ‘Urho3D.lib’ and the debug version ‘Urho3D_d.lib’ to get everything to work on windows. Right?</p>
 <p>Is there a switch to change the build to a windows ‘.lib’ somehow?</p>
 <p>I use Mingw64 (i686-4.9.1-posix-dwarf-rt_v3-rev1) to compile and link.</p>
@@ -199,7 +199,7 @@ D:/dev/hvfn/cpp/Urho3D-1.31/Lib/Urho3D.a</p>
 I have only the vaguest idea howto build Urho3D inside Clion…[/quote]</p>
 <p>Maybe try checking out the github source via the IDE… ‘<span class="bbcode-b">might</span>’ auto create a cmake file<br/>
 <a href="http://www.jetbrains.com/clion/quickstart/" rel="nofollow noopener">jetbrains.com/clion/quickstart/</a> Step 1. Open/Create a project in CLion</p>
-<p>Sorry, i’m not a cmake expert, having cmake issues with qtCreator myself  <img alt=":laughing:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/laughing.png?v=5" title=":laughing:"/></p>
+<p>Sorry, i’m not a cmake expert, having cmake issues with qtCreator myself  <img alt=":laughing:" class="emoji" src="../../../images2/f1b3f4dd9f845d1069864c322071dffe.png" title=":laughing:"/></p>
 <p>Edit: looks like they just added Mingw64 in last few days, you might need to update to that version</p>
           </div>
         </div>
@@ -217,7 +217,7 @@ I have only the vaguest idea howto build Urho3D inside Clion…[/quote]</p>
 <p>Your other suggestions sadly didn’t work. Clion doesn’t know how to build Urho, checking it out from github or importing the sources can’t work. And using the libUrho3D.a in Clion doesn’t work either, it leads to the same undefined references as described in my first post.</p>
 <p>I also tried to generate a Code-Blocks-project with MingW-make-files and build it inside Code::Blocks to get a windows ‘.lib’, but that builds an ‘.a’-Lib too.</p>
 <p>Hm. I think I’ll try to find out more about make and building on windows.</p>
-<p>EDIT: Ah, you were right! I can build Urho3D inside Clion, by using the CMakeLists.txt in the /Source-Folder and use that to import it as project! Then I can build the Urho library inside Clion… but it still is in Linux-format (libUrho3D.a). <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/> Damn.</p>
+<p>EDIT: Ah, you were right! I can build Urho3D inside Clion, by using the CMakeLists.txt in the /Source-Folder and use that to import it as project! Then I can build the Urho library inside Clion… but it still is in Linux-format (libUrho3D.a). <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/> Damn.</p>
           </div>
         </div>
       </div>
@@ -257,9 +257,9 @@ So that’s not the problem. Perhaps I’ll have to wait until Clion is a bit mo
           <div class="user_name">shu</div>
           <div class="post_content">
 <p>It works! Oh man, I’m so blind…</p>
-<p>Basically the section <a data-bbcode="true" href="http://urho3d.github.io/documentation/HEAD/_using_library.html" rel="nofollow noopener">"From Urho3D project root tree</a>" is working perfectly, when Urho3D was also build in Clion… <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/><br/>
+<p>Basically the section <a data-bbcode="true" href="http://urho3d.github.io/documentation/HEAD/_using_library.html" rel="nofollow noopener">"From Urho3D project root tree</a>" is working perfectly, when Urho3D was also build in Clion… <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/><br/>
 I used the CMakeLists.txt from there, set the environment variable URHO3D_HOME and could compile the project.</p>
-<p>Well, at least I learned a bit about cmake, make, mingw and the build process today! <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/></p>
+<p>Well, at least I learned a bit about cmake, make, mingw and the build process today! <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/></p>
           </div>
         </div>
       </div>
@@ -286,7 +286,7 @@ I used the CMakeLists.txt from there, set the environment variable URHO3D_HOME a
 <aside class="quote no-group" data-full="true" data-post="9" data-topic="459" data-username="yzkuris">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/y/91b2a8/40.png" width="20"/> yzkuris:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/f5d2957d22dbb463710a0271c4663b13.png" width="20"/> yzkuris:</div>
 <blockquote>
 <p>Hello, how do you exactly set the environment variable URHO3D_HOME</p>
 </blockquote>
@@ -332,7 +332,7 @@ I used the CMakeLists.txt from there, set the environment variable URHO3D_HOME a
 <aside class="quote no-group" data-post="12" data-topic="459" data-username="yzkuris">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/y/91b2a8/40.png" width="20"/> yzkuris:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/f5d2957d22dbb463710a0271c4663b13.png" width="20"/> yzkuris:</div>
 <blockquote>
 <p>Is this how I set the environment variable?</p>
 </blockquote>

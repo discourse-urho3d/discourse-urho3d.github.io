@@ -187,7 +187,7 @@ BiasParameters s_FarBias = new BiasParameters() { ConstantBias = 0.001f };</p>
 <aside class="quote no-group" data-post="1" data-topic="6792" data-username="najak3d">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/n/6a8cbe/40.png" width="20"/> najak3d:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/767fb084bb13664b1de3b2e66227eb5f.png" width="20"/> najak3d:</div>
 <blockquote>
 <p>For some reason, on OpenGL, the DepthBias of constant 0.001 if AMPLIFIED A LOT, compared to DirectX.</p>
 </blockquote>
@@ -206,14 +206,14 @@ BiasParameters s_FarBias = new BiasParameters() { ConstantBias = 0.001f };</p>
           <div class="post_content">
 <p>The “a lot” means it’s grossly skewing the location of the object on the screen downwards a LOT.   I was applying it to Far terrain which goes from under the camera on to the horizon, about 1800 miles away.  The Near Terrain only goes to around 300 miles, so beyond 300 miles, you should only be seeing the Far Terrain.</p>
 <p>Here is what it’s supposed to look like, with OpenGL DepthBias set to 0.000035, it’s working well, and looks like this – here you can see the far terrain matches up exactly with Far Water, to fade out together in unison.  No Offset here is apparent.</p>
-<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/iow4M9gOOfGf9GrstIQWoRq4F5v.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/8/80ec9f4b87fdd9138428f85140d0b4276527acd9.png" rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="iow4M9gOOfGf9GrstIQWoRq4F5v" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/80ec9f4b87fdd9138428f85140d0b4276527acd9_2_10x10.png" height="298" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/8/80ec9f4b87fdd9138428f85140d0b4276527acd9.png" width="690"/><div class="meta">
+<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/iow4M9gOOfGf9GrstIQWoRq4F5v.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/8/80ec9f4b87fdd9138428f85140d0b4276527acd9.png" rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="iow4M9gOOfGf9GrstIQWoRq4F5v" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/80ec9f4b87fdd9138428f85140d0b4276527acd9_2_10x10.png" height="298" src="../../../images2/1f43765631783bfcfe06a05822d73c91.png" width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">779×337 43.4 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg>
 </div></a></div></p>
 <p>When I set the DepthBias to 0.001, the far terrain drops WAY DOWN on screen.  What is really happening here is that the FarClip is kicking in way too close… so it’s not really moving it DOWN, but rather is simply culling out all Far Terrain beyond a certain point.   The DepthBias is effectively rampantly causing the FarClip plane to skoot WAY CLOSER.  Here is the result of 0.001:</p>
-<p><img alt="image" data-base62-sha1="p5TYCAMY4e5FHKFqeaMlTA5NPXO" height="252" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/a/afe12b09552f1a1ee44e31bca48f8431093b58d0.png" width="642"/></p>
+<p><img alt="image" data-base62-sha1="p5TYCAMY4e5FHKFqeaMlTA5NPXO" height="252" src="../../../images2/b991a51f3d0391f2c16b96b8cc5cf2d5.png" width="642"/></p>
 <p>On DirectX, this 0.001 depthBias works perfectly  (same as the top image above).</p>
 <p>If I set an intermediate value for DepthBias on OpenGL, you can see the FarClip plane move back closer to where it should be.  Here’s DepthBias 0.0004:</p>
-<p><img alt="image" data-base62-sha1="h8lTWW8PXjrxThYOtqGxkbN1WRi" height="261" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/7/7816afc9e150db8a25656d4589ee7691b2f5caf8.png" width="544"/></p>
+<p><img alt="image" data-base62-sha1="h8lTWW8PXjrxThYOtqGxkbN1WRi" height="261" src="../../../images2/d9c5f75452c7138bf7b6b45f0364a81b.png" width="544"/></p>
 <p>So the big question is why is DepthBias on OpenGL causing the effective FarClip distance to scoot WAY CLOSER?</p>
 <p>My tentative solution is to simply use different DepthBiases for OpenGL vs DirectX.  Is there a better solution?</p>
           </div>
@@ -231,7 +231,7 @@ BiasParameters s_FarBias = new BiasParameters() { ConstantBias = 0.001f };</p>
 I put decal on the floor and move away until it becomes visible thru geometry due to this bias.<br/>
 I get consistent results for both DX11 and OpenGL2/3, both 16 and 24 bit depth buffers.<br/>
 I was testing my branch, but Urho Web sample looks the same too.<br/>
-<img alt="image" data-base62-sha1="p3Qt4PTCA7spErOS4Yc43bKIBLk" height="184" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/a/afa5a760b8e5d8523b06bb2d6980a5ca26c409ea.jpeg" width="598"/></p>
+<img alt="image" data-base62-sha1="p3Qt4PTCA7spErOS4Yc43bKIBLk" height="184" src="../../../images2/c66b468bf0d45132b0cfdd281d21966c.jpeg" width="598"/></p>
 <p>I’ll try to check OpenGL maths later.</p>
           </div>
         </div>

@@ -35,7 +35,7 @@
 <p>I find the code <code>ResourceCache::GetResource(StringHash type, ...)</code> checks the load happens in the main thread,<br/>
 but I do not understand why it does this check, why Urho could not load resource in another thread</p>
 <p>My knowledge tells me that use multiply thread will accelerate the progress when loading multiply resource<br/>
-<img alt=":confused:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/confused.png?v=5" title=":confused:"/></p>
+<img alt=":confused:" class="emoji" src="../../../images2/5fc0af8f196734b5bf5c1aacdc718a17.png" title=":confused:"/></p>
           </div>
         </div>
       </div>
@@ -100,7 +100,7 @@ bool Resource::EndLoad()
 <aside class="quote" data-post="1" data-topic="3852">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/haolly/40/1041_1.png" width="20"/> haolly:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/2d6d65ec62907af1642d120a24f9766a.png" width="20"/> haolly:</div>
 <blockquote>
 <p>but I do not understand why it does this check, why Urho could not load resource in another thread</p>
 </blockquote>
@@ -130,11 +130,11 @@ bool Resource::EndLoad()
 </blockquote>
 <p>It seems that whether or not  a resource could be loaded in background thread depends on the type of the process,<br/>
 So, could I say that when loading any resource that does not involve GPU stuff, it could be a loading at background thread ?<br/>
-but <span class="mention">@Eugene</span>  's words make me think  that it depends on the type of the resource <img alt=":disappointed_relieved:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/disappointed_relieved.png?v=10" title=":disappointed_relieved:"/></p>
+but <span class="mention">@Eugene</span>  's words make me think  that it depends on the type of the resource <img alt=":disappointed_relieved:" class="emoji" src="../../../images2/2c539f013016e7cc2395856447a9f91b.png" title=":disappointed_relieved:"/></p>
 <aside class="quote no-group" data-post="5" data-topic="3852" data-username="Eugene">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/eugene/40/902_2.png" width="20"/> Eugene:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/ae663b3d37eca5ee603f9e0610f8f829.png" width="20"/> Eugene:</div>
 <blockquote>
 <p>Because not every resource could be loaded in worker threads.</p>
 </blockquote>
@@ -153,7 +153,7 @@ but <span class="mention">@Eugene</span>  's words make me think  that it depend
 <aside class="quote" data-post="6" data-topic="3852">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/haolly/40/1041_1.png" width="20"/> haolly:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/2d6d65ec62907af1642d120a24f9766a.png" width="20"/> haolly:</div>
 <blockquote>
 <p>So, could I say that when loading any resource that does not involve GPU stuff, it could be a loading at background thread ?</p>
 </blockquote>

@@ -68,7 +68,7 @@ And the thread class needs to take a context as an explicit or implicit paramete
 Subsystems, events, etc… are “global” to the Context only. Each Context can therefore have an Engine, Renderer, etc… without running into conflicts.</p>
 <p>You should be able to create the Urho3D Context on its own thread, but I haven’t tested this.[/quote]</p>
 <p>Yes, I created a new thread and set it to be the main thread for a context, and it works fine.  Previously I was tryng to do things to a context/engine from different threads, and I gave up on that.  Now I use C++11 lamdas to “dispatch” C blocks to execute on this main thread from other threads so everything touching this engine is done in this single thread, and I don’t have issues.</p>
-<p>Now with the workaround for switching GL contexts between Urho3D instances, and hopefully multiple Urho3D engines run concurrently and happily together <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/></p>
+<p>Now with the workaround for switching GL contexts between Urho3D instances, and hopefully multiple Urho3D engines run concurrently and happily together <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/></p>
           </div>
         </div>
       </div>
@@ -110,7 +110,7 @@ Subsystems, events, etc… are “global” to the Context only. Each Context ca
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/thecomet/40/142_1.png" width="20"/> TheComet:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/12a1dc2eccbee0e3555e7cc3e716f46e.png" width="20"/> TheComet:</div>
 <blockquote>
 <p>What’s the use-case for this if you don’t mind me asking?</p>
 </blockquote>

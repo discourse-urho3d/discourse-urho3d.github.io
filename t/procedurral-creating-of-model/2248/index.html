@@ -37,7 +37,7 @@ and best practices to do things.</p>
 <p>The first question is - how can I create Model so I can use several materials with it,<br/>
 but it should be single model still. I know it is related to Geometry, so Model should contain Geometry for each material.<br/>
 But I have problems setting-up proper model, as I don’t really understand how to set up VertexBuffer and IndexBuffer for<br/>
-this configuration, what is actual sequence? I could not find any code sample about this <img alt=":frowning:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/frowning.png?v=5" title=":frowning:"/><br/>
+this configuration, what is actual sequence? I could not find any code sample about this <img alt=":frowning:" class="emoji" src="../../../images2/2506cac83464f3f86e257fa414340d4c.png" title=":frowning:"/><br/>
 I’d be very happy to see AngelScript code sample for this.</p>
 <p>What I do to dissect such model:</p>
 <pre><code class="lang-auto">class DissectModel {
@@ -228,7 +228,7 @@ Its just 3 lines:</p>
     &lt;technique name="Techniques/NoTextureUnlitVCol.xml" /&gt;
 &lt;/material&gt;</code></pre>
 <p>And the result:<br/>
-<div class="lightbox-wrapper"><a class="lightbox" href="http://www.pts-club.com/static/HORVATHA4/pics/vl2016091801.png" rel="nofollow noopener" title=""><img alt="" height="500" src="http://www.pts-club.com/static/HORVATHA4/pics/vl2016091801.png" width="666"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">800×600</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<div class="lightbox-wrapper"><a class="lightbox" href="http://www.pts-club.com/static/HORVATHA4/pics/vl2016091801.png" rel="nofollow noopener" title=""><img alt="" height="500" src="../../../images2/2a7f1579485469dd61b1c4901823457c.png" width="666"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">800×600</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
 <p>I don’t need lights, normals, textures and tangents, but you can set all them, vector to vector, one by one. As you wish. Just don’t forget to set the Material too.</p>
 <p>As I see in the videos, you don’t need so detailed windows. There is a techic, “normal bumpmap”. Maybe you need just make cubes and play with its textures.</p>
 <p>Arpi</p>

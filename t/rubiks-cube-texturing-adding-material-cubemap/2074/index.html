@@ -75,7 +75,7 @@ Kacper</p>
 <p>A cubemap is not what you’re looking for. Those are used for reflections and backgrounds.</p>
 <p><a data-bbcode="true" href="http://luckeyproductions.nl/mdl/RubixCubie.mdl">This model</a> <a data-bbcode="true" href="http://luckeyproductions.nl/blends/RubixCubie.blend">[Blend]</a> uses vertex colors. Applying a material with a VCol technique will show the colors.<br/>
 There’s a lot of ways you could do this, but I think this is the most straightforward one.</p>
-<p>I know it’s better to teach a person how to fish than to give one a fish. But I think this is more like providing a hook. <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/></p>
+<p>I know it’s better to teach a person how to fish than to give one a fish. But I think this is more like providing a hook. <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/></p>
           </div>
         </div>
       </div>
@@ -117,14 +117,14 @@ Kacper</p>
 <aside class="quote no-group" data-username="kaapa">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/k/f0a364/40.png" width="20"/> kaapa:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/f58ba84b48f288577fce64db1ed46dc8.png" width="20"/> kaapa:</div>
 <blockquote>
 <p>Meanwhile I’ve figured out that I can make a blender cube model which will have 6 different materials (one per side), and then just use SetMaterial method (with proper material index as a first argument) to set different colored materials. Is it going to work?</p>
 </blockquote>
 </aside>
 <p>Yes, that would be another way. Mind you that for the Geometry indices to match the material order in Blender you usually need to <a data-bbcode="true" href="https://www.blender.org/manual/modeling/meshes/editing/misc.html" rel="noopener nofollow ugc">sort the elements</a> by material.<br/>
 Eight months ago CodeMonkey provided this image to help me find it:<br/>
-<a data-bbcode="true" href="http://savepic.su/6184007.png" rel="noopener nofollow ugc"><img alt="" height="1" src="http://savepic.su/6184007m.png" width="1"/></a></p>
+<a data-bbcode="true" href="http://savepic.su/6184007.png" rel="noopener nofollow ugc"><img alt="" height="1" src="../../../images2/50c4134fd269ff75a773eef84af989df.png" width="1"/></a></p>
 <p>In case you need to do this for many objects in the future, this python script will do the same for all selected objects:</p>
 <p>[code]<br/>
 import bpy</p>

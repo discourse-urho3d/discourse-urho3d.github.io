@@ -74,7 +74,7 @@
           <div class="user_name">vmost</div>
           <div class="post_content">
 <p>Thanks <span class="mention">@vram32</span> this looks like the right direction! Also, many subsystems (including FileSystem) are created in the Engine constructor, and the engine is created in the Application constructor. So, those subsystems are available from the earliest entry point that we have into runtime (aside from command line arguments), namely <code>Application::Setup()</code>. [EDIT: actually, I think they are even available within the initializer list of the <code>MyApp</code> constructor, since the <code>Application</code> subobject is constructed first]</p>
-<p><span class="mention">@SirNate0</span> you’re right and that’s what I’ll probably end up doing. I also want to persist user settings between sessions, so the settings file needs a robust home in the app bundle. Perhaps in a month or two if things go well I will debut my <code>SettingsManager</code> extension for everyone to use <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=9" title=":slight_smile:"/></p>
+<p><span class="mention">@SirNate0</span> you’re right and that’s what I’ll probably end up doing. I also want to persist user settings between sessions, so the settings file needs a robust home in the app bundle. Perhaps in a month or two if things go well I will debut my <code>SettingsManager</code> extension for everyone to use <img alt=":slight_smile:" class="emoji" src="../../../images2/7bdd5ab4d67675d002d99e4b948c8cdb.png" title=":slight_smile:"/></p>
           </div>
         </div>
       </div>
@@ -105,7 +105,7 @@ You can easily implement this by doing this before you startup your Urho3D app (
           <div class="post_content">
 <p>I use <code>GetAppPreferencesDir(</code>…<code>) + "filename.log"</code>. Which, on my machine results in:<br/>
 <code>/home/frode/.local/share/$org/$app/filename.log</code></p>
-<p>…and I use the same folder for settings files, which should be semantically obvious. <img alt=":slightly_smiling_face:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slightly_smiling_face.png?v=9" title=":slightly_smiling_face:"/></p>
+<p>…and I use the same folder for settings files, which should be semantically obvious. <img alt=":slightly_smiling_face:" class="emoji" src="../../../images2/083e71e9976093cddc504d689025b42c.png" title=":slightly_smiling_face:"/></p>
           </div>
         </div>
       </div>

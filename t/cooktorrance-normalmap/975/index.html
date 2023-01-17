@@ -52,9 +52,9 @@ Today i’m figure out how to add the affect of the NormalMap to CookTorrance li
 vec3 n = normal;<br/>
 float NoL = dot(n, l);<br/>
 finalColor = (max(0.0, NoL) * ((diffCt.xyz + specCt.xyz))); - very bright in some angles view and color affecting on camera position<br/>
-<a data-bbcode="true" href="http://savepic.net/6603347.htm"><img alt="" height="" src="http://savepic.net/6603347m.png" width=""/></a></p>
+<a data-bbcode="true" href="http://savepic.net/6603347.htm"><img alt="" height="" src="../../../images2/c698ab7c3fc278da19823097815c7d1d.png" width=""/></a></p>
 <p>finalColor = (max(0.0, NoL) * ( diff * (diffCt.xyz + specCt.xyz))); - very dark in most angles view and color mostly constants and not affecting on scene lights<br/>
-<a data-bbcode="true" href="http://savepic.net/6566483.htm"><img alt="" height="" src="http://savepic.net/6566483m.png" width=""/></a></p>
+<a data-bbcode="true" href="http://savepic.net/6566483.htm"><img alt="" height="" src="../../../images2/c13c5c0e8147bd352133e1639c83ce59.png" width=""/></a></p>
 <p>I’m don’t understand how to doing right affecting the normal mapping with CT tech.<br/>
 Any ideas how to marge CT with normal mapping ?</p>
           </div>

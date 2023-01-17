@@ -198,7 +198,7 @@ Please help me understand what I am doing wrong.</p>
 <aside class="quote no-group" data-post="5" data-topic="4766" data-username="Dave82">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/dave82/40/2369_2.png" width="20"/> Dave82:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/39fd1aeff01d89e7279fa956666af00e.png" width="20"/> Dave82:</div>
 <blockquote>
 <p>to</p>
 <pre><code class="lang-auto">CWorldObject::~CWorldObject()
@@ -242,7 +242,7 @@ Smart pointers really free memory? …</p>
 <aside class="quote no-group" data-post="6" data-topic="4766">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/sheridan/40/1835_1.png" width="20"/> Sheridan:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/9bddd9f8b6ee23c69b17913b5a6b08c8.png" width="20"/> Sheridan:</div>
 <blockquote>
 <p>Smart pointers really free memory? …</p>
 </blockquote>
@@ -252,7 +252,7 @@ So to answer your question : Yes. You doun’t need to do anything with smart po
 <aside class="quote no-group" data-post="6" data-topic="4766">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/sheridan/40/1835_1.png" width="20"/> Sheridan:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/9bddd9f8b6ee23c69b17913b5a6b08c8.png" width="20"/> Sheridan:</div>
 <blockquote>
 <p>CWorldObject::~CWorldObject() { scene()-&gt;RemoveChild(m_rootNode); }</p>
 </blockquote>
@@ -272,7 +272,7 @@ So to answer your question : Yes. You doun’t need to do anything with smart po
 <aside class="quote no-group" data-post="8" data-topic="4766" data-username="Dave82">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/dave82/40/2369_2.png" width="20"/> Dave82:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/39fd1aeff01d89e7279fa956666af00e.png" width="20"/> Dave82:</div>
 <blockquote>
 <p>(delete your CWorldObject)</p>
 </blockquote>
@@ -310,7 +310,7 @@ private:
 <aside class="quote no-group" data-post="7" data-topic="4766">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/sheridan/40/1835_1.png" width="20"/> Sheridan:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/9bddd9f8b6ee23c69b17913b5a6b08c8.png" width="20"/> Sheridan:</div>
 <blockquote>
 <p>Just checked. If i leave the destructor empty, then the nodes are not removed from the scene</p>
 </blockquote>
@@ -366,7 +366,7 @@ CWorldObject::~CWorldObject()
 
 </code></pre>
 <p>I try with <code>m_node-&gt;Remove();</code> or <code>scene()-&gt;RemoveChild(m_rootNode);</code> in destrunctor<br/>
-<img alt=":frowning:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/frowning.png?v=6" title=":frowning:"/></p>
+<img alt=":frowning:" class="emoji" src="../../../images2/51ea35e7c47bd75b6fa0d425ad2d734f.png" title=":frowning:"/></p>
           </div>
         </div>
       </div>
@@ -405,7 +405,7 @@ CWorldObject::~CWorldObject()
 <aside class="quote no-group" data-post="9" data-topic="4766">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/sheridan/40/1835_1.png" width="20"/> Sheridan:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/9bddd9f8b6ee23c69b17913b5a6b08c8.png" width="20"/> Sheridan:</div>
 <blockquote>
 <p>My class CWorldObject is not inherited from anything from Urho3D. It controls the node, but is not part of the scene itself.</p>
 </blockquote>

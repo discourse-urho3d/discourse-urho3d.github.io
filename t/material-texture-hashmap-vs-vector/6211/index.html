@@ -49,7 +49,7 @@
 <p>My (semi-educated) guess is that Urho3D development started a while ago before all the latest engine design hype of ECS, procedural programming and CPU cache optimizations. And in order to develop a general purpose engine you sometimes have to compromise performance in order to have flexibility (see also the Godot engine design philosophy document).</p>
 <p>Having said that, I’m very convinced that there are many areas of performance improvement for Urho3D, but there just aren’t enough developers around with the necessary time (and maybe skills) to work on them. But the greatest benefit of a free, open source project is that you can always go into the code and hack anything you want.<br/>
 One of the first things I’ve hacked into my custom branch is a StringView hack. If you think your material is not optimized, how about every time you pass a String around (and that’s everywhere), memory is allocated on the heap, the string is copied into that allocated block and that’s just to pass it to a function and then when you return from the function the memory is released to the heap.<br/>
-So yeah, there are many areas of improvements for sure, but the good thing is no one is stopping you from fixing them (at least in your own branch <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=9" title=":slight_smile:"/>).</p>
+So yeah, there are many areas of improvements for sure, but the good thing is no one is stopping you from fixing them (at least in your own branch <img alt=":slight_smile:" class="emoji" src="../../../images2/7bdd5ab4d67675d002d99e4b948c8cdb.png" title=":slight_smile:"/>).</p>
           </div>
         </div>
       </div>

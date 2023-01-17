@@ -135,7 +135,7 @@ There could be more pitfalls which can be avoided with types and not having erro
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/gawag/40/68_1.png" width="20"/> gawag:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/000e83ce255afd88a5c3fef7c5cdf302.png" width="20"/> gawag:</div>
 <blockquote>
 <p>One could also use “operator bool() const” which is usually done for such checks. The obvious archetype std::shared_ptr does that too: <a href="http://www.cplusplus.com/reference/memory/shared_ptr/" rel="nofollow noopener">cplusplus.com/reference/memory/shared_ptr/</a></p>
 </blockquote>
@@ -144,7 +144,7 @@ There could be more pitfalls which can be avoided with types and not having erro
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/gawag/40/68_1.png" width="20"/> gawag:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/000e83ce255afd88a5c3fef7c5cdf302.png" width="20"/> gawag:</div>
 <blockquote>
 <p>T* and SharedPtr feel weirdly mixed in Urho. What is the guideline behind that? Is there a consistent style?</p>
 </blockquote>
@@ -197,7 +197,7 @@ There could be more pitfalls which can be avoided with types and not having erro
         <div class="post">
           <div class="user_name">gawag</div>
           <div class="post_content">
-<p>Ha!  <img alt=":laughing:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/laughing.png?v=5" title=":laughing:"/> That’s funny. This situation is kinda hilarious:</p>
+<p>Ha!  <img alt=":laughing:" class="emoji" src="../../../images2/f1b3f4dd9f845d1069864c322071dffe.png" title=":laughing:"/> That’s funny. This situation is kinda hilarious:</p>
 <aside class="quote">
 <blockquote>
 <p>This is a good idea. That means we can get rid of operator T*() const completely.</p>
@@ -213,7 +213,7 @@ The conversion is quite a big and dangerous pitfall but I see this one big reaso
 <p>[all that SharedPtr and intrusive pointer stuff]</p>
 </blockquote>
 </aside>
-<p>Eww. <img alt=":confused:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/confused.png?v=5" title=":confused:"/> Really? That’s totally unexpected. I thought it was similar to std::shared_ptr like the name suggested. I kinda assumed something like that happening in Urho but I didn’t know exactly until now.<br/>
+<p>Eww. <img alt=":confused:" class="emoji" src="../../../images2/5fc0af8f196734b5bf5c1aacdc718a17.png" title=":confused:"/> Really? That’s totally unexpected. I thought it was similar to std::shared_ptr like the name suggested. I kinda assumed something like that happening in Urho but I didn’t know exactly until now.<br/>
 I see the reason for that but at least the naming is terrible. What about IntrusivePtr? Is SharedPtr also used like a normal shared pointer (like std::shared_ptr) and not like an intrinsic pointer? Smells like two different use cases that suggest two different types.</p>
           </div>
         </div>
@@ -251,7 +251,7 @@ I’ve included a screenshot of the assembler output. It’s practically cost fr
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/cadaver/40/3_1.png" width="20"/> cadaver:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/17ea6233fe86521c2e3179bd3849d219.png" width="20"/> cadaver:</div>
 <blockquote>
 <p>In C++ application code IMO you should never do manual AddRef() or ReleaseRef(), but use shared ptrs. Script bindings would sometimes need to use these when “transferring” ownership from a shared ptr.</p>
 </blockquote>
@@ -260,7 +260,7 @@ I’ve included a screenshot of the assembler output. It’s practically cost fr
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/gawag/40/68_1.png" width="20"/> gawag:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/000e83ce255afd88a5c3fef7c5cdf302.png" width="20"/> gawag:</div>
 <blockquote>
 <p>I’ve researched the idea I mentioned: <a href="https://github.com/damu/wiki/blob/master/converter_classes.md" rel="nofollow noopener">github.com/damu/wiki/blob/maste … classes.md</a></p>
 </blockquote>
@@ -402,7 +402,7 @@ This :</p>
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/thecomet/40/142_1.png" width="20"/> TheComet:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/12a1dc2eccbee0e3555e7cc3e716f46e.png" width="20"/> TheComet:</div>
 <blockquote>
 <p>Maybe I’m missing something here, but how does your solution solve the problem in the first post?</p>
 </blockquote>
@@ -422,13 +422,13 @@ You appear to disagree with 1) because of “code bloat”. However, your soluti
 I don’t disagree but it would force to add .Get() to every place where the implicit conversion was used (breaking old code). My solution fixes this at the places where a naked pointer was used “properly” (without any semantic meaning or sharing) without having the issues you mentioned (as it is not used shared).<br/>
 In Terrain::SetHeightmap the Image* is actually used shared (if I got that right) but that is confusing as a naked pointer doesn’t hint to that. So I suggested passing the SharedPtr either per value (extra cost) or per reference in such cases where the object is actually used in a shared way.</p>
 <p>Oh I just notized this: Texture2D::SetData(SharedPtr). That function is actually getting passed a SharedPtr… And that function isn’t using the Image shared at all. It’s copying the data.<br/>
-Why is Texture2D::SetData getting passed a SharedPtr but not using the Image in any way shared but Terrain::SetHeightmap is receiving the Image as a naked pointer but using the reference counting feature (using it shared)? Smells fishy. <img alt=":unamused:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/unamused.png?v=5" title=":unamused:"/></p>
+Why is Texture2D::SetData getting passed a SharedPtr but not using the Image in any way shared but Terrain::SetHeightmap is receiving the Image as a naked pointer but using the reference counting feature (using it shared)? Smells fishy. <img alt=":unamused:" class="emoji" src="../../../images2/21382c100a852239caa7667da5bafe68.png" title=":unamused:"/></p>
 <p>Basically I’m suggesting to use a converter class in functions that don’t use the ressource shared like Texture2D::SetData as it would allow to pass SharedPtr in there as well as Image* and that without having an implicit T* conversion in SharedPtr (as we want to get rid of that unsafe implicitness). And to use SharedPtr (potentially as a reference or somehow “disguised” for speed) in functions like Terrain::SetHeightmap that actually use the resource shared.<br/>
 AnyPtr is also kinda clumsy especially when passing a naked pointer but I don’t see a better solution if one doesn’t want the implicit cast SharedPptr::T* or function overloads everywhere for every “pointer type”.</p>
 <p>Oh Dave82 posted while I was writing this. I completely agree with that post. <em>nonexisting thumbs up smiley</em></p>
 <p>Edit: Oh isn’t a SharedPtr of a RefCounted object not kinda weird and doubled shared? Oh they work in conjunction, that’s still odd.</p>
 <p>Edit2: Also SharedPtr can’t be used with any class: “error: ‘class person’ has no member named ‘AddRef’” "error: ‘class person’ has no member named ‘ReleaseRef’"<br/>
-Someone not knowing that Urho specialty "But I thought it would be like std::shared_ptr or QSharedPointer or boost::shared_ptr or …  <img alt=":frowning:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/frowning.png?v=5" title=":frowning:"/> "</p>
+Someone not knowing that Urho specialty "But I thought it would be like std::shared_ptr or QSharedPointer or boost::shared_ptr or …  <img alt=":frowning:" class="emoji" src="../../../images2/2506cac83464f3f86e257fa414340d4c.png" title=":frowning:"/> "</p>
           </div>
         </div>
       </div>
@@ -450,7 +450,7 @@ Someone not knowing that Urho specialty "But I thought it would be like std::sha
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/gawag/40/68_1.png" width="20"/> gawag:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/000e83ce255afd88a5c3fef7c5cdf302.png" width="20"/> gawag:</div>
 <blockquote>
 <p>My solution fixes this at the places where a naked pointer was used “properly” (without any semantic meaning or sharing) without having the issues you mentioned (as it is not used shared).</p>
 </blockquote>

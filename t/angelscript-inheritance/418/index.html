@@ -68,7 +68,7 @@ public:
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/friesencr/40/827_1.png" width="20"/> friesencr:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/70bcc47748c28f7bda94e891e8db727b.png" width="20"/> friesencr:</div>
 <blockquote>
 <p>Do you need to pass data generated from c++?  Why does the c++ code call it?  There are lots of looser coupled options like subscribing to events and using node vars data bags.</p>
 </blockquote>
@@ -174,7 +174,7 @@ return false; // Don’t draw a card</p>
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/weitjong/40/4_1.png" width="20"/> weitjong:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/5dc21abd616a69d8b82c2d56dfa657a5.png" width="20"/> weitjong:</div>
 <blockquote>
 <p>As I understand it, you only use SubscribeToEvent() when you know there is <em>other</em> Object sending a particular event that your object is interested (and want to become the event receiver). For your case, I don’t think you can easily find the preexisting events that are suitable for your two handlers to listen to. I believe it is easier to just invoke the PreDraw() and PostDraw() as normal Script Object’s methods via the ScriptInstance::Execute() method as I pointed out earlier.</p>
 </blockquote>
@@ -210,7 +210,7 @@ return false; // Don’t draw a card</p>
 <aside class="quote no-group" data-username="thebluefish">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/t/f04885/40.png" width="20"/> thebluefish:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/bf1ad5330f9831ec6d82214e91751e5d.png" width="20"/> thebluefish:</div>
 <blockquote>
 <p>Due to the way events work, it’s trivial to add new events as needed.</p>
 </blockquote>
@@ -227,7 +227,7 @@ return false; // Don’t draw a card</p>
         <div class="post">
           <div class="user_name">thebluefish</div>
           <div class="post_content">
-<p>Awesome <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/></p>
+<p>Awesome <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/></p>
 <p>I was able to further work the ScriptInstance class to fit what I was trying to do. I find it’s easy to simply inherit from this class, and expose additional script functions explicitly.</p>
           </div>
         </div>

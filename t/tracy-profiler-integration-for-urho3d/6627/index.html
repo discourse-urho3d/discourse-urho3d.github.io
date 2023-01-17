@@ -35,7 +35,7 @@
 <p>Hi,</p>
 <p>I’m integrating <strong>Tracy</strong> profiler (<a href="https://github.com/wolfpld/tracy/" rel="noopener nofollow ugc">https://github.com/wolfpld/tracy/</a>) into Urho3D. If it’s only the client side integration, things should be neat. Tracy profiler should be a good plus to the engine.</p>
 <p>It’s working great on Windows -</p>
-<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/xwZGUKpyNywSqcUJKtL53n0DHvI.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/e/eb028f94cf9b6573491cbe03d67d51d4fe63cd82.jpeg" rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="xwZGUKpyNywSqcUJKtL53n0DHvI" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/e/eb028f94cf9b6573491cbe03d67d51d4fe63cd82_2_10x10.png" height="253" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/e/eb028f94cf9b6573491cbe03d67d51d4fe63cd82_2_690x253.jpeg" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/e/eb028f94cf9b6573491cbe03d67d51d4fe63cd82_2_690x253.jpeg, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/e/eb028f94cf9b6573491cbe03d67d51d4fe63cd82_2_1035x379.jpeg 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/e/eb028f94cf9b6573491cbe03d67d51d4fe63cd82_2_1380x506.jpeg 2x" width="690"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2183×803 324 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/xwZGUKpyNywSqcUJKtL53n0DHvI.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/e/eb028f94cf9b6573491cbe03d67d51d4fe63cd82.jpeg" rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="xwZGUKpyNywSqcUJKtL53n0DHvI" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/e/eb028f94cf9b6573491cbe03d67d51d4fe63cd82_2_10x10.png" height="253" src="../../../images2/75f269d58496cdcd97cb77498c2893aa.jpeg" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/e/eb028f94cf9b6573491cbe03d67d51d4fe63cd82_2_690x253.jpeg, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/e/eb028f94cf9b6573491cbe03d67d51d4fe63cd82_2_1035x379.jpeg 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/e/eb028f94cf9b6573491cbe03d67d51d4fe63cd82_2_1380x506.jpeg 2x" width="690"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2183×803 324 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
 <p>but, I find a compiling issue for Android:</p>
 <pre><code class="lang-auto">D:\AndroidDev\AndroidSDK\ndk\22.0.7026061\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=armv7-none-linux-androideabi18 --gcc-toolchain=D:/AndroidDev/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/AndroidDev/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -DNOMINMAX=1 -DTRACY_ENABLE=1 -DURHO3D_ANGELSCRIPT -DURHO3D_FILEWATCHER -DURHO3D_IK -DURHO3D_LOGGING -DURHO3D_LUA -DURHO3D_NAVIGATION -DURHO3D_NETWORK -DURHO3D_PHYSICS -DURHO3D_PROFILING -DURHO3D_STATIC_DEFINE -DURHO3D_THREADING -DURHO3D_URHO2D -DURHO3D_WEBP -DWIN32_LEAN_AND_MEAN -D_CRT_NONSTDC_NO_DEPRECATE -D_CRT_SECURE_NO_DEPRECATE -D_USE_MATH_DEFINES  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -std=c++11 -Wno-invalid-offsetof -Qunused-arguments -fcolor-diagnostics -Wno-argument-outside-range -O0 -fno-limit-debug-info  -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -MD -MT Source/ThirdParty/Tracy/CMakeFiles/Tracy.dir/client/TracySysTrace.cpp.o -MF Source\ThirdParty\Tracy\CMakeFiles\Tracy.dir\client\TracySysTrace.cpp.o.d -o Source/ThirdParty/Tracy/CMakeFiles/Tracy.dir/client/TracySysTrace.cpp.o -c ../../../../../../Source/ThirdParty/Tracy/client/TracySysTrace.cpp
 ../../../../../../Source/ThirdParty/Tracy/client/TracySysTrace.cpp:638:21: error: use of undeclared identifier '__NR_perf_event_open'
@@ -84,7 +84,7 @@ ninja: build stopped: subcommand failed.
           <div class="user_name">WangKai</div>
           <div class="post_content">
 <p>According to Tracy’s document -<br/>
-<img alt="image" data-base62-sha1="zq3k8sdkC0nr9sm4hsEreuIdlOr" height="444" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/f/f83e09496619e72572b5ecf3c4ce69d4c65a5f23.png" width="671"/></p>
+<img alt="image" data-base62-sha1="zq3k8sdkC0nr9sm4hsEreuIdlOr" height="444" src="../../../images2/146ff36e3b7d5652a17b001aea8d2348.png" width="671"/></p>
 <p>Context switch should be supported on Android and if there is no direct fixing, I have to disable <code>TRACY_HAS_SYSTEM_TRACING</code> completely to make it work on Android.</p>
 <p>I have submitted an issue on Tracy -</p><aside class="onebox githubissue">
 <header class="source">
@@ -105,7 +105,7 @@ ninja: build stopped: subcommand failed.
 </div>
 <div class="user">
 <a href="https://github.com/SuperWangKai" rel="noopener nofollow ugc" target="_blank">
-<img alt="SuperWangKai" class="onebox-avatar-inline" height="20" src="https://avatars3.githubusercontent.com/u/15721569?v=4" width="20"/>
+<img alt="SuperWangKai" class="onebox-avatar-inline" height="20" src="../../../images2/5f5c33dbd6ad79ea723b91c92c68c36d" width="20"/>
           SuperWangKai
         </a>
 </div>
@@ -146,9 +146,9 @@ D:\AndroidDev\AndroidSDK\ndk\22.0.7026061\toolchains\llvm\prebuilt\windows-x86_6
   ../../../../../../Source/ThirdParty/Tracy/client/TracyProfiler.cpp:123: error: undefined reference to 'tracy::rpmalloc_initialize()'
 </code></pre>
 <p>function <code>tracy::rpmalloc_initialize()</code> in source code -<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/mQOL5PjEGODzl676XBgfeu9voRa.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/a/a0284f6c6f12f207e8dd2a95e6a2dea94378dc18.png" rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="mQOL5PjEGODzl676XBgfeu9voRa" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/a/a0284f6c6f12f207e8dd2a95e6a2dea94378dc18_2_10x10.png" height="500" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/a/a0284f6c6f12f207e8dd2a95e6a2dea94378dc18.png" width="598"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">619×517 25.5 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/mQOL5PjEGODzl676XBgfeu9voRa.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/a/a0284f6c6f12f207e8dd2a95e6a2dea94378dc18.png" rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="mQOL5PjEGODzl676XBgfeu9voRa" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/a/a0284f6c6f12f207e8dd2a95e6a2dea94378dc18_2_10x10.png" height="500" src="../../../images2/f70abfbeb4507a185e7301b2fa88206d.png" width="598"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">619×517 25.5 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
 <p>object generated -<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/4N6vhBSOu7StmCMU1P1Yax8UmkI.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/2/2195b543f357f0b547e8d554cffe6ab18f6c697c.png" rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="4N6vhBSOu7StmCMU1P1Yax8UmkI" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/2/2195b543f357f0b547e8d554cffe6ab18f6c697c_2_10x10.png" height="65" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/2/2195b543f357f0b547e8d554cffe6ab18f6c697c.png" width="690"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">869×82 3.59 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/4N6vhBSOu7StmCMU1P1Yax8UmkI.png?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/2/2195b543f357f0b547e8d554cffe6ab18f6c697c.png" rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="4N6vhBSOu7StmCMU1P1Yax8UmkI" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/2/2195b543f357f0b547e8d554cffe6ab18f6c697c_2_10x10.png" height="65" src="../../../images2/b56e359766a1a0859a39f14c149d2259.png" width="690"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">869×82 3.59 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
 <p>Interesting situation…</p>
           </div>
         </div>
@@ -173,7 +173,7 @@ D:\AndroidDev\AndroidSDK\ndk\22.0.7026061\toolchains\llvm\prebuilt\windows-x86_6
         <div class="post">
           <div class="user_name">WangKai</div>
           <div class="post_content">
-<p>Thank you! However, the link issue still exists <img alt=":thinking:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/thinking.png?v=9" title=":thinking:"/></p>
+<p>Thank you! However, the link issue still exists <img alt=":thinking:" class="emoji" src="../../../images2/95fb74f06c03358715b7b493b96f1e60.png" title=":thinking:"/></p>
           </div>
         </div>
       </div>
@@ -322,11 +322,11 @@ I’d like to have a try after fixing my Hello World issues on Linux.</p>
         <div class="post">
           <div class="user_name">rku</div>
           <div class="post_content">
-<p>Not exactly correct. MinGW builds work fine as long as you do not enable Tracy. Actually problem is quite minor too. MinGW is <img alt=":poop:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/poop.png?v=9" title=":poop:"/> so even latest SDK does not provide all windows APIs, some of which Tracy uses. What we have to do is load those APIs using LoadLibrary+GetProcAddress.</p>
+<p>Not exactly correct. MinGW builds work fine as long as you do not enable Tracy. Actually problem is quite minor too. MinGW is <img alt=":poop:" class="emoji" src="../../../images2/df9c5f6a97a92dd7b39b315162af6d2c.png" title=":poop:"/> so even latest SDK does not provide all windows APIs, some of which Tracy uses. What we have to do is load those APIs using LoadLibrary+GetProcAddress.</p>
 <aside class="quote no-group" data-post="16" data-topic="6627" data-username="WangKai">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/wangkai/40/821_2.png" width="20"/> WangKai:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/8d788b223c509beebfc362364798c6b3.png" width="20"/> WangKai:</div>
 <blockquote>
 <p>I think in Urho, we can keep thing simple by just integrating the client, and use standard Tracy tool avoid the introduction of other dependencies.</p>
 </blockquote>
@@ -335,7 +335,7 @@ I’d like to have a try after fixing my Hello World issues on Linux.</p>
 <aside class="quote no-group" data-post="16" data-topic="6627" data-username="WangKai">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/wangkai/40/821_2.png" width="20"/> WangKai:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/8d788b223c509beebfc362364798c6b3.png" width="20"/> WangKai:</div>
 <blockquote>
 <p>AFAIK, the Tracy support for other platforms in rbfx is limited, no Android (yet?) and I must have missed the <code>Release</code> configurations in Visual Studio solution cmake generated?</p>
 </blockquote>
@@ -375,7 +375,7 @@ I’d like to have a try after fixing my Hello World issues on Linux.</p>
 </div>
 <div class="user">
 <a href="https://github.com/SuperWangKai" rel="noopener nofollow ugc" target="_blank">
-<img alt="SuperWangKai" class="onebox-avatar-inline" height="20" src="https://avatars.githubusercontent.com/u/15721569?v=4" width="20"/>
+<img alt="SuperWangKai" class="onebox-avatar-inline" height="20" src="../../../images2/fc4e85abb2782b2d30ecfe981af964f0" width="20"/>
           SuperWangKai
         </a>
 </div>
@@ -450,11 +450,11 @@ endif ()
 </li>
 <li>
 <p>In the Tracy server, press <code>Connect</code> button to start profiling<br/>
-<img alt="image" data-base62-sha1="aLNjAwobYJ0t2cKcx4rKgSWZTNJ" height="319" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/4/4b7cdb7c3871a1fd1afea740f760fb6b9df023df.png" width="453"/></p>
+<img alt="image" data-base62-sha1="aLNjAwobYJ0t2cKcx4rKgSWZTNJ" height="319" src="../../../images2/95cc00df583bcb93372eac6feb9016db.png" width="453"/></p>
 </li>
 <li>
 <p>You should see this -<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/fEw04RFfSiZv6iUN05skP5QkJF2.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/6/6db513de254c2dbce6bffa76305c87fefbd06c64.jpeg" rel="noopener nofollow ugc" title="tracy_screenshot"><img alt="tracy_screenshot" data-base62-sha1="fEw04RFfSiZv6iUN05skP5QkJF2" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/6/6db513de254c2dbce6bffa76305c87fefbd06c64_2_10x10.png" height="266" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/6/6db513de254c2dbce6bffa76305c87fefbd06c64_2_690x266.jpeg" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/6/6db513de254c2dbce6bffa76305c87fefbd06c64_2_690x266.jpeg, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/6/6db513de254c2dbce6bffa76305c87fefbd06c64_2_1035x399.jpeg 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/6/6db513de254c2dbce6bffa76305c87fefbd06c64_2_1380x532.jpeg 2x" width="690"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">tracy_screenshot</span><span class="informations">1694×654 163 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/fEw04RFfSiZv6iUN05skP5QkJF2.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/6/6db513de254c2dbce6bffa76305c87fefbd06c64.jpeg" rel="noopener nofollow ugc" title="tracy_screenshot"><img alt="tracy_screenshot" data-base62-sha1="fEw04RFfSiZv6iUN05skP5QkJF2" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/6/6db513de254c2dbce6bffa76305c87fefbd06c64_2_10x10.png" height="266" src="../../../images2/16b0ba051ba2d0fee28ce0968eb8b1f2.jpeg" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/6/6db513de254c2dbce6bffa76305c87fefbd06c64_2_690x266.jpeg, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/6/6db513de254c2dbce6bffa76305c87fefbd06c64_2_1035x399.jpeg 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/6/6db513de254c2dbce6bffa76305c87fefbd06c64_2_1380x532.jpeg 2x" width="690"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">tracy_screenshot</span><span class="informations">1694×654 163 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
 </li>
 </ul>
 <p>Enjoy Urho3D!</p>

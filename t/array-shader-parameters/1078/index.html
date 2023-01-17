@@ -215,7 +215,7 @@
         <div class="post">
           <div class="user_name">friesencr</div>
           <div class="post_content">
-<p>Sorry I haven’t done this yet.  Work has been very demanding lately <img alt=":frowning:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/frowning.png?v=5" title=":frowning:"/> <img alt=":frowning:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/frowning.png?v=5" title=":frowning:"/>.  The snippet I shared earlier has a bug if I remember.  I think it calculated the float size incorrectly.  My voxel renderer code has a working implimenation.  I found a pretty big weakness this approach and that is that the variant array it not efficient, and not capable of reusing data.  In my voxel renderer which has a sizable normal lookup table ~4-5% of gpu time was spent in this method.</p>
+<p>Sorry I haven’t done this yet.  Work has been very demanding lately <img alt=":frowning:" class="emoji" src="../../../images2/2506cac83464f3f86e257fa414340d4c.png" title=":frowning:"/> <img alt=":frowning:" class="emoji" src="../../../images2/2506cac83464f3f86e257fa414340d4c.png" title=":frowning:"/>.  The snippet I shared earlier has a bug if I remember.  I think it calculated the float size incorrectly.  My voxel renderer code has a working implimenation.  I found a pretty big weakness this approach and that is that the variant array it not efficient, and not capable of reusing data.  In my voxel renderer which has a sizable normal lookup table ~4-5% of gpu time was spent in this method.</p>
 <p>I think this code is good.  You have to replace the functions in OGLGraphics.cpp</p>
 <pre><code class="lang-auto">void Graphics::SetShaderParameter(StringHash param, const VariantVector&amp; variantVector)
 {

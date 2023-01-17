@@ -52,7 +52,7 @@ float s = p / 4;
 return (d * pow( 2, -10 * t ) * sin( (t - s)*(2 * M_PI) / p ) + c + a);
 </code></pre>
 <p>The animation looks right, but I dont know why this dont looks smooth, check:<br/>
-<img height="139" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/8/8d5590e74595da42751a912a6d3b45a6066616c2.gif" width="431"/></p>
+<img height="139" src="../../../images2/f3855ec09ef97457c62046ea3712760c.gif" width="431"/></p>
 <p>I’ve already tried to use the IM_LINEAR interpolation method, but the same problem happens.<br/>
 My code to apply valueanimation on the text it’s:</p>
 <pre><code>SharedPtr&lt;ValueAnimation&gt; textAnimation( new ValueAnimation( context_ ) );
@@ -74,7 +74,7 @@ Thanks.</p>
         <div class="post">
           <div class="user_name">dev4fun</div>
           <div class="post_content">
-<p>Sure, I understood the problem, probably I will need to use Text3D and use this animation on scale. <img alt=":tired_face:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/tired_face.png?v=5" title=":tired_face:"/></p>
+<p>Sure, I understood the problem, probably I will need to use Text3D and use this animation on scale. <img alt=":tired_face:" class="emoji" src="../../../images2/f723bb64345b5e0ef8283908c449e178.png" title=":tired_face:"/></p>
 <p><span class="mention">@The</span> problem its bcoz when I change Font Size, engine always will create a new font. What I need its just change the size on render.<br/>
 <span class="mention">@Anyway</span> to change the size of texture 2d from font on render?</p>
           </div>
@@ -103,7 +103,7 @@ for (unsigned i = 0; i &lt; pageGlyphLocation.Size(); ++i)
 <p>I hope that its the best way for what I want. I plan make some updates on UI:Text of Urho3D, like formatting tags and now the scaling function.</p>
 <p>If someone have a better way to do it, tell me haha.</p>
 <p>@ Just fix the text alignment now. It works if I used out of valueanimation, so I need to check later what is happening.<br/>
-<img height="260" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/1/1e3b6d80c0f0518a0adca6ef65b5c6e8a7155d62.gif" width="427"/></p>
+<img height="260" src="../../../images2/8609ab78ebd0e1e04931bcacc22da06b.gif" width="427"/></p>
           </div>
         </div>
       </div>
@@ -118,7 +118,7 @@ for (unsigned i = 0; i &lt; pageGlyphLocation.Size(); ++i)
 <aside class="quote" data-post="21" data-topic="2969">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" loading="lazy" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/pencheff/40/259_2.png" width="20"/>
+<img alt="" class="avatar" height="20" loading="lazy" src="../../../images2/38c9bf4f14473a4316c4c190ea1e02ef.png" width="20"/>
 <a href="https://discourse.urho3d.io/t/3d-rich-text-view/2969/21">3D rich text view</a> <a class="badge-wrapper bullet" href="/c/showcase/17"><span class="badge-category-bg" style="background-color: #F1592A;"></span><span class="badge-category clear-badge" data-drop-close="true" style="" title="Share things created with or for Urho3D.">Showcase</span></a>
 </div>
 <blockquote>
@@ -137,7 +137,7 @@ for (unsigned i = 0; i &lt; pageGlyphLocation.Size(); ++i)
         <div class="post">
           <div class="user_name">dev4fun</div>
           <div class="post_content">
-<p>Aaah I didnt know that was possible to use on Text2D <img alt=":tired_face:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/tired_face.png?v=6" title=":tired_face:"/><br/>
+<p>Aaah I didnt know that was possible to use on Text2D <img alt=":tired_face:" class="emoji" src="../../../images2/fd249ce19339f305f295b9ba1d190b8d.png" title=":tired_face:"/><br/>
 But now I already doing my own version for this, will be interesting to learn Urho UI.</p>
 <p>Im using bbcode instead of html tags (something like that <a href="http://cegui.org.uk/wiki/Formatting_Tags_in_CEGUI" rel="nofollow noopener">http://cegui.org.uk/wiki/Formatting_Tags_in_CEGUI</a>):</p>
 <p><code>+200 Test[color=red]ing eas[/color]ing</code></p>

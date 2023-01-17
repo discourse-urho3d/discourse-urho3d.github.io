@@ -50,7 +50,7 @@ Navigation etc - I don’t know.</p>
 <aside class="quote no-group" data-post="2" data-topic="3538" data-username="Eugene">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/eugene/40/902_2.png" width="20"/><a href="https://discourse.urho3d.io/t/urho3d-questions-terrain-material-vs-other-engines/3538/2">Urho3D questions (terrain, material, vs other engines)</a>
+<img alt="" class="avatar" height="20" src="../../../images2/ae663b3d37eca5ee603f9e0610f8f829.png" width="20"/><a href="https://discourse.urho3d.io/t/urho3d-questions-terrain-material-vs-other-engines/3538/2">Urho3D questions (terrain, material, vs other engines)</a>
 </div>
 <blockquote>
 <p>Semi-transparent material for graphics.</p>
@@ -167,7 +167,7 @@ void SetEastNeighbor(Terrain* east);
 </code></pre>
 <p>Does terrain component handle stitching of multiple <code>Terrain</code> components together? Not just <code>TerrainPatch</code>es within <code>Terrain</code>? If so that brings me to your original suggestion.</p>
 <p>Take a following picture as example:<br/>
-<img alt="terrains" height="284" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/1X/7a3c478741d46de5e6cc8f9a04adf4b98f786550.png" width="442"/><br/>
+<img alt="terrains" height="284" src="../../../images2/bb019289937cf470925dca0724a2738a.png" width="442"/><br/>
 Each rectangle represents <code>Terrain</code> component. Each green border represents neighbour relationship being set. Red border represents no neighbour relationship.</p>
 <p>Am i right to think that in this setup terrain would not be stitched together at the red border? If so then adjacent tiles could have different height (which would be a very steep cliff if stitched together) and create a hole when no stitching is applied to that border.</p>
           </div>
@@ -221,7 +221,7 @@ But I find this approach very limited to be useful.</p>
 <aside class="quote no-group" data-post="12" data-topic="3667" data-username="Eugene">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/eugene/40/902_2.png" width="20"/> Eugene:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/ae663b3d37eca5ee603f9e0610f8f829.png" width="20"/> Eugene:</div>
 <blockquote>
 <p>geomipmapping</p>
 </blockquote>
@@ -301,7 +301,7 @@ But I find this approach very limited to be useful.</p>
 <aside class="quote" data-post="16" data-topic="3667">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/rku/40/881_1.png" width="20"/> rku:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/c74e1d6abd7187cdd2f8199c8cfb922b.png" width="20"/> rku:</div>
 <blockquote>
 <p>thus for creating 16x16 units terrain i need to use 17x17 heigthmap. Whats the purpose of skipped edge?</p>
 </blockquote>
@@ -310,7 +310,7 @@ But I find this approach very limited to be useful.</p>
 <aside class="quote" data-post="16" data-topic="3667">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/rku/40/881_1.png" width="20"/> rku:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/c74e1d6abd7187cdd2f8199c8cfb922b.png" width="20"/> rku:</div>
 <blockquote>
 <p>How exactly am i supposed to use SetXXXNeighbor()?</p>
 </blockquote>
@@ -330,7 +330,7 @@ But I find this approach very limited to be useful.</p>
 <aside class="quote no-group" data-post="17" data-topic="3667" data-username="Eugene">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/eugene/40/902_2.png" width="20"/> Eugene:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/ae663b3d37eca5ee603f9e0610f8f829.png" width="20"/> Eugene:</div>
 <blockquote>
 <p>Do you mean 16x16 quads?</p>
 </blockquote>
@@ -340,7 +340,7 @@ But I find this approach very limited to be useful.</p>
 <aside class="quote no-group" data-post="17" data-topic="3667" data-username="Eugene">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/eugene/40/902_2.png" width="20"/> Eugene:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/ae663b3d37eca5ee603f9e0610f8f829.png" width="20"/> Eugene:</div>
 <blockquote>
 <p>If you want two terrains be seamlessly connected, you should set them as neighbors for each other.</p>
 </blockquote>
@@ -364,7 +364,7 @@ But I find this approach very limited to be useful.</p>
 <aside class="quote" data-post="18" data-topic="3667">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/rku/40/881_1.png" width="20"/> rku:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/c74e1d6abd7187cdd2f8199c8cfb922b.png" width="20"/> rku:</div>
 <blockquote>
 <p>i suppose 1 pixel in heightmap means one vertex. In order to get 1x1 tile terrain i would need 2x2 heightmap, because one quad needs 4 vertices at the corners. So 16x16 terrain needx 17x17 pixels. Right?</p>
 </blockquote>
@@ -373,7 +373,7 @@ But I find this approach very limited to be useful.</p>
 <aside class="quote" data-post="18" data-topic="3667">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/rku/40/881_1.png" width="20"/> rku:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/c74e1d6abd7187cdd2f8199c8cfb922b.png" width="20"/> rku:</div>
 <blockquote>
 <p>Because it produces exactly same visual result.</p>
 </blockquote>
@@ -394,7 +394,7 @@ They must have connected geometry. Could you check the grid?</p>
 <aside class="quote no-group" data-post="19" data-topic="3667">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/eugene/40/902_2.png" width="20"/> Eugene:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/ae663b3d37eca5ee603f9e0610f8f829.png" width="20"/> Eugene:</div>
 <blockquote>
 <p>Could you check the grid?</p>
 </blockquote>
@@ -419,7 +419,7 @@ I just noticed that white pixel on the right was tiny bit darker than white pixe
 <aside class="quote" data-post="20" data-topic="3667">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/rku/40/881_1.png" width="20"/> rku:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/c74e1d6abd7187cdd2f8199c8cfb922b.png" width="20"/> rku:</div>
 <blockquote>
 <p>I just noticed that white pixel on the right was tiny bit darker than white pixel on the left. That caused height mismatch.</p>
 </blockquote>
@@ -428,7 +428,7 @@ I just noticed that white pixel on the right was tiny bit darker than white pixe
 <aside class="quote" data-post="20" data-topic="3667">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/rku/40/881_1.png" width="20"/> rku:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/c74e1d6abd7187cdd2f8199c8cfb922b.png" width="20"/> rku:</div>
 <blockquote>
 <p>But there is still normal issue which makes lighting look weird. Is terrain supposed to take into account neighbouring terrains when calculating normals?</p>
 </blockquote>
@@ -481,7 +481,7 @@ Vertex normals are badly corrupted by geomipmapping and look nasty. Texture is a
 <aside class="quote" data-post="22" data-topic="3667">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/modanung/40/1123_1.png" width="20"/> Modanung:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/8b9decec7cc30729aa8f8f7015602d32.png" width="20"/> Modanung:</div>
 <blockquote>
 <p>Looking at the code it seems like neighbours should be set before creating the terrain geometry</p>
 </blockquote>
@@ -499,7 +499,7 @@ Vertex normals are badly corrupted by geomipmapping and look nasty. Texture is a
           <div class="user_name">rku</div>
           <div class="post_content">
 <p>Tried setting neighbours before setting heightmap too. <span class="mention">@Eugene</span> guessed right - it had no effect.</p>
-<p>Sounds like normals in a texture are easy way around the problem, going to do just that. Thanks <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=5" title=":wink:"/></p>
+<p>Sounds like normals in a texture are easy way around the problem, going to do just that. Thanks <img alt=":wink:" class="emoji" src="../../../images2/95940790c23d98635b2a6d3f22657158.png" title=":wink:"/></p>
           </div>
         </div>
       </div>
@@ -539,7 +539,7 @@ Vertex normals are badly corrupted by geomipmapping and look nasty. Texture is a
 <aside class="quote no-group" data-post="26" data-topic="3667">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/rku/40/881_2.png" width="20"/> rku:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/fd3b88ecdc16c24107db787de64d9d59.png" width="20"/> rku:</div>
 <blockquote>
 <p>I found interesting idea on the internets: having depth mask object in a place where hole is supposed to be cut in the terrain.</p>
 </blockquote>
@@ -549,7 +549,7 @@ Vertex normals are badly corrupted by geomipmapping and look nasty. Texture is a
 <aside class="quote no-group" data-post="26" data-topic="3667">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/rku/40/881_2.png" width="20"/> rku:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/fd3b88ecdc16c24107db787de64d9d59.png" width="20"/> rku:</div>
 <blockquote>
 <p>This indeed sounds like perfect solution</p>
 </blockquote>
@@ -558,7 +558,7 @@ Vertex normals are badly corrupted by geomipmapping and look nasty. Texture is a
 <ol>
 <li>All your holes have some “restricted area” around the hole edge that is never collided.</li>
 <li>This restricted area is bigger that any dynamic object that could collide your hole.<br/>
-<img alt="image" height="326" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/1X/a8ec9d1c720e9dac708ee5f7b0a3b7a2914ed92e.png" width="380"/>
+<img alt="image" height="326" src="../../../images2/8b2903ed990d5d6646b74b86ed027230.png" width="380"/>
 </li>
 </ol>
           </div>
@@ -575,7 +575,7 @@ Vertex normals are badly corrupted by geomipmapping and look nasty. Texture is a
 <aside class="quote no-group" data-post="27" data-topic="3667" data-username="Eugene">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/eugene/40/902_2.png" width="20"/> Eugene:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/ae663b3d37eca5ee603f9e0610f8f829.png" width="20"/> Eugene:</div>
 <blockquote>
 <p>I don’t understand the idea, may you elaborate?</p>
 </blockquote>
@@ -617,7 +617,7 @@ Same thing is done with terrain material, except its added to queue at <code>Geo
 <aside class="quote no-group" data-post="29" data-topic="3667" data-username="Eugene">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/eugene/40/902_2.png" width="20"/> Eugene:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/ae663b3d37eca5ee603f9e0610f8f829.png" width="20"/> Eugene:</div>
 <blockquote>
 <p>If I understand correctly, this hack won’t work if your Camera could move through the hole.</p>
 </blockquote>
@@ -649,7 +649,7 @@ Same thing is done with terrain material, except its added to queue at <code>Geo
 <aside class="quote" data-post="30" data-topic="3667">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/rku/40/881_1.png" width="20"/> rku:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/c74e1d6abd7187cdd2f8199c8cfb922b.png" width="20"/> rku:</div>
 <blockquote>
 <p>For terrain i am using original Materials/Terrain.xml material by the way.</p>
 </blockquote>
@@ -658,7 +658,7 @@ Same thing is done with terrain material, except its added to queue at <code>Geo
 <aside class="quote" data-post="30" data-topic="3667">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/rku/40/881_1.png" width="20"/> rku:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/c74e1d6abd7187cdd2f8199c8cfb922b.png" width="20"/> rku:</div>
 <blockquote>
 <p>Why not? Considering camera can see through that spot and collisions would be disabled upon moving through…</p>
 </blockquote>
@@ -678,7 +678,7 @@ Same thing is done with terrain material, except its added to queue at <code>Geo
 <aside class="quote no-group" data-post="31" data-topic="3667" data-username="Eugene">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/eugene/40/902_2.png" width="20"/> Eugene:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/ae663b3d37eca5ee603f9e0610f8f829.png" width="20"/> Eugene:</div>
 <blockquote>
 <p>What about Terrain render order?</p>
 </blockquote>
@@ -698,7 +698,7 @@ Same thing is done with terrain material, except its added to queue at <code>Geo
 <aside class="quote" data-post="32" data-topic="3667">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/rku/40/881_1.png" width="20"/> rku:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/c74e1d6abd7187cdd2f8199c8cfb922b.png" width="20"/> rku:</div>
 <blockquote>
 <p>Terrain material does not set renderorder so it must be default value.</p>
 </blockquote>
@@ -730,7 +730,7 @@ Same thing is done with terrain material, except its added to queue at <code>Geo
 <aside class="quote" data-post="34" data-topic="3667">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/rku/40/881_1.png" width="20"/> rku:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/c74e1d6abd7187cdd2f8199c8cfb922b.png" width="20"/> rku:</div>
 <blockquote>
 <p>Nothing has any effect which makes me think i messed up something else in material or technique.</p>
 </blockquote>
@@ -776,7 +776,7 @@ If you turn lighting on and make your terrain semi-transparend, you should be ab
 &lt;/material&gt;
 </code></pre>
 <p>Important: terrain has to have technique supporting alpha. Result:</p>
-<p><img alt="2" height="255" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/1X/06f2e6dca95a68f865ef14a1c61613b9f7d294ab.gif" width="320"/></p>
+<p><img alt="2" height="255" src="../../../images2/c2661fed4ff52a7948cb0f7f0503ad1b.gif" width="320"/></p>
 <p>Thank you everyone for the help!</p>
           </div>
         </div>
@@ -792,7 +792,7 @@ If you turn lighting on and make your terrain semi-transparend, you should be ab
 <aside class="quote no-group" data-post="31" data-topic="3667" data-username="Eugene">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/eugene/40/902_2.png" width="20"/> Eugene:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/ae663b3d37eca5ee603f9e0610f8f829.png" width="20"/> Eugene:</div>
 <blockquote>
 <p>Huh, it would be fine if you set front face culling for your mask object material.</p>
 </blockquote>
@@ -828,7 +828,7 @@ This hack won’t work if hole object is not rendered in front of terrain. E.g. 
 <aside class="quote" data-post="39" data-topic="3667">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/rku/40/881_1.png" width="20"/> rku:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/c74e1d6abd7187cdd2f8199c8cfb922b.png" width="20"/> rku:</div>
 <blockquote>
 <p>Back to the drawing board i guess. I took a closer look at terrain code and seems like sentinel height values are off the table as well. Terrain component does a smart thing reusing index buffers between patches. Going to try to experiment by allowing unique index buffers for patches.</p>
 </blockquote>
@@ -851,7 +851,7 @@ Of course, you’ll need semi-transparent material for terrain.</p>
 <aside class="quote no-group" data-post="40" data-topic="3667" data-username="Eugene">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/eugene/40/902_2.png" width="20"/> Eugene:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/ae663b3d37eca5ee603f9e0610f8f829.png" width="20"/> Eugene:</div>
 <blockquote>
 <p>I don’t think it’s good solution if you want to use geomipmapping. There is no change to generate nice automatic LODs for terrain with corrupted geometry.</p>
 </blockquote>
@@ -860,7 +860,7 @@ Of course, you’ll need semi-transparent material for terrain.</p>
 <aside class="quote no-group" data-post="40" data-topic="3667" data-username="Eugene">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/eugene/40/902_2.png" width="20"/> Eugene:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/ae663b3d37eca5ee603f9e0610f8f829.png" width="20"/> Eugene:</div>
 <blockquote>
 <p>Of course, you’ll need semi-transparent material for terrain.</p>
 </blockquote>
@@ -880,7 +880,7 @@ Of course, you’ll need semi-transparent material for terrain.</p>
 <aside class="quote" data-post="41" data-topic="3667">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/rku/40/881_1.png" width="20"/> rku:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/c74e1d6abd7187cdd2f8199c8cfb922b.png" width="20"/> rku:</div>
 <blockquote>
 <p>But transparent objects are rendered after geometry, so it means overdraw like with previous approach, no?</p>
 </blockquote>
@@ -889,7 +889,7 @@ Of course, you’ll need semi-transparent material for terrain.</p>
 <aside class="quote" data-post="41" data-topic="3667">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/rku/40/881_1.png" width="20"/> rku:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/c74e1d6abd7187cdd2f8199c8cfb922b.png" width="20"/> rku:</div>
 <blockquote>
 <p>My idea was to allow it generate and process all vertices and only to not render triangles where at least one vertex is at zero height.</p>
 </blockquote>

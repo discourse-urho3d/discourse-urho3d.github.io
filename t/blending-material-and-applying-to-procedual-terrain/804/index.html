@@ -316,7 +316,7 @@ blendtex -&gt;SetData(blend -&gt;GetNextLevel (), false);[/code]</code></pre>
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/jtippetts/40/357_1.png" width="20"/> JTippetts:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/fa8323cd130f703ad0982cec8eee46b7.png" width="20"/> JTippetts:</div>
 <blockquote>
 <p>blend-&gt;GetNextLevel() gets the next mip level down from the current image. Perhaps you want to just do blendtex:SetData(blend,false) instead?</p>
 </blockquote>
@@ -495,7 +495,7 @@ blendtex -&gt;SetData(blend, true);[/code]</code></pre>
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/jtippetts/40/357_1.png" width="20"/> JTippetts:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/fa8323cd130f703ad0982cec8eee46b7.png" width="20"/> JTippetts:</div>
 <blockquote>
 <p>Make sure that your terrain heightmap is sized 2^n+1 rather than 2^n. That is, instead of using an image 2048x2048 for the heightmap, use one that’s 2049x2049. Otherwise, the last terrain patch row and column in X and Z won’t be generated, meaning that the blend map will extend out beyond the edges of the terrain itself.</p>
 </blockquote>
@@ -517,7 +517,7 @@ blendtex -&gt;SetData(blend, true);[/code]</code></pre>
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/vivienneanthony/40/942_1.png" width="20"/> vivienneanthony:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/1508150f71fcef53ebe1d65b4e91fa85.png" width="20"/> vivienneanthony:</div>
 <blockquote>
 <p>So, I should do it  for the procedual terrain heightmap image I created? Instead of 2048.</p>
 </blockquote>

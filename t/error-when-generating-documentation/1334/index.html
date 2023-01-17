@@ -56,7 +56,7 @@ I am trying to build the docs for Urho3D on Windows and I get an error saying it
 cmake -G "MinGW Makefiles" ./
 mingw32-make doc
 </code></p>
-<p><div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/H7KXtnG.png" rel="nofollow noopener" title=""><img alt="" height="352" src="http://i.imgur.com/H7KXtnG.png" width="690"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">800×409</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/H7KXtnG.png" rel="nofollow noopener" title=""><img alt="" height="352" src="../../../images2/8bbed5d5d5a76264a78d3497c0af2d2e.png" width="690"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">800×409</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
           </div>
         </div>
       </div>
@@ -116,8 +116,8 @@ This makes me think that CMake is finding doxygen and graphviz correctly, but th
           <div class="post_content">
 <p><span class="bbcode-b"><span class="mention">@bvanevery</span></span></p>
 <p>I think I know now your current issue here and I somehow replicated that problem and did a workaround. The generated files that I posted before was incomplete but I think I have managed to update it by setting up the path using environment variables. Just add another path pointing to your graphviz bin folder and your good to go:</p>
-<p><img alt="" height="433" src="http://i.imgur.com/s65KUJq.jpg" width="389"/></p>
-<p><img alt="" height="323" src="http://i.imgur.com/ZDA2F4V.jpg" width="512"/></p>
+<p><img alt="" height="433" src="../../../images2/55992690358b4500c266f8e599cf6f29.jpg" width="389"/></p>
+<p><img alt="" height="323" src="../../../images2/40bf6fa481785a813f6c4a8135ccecc6.jpg" width="512"/></p>
 <p>Generated files inside the html folder is now ~500mb in size and ~30k items.</p>
 <p>The lack of space on that make/cmake path needs to be addressed though.</p>
 <p>Hope this helps.</p>

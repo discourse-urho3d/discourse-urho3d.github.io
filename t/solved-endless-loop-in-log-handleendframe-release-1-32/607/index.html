@@ -38,7 +38,7 @@
 [li]The main exe, which calls a GraphicsEngine::Run[/li]<br/>
 [li]The Urho3D ‘Interaction’ dll, which contains the class inheriting from Urho3D::Application[/li]<br/>
 [li]The dll where the bulk of the code resides, which contains the GraphicsEngine class, and which creates the Urho3D::Application subclass.[/li][/ul]</p>
-<p>Using the exact code from the test exe, putting it into the aforementioned dll (and exporting it), and running the application, results in an endless loop due to it apparently not being the ‘main thread’ (I’ve created no threads in my own code at this stage). I can post code if this isn’t clear, which I don’t think it is  <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/></p>
+<p>Using the exact code from the test exe, putting it into the aforementioned dll (and exporting it), and running the application, results in an endless loop due to it apparently not being the ‘main thread’ (I’ve created no threads in my own code at this stage). I can post code if this isn’t clear, which I don’t think it is  <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/></p>
 <p>Which results my main question: Why does it not register as a main thread, or how can I make it do so? I had a quick look over the documentation but could only see the multithreading reference.</p>
 <p>This leads onto the problem in the actual code:</p>
 <p>Line 252 in Log.cpp:</p>

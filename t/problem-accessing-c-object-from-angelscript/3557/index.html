@@ -68,7 +68,7 @@ RegisterObject&lt;Grid&gt;(engine, "Grid");
 <aside class="quote" data-post="1" data-topic="3557">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/trevorcash/40/698_1.png" width="20"/> TrevorCash:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/fd9bab040403848595735bada0be653a.png" width="20"/> TrevorCash:</div>
 <blockquote>
 <p>engine-&gt;RegisterObjectMethod(“GridWorld”, “Grid&amp; GetGrid(Vector3 globalPos)”, asMETHODPR(GridWorld, GetGrid, (Vector3), WeakPtr), asCALL_THISCALL);</p>
 </blockquote>
@@ -173,7 +173,7 @@ A SharedPtr to the GridWorld also exists as a member in my Application class jus
 <aside class="quote" data-full="true" data-post="7" data-topic="3557">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/victor/40/430_1.png" width="20"/> Victor:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/56d7526156403ea04e6f95c8231fbe4f.png" width="20"/> Victor:</div>
 <blockquote>
 <p>I’ve not used AngleScript before, however that does look odd the way it’s written. If GridWorld is already created as a Subsystem singleton, couldn’t you do something like:</p>
 <pre><code>SharedPtr&lt;GridWorld&gt; GetGridWorld() { 
@@ -213,7 +213,7 @@ return GetScriptContext()-&gt;GetSubsystem&lt;GridWorld&gt;();<br/>
 <aside class="quote" data-post="6" data-topic="3557">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/trevorcash/40/698_1.png" width="20"/> TrevorCash:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/fd9bab040403848595735bada0be653a.png" width="20"/> TrevorCash:</div>
 <blockquote>
 <p>The problem seems to be with AngleScript attempting to delete the GridWorld Object after the following call in the API:</p>
 </blockquote>
@@ -283,7 +283,7 @@ return GetScriptContext()-&gt;GetSubsystem&lt;GridWorld&gt;();<br/>
 <aside class="quote no-group" data-full="true" data-post="11" data-topic="3557" data-username="Eugene">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/eugene/40/902_2.png" width="20"/> Eugene:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/ae663b3d37eca5ee603f9e0610f8f829.png" width="20"/> Eugene:</div>
 <blockquote>
 <p>Try <code>GridWorld@+ get_gridworld()</code></p>
 </blockquote>

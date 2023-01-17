@@ -32,10 +32,10 @@
         <div class="post">
           <div class="user_name">Bluemoon</div>
           <div class="post_content">
-<p>The numerous techniques included with urho3D has really saved me a lot of stress and brain overloads  <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=9" title=":smiley:"/> . But there seems to be a problem with the Alpha Enabled techniques, like the DiffAlpha DiffNormalAlpha, DiffNormalSpecAlpha and most likely other techniques that have alpha included. The issue is when a material that has any of these technique is applied to an object, the alpha effect affects parts of the object that are not meant to be transparent according to the texture used. This usually happens when the object has surfaces that occlude each other. I made a model to explain this.</p>
-<p><img alt="" height="" src="http://s25.postimg.org/71addtwml/Screenshot_Mon_Aug_04_03_05_33_2014.png" width=""/></p>
+<p>The numerous techniques included with urho3D has really saved me a lot of stress and brain overloads  <img alt=":smiley:" class="emoji" src="../../../images2/94dd27e9c6c243335d29229e02e34e9d.png" title=":smiley:"/> . But there seems to be a problem with the Alpha Enabled techniques, like the DiffAlpha DiffNormalAlpha, DiffNormalSpecAlpha and most likely other techniques that have alpha included. The issue is when a material that has any of these technique is applied to an object, the alpha effect affects parts of the object that are not meant to be transparent according to the texture used. This usually happens when the object has surfaces that occlude each other. I made a model to explain this.</p>
+<p><img alt="" height="" src="../../../images2/0bddbf21ddbe27cbefb920ba901051a4.png" width=""/></p>
 <p>The model on the left is a continues mesh model, the head and the veil covering the face are joined together, the material has a technique of DiffAlpha so as to give an alpha effect to the veil while the head remains with its diffuse appearance. Looking at this model one will see the transparency defect at the side of the head due to the occluded sides showing through to the front. The model at the right is an object with two sub entities each having its own material. The material of the head has a plain Diff technique while that of the veil has DiffAlpha. Doing it this way the problem doesn’t show up, but I’m a bit concerned that this method would involve unnecessary sub entities if I were to have transparency in some of my models since I would have to separate each transparent part into its own material.</p>
-<p>I know this issue can be corrected by writing one or two shaders  <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=9" title=":smiley:"/> , but I will like to know if there is already a work-around for it</p>
+<p>I know this issue can be corrected by writing one or two shaders  <img alt=":smiley:" class="emoji" src="../../../images2/94dd27e9c6c243335d29229e02e34e9d.png" title=":smiley:"/> , but I will like to know if there is already a work-around for it</p>
           </div>
         </div>
       </div>
@@ -61,7 +61,7 @@
         <div class="post">
           <div class="user_name">Bluemoon</div>
           <div class="post_content">
-<p>Sorry for the image (still figuring out how to properly post images <img alt=":frowning:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/frowning.png?v=5" title=":frowning:"/> )</p>
+<p>Sorry for the image (still figuring out how to properly post images <img alt=":frowning:" class="emoji" src="../../../images2/2506cac83464f3f86e257fa414340d4c.png" title=":frowning:"/> )</p>
 <p>Thanks for the answer, let me try out the alpha test option you mentioned cos I have some trees with leaves that use alpha enabled texture.</p>
           </div>
         </div>

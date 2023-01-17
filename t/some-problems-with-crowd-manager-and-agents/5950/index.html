@@ -71,7 +71,7 @@ Thanks</p>
 <aside class="quote no-group" data-post="1" data-topic="5950" data-username="Dave82">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/dave82/40/2369_2.png" width="20"/> Dave82:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/39fd1aeff01d89e7279fa956666af00e.png" width="20"/> Dave82:</div>
 <blockquote>
 <p>SetEnabled doesn’t seem to work with crowd agents. Your only chance to stop the crowd agents from updating and moving is removing the component from the node. That could be a real pain once you plan adding more complex logic to your enemies instead of moving along a path to a certain destination</p>
 </blockquote>
@@ -80,7 +80,7 @@ Thanks</p>
 <aside class="quote no-group" data-post="1" data-topic="5950" data-username="Dave82">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/dave82/40/2369_2.png" width="20"/> Dave82:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/39fd1aeff01d89e7279fa956666af00e.png" width="20"/> Dave82:</div>
 <blockquote>
 <ul>
 <li>Crowd can only have one target. So if you have two players and you want both of them to be attacked by a crowd of enemies at the same time you can’t do that.</li>
@@ -91,7 +91,7 @@ Thanks</p>
 <aside class="quote no-group" data-post="1" data-topic="5950" data-username="Dave82">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/dave82/40/2369_2.png" width="20"/> Dave82:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/39fd1aeff01d89e7279fa956666af00e.png" width="20"/> Dave82:</div>
 <blockquote>
 <p>We need more helper functions to have more control over the agents. For simple demo purposes where agents follow a simple path until they reach their destionation the current state is ok but adding logic to enemies requires lot more control and access (length of the current path , path points). How can i activate my agent only if the distance between the player and the agent reaches a certain value without knowing the path distance ?</p>
 </blockquote>
@@ -101,7 +101,7 @@ As for activating agent, it would be probably better to use triggers and not nav
 <aside class="quote no-group" data-post="1" data-topic="5950" data-username="Dave82">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/dave82/40/2369_2.png" width="20"/> Dave82:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/39fd1aeff01d89e7279fa956666af00e.png" width="20"/> Dave82:</div>
 <blockquote>
 <p>I think the ground distance should be irrelevant in crowd navigation. Right now the agents won’t move if the ground isn’t close enough to their feet (still can’t understand how it works but maybe i’m doing something wrong ?) The y position of the agents should be controlled by gravity and the path should be calculated on a ZX plane</p>
 </blockquote>
@@ -133,7 +133,7 @@ As for activating agent, it would be probably better to use triggers and not nav
 <aside class="quote no-group" data-post="2" data-topic="5950" data-username="lezak">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/l/b38774/40.png" width="20"/> lezak:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/6ef2f82e83bb3859852dc241e102e0b3.png" width="20"/> lezak:</div>
 <blockquote>
 <p>I’m unable to reproduce this. I’v checked it by adding ability to disable agents in sample and agent stops when disabled. There are also other ways to stop agent: SetTargetVelocity to 0 or set target position to current position.</p>
 </blockquote>
@@ -142,7 +142,7 @@ As for activating agent, it would be probably better to use triggers and not nav
 <aside class="quote no-group" data-post="2" data-topic="5950" data-username="lezak">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/l/b38774/40.png" width="20"/> lezak:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/6ef2f82e83bb3859852dc241e102e0b3.png" width="20"/> lezak:</div>
 <blockquote>
 <p>You will not get one path that is valid from setting target to the moment when agent reaches it</p>
 </blockquote>
@@ -151,7 +151,7 @@ As for activating agent, it would be probably better to use triggers and not nav
 <aside class="quote no-group" data-post="2" data-topic="5950" data-username="lezak">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/l/b38774/40.png" width="20"/> lezak:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/6ef2f82e83bb3859852dc241e102e0b3.png" width="20"/> lezak:</div>
 <blockquote>
 <p>for example if Y position should be controlled by gravity, what to do when project is not using physics?</p>
 </blockquote>
@@ -171,7 +171,7 @@ As for activating agent, it would be probably better to use triggers and not nav
 <aside class="quote no-group" data-post="4" data-topic="5950" data-username="Dave82">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/dave82/40/2369_2.png" width="20"/> Dave82:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/39fd1aeff01d89e7279fa956666af00e.png" width="20"/> Dave82:</div>
 <blockquote>
 <p>As i mentioned if the agent is slightly above or under the navigation mesh “floor” then the agent isn’t moving (probably the path is invalid).</p>
 </blockquote>
@@ -191,7 +191,7 @@ As for activating agent, it would be probably better to use triggers and not nav
 <aside class="quote no-group" data-post="4" data-topic="5950" data-username="Dave82">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/dave82/40/2369_2.png" width="20"/> Dave82:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/39fd1aeff01d89e7279fa956666af00e.png" width="20"/> Dave82:</div>
 <blockquote>
 <p>That’s not what i was suggesting. My suggestion was to get the current generated path (path this frame) so i can check i’ts length. If the enemy is far away stop movement and e.g play idle animation. If the path length is below some value , activate the agent and start moving towards target.</p>
 </blockquote>

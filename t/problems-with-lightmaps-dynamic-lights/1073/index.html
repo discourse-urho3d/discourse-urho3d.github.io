@@ -34,7 +34,7 @@
           <div class="post_content">
 <p>Hi ! It seems that dynamic lights + shadow mapping + baked lightmaps doesn’t work properly together… i don’t know what causes this but here’s a picture whats happening :</p>
 <p>Left Images : No dynamic lights (OK)    -      Right : Dynamic lights + lightmap (Wrong)</p>
-<p><img alt="" height="369" src="https://i.postimg.cc/hPB9HsFC/dynlights.jpg" width="382"/></p>
+<p><img alt="" height="369" src="../../../images2/4a36bb3e8c1426246e25b744f7dd11c7.jpg" width="382"/></p>
 <p>As you can see some faces are lit and some are not. Also the shadow is not visible on unlit faces…(right bottom pic)<br/>
 I tried to recalculate normals , turn off cast shadows on level , but it didnt helped.<br/>
 i’m using the DiffLightMap , Diff , DiffLightmapAlpha , DiffAlpha techniques</p>
@@ -64,7 +64,7 @@ i’m using the DiffLightMap , Diff , DiffLightmapAlpha , DiffAlpha techniques</
           <div class="post_content">
 <p>Now the dynamic lights are gone , but the shadows are disappeared too…</p>
 <p>The shadows are visible on the cube (DiffNormalPacked technique) but not on the level<br/>
-<img alt="" height="" src="http://s7.postimg.org/xeiutcvcb/problems3.jpg" width=""/></p>
+<img alt="" height="" src="../../../images2/1c162dad25db2b609eb4105034bec5cd.jpg" width=""/></p>
 <p>I tried :</p>
 <p>[code]level-&gt;SetLightMask(1);<br/>
 level-&gt;SetShadowMask(1);</p>
@@ -156,9 +156,9 @@ I have no project on git either , but as i said i can upload an mdl file tomorro
 Have you tried adjusting the “Brightness Multiplier” of the light. Something like 0.1.[/quote]</p>
 <p>Hm i just did a test too in the urho editor.I imported a lightmapped mesh added a cube and a light. If i turn the brightness lower , the shadow cast by the cube also disappears.Also turning the brighness lower would affect models that SHOULD be lit in the scene (e.g characters dynamic objects etc)</p>
 <p>This is how it looks Brightness 0.1 :<br/>
-<img alt="" height="" src="http://s22.postimg.org/84wrenqzl/lmap01.jpg" width=""/></p>
+<img alt="" height="" src="../../../images2/529003686a3f7571197adfc9ad297e2e.jpg" width=""/></p>
 <p>And brightness 0.75 :<br/>
-<img alt="" height="" src="http://s12.postimg.org/bhsdqhukd/lmap2.jpg" width=""/></p>
+<img alt="" height="" src="../../../images2/4d08e8b27b3f408d1f606c860ab34f5b.jpg" width=""/></p>
           </div>
         </div>
       </div>
@@ -171,7 +171,7 @@ Have you tried adjusting the “Brightness Multiplier” of the light. Something
           <div class="user_name">rasteron</div>
           <div class="post_content">
 <p>Quick question Dave82, What software tool are you using in generating Lightmaps? I’ve always been curious with lightmap techniques since this is a big part of asset optimization.</p>
-<p>I tried to contribute some samples before but <a data-bbcode="true" href="http://discourse.urho3d.io/t/lightmap-on-dynamic-shadows/678/1">my thread</a> was somehow buried  <img alt=":unamused:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/unamused.png?v=5" title=":unamused:"/></p>
+<p>I tried to contribute some samples before but <a data-bbcode="true" href="http://discourse.urho3d.io/t/lightmap-on-dynamic-shadows/678/1">my thread</a> was somehow buried  <img alt=":unamused:" class="emoji" src="../../../images2/21382c100a852239caa7667da5bafe68.png" title=":unamused:"/></p>
 <p>really curious how this turns out.</p>
           </div>
         </div>
@@ -210,9 +210,9 @@ lightCol = (1-colorIntensity)*ambient+(colorIntensity)*lightmapColor;</code></p>
 In general - it work.</p>
 <p>For rasteron:</p>
 <p>[spoiler][quote=“rasteron”]Quick question Dave82, What software tool are you using in generating Lightmaps? I’ve always been curious with lightmap techniques since this is a big part of asset optimization.</p>
-<p>I tried to contribute some samples before but <a data-bbcode="true" href="http://discourse.urho3d.io/t/lightmap-on-dynamic-shadows/678/1">my thread</a> was somehow buried  <img alt=":unamused:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/unamused.png?v=9" title=":unamused:"/></p>
+<p>I tried to contribute some samples before but <a data-bbcode="true" href="http://discourse.urho3d.io/t/lightmap-on-dynamic-shadows/678/1">my thread</a> was somehow buried  <img alt=":unamused:" class="emoji" src="../../../images2/8506f760150c1432f8c16c5e06559e88.png" title=":unamused:"/></p>
 <p>really curious how this turns out.[/quote]</p>
-<p><img alt="" height="" src="http://i.piccy.info/i9/8af60cd9b62cabd8aa248baa4f57e931/1432727186/65192/912050/555.jpg" width=""/></p>
+<p><img alt="" height="" src="../../../images2/51b64236840e61d49ce77a41e3c534af.jpg" width=""/></p>
 <p>3DMax , Maya, Blender3D and other programs can do it.</p>
 <p>Quick theory from Wiki<br/>
 <a data-bbcode="true" href="http://en.wikipedia.org/wiki/Lightmap" rel="nofollow noopener">http://en.wikipedia.org/wiki/Lightmap</a></p>
@@ -237,7 +237,7 @@ Variants for Blender “TextureAtlas Add-on”<br/>
 Introduction to Baking in Cycles<br/>
 <a data-bbcode="true" href="http://www.blenderguru.com/tutorials/introduction-baking-cycles/" rel="nofollow noopener">http://www.blenderguru.com/tutorials/introduction-baking-cycles/</a>[/spoiler]<br/>
 Look also to:<br/>
-<img alt="" height="" src="http://i.piccy.info/i9/1bbf7d157365957a9a5a8daee706e72e/1432731235/186542/912050/u3dshadows.jpg" width=""/><br/>
+<img alt="" height="" src="../../../images2/4eb14528303428ac060b348dbd9529d9.jpg" width=""/><br/>
 <span class="bbcode-b">Warboat</span> (Local Multiplayer Boat Battle)<br/>
 <span class="bbcode-b">Use Blender and Urho3D for shadowmap.</span><br/>
 <a data-bbcode="true" href="http://forums.tigsource.com/index.php?topic=41689.20" rel="nofollow noopener">http://forums.tigsource.com/index.php?topic=41689.20</a></p>
@@ -263,7 +263,7 @@ Look also to:<br/>
 <p>really curious how this turns out.</p>
 </blockquote>
 </aside>
-<p>Me too <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=9" title=":smiley:"/> but the more i think about this the more i came to a conclusion that is impossible to do it…<br/>
+<p>Me too <img alt=":smiley:" class="emoji" src="../../../images2/94dd27e9c6c243335d29229e02e34e9d.png" title=":smiley:"/> but the more i think about this the more i came to a conclusion that is impossible to do it…<br/>
 The shadow mapping is not “Rendering dark shadows on top of the level” but “rendering light on top of the level and leave out the shadowed areas”<br/>
 So shadows in fact are non-lit parts of the scene.<br/>
 So it goes something like this :</p>
@@ -274,7 +274,7 @@ So what we will have is completely the oposite , but this way we can specify cus
 <p>1 render the scene unlit<br/>
 2 render the scene but instead of calculating the lighting we simply use black color for the whole image EXCEPT where the shadows should be.There we can use shadowColor</p>
 <p>Here’s my idea :<br/>
-<img alt="" height="" src="http://s22.postimg.org/slpdbpye9/lightmaps_shadows.jpg" width=""/></p>
+<img alt="" height="" src="../../../images2/6e120e3c33c46dc024bbbcf4f5647d12.jpg" width=""/></p>
 <p>Is possible to do something like this with shaders ??? This way the lightmapped meshes are unaffected by lights still dynamic shadows will be possible.</p>
           </div>
         </div>
@@ -318,10 +318,10 @@ So what we will have is completely the oposite , but this way we can specify cus
           <div class="user_name">rasteron</div>
           <div class="post_content">
 <p><span class="mention">@globus</span></p>
-<p>Thanks for the reference. I’m already very familiar and knowledgeable with lightmapping process, in fact it is one of my favorite topics when it comes to engine and game optimization. <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=9" title=":smiley:"/> I’m not a shader guy though…</p>
+<p>Thanks for the reference. I’m already very familiar and knowledgeable with lightmapping process, in fact it is one of my favorite topics when it comes to engine and game optimization. <img alt=":smiley:" class="emoji" src="../../../images2/94dd27e9c6c243335d29229e02e34e9d.png" title=":smiley:"/> I’m not a shader guy though…</p>
 <p>This one I did for testing months ago:</p>
-<p><img alt="" height="150" src="http://media.indiedb.com/cache/images/engines/1/1/641/thumb_300x150/global_illumination.jpg" width="271"/></p>
-<p>It is the pipeline and the technique of blending dynamic shadows and static lightmaps <span class="bbcode-u">with Urho3D</span> that I’m curious with, which is why I was planning to contribute to as samples, and apparently this has not been a feature with the engine [yet]. <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=9" title=":wink:"/></p>
+<p><img alt="" height="150" src="../../../images2/c831c24ac83e18d8e4eb0c7eb1994718.jpg" width="271"/></p>
+<p>It is the pipeline and the technique of blending dynamic shadows and static lightmaps <span class="bbcode-u">with Urho3D</span> that I’m curious with, which is why I was planning to contribute to as samples, and apparently this has not been a feature with the engine [yet]. <img alt=":wink:" class="emoji" src="../../../images2/537e3e653d641df5b9858e75faf3862a.png" title=":wink:"/></p>
           </div>
         </div>
       </div>
@@ -338,7 +338,7 @@ So what we will have is completely the oposite , but this way we can specify cus
 <p>I mean dynamic lighting with dynamic shadow mapping looks really great but not even close to baked global illumination.Thats the main reason why i want to use static lightmaps.</p>
 </blockquote>
 </aside>
-<p>Same reason here and I couldn’t agree more. Not a fan of using dynamic shadow mapping on all objects as well  <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/></p>
+<p>Same reason here and I couldn’t agree more. Not a fan of using dynamic shadow mapping on all objects as well  <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/></p>
 <p>Realtime GI and other lighting effects is really nice but if you can save up and another reason not to make the graphic card or system overheat, it is a must have.</p>
           </div>
         </div>
@@ -351,9 +351,9 @@ So what we will have is completely the oposite , but this way we can specify cus
         <div class="post">
           <div class="user_name">rasteron</div>
           <div class="post_content">
-<p>I tried to work on a small demo with Godot engine for a bit, particularly when I found out that they got their baked GI working months ago. It was really awesome but still having problems with their editor and it’s only GLES2 for Godot at the moment <img alt=":unamused:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/unamused.png?v=9" title=":unamused:"/>  so I stopped my work there and got back to my old engine. <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=9" title=":slight_smile:"/></p>
+<p>I tried to work on a small demo with Godot engine for a bit, particularly when I found out that they got their baked GI working months ago. It was really awesome but still having problems with their editor and it’s only GLES2 for Godot at the moment <img alt=":unamused:" class="emoji" src="../../../images2/8506f760150c1432f8c16c5e06559e88.png" title=":unamused:"/>  so I stopped my work there and got back to my old engine. <img alt=":slight_smile:" class="emoji" src="../../../images2/7bdd5ab4d67675d002d99e4b948c8cdb.png" title=":slight_smile:"/></p>
 <p>Here’s the Godot editor interface with their baked GI feature…</p>
-<p><img alt="" height="358" src="http://i.imgur.com/GxdRqS4l.jpg" width="640"/></p>
+<p><img alt="" height="358" src="../../../images2/746bb88eb19d2a476562612ffc4e565e.jpg" width="640"/></p>
           </div>
         </div>
       </div>
@@ -381,9 +381,9 @@ It is unfortunate that a feature like this not included in Urho3d</p>
 <aside class="quote no-group" data-username="rasteron">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/rasteron/40/55_2.png" width="20"/> rasteron:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/fd8529e5abecd6bdd1f8770e66ee2bab.png" width="20"/> rasteron:</div>
 <blockquote>
-<p>…, in fact it is one of my favorite topics when it comes to engine and game optimization. <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=9" title=":smiley:"/> I’m not a shader guy though…</p>
+<p>…, in fact it is one of my favorite topics when it comes to engine and game optimization. <img alt=":smiley:" class="emoji" src="../../../images2/94dd27e9c6c243335d29229e02e34e9d.png" title=":smiley:"/> I’m not a shader guy though…</p>
 </blockquote>
 </aside>
 <p>I fully support your attitude towards optimization.<br/>
@@ -393,7 +393,7 @@ There are a lot of old games that are fun to replay again.<br/>
 Previously, developers were limited in resources and do miracles of optimization.</p>
 <p>And there’s a huge mass of modern games they look very best<br/>
 but with mercilessly loaded hardware and which are not fun to play.</p>
-<p>[spoiler]<img alt="" height="" src="http://i.piccy.info/i9/60f787468146686ccbbf5ee0c26aa7af/1432838852/129240/912050/complete.jpg" width=""/></p>
+<p>[spoiler]<img alt="" height="" src="../../../images2/93cbb3b992719085c602af0a75c3d9bb.jpg" width=""/></p>
 <p>Also, Fable: The Lost Chapters, Rune and mass of other old games.</p>
 <p>Not very old but well optimized:<br/>
 COD: Modern Warfare 2 and Dead Space 2-3[/spoiler]</p>
@@ -409,7 +409,7 @@ COD: Modern Warfare 2 and Dead Space 2-3[/spoiler]</p>
           <div class="user_name">rasteron</div>
           <div class="post_content">
 <p>[quote=“globus”][quote=“rasteron”]<br/>
-…, in fact it is one of my favorite topics when it comes to engine and game optimization. <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=9" title=":smiley:"/> I’m not a shader guy though…<br/>
+…, in fact it is one of my favorite topics when it comes to engine and game optimization. <img alt=":smiley:" class="emoji" src="../../../images2/94dd27e9c6c243335d29229e02e34e9d.png" title=":smiley:"/> I’m not a shader guy though…<br/>
 [/quote]</p>
 <p>I fully support your attitude towards optimization.<br/>
 Lightmapping big step in that direction.</p>
@@ -418,11 +418,11 @@ There are a lot of old games that are fun to replay again.<br/>
 Previously, developers were limited in resources and do miracles of optimization.</p>
 <p>And there’s a huge mass of modern games they look very best<br/>
 but with mercilessly loaded hardware and which are not fun to play.</p>
-<p>[spoiler]<img alt="" height="" src="http://i.piccy.info/i9/60f787468146686ccbbf5ee0c26aa7af/1432838852/129240/912050/complete.jpg" width=""/></p>
+<p>[spoiler]<img alt="" height="" src="../../../images2/93cbb3b992719085c602af0a75c3d9bb.jpg" width=""/></p>
 <p>Also, Fable: The Lost Chapters, Rune and mass of other old games.</p>
 <p>Not very old but well optimized:<br/>
 COD: Modern Warfare 2 and Dead Space 2-3[/spoiler][/quote]</p>
-<p>Thanks globus, I’m sure a lot of game devs appreciate this and are also using it with other engines. But in the case with Urho3d, there’s still a lot of improvement needed to accomplish this seamless and optimized pipeline.  <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=9" title=":wink:"/></p>
+<p>Thanks globus, I’m sure a lot of game devs appreciate this and are also using it with other engines. But in the case with Urho3d, there’s still a lot of improvement needed to accomplish this seamless and optimized pipeline.  <img alt=":wink:" class="emoji" src="../../../images2/537e3e653d641df5b9858e75faf3862a.png" title=":wink:"/></p>
           </div>
         </div>
       </div>
@@ -467,7 +467,7 @@ Probably because, they initially made for powerful computers.</p>
           <div class="post_content">
 <p>Has anyone worked out a nice solution to this yet?<br/>
 I’ve tried adding a lighting pass  and just applying the shadows as suggested on the first page, but as someone else also mentioned since the lighting is additive there’s really no way to do it there.<br/>
-So at this point I’m trying to see if I can introduce the shadows in the base pass by modifying the output color there, which is proving tricky (I’m no shader expert <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/> )</p>
+So at this point I’m trying to see if I can introduce the shadows in the base pass by modifying the output color there, which is proving tricky (I’m no shader expert <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/> )</p>
           </div>
         </div>
       </div>
@@ -603,7 +603,7 @@ float diff = GetDiffuse(normal, iWorldPos.xyz, lightDir);</p>
 </code></pre>
 <p><span class="hashtag">#endif</span><br/>
 [/code][/quote]</p>
-<p>First of, welcome! <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/> This looks interesting, could you post some screenshots of this result and perhaps a working sample?</p>
+<p>First of, welcome! <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/> This looks interesting, could you post some screenshots of this result and perhaps a working sample?</p>
 <p>Thanks!</p>
           </div>
         </div>
@@ -616,7 +616,7 @@ float diff = GetDiffuse(normal, iWorldPos.xyz, lightDir);</p>
         <div class="post">
           <div class="user_name">flintza</div>
           <div class="post_content">
-<p>Hmm, I don’t have a screenshot I could share just yet (NDA and all that), I’ll see what I can organize. As for a working sample, I’m doing this in Atomic Game Engine, and we do have a material sample level we hope to put into examples repo sometime next year but not just yet <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/></p>
+<p>Hmm, I don’t have a screenshot I could share just yet (NDA and all that), I’ll see what I can organize. As for a working sample, I’m doing this in Atomic Game Engine, and we do have a material sample level we hope to put into examples repo sometime next year but not just yet <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/></p>
           </div>
         </div>
       </div>

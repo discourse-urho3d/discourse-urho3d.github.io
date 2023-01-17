@@ -33,11 +33,11 @@
           <div class="user_name">Pellucas</div>
           <div class="post_content">
 <p>Hi all. I’m trying to generate the xcode project with cmake but I get some error. Here is a snapshot:</p>
-<p><div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/v609i5R.jpg" rel="nofollow noopener" title=""><img alt="" height="500" src="http://i.imgur.com/v609i5R.jpg" width="578"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">816×705</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="http://i.imgur.com/v609i5R.jpg" rel="nofollow noopener" title=""><img alt="" height="500" src="../../../images2/fa93b6070dba541b135b5a5f34f7ed98.jpg" width="578"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">816×705</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
 <p><span class="bbcode-b">I’m using this package:</span><br/>
 Urho3D-1.32.655-OSX-64bit-STATIC-snapshot</p>
 <p><span class="bbcode-b">OS</span>: Mac OS X 10.8.5</p>
-<p><img alt=":question:" class="emoji only-emoji" src="https://emoji.discourse-cdn.com/twitter/question.png?v=9" title=":question:"/></p>
+<p><img alt=":question:" class="emoji only-emoji" src="../../../images2/08af911154f05d7fb1402adad2ea9d25.png" title=":question:"/></p>
           </div>
         </div>
       </div>
@@ -107,7 +107,7 @@ any idea?</p>
         <div class="post">
           <div class="user_name">weitjong</div>
           <div class="post_content">
-<p>I am actually seriously not sure how to help you because I have no idea what you are trying to do  <img alt=":laughing:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/laughing.png?v=5" title=":laughing:"/> . The “pkgconfig” is not a native tool in Mac OS X. So, you have to use Mac “homebrew” to install it first. But if you are willing to setup “homebrew” to work with your Mac OS X then you might as well ask homebrew to install “cmake” and use that instead. If want the easiest way, use “cmake” rather than “pkgconfig”.</p>
+<p>I am actually seriously not sure how to help you because I have no idea what you are trying to do  <img alt=":laughing:" class="emoji" src="../../../images2/f1b3f4dd9f845d1069864c322071dffe.png" title=":laughing:"/> . The “pkgconfig” is not a native tool in Mac OS X. So, you have to use Mac “homebrew” to install it first. But if you are willing to setup “homebrew” to work with your Mac OS X then you might as well ask homebrew to install “cmake” and use that instead. If want the easiest way, use “cmake” rather than “pkgconfig”.</p>
 <p>If you use binary package then you can extract it anywhere in your filesystem. There is no need to manually move the pieces to /usr/local like you have done. Read the <a href="http://urho3d.github.io/documentation/HEAD/_using_library.html">urho3d.github.io/documentation/H … brary.html</a> page carefully again, especially on the usage of URHO3D_HOME environment variable. You need it to be set to point to where you have extracted the binary package.</p>
 <p>If you have to use Qt IDE on a Mac OS X (really?) then you need to set it up to generate project file using CMake, which should give you “makefile” instead of *.pro. You are on your own if you insist on using Qt own project file. In summary, Urho3D uses CMake extensively. When you are not using CMake in anyway to configure/generate the project file then you will find yourself to have a hard time.</p>
           </div>

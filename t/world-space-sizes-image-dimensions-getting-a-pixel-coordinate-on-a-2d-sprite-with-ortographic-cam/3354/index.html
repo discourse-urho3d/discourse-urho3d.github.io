@@ -33,7 +33,7 @@
           <div class="user_name">bremby</div>
           <div class="post_content">
 <p>Hello,</p>
-<p>Newbie here, please be patient with me <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/>. I have an image as a static 2D sprite and ortographic camera pointed at it. The ortosize of the camera is set up the same way like in the samples - using PIXEL_SIZE and the height from the graphics subsystem (which is the height of the window in pixels). When I click on that sprite, I need to calculate the pixel coordinates under the mouse pointer on that image. If the camera was static and unable to zoom, the calculation could be somewhat simple, but if I use camera zoom, then I have to first recalculate the mouse coordinates to a point in the world space (following the 2D Constraints sample). To get the coordinates of the pixel under the mouse cursor I multiply the world coordinates by the dimensions of the image and some magic constant 0.05f (and I add an offset depending on what is the position of the sprite in worldspace). This works well, but I want to understand how the calculation should be done properly.</p>
+<p>Newbie here, please be patient with me <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/>. I have an image as a static 2D sprite and ortographic camera pointed at it. The ortosize of the camera is set up the same way like in the samples - using PIXEL_SIZE and the height from the graphics subsystem (which is the height of the window in pixels). When I click on that sprite, I need to calculate the pixel coordinates under the mouse pointer on that image. If the camera was static and unable to zoom, the calculation could be somewhat simple, but if I use camera zoom, then I have to first recalculate the mouse coordinates to a point in the world space (following the 2D Constraints sample). To get the coordinates of the pixel under the mouse cursor I multiply the world coordinates by the dimensions of the image and some magic constant 0.05f (and I add an offset depending on what is the position of the sprite in worldspace). This works well, but I want to understand how the calculation should be done properly.</p>
 <p>So can anyone suggest a better way? Or explain what is going on with PIXEL_SIZE, world space coordinates and that magic constant 0.05f?</p>
 <p>Thank you.</p>
           </div>
@@ -74,7 +74,7 @@
 <aside class="quote no-group" data-post="1" data-topic="3354" data-username="bremby">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/b/e19adc/40.png" width="20"/> bremby:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/2dba42e285c34350639873b3aa7ceaa8.png" width="20"/> bremby:</div>
 <blockquote>
 <p>Or explain what is going on with PIXEL_SIZE, world space coordinates and that magic constant 0.05f?</p>
 </blockquote>

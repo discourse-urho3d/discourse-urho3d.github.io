@@ -100,9 +100,9 @@ Scripts/Cannon.as:void Cannon::Shoot():19,9<br/>
 Scripts/Cannon.as:void Cannon::Update(float):7,4<br/>
 </span></p>
 <p>Also I have checked, that if I comment <span class="bbcode-b">Shoot</span> function, animation works fine.</p>
-<p><img alt="" height="" src="http://s15.postimg.org/fb922ay0r/cannonscript.png" width=""/></p>
+<p><img alt="" height="" src="../../../images2/4b29ea5ae69a3390a1a430b28d54f8db.png" width=""/></p>
 <p>UPDATED.</p>
-<p>I have written function Shoot() in C++. All works fine. So, there is problem with AngelScript, especially with InstantiateXML fucntion.  <img alt=":exclamation:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/exclamation.png?v=9" title=":exclamation:"/></p>
+<p>I have written function Shoot() in C++. All works fine. So, there is problem with AngelScript, especially with InstantiateXML fucntion.  <img alt=":exclamation:" class="emoji" src="../../../images2/65073176cb6bc6f96079729d7cec5ae9.png" title=":exclamation:"/></p>
 <p><code>Vector3 pos = m_pScene-&gt;GetChild("CannonballPlace", true)-&gt;GetWorldPosition();
 			XMLFile* xml = g_pApp-&gt;GetConstantResCache()-&gt;GetResource&lt;XMLFile&gt;("Objects/Cannonball.xml");
 			Node* newNode = m_pScene-&gt;InstantiateXML(xml-&gt;GetRoot(), pos, Quaternion());
@@ -186,7 +186,7 @@ Scripts/Cannon.as:void Cannon::Update(float):7,4<br/>
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/bluemoon/40/348_1.png" width="20"/> Bluemoon:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/f4748da84624d02ddd97927fbea23bd6.png" width="20"/> Bluemoon:</div>
 <blockquote>
 <p>From what I’m suspecting its either a null reference was returned for the rigid body when instantiated from xml or the Node@ reference held by the “node” attribute of the Canon ScriptClass was lost. Can you post the code of <a href="http://CanonBall.as" rel="nofollow noopener">CanonBall.as</a>, it might be a bit helpful.</p>
 </blockquote>

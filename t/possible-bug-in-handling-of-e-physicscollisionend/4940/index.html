@@ -175,12 +175,12 @@ I have a horrible feeling from memory that Bullet only uses 16-bit masks, but ev
 <aside class="quote no-group quote-modified" data-post="10" data-topic="4940" data-username="Leith">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/leith/40/2384_2.png" width="20"/> Leith:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/344277caf39f87861709d8bd9d77ec6d.png" width="20"/> Leith:</div>
 <blockquote>
 <p>I’m willing to hook up the continual collision event and debug spew it to be sure its not my fault…</p>
 </blockquote>
 </aside>
-<p>If I had a dime for every time I wrongly blamed Urho in the beginning… <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=10" title=":wink:"/></p>
+<p>If I had a dime for every time I wrongly blamed Urho in the beginning… <img alt=":wink:" class="emoji" src="../../../images2/58bcd684421190f24be1944e2a997a04.png" title=":wink:"/></p>
           </div>
         </div>
       </div>
@@ -248,14 +248,14 @@ I feel silly - look at the symbol I used for “or” - I have a logical or (||)
 <aside class="quote no-group" data-post="1" data-topic="4940" data-username="Leith">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/leith/40/2384_2.png" width="20"/> Leith:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/344277caf39f87861709d8bd9d77ec6d.png" width="20"/> Leith:</div>
 <blockquote>
 <p>Bodyparts have CollisionFilter::NonPlayerCharacter, CollisionFilter::Static || CollisionFilter::PlayerCharacter</p>
 </blockquote>
 </aside>
 <p>I expanded one foot body to a ridiculous size to ensure it collided with the floor, and I am receiving that event - so I’m fairly confident that I’ll now be able to also receive the end of collision event as well.</p>
 <p>[EDIT]<br/>
-Yep, we have “lift-off” <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=10" title=":smiley:"/><br/>
+Yep, we have “lift-off” <img alt=":smiley:" class="emoji" src="../../../images2/7014497b1c97c810791a011290bda7f5.png" title=":smiley:"/><br/>
 At this point I’ll switch from using anonymous collision handling events, to node-specific events (since each bodypart is owned by a unique and well-named node), and start experimenting with using foot collisions as a guide to detecting footfalls, as opposed to using animation triggers. This should allow me to apply my foot-planting solution “early” when walking up a slope, and “late” when walking down a slope. I’ll probably still need to use IK to find a proper position for the pelvis based on the animated pose, looking forward to backporting the results into the existing IK Sample, and will offer resulting code back to the community via PR.<br/>
 Oh, I’ve also realized that I can probably omit the foot bodies, if I extend the length of the lower leg bodypart down past the ankle, to the heel, ie, until it touches the zero plane.</p>
           </div>

@@ -47,7 +47,7 @@
           <div class="post_content">
 <p>No. Components are allocated with new from the heap when created.</p>
 <p>However, there aren’t actually any places in the code where it would need to iterate all components of a given type in order. For example Urho’s rigidbody component just contains a pointer to the Bullet rigidbody object, and Bullet does all the heavy lifting of the physics simulation within its own data structures. Culling when rendering a view is another; we don’t iterate all drawables, but rather those that are visible in the frustum.</p>
-<p>A few weeks ago I profiled Ogre 2.1 which goes to quite significant pains to allocate the scene objects in a cache and SIMD friendly way. I did the 250 x 250 individual object test (20_HugeObjectCount), which on both Ogre 2.1 and Urho, results in the renderer first frustum culling all the objects, then forming instanced rendering batches of them. Urho was 2x faster <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/></p>
+<p>A few weeks ago I profiled Ogre 2.1 which goes to quite significant pains to allocate the scene objects in a cache and SIMD friendly way. I did the 250 x 250 individual object test (20_HugeObjectCount), which on both Ogre 2.1 and Urho, results in the renderer first frustum culling all the objects, then forming instanced rendering batches of them. Urho was 2x faster <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/></p>
           </div>
         </div>
       </div>
@@ -62,13 +62,13 @@
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/cadaver/40/3_1.png" width="20"/> cadaver:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/17ea6233fe86521c2e3179bd3849d219.png" width="20"/> cadaver:</div>
 <blockquote>
-<p>A few weeks ago I profiled Ogre 2.1 which goes to quite significant pains to allocate the scene objects in a cache and SIMD friendly way. I did the 250 x 250 individual object test (20_HugeObjectCount), which on both Ogre 2.1 and Urho, results in the renderer first frustum culling all the objects, then forming instanced rendering batches of them. Urho was 2x faster <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/></p>
+<p>A few weeks ago I profiled Ogre 2.1 which goes to quite significant pains to allocate the scene objects in a cache and SIMD friendly way. I did the 250 x 250 individual object test (20_HugeObjectCount), which on both Ogre 2.1 and Urho, results in the renderer first frustum culling all the objects, then forming instanced rendering batches of them. Urho was 2x faster <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/></p>
 </blockquote>
 </aside>
-<p><img alt=":astonished:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/astonished.png?v=5" title=":astonished:"/>  That’s crazy!  Wow!  I never would have guessed that the performance gap would be so great!</p>
-<p>Just a quick question.  Will the rendering refactor update increase the speed even more?  Also will the rendering speed be improved for older versions of DirectX and OpenGL?  I use OpenGL 2.1. (yes my comp is pretty old  <img alt=":confused:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/confused.png?v=5" title=":confused:"/> )</p>
+<p><img alt=":astonished:" class="emoji" src="../../../images2/d210df802a5d9b4bc3a55c75eca07db3.png" title=":astonished:"/>  That’s crazy!  Wow!  I never would have guessed that the performance gap would be so great!</p>
+<p>Just a quick question.  Will the rendering refactor update increase the speed even more?  Also will the rendering speed be improved for older versions of DirectX and OpenGL?  I use OpenGL 2.1. (yes my comp is pretty old  <img alt=":confused:" class="emoji" src="../../../images2/5fc0af8f196734b5bf5c1aacdc718a17.png" title=":confused:"/> )</p>
           </div>
         </div>
       </div>
@@ -82,7 +82,7 @@
           <div class="post_content">
 <p>[quote=“cadaver”]No. Components are allocated with new from the heap when created.</p>
 <p>However, there aren’t actually any places in the code where it would need to iterate all components of a given type in order. For example Urho’s rigidbody component just contains a pointer to the Bullet rigidbody object, and Bullet does all the heavy lifting of the physics simulation within its own data structures. Culling when rendering a view is another; we don’t iterate all drawables, but rather those that are visible in the frustum.</p>
-<p>A few weeks ago I profiled Ogre 2.1 which goes to quite significant pains to allocate the scene objects in a cache and SIMD friendly way. I did the 250 x 250 individual object test (20_HugeObjectCount), which on both Ogre 2.1 and Urho, results in the renderer first frustum culling all the objects, then forming instanced rendering batches of them. Urho was 2x faster <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/>[/quote]</p>
+<p>A few weeks ago I profiled Ogre 2.1 which goes to quite significant pains to allocate the scene objects in a cache and SIMD friendly way. I did the 250 x 250 individual object test (20_HugeObjectCount), which on both Ogre 2.1 and Urho, results in the renderer first frustum culling all the objects, then forming instanced rendering batches of them. Urho was 2x faster <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/>[/quote]</p>
 <p>I heard that last week. I twirled my mustache and laughed maniacally for you.</p>
           </div>
         </div>
@@ -108,7 +108,7 @@
         <div class="post">
           <div class="user_name">GoogleBot42</div>
           <div class="post_content">
-<p>That makes sense.   <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=5" title=":wink:"/>   I really appreciate the effort of the Urho3D development team.  I am just a beginning CS student so I won’t be of much help.   <img alt=":confused:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/confused.png?v=5" title=":confused:"/></p>
+<p>That makes sense.   <img alt=":wink:" class="emoji" src="../../../images2/95940790c23d98635b2a6d3f22657158.png" title=":wink:"/>   I really appreciate the effort of the Urho3D development team.  I am just a beginning CS student so I won’t be of much help.   <img alt=":confused:" class="emoji" src="../../../images2/5fc0af8f196734b5bf5c1aacdc718a17.png" title=":confused:"/></p>
           </div>
         </div>
       </div>

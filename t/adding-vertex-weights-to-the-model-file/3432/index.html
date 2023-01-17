@@ -66,7 +66,7 @@ Vertex Weights:
 <aside class="quote no-group" data-post="1" data-topic="3432" data-username="xenodora">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/x/f9ae1b/40.png" width="20"/> xenodora:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/529d5ba71b0c00788498d8ff2c6b6399.png" width="20"/> xenodora:</div>
 <blockquote>
 <p>So far it’s working fine, but I’m not sure if this is the best way to add this feature into the Urho3D model file. Should the block be formatted differently? Should the data actually go else where in the file? Or are separate files a better option?</p>
 </blockquote>
@@ -83,7 +83,7 @@ Vertex Weights:
         <div class="post">
           <div class="user_name">Modanung</div>
           <div class="post_content">
-<p>But the models should already store vertex groups and weights somehow for bone animation, right? <img alt=":confused:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/confused.png?v=5" title=":confused:"/></p>
+<p>But the models should already store vertex groups and weights somehow for bone animation, right? <img alt=":confused:" class="emoji" src="../../../images2/5fc0af8f196734b5bf5c1aacdc718a17.png" title=":confused:"/></p>
           </div>
         </div>
       </div>
@@ -98,9 +98,9 @@ Vertex Weights:
 <aside class="quote" data-post="3" data-topic="3432">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/modanung/40/1123_1.png" width="20"/> Modanung:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/8b9decec7cc30729aa8f8f7015602d32.png" width="20"/> Modanung:</div>
 <blockquote>
-<p>But the models should already store vertex groups and weights somehow for bone animation, right? <img alt=":confused:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/confused.png?v=5" title=":confused:"/></p>
+<p>But the models should already store vertex groups and weights somehow for bone animation, right? <img alt=":confused:" class="emoji" src="../../../images2/5fc0af8f196734b5bf5c1aacdc718a17.png" title=":confused:"/></p>
 </blockquote>
 </aside>
 <p>Not exactly, from my reading of Urho3D model file format, bone weightings are stored in the vertex, and only 4 bones can be associated with a single vertex, and those weights must add up to 1, which normally means they’re rescaled. If the original model had more than 4 bones affecting a vertex, it would keep the 4 with the largest weights, and discard everything else.</p>

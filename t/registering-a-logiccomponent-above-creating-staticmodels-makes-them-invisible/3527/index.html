@@ -107,7 +107,7 @@ void PlayerCamera::Update(float deltaTime) {
 	else if (input-&gt;GetKeyDown(ur::KEY_S)) node_-&gt;Translate(ur::Vector3::FORWARD * MOVE_SPEED * deltaTime);
 }
 </code></pre>
-<p>Any clues? <img alt=":confused:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/confused.png?v=5" title=":confused:"/> I don’t know how registering a factory is related to breaking a StaticModel</p>
+<p>Any clues? <img alt=":confused:" class="emoji" src="../../../images2/5fc0af8f196734b5bf5c1aacdc718a17.png" title=":confused:"/> I don’t know how registering a factory is related to breaking a StaticModel</p>
           </div>
         </div>
       </div>
@@ -122,7 +122,7 @@ void PlayerCamera::Update(float deltaTime) {
 <p>Holy cow I didn’t notice the</p>
 <pre><code>URHO3D_OBJECT(Camera, LogicComponent)
 </code></pre>
-<p>Mistake, I’m stupid. <img alt=":man_facepalming:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/man_facepalming.png?v=5" title=":man_facepalming:"/></p>
+<p>Mistake, I’m stupid. <img alt=":man_facepalming:" class="emoji" src="../../../images2/8b44a49c0d15855930c0a7f893e4cbea.png" title=":man_facepalming:"/></p>
 <p>Sorry for wasting anyone’s time</p>
           </div>
         </div>

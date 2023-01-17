@@ -79,7 +79,7 @@
 <aside class="quote no-group" data-post="2" data-topic="4007" data-username="Sinoid">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/s/f19dbf/40.png" width="20"/> Sinoid:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/364b15125065144cbdd62e2448806aa6.png" width="20"/> Sinoid:</div>
 <blockquote>
 <p>insert pedantic you do not subtract, because specular and stuff bit here</p>
 </blockquote>
@@ -109,7 +109,7 @@ I’m really curious how this was done and how could be implemented in Urho3d ?<
 <p>The problem with this i have no idea where to start because i still not familiar with the lower level of the engine.I could implement a projector component but there are few things that are unclear :<br/>
 1 how to implement this into the renderpath so i get the best performance (clearly my solution takes one extra pass to render the whole scene.Hw skinning and instancing will be handled automatically if possible ?</p>
 <p>The reason i’m asking this because without this i can’t do proper shadows.Just look at the scene below.How i suppose to simulate lights like this with dynamic lights ? Even if i hack out something , in the dark areas where are no lights the dynamic objects won’t have shadow.</p>
-<p><img alt="" height="450" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/6/638d6bb5af53ed7e08e94743b28e3fc0e8ff78ee.jpg" width="600"/></p>
+<p><img alt="" height="450" src="../../../images2/3ea27eb6223fdc329ac6705122ab87e1.jpg" width="600"/></p>
           </div>
         </div>
       </div>
@@ -183,13 +183,13 @@ I’m really curious how this was done and how could be implemented in Urho3d ?<
 <span class="bbcode-b">1. The Depth only pass.</span><br/>
 It was an inveresting discovery that we can render objects into the depthbuffer only, Fake 3d depth in front of a pre rendered 2d background so parts of dynamic objects are overlapped by these invisible walls giving an illusion that the pre-rendered 2d shapes are really there .<br/>
 here’s the result : (The whole scene including that shiny teapot in the middle is a pre rendered 2d image. The character is the only 3d element in the scene)<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/k2eheBvEVuUSgvPThPQwNbrfCJd.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/8/8c6c0529593435fdd1800f9d6eac2e63eb1f8ca3.jpeg" rel="nofollow noopener" title="image"><img alt="image" data-base62-sha1="k2eheBvEVuUSgvPThPQwNbrfCJd" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/8c6c0529593435fdd1800f9d6eac2e63eb1f8ca3_2_10x10.png" height="413" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/8c6c0529593435fdd1800f9d6eac2e63eb1f8ca3_2_690x413.jpeg" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/8c6c0529593435fdd1800f9d6eac2e63eb1f8ca3_2_690x413.jpeg, https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/8/8c6c0529593435fdd1800f9d6eac2e63eb1f8ca3.jpeg 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/8/8c6c0529593435fdd1800f9d6eac2e63eb1f8ca3.jpeg 2x" width="690"/><div class="meta">
+<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/k2eheBvEVuUSgvPThPQwNbrfCJd.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/8/8c6c0529593435fdd1800f9d6eac2e63eb1f8ca3.jpeg" rel="nofollow noopener" title="image"><img alt="image" data-base62-sha1="k2eheBvEVuUSgvPThPQwNbrfCJd" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/8c6c0529593435fdd1800f9d6eac2e63eb1f8ca3_2_10x10.png" height="413" src="../../../images2/54e11710a19a96b921e9ad1446686909.jpeg" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/8c6c0529593435fdd1800f9d6eac2e63eb1f8ca3_2_690x413.jpeg, https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/8/8c6c0529593435fdd1800f9d6eac2e63eb1f8ca3.jpeg 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/8/8c6c0529593435fdd1800f9d6eac2e63eb1f8ca3.jpeg 2x" width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1024×614 117 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg>
 </div></a></div></p>
 <p>However the solution i used only works with the extended prepassHWDepth renderpath and there are still some things that i don’t understand why it works like it does, but in general , it works.</p>
 <p><span class="bbcode-b">2. The projected shadows</span><br/>
-It is actually a hack and a slight modification of the LitSolid shader to make this work, but finally it is WORKING ! Playing with shadow and light masks we can finally get perfect dynamic shadows in a pre rendered game. Let’s see Unity does this <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=9" title=":smiley:"/> So years of testing and practicing brought us this :</p>
-<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/vI4SFmPsPxMsmr48cC3tkfBfyUQ.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/d/de3ef4d1462d0e26607180bec31c0ca5db508ac4.jpeg" rel="nofollow noopener" title="image"><img alt="image" data-base62-sha1="vI4SFmPsPxMsmr48cC3tkfBfyUQ" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/d/de3ef4d1462d0e26607180bec31c0ca5db508ac4_2_10x10.png" height="412" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/d/de3ef4d1462d0e26607180bec31c0ca5db508ac4_2_690x412.jpeg" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/d/de3ef4d1462d0e26607180bec31c0ca5db508ac4_2_690x412.jpeg, https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/d/de3ef4d1462d0e26607180bec31c0ca5db508ac4.jpeg 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/d/de3ef4d1462d0e26607180bec31c0ca5db508ac4.jpeg 2x" width="690"/><div class="meta">
+It is actually a hack and a slight modification of the LitSolid shader to make this work, but finally it is WORKING ! Playing with shadow and light masks we can finally get perfect dynamic shadows in a pre rendered game. Let’s see Unity does this <img alt=":smiley:" class="emoji" src="../../../images2/94dd27e9c6c243335d29229e02e34e9d.png" title=":smiley:"/> So years of testing and practicing brought us this :</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/vI4SFmPsPxMsmr48cC3tkfBfyUQ.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/d/de3ef4d1462d0e26607180bec31c0ca5db508ac4.jpeg" rel="nofollow noopener" title="image"><img alt="image" data-base62-sha1="vI4SFmPsPxMsmr48cC3tkfBfyUQ" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/d/de3ef4d1462d0e26607180bec31c0ca5db508ac4_2_10x10.png" height="412" src="../../../images2/991b33c46b775c6ca8e0a2fc649da14d.jpeg" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/d/de3ef4d1462d0e26607180bec31c0ca5db508ac4_2_690x412.jpeg, https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/d/de3ef4d1462d0e26607180bec31c0ca5db508ac4.jpeg 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/d/de3ef4d1462d0e26607180bec31c0ca5db508ac4.jpeg 2x" width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1024×612 124 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg>
 </div></a></div></p>
 <p>It is simply a trick using a light pass that has a multiplicative blending and in LitSolid shader i use a constant float3(0,1,0) (the normal passed in  GetDiffuse() ) vector to have the same light intensity on all faces so it doesn’t ruin the prerendered lighting in the 2d background.</p>
@@ -230,7 +230,7 @@ Happy new year everybody !</p>
 <aside class="quote no-group" data-post="10" data-topic="4007" data-username="GodMan">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/g/e79b87/40.png" width="20"/> GodMan:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/ec6d74ff2472bced6f12da93c20c296f.png" width="20"/> GodMan:</div>
 <blockquote>
 <p>Have you tried your changes on an environment that is better illuminated?</p>
 </blockquote>
@@ -292,7 +292,7 @@ Happy new year everybody !</p>
 <aside class="quote no-group" data-post="14" data-topic="4007" data-username="Sinoid">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/s/f19dbf/40.png" width="20"/> Sinoid:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/364b15125065144cbdd62e2448806aa6.png" width="20"/> Sinoid:</div>
 <blockquote>
 <p>how fat is a single view (color + depth, etc)</p>
 </blockquote>

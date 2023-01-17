@@ -72,9 +72,9 @@
           <div class="post_content">
 <p>I apologize, I realize now that my question might not be as clear as I thought.</p>
 <p>As an example, here is a fire effect that I made<br/>
-<img alt="image" height="471" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/1X/d1313154f0a88777e16be8862659f089522d6788.png" width="384"/></p>
+<img alt="image" height="471" src="../../../images2/3833f3290e7b32813d90615f9e772995.png" width="384"/></p>
 <p>It looks great, except for when my player is travelling at higher velocities</p>
-<p><img alt="image" height="454" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/1X/83d02c2309150f7518109e5b5365c1627fdd225f.png" width="348"/></p>
+<p><img alt="image" height="454" src="../../../images2/caaa103ae506211e71896072d2c03eee.png" width="348"/></p>
 <p>The ParticleEmitter2D itself follows the player node accurately, and the reason for the particles appearing like this is due to them being created at regular intervals, allowing the ParticleEmitter2D to travel away from the previously emitted particle, therefore creating a broken stream of particles.</p>
 <p>A simple suggestion would be to increase the emission frequency of the particles. I have tried that, and the results do not differ because the particle system updates at regular intervals, only creating new particles ones it “trips” past the desired interval. <strong>The underlying issue here</strong> is that when a particle is created, it does not properly maintain the current velocity of the ParticleEmitter2D’s node.</p>
 <p>My ship has a velocity of (0, 50000), and the particles being emitted have a velocity of (0, -70), when really they should have a velocity of (0, 50000 - 70).</p>

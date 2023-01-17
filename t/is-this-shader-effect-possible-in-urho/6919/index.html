@@ -33,7 +33,7 @@
           <div class="user_name">shifttab</div>
           <div class="post_content">
 <p>I’m trying to recreate this <a href="https://www.youtube.com/watch?v=iASMFba7GeI" rel="noopener nofollow ugc">fluffy foliage</a> shader. Is this possible to do in urho?</p>
-<p>The effect doesn’t seem to be that complicated and his node tree is fairly small but I just suck at shaders in general <img alt=":stuck_out_tongue:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/stuck_out_tongue.png?v=9" title=":stuck_out_tongue:"/></p>
+<p>The effect doesn’t seem to be that complicated and his node tree is fairly small but I just suck at shaders in general <img alt=":stuck_out_tongue:" class="emoji" src="../../../images2/2163fe85d10cc0d651a6a2d04efe61d0.png" title=":stuck_out_tongue:"/></p>
 <p>I’m already stuck in the beginning. This is what I tried:</p>
 <pre><code class="lang-auto">#include "Uniforms.glsl"
 #include "Samplers.glsl"
@@ -84,7 +84,7 @@ void PS()
     #endif
 }
 </code></pre>
-<p><img alt="Image" data-base62-sha1="kFRXp87AWD7H3yleu4wHZQ3MLCy" height="323" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/9/90e72250b96283152301a08a0e8e565800789502.png" width="690"/></p>
+<p><img alt="Image" data-base62-sha1="kFRXp87AWD7H3yleu4wHZQ3MLCy" height="323" src="../../../images2/93e2751b4a92931d3fbfdc395aafa212.png" width="690"/></p>
 <p>It’s a round mesh but I’m confused because it is visible from the back but not from the front when I transform the vertices and it looks all wrong.</p>
           </div>
         </div>
@@ -134,7 +134,7 @@ void PS()
         <div class="post">
           <div class="user_name">shifttab</div>
           <div class="post_content">
-<p>I can’t make it look the camera so I ditched it. I’m too noob for it. <img alt=":confused:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/confused.png?v=10" title=":confused:"/></p>
+<p>I can’t make it look the camera so I ditched it. I’m too noob for it. <img alt=":confused:" class="emoji" src="../../../images2/256f55d6dee778d12c9ee3bb598de2b8.png" title=":confused:"/></p>
           </div>
         </div>
       </div>
@@ -159,15 +159,15 @@ void PS()
     gl_Position = GetClipPos(worldPos + displacement);
 </code></pre>
 <p><strong>Bush after displacment</strong><br/>
-<img alt="image" data-base62-sha1="sllDaWvuCAAlqHceDpGYq7jaNHW" height="251" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/c/c6a6abfc7b7dc3329e9c687e8142427cd890c8e8.png" width="379"/></p>
+<img alt="image" data-base62-sha1="sllDaWvuCAAlqHceDpGYq7jaNHW" height="251" src="../../../images2/b4e89605bcac56b8415f420e5ea88484.png" width="379"/></p>
 <p><strong>Bush with almost no displacement or alpha masking</strong><br/>
-<img alt="image" data-base62-sha1="kJybpsrDCmjphTfuC246nI0jC6W" height="102" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/9/9151a85f63ca8b241850ad4f90e0cba54ce309ee.png" width="188"/></p>
+<img alt="image" data-base62-sha1="kJybpsrDCmjphTfuC246nI0jC6W" height="102" src="../../../images2/ec6fa0b6dccaf5a3b8b44804d61edc1b.png" width="188"/></p>
 <p><strong>Bush in Blender</strong> (orientation and scale may differ)<br/>
-<img alt="image" data-base62-sha1="cFIa6WlvC1P56Ck18ldUB1PIiKQ" height="216" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/5/58d12ba4e17df1b5faee8419e8f187db85ed5390.png" width="393"/></p>
+<img alt="image" data-base62-sha1="cFIa6WlvC1P56Ck18ldUB1PIiKQ" height="216" src="../../../images2/1a83090fd5101b241f8c7020f1e82830.png" width="393"/></p>
 <hr/>
 <p><strong>Update 1:</strong><br/>
 Threw it on a large mesh I had that had suitable UV coordinates, though often backwards normals, and even with around 1 million triangles in a model using it I’m getting ~120 FPS, down from 200 FPS with just the bush. Note that this is with a second viewport, though the model isn’t visible in it.<br/>
-<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/17ce8BnR5QghNBTa1nlzRpC41GY.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/0/07d2730b9cbcba2c7f866a6a35253c63dcf7af4c.jpeg" rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="17ce8BnR5QghNBTa1nlzRpC41GY" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/0/07d2730b9cbcba2c7f866a6a35253c63dcf7af4c_2_10x10.png" height="500" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/0/07d2730b9cbcba2c7f866a6a35253c63dcf7af4c.jpeg" width="665"/><div class="meta">
+<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/17ce8BnR5QghNBTa1nlzRpC41GY.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/0/07d2730b9cbcba2c7f866a6a35253c63dcf7af4c.jpeg" rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="17ce8BnR5QghNBTa1nlzRpC41GY" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/0/07d2730b9cbcba2c7f866a6a35253c63dcf7af4c_2_10x10.png" height="500" src="../../../images2/f0f3998f9d786b03375d9aad6f15acc0.jpeg" width="665"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1021×767 119 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg>
 </div></a></div></p>
           </div>

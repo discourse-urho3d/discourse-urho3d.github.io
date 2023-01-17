@@ -52,7 +52,7 @@
 <aside class="quote no-group" data-post="1" data-topic="4273">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/thecomet/40/142_1.png" width="20"/> TheComet:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/12a1dc2eccbee0e3555e7cc3e716f46e.png" width="20"/> TheComet:</div>
 <blockquote>
 <p>The first is to inline <code>refs_</code> and <code>weakRefs_</code> into RefCounted and get rid of <code>RefCount</code> entirely. In order for weakrefs to still work, the conditions for when the object is destructed and freed would have to be modified: Call the destructor when <code>refs_</code> reaches zero, free the memory when <code>weakRefs_</code> reaches zero.</p>
 </blockquote>
@@ -62,7 +62,7 @@
 <aside class="quote no-group" data-post="1" data-topic="4273">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/thecomet/40/142_1.png" width="20"/> TheComet:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/12a1dc2eccbee0e3555e7cc3e716f46e.png" width="20"/> TheComet:</div>
 <blockquote>
 <p>Another idea might be to have a memory pool for <code>RefCount</code> objects.</p>
 </blockquote>
@@ -97,7 +97,7 @@
 <aside class="quote no-group" data-post="2" data-topic="4273" data-username="Eugene">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/eugene/40/902_2.png" width="20"/> Eugene:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/ae663b3d37eca5ee603f9e0610f8f829.png" width="20"/> Eugene:</div>
 <blockquote>
 <p>Once you called dtor, you are not allowed to read or modify any part of the object.</p>
 </blockquote>
@@ -106,7 +106,7 @@
 <aside class="quote no-group" data-post="3" data-topic="4273" data-username="S.L.C">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/s.l.c/40/1016_2.png" width="20"/> S.L.C:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/aa1895aba5007d63790c391fb6bef3db.png" width="20"/> S.L.C:</div>
 <blockquote>
 <p>And if you try to do it like a shared pointer thing where you store the counter and instance in the same structure to be near each-other, you end up “leaking” memory because if there’s still a weak reference you can’t release the counter and thus you can’t release the memory for the actual instance.</p>
 </blockquote>
@@ -127,7 +127,7 @@
 <aside class="quote no-group" data-post="1" data-topic="4273">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/thecomet/40/142_1.png" width="20"/> TheComet:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/12a1dc2eccbee0e3555e7cc3e716f46e.png" width="20"/> TheComet:</div>
 <blockquote>
 <p>Or are there other things that outweigh the cost of allocating?</p>
 </blockquote>
@@ -161,7 +161,7 @@ Do you have profiled tests telling that It is bottleneck for engine?</p>
 <aside class="quote no-group" data-full="true" data-post="6" data-topic="4273">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/orefkov/40/1164_1.png" width="20"/> orefkov:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/9f00551e78b4b4b1725a5dff4ab7a087.png" width="20"/> orefkov:</div>
 <blockquote>
 <p>Imho, by optimizing refcount allocation in 100 times, common programm performance increased by 0.01%<br/>
 Do you have profiled tests telling that It is bottleneck for engine?</p>

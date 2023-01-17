@@ -63,7 +63,7 @@
           <div class="post_content">
 <p>Thanks for the hint.  I found out why nothing was showing up when I did a <code>Clone</code>.</p>
 <p>The basic problem is that <code>Clone</code> expects the cloned <code>Component</code>'s <code>Model</code> to have come from the <code>ResourceCache</code> (see <code>StaticModel::SetMaterialsAttr</code>).  However, my <code>Model</code>s are custom and created at run time, so are not in the <code>ResourceCache</code>.  Hence the cloned <code>Component</code> has no <code>Model</code> and doesn’t render (and I get an error  log “Material index out of bounds”, since it’s trying to clone a <code>Material</code> onto a non-existent <code>Model</code>).</p>
-<p>Adding my models to the <code>ResourceCache</code> via <code>AddManualResource</code> gets me something on screen to play with.  It doesn’t get me all the way to a periodic environment, but at least I’m making progress  <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=5" title=":wink:"/> .</p>
+<p>Adding my models to the <code>ResourceCache</code> via <code>AddManualResource</code> gets me something on screen to play with.  It doesn’t get me all the way to a periodic environment, but at least I’m making progress  <img alt=":wink:" class="emoji" src="../../../images2/95940790c23d98635b2a6d3f22657158.png" title=":wink:"/> .</p>
           </div>
         </div>
       </div>

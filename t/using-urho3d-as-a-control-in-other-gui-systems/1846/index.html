@@ -67,7 +67,7 @@ The special requirement is the app can be released as a control, so the users ca
 <p>Like you have noticed you are working against Urho’s own usecase, which is to run a game-like app in its own window, and which SDL allows to accomplish on all supported platforms. But if you go outside of that, and rip out SDL, I’m sorry to say you’re on your own.</p>
 <p>We support an “external window handle” usecase in which the Urho window is to be embedded e.g. in an editor application’s native window, but this is still working within SDL. I don’t think that can be expanded to mobiles (“run as a control”) without modifications to SDL.</p>
 <p>As of the current version multiple window rendering from within the same application isn’t supported.[/quote]</p>
-<p>Thanks for your reply <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/><br/>
+<p>Thanks for your reply <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/><br/>
 I’ll try to replace SDL first, then see if I can write new backends for SDL.<br/>
 Since there’re only several files using SDL(graphics/input/audio/file), the change work should be acceptable.</p>
           </div>

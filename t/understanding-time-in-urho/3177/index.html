@@ -58,7 +58,7 @@
 <p><strong>deltaTime</strong> -&gt; not sure there’s exact analog</p>
 <p><strong>smootDeltaTime</strong>:<code>float smoothDeltaTime = GetSubsystem&lt;Engine&gt;()-&gt;GetNextTimeStep();</code><br/>
 <strong>time</strong>: <code>float time = GetSubsystem&lt;Time&gt;()-&gt;GetTimeStep();</code></p>
-<p>In Update(), timeStep is the the same as smoothDeltaTime. I’m not sure about FixedUpdate(), judging by the code in PhysicsWorld.cpp, it is <strong>float internalTimeStep = 1.0f / fps_;</strong>, that is if you run physics at 60fps, it would be 16.667ms <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/></p>
+<p>In Update(), timeStep is the the same as smoothDeltaTime. I’m not sure about FixedUpdate(), judging by the code in PhysicsWorld.cpp, it is <strong>float internalTimeStep = 1.0f / fps_;</strong>, that is if you run physics at 60fps, it would be 16.667ms <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/></p>
           </div>
         </div>
       </div>

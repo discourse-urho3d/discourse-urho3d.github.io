@@ -75,7 +75,7 @@ For example, for <code>height = -1</code>, we encode into <code>R = 1111 1111</c
 So in shader we get: <code>heights.r = 1.0, heights.g = 1.0</code>.<br/>
 Then we should get <code>-1 * scale</code> as the final result.</p>
 <p><strong>However, there are many sharp spikes in my terrain for those negative value regions.</strong></p>
-<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/jf25oD0GnvKMCSGBPmbG0Rmk2B2.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/8/86dc5a97edbaf9c500cde76e7cb2c0b4e101ff20.jpeg" rel="nofollow noopener" title="image"><img alt="image" data-base62-sha1="jf25oD0GnvKMCSGBPmbG0Rmk2B2" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/86dc5a97edbaf9c500cde76e7cb2c0b4e101ff20_2_10x10.png" height="500" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/86dc5a97edbaf9c500cde76e7cb2c0b4e101ff20_2_674x500.jpeg" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/86dc5a97edbaf9c500cde76e7cb2c0b4e101ff20_2_674x500.jpeg, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/86dc5a97edbaf9c500cde76e7cb2c0b4e101ff20_2_1011x750.jpeg 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/86dc5a97edbaf9c500cde76e7cb2c0b4e101ff20_2_1348x1000.jpeg 2x" width="674"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2046×1516 1.05 MB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/jf25oD0GnvKMCSGBPmbG0Rmk2B2.jpeg?dl=1" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/8/86dc5a97edbaf9c500cde76e7cb2c0b4e101ff20.jpeg" rel="nofollow noopener" title="image"><img alt="image" data-base62-sha1="jf25oD0GnvKMCSGBPmbG0Rmk2B2" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/86dc5a97edbaf9c500cde76e7cb2c0b4e101ff20_2_10x10.png" height="500" src="../../../images2/acfe050d1b2293bbb86ffb7e69c0f56a.jpeg" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/86dc5a97edbaf9c500cde76e7cb2c0b4e101ff20_2_674x500.jpeg, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/86dc5a97edbaf9c500cde76e7cb2c0b4e101ff20_2_1011x750.jpeg 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/2X/8/86dc5a97edbaf9c500cde76e7cb2c0b4e101ff20_2_1348x1000.jpeg 2x" width="674"/><div class="meta"><svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2046×1516 1.05 MB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
 <p><strong>I verified those height raw values and calculated them using my formula, everything should be correct.</strong><br/>
 <strong>This does not make any sense to me unless I’ve made some stupid mistakes somewhere?</strong></p>
           </div>
@@ -92,7 +92,7 @@ Then we should get <code>-1 * scale</code> as the final result.</p>
 <p>Ah, yes, it’s a stupid mistake!<br/>
 It’s because the default <strong><code>TextureFilterMode</code></strong>.</p>
 <p>I spent the whole afternoon debugging this and did not realize it until I clicked the <code>Create Topic</code> button.<br/>
-<img alt=":rofl:" class="emoji only-emoji" src="https://emoji.discourse-cdn.com/twitter/rofl.png?v=9" title=":rofl:"/></p>
+<img alt=":rofl:" class="emoji only-emoji" src="../../../images2/b8e55af518619a978b88eeaeaca19aa3.png" title=":rofl:"/></p>
 <p>But the original question is still valid:<br/>
 Since  <code>format_</code>  is just  <code>unsigned</code> , I was wondering the mapping relation between the  <code>integer</code>  and different OpenGL texture format  <code>GL_XXXX</code></p>
           </div>
@@ -109,7 +109,7 @@ Since  <code>format_</code>  is just  <code>unsigned</code> , I was wondering th
 <aside class="quote no-group" data-post="2" data-topic="6286" data-username="UrhoIsTheBest">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/u/7feea3/40.png" width="20"/> UrhoIsTheBest:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/d75d27d5d93b2fc4395b4ba685be6335.png" width="20"/> UrhoIsTheBest:</div>
 <blockquote>
 <p>I was wondering the mapping relation between the <code>integer</code> and different OpenGL texture format <code>GL_XXXX</code></p>
 </blockquote>

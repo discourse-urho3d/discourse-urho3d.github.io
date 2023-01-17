@@ -32,7 +32,7 @@
         <div class="post">
           <div class="user_name">xahon</div>
           <div class="post_content">
-<p>I’ve created a simple model and rigged it and created 2 animations. In blender animations work well. When exporting through <code>Urho exporter</code> plugin this message pops up. <img alt="image" height="396" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/d/d9c518e36016488b66d96ed48459367f68aaf18c.jpg" width="506"/></p>
+<p>I’ve created a simple model and rigged it and created 2 animations. In blender animations work well. When exporting through <code>Urho exporter</code> plugin this message pops up. <img alt="image" height="396" src="../../../images2/8577cb6de61f14a8fa70621c9b58cd39.jpg" width="506"/></p>
 <p>In urho I’m creating <code>AnimationController</code> like this:</p>
 <pre><code>void Character::Start() {
   animation_ = node_-&gt;CreateComponent&lt;AnimationController&gt;();
@@ -52,9 +52,9 @@
 … and other bones excluding IKs, Poles, etc …</p>
 </blockquote>
 <p>Of course animation is not working in game, but model is ok<br/>
-<img alt="image" height="388" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/4/4a45732633cc857e28c14108823091487ada4c19.jpg" width="639"/></p>
+<img alt="image" height="388" src="../../../images2/ab1ada93fa6a8e35aa6e145e0b3dfee9.jpg" width="639"/></p>
 <p>Here is how my model looks in blender<br/>
-<img alt="image" height="354" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/9/95c4ad4987d44f62a9e51b16088a25074096c65e.jpg" width="411"/></p>
+<img alt="image" height="354" src="../../../images2/0e286585bd0bde977e00d4b732afa7ae.jpg" width="411"/></p>
 <p>It has multiple root bones. Rear paws parented to <code>Root</code> bone and front paws parented to <code>Spine3</code></p>
 <p>I tried to export model with one bone (Cube) and it worked well in Urho3d.<br/>
 <strike>Is the problem because of multiple root bones?</strike></p>
@@ -72,7 +72,7 @@
           <div class="post_content">
 <p>How does your scene look like in blender?<br/>
 I haven’t played with animation, but just model with skeleton exported fine for me w/o Derigifying<br/>
-<img alt="image" height="263" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/2X/3/3047df28e8f87942186b317d341f76c338e1c078.png" width="270"/></p>
+<img alt="image" height="263" src="../../../images2/dfc80393434248d7131de63d9c317b68.png" width="270"/></p>
           </div>
         </div>
       </div>

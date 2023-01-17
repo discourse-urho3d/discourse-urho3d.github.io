@@ -89,7 +89,7 @@ Urho3D::Quaternion rotation = Urho3D::Quaternion(Urho3D::Random(360.0f), Urho3D:
 &lt;/node&gt;
 </code></p>
 <p>This spawns the keys correctly, however they do not respect gravity. For example:<br/>
-<a data-bbcode="true" href="http://i.imgur.com/49HqtCj.jpg" rel="nofollow noopener"><img alt="" height="480" src="http://i.imgur.com/49HqtCjl.jpg" width="640"/></a></p>
+<a data-bbcode="true" href="http://i.imgur.com/49HqtCj.jpg" rel="nofollow noopener"><img alt="" height="480" src="../../../images2/8490d9292283934b52d3fa09358f5ae1.jpg" width="640"/></a></p>
 <p>Edit: Something definitely seems odd. Consider the following changes:</p>
 <p>[code]const unsigned NUM_KEYS = 200;<br/>
 Urho3D::XMLFile* keyFile = GetSubsystem<a>Urho3D::ResourceCache</a>()-&gt;GetResource<a>Urho3D::XMLFile</a>(“Objects/key.xml”);<br/>
@@ -153,7 +153,7 @@ Urho3D::Quaternion rotation = Urho3D::Quaternion(Urho3D::Random(360.0f), Urho3D:
 		&lt;attribute name="Linear Rest Threshold" value="0" /&gt;
 		&lt;attribute name="Angular Rest Threshold" value="0" /&gt;
 		&lt;attribute name="Contact Threshold" value="0" /&gt;</code></p>
-<p>I didn’t even realize that I had a post-build step in my Visual Studio solution to automatically sync data from my Data folder, so all of my changes when testing were being reversed. Wow that took me way too long last night and I figured it out in 30 minutes after waking up  <img alt=":laughing:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/laughing.png?v=5" title=":laughing:"/></p>
+<p>I didn’t even realize that I had a post-build step in my Visual Studio solution to automatically sync data from my Data folder, so all of my changes when testing were being reversed. Wow that took me way too long last night and I figured it out in 30 minutes after waking up  <img alt=":laughing:" class="emoji" src="../../../images2/f1b3f4dd9f845d1069864c322071dffe.png" title=":laughing:"/></p>
           </div>
         </div>
       </div>

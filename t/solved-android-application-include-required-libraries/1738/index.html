@@ -81,7 +81,7 @@ I suppose you could build the APK on the command line, and then extract it in a 
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/mightymarcus/40/832_1.png" width="20"/> mightymarcus:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/587d29f498fc9472af79733566b48691.png" width="20"/> mightymarcus:</div>
 <blockquote>
 <p>C:\Users\mighty\Urho3D\buildandroidphysics\libs\armeabi-v7a\libUrho3D.a(SDL_android.c.o):SDL_android.c:function Android_JNI_GetNativeWindow: error: undefined reference to ‘ANativeWindow_fromSurface’</p>
 </blockquote>
@@ -163,16 +163,16 @@ advapi32.lib</p>
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/weitjong/40/4_1.png" width="20"/> weitjong:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/5dc21abd616a69d8b82c2d56dfa657a5.png" width="20"/> weitjong:</div>
 <blockquote>
 <p>What rasteron has suggested makes sense. If I were you, I would also do a search myself in the source files. Urho3D project is OSS, so take the full benefit of it.</p>
 </blockquote>
 </aside>
-<p>I have to dig into the source code anyways if I want to write my extern classes, and I had to rename e.g. Urho3D::String to Urho3D::UrhoString to bypass conflicts with haxe (there is a String class too) and had to alter the source code with <span class="hashtag">#ifdef</span> RegisterClass <span class="hashtag">#undef</span> RegisterClass (windows …) to get it working. <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=5" title=":wink:"/></p>
+<p>I have to dig into the source code anyways if I want to write my extern classes, and I had to rename e.g. Urho3D::String to Urho3D::UrhoString to bypass conflicts with haxe (there is a String class too) and had to alter the source code with <span class="hashtag">#ifdef</span> RegisterClass <span class="hashtag">#undef</span> RegisterClass (windows …) to get it working. <img alt=":wink:" class="emoji" src="../../../images2/95940790c23d98635b2a6d3f22657158.png" title=":wink:"/></p>
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/weitjong/40/4_1.png" width="20"/> weitjong:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/5dc21abd616a69d8b82c2d56dfa657a5.png" width="20"/> weitjong:</div>
 <blockquote>
 <p>Afterall you already know the keyword to search for, like winmm or imm32. Since Urho3D build system supports Android out of the box along with Win32 platform, you will surely find whatever the good “bits” that define the winmm/imm32 for Win32 may be also the one responsible for defining dependency libs for Android platform. Hint: it is in our CMake common module. Another hint: git grep keyword.</p>
 </blockquote>

@@ -65,13 +65,13 @@
 <aside class="quote no-group" data-username="Bananaft">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/bananaft/40/222_2.png" width="20"/> Bananaft:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/39770b981d4a61c699f58bd27efbb8f3.png" width="20"/> Bananaft:</div>
 <blockquote>
 <p>Aren’t there already “Depth Slope Bias” aka slopeScaledBias parameter ?</p>
 </blockquote>
 </aside>
 <p>It’s kinda confusing, but slope scale bias is something else, it’s about scaling the constant depth offset according to the angle of the slope, and that causes severe peter panning.</p>
-<p><img alt="" height="275" src="http://i.imgur.com/vXwjqC1.jpg" width="635"/></p>
+<p><img alt="" height="275" src="../../../images2/9ed5c87fbab06fa10b52ab0d8a51ebbb.jpg" width="635"/></p>
 <p>I recommend watching the video, it explains the difference between constant &amp; slope bias and normal offset bias:<br/>
 <a href="http://www.dissidentlogic.com/old/video/Techniques/NormalOffsetShadows_0001.wmv" rel="nofollow noopener">dissidentlogic.com/old/video … s_0001.wmv</a></p>
 <p>Daniel Holbert also uploaded a tech demo on that <a data-bbcode="true" href="http://www.dissidentlogic.com/old" rel="nofollow noopener">website</a> that works with Nvidia FX Composer.</p>
@@ -103,19 +103,19 @@
 <p>Some tests:</p>
 <ol>
 <li>Without bias<br/>
-<a data-bbcode="true" href="http://savepic.ru/9680018.htm"><img alt="" height="" src="http://savepic.ru/9680018m.png" width=""/></a>
+<a data-bbcode="true" href="http://savepic.ru/9680018.htm"><img alt="" height="" src="../../../images2/9f87c654d70be5e0242a49607d26956c.png" width=""/></a>
 </li>
 <li>Constant bias<br/>
-<a data-bbcode="true" href="http://savepic.ru/9667730.htm"><img alt="" height="" src="http://savepic.ru/9667730m.png" width=""/></a>
+<a data-bbcode="true" href="http://savepic.ru/9667730.htm"><img alt="" height="" src="../../../images2/77366f885b9a21de0ca9ec5499469def.png" width=""/></a>
 </li>
 <li>Slope bias<br/>
-<a data-bbcode="true" href="http://savepic.ru/9657490.htm"><img alt="" height="" src="http://savepic.ru/9657490m.png" width=""/></a>
+<a data-bbcode="true" href="http://savepic.ru/9657490.htm"><img alt="" height="" src="../../../images2/fb8665404c81ad9df207cadbd8bc6a8d.png" width=""/></a>
 </li>
 <li>Normal offset<br/>
-<a data-bbcode="true" href="http://savepic.ru/9671826.htm"><img alt="" height="" src="http://savepic.ru/9671826m.png" width=""/></a>
+<a data-bbcode="true" href="http://savepic.ru/9671826.htm"><img alt="" height="" src="../../../images2/d3611e72f1a9a65f80f5d74aef5bd4cc.png" width=""/></a>
 </li>
 <li>SlopeBias + Normal offset<br/>
-<a data-bbcode="true" href="http://savepic.ru/9661586.htm"><img alt="" height="" src="http://savepic.ru/9661586m.png" width=""/></a>
+<a data-bbcode="true" href="http://savepic.ru/9661586.htm"><img alt="" height="" src="../../../images2/4e043ac3cef94f9e763d449e3b21cc92.png" width=""/></a>
 </li>
 </ol>
           </div>
@@ -130,7 +130,7 @@
           <div class="user_name">rikorin</div>
           <div class="post_content">
 <p>Huge Thank You for this, it works amazing! No more detached shadows.<br/>
-Though now it became apparent that physics objects are not touching the surface <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/><br/>
+Though now it became apparent that physics objects are not touching the surface <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/><br/>
 How can I change the distance of contact for physics objects? (figured it out, have to change margin for the floor, not the object )</p>
           </div>
         </div>
@@ -145,7 +145,7 @@ How can I change the distance of contact for physics objects? (figured it out, h
           <div class="post_content">
 <p>So glad it’s been added!</p>
 <p>[quote=“rikorin”]Huge Thank You for this, it works amazing! No more detached shadows.<br/>
-Though now it became apparent that physics objects are not touching the surface <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/><br/>
+Though now it became apparent that physics objects are not touching the surface <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/><br/>
 How can I change the distance of contact for physics objects? (figured it out, have to change margin for the floor, not the object )[/quote]</p>
 <p>With Bullet physics you have a default collision margin that for most shapes extrudes outwards. You’ll just have to take it into account when matching the size of the model and collision shape.<br/>
 Good video about it: <a href="https://www.youtube.com/watch?v=BGAwRKPlpCw" rel="nofollow noopener">youtube.com/watch?v=BGAwRKPlpCw</a></p>

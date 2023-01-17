@@ -67,7 +67,7 @@
                     RecursiveSetAnimation(noed-&gt;GetChild(x), ani, loop, layer);
             }
     }</code></pre>
-<p><img alt="" height="" src="http://img.ctrlv.in/img/15/10/13/561d8bbe8dc0c.gif" width=""/></p>
+<p><img alt="" height="" src="../../../images2/5876324c9a1e695df8892877ee6b6c08.gif" width=""/></p>
 <p>Edit <span class="hashtag">#1:</span>  I made some progress.  It seems something doesn’t like the long path after the first usage.  Using String aniPath = “Models/” + fileName + “/” + ani + “.ani”; along with noed-&gt;GetComponent()-&gt;FadeOthers(aniPath, 0.0f, 0.25f); works but it seems that each time PlayExclusive() is called, a new animation is added.  After too many calls, the app hangs.</p>
 <p>Hello, I’m loading a prefab and its idle animation is showing.  Then I tell it to play a run animation and it does.  Afterwards I tell it to play the idle animation again but the run animation plays faster.  Thanks for any help.</p>
 <pre><code class="lang-auto">    void ModelController::RecursiveSetAnimation(Node* noed, String ani, bool loop, unsigned char layer)

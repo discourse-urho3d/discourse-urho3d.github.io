@@ -37,7 +37,7 @@
 <p>Superficially it looks like it’s been static … but it really hasn’t been.</p>
 <p>Recently I have been exploring avoiding data-binding in order to minimize the woes of GUI programming. Because I use the same code-base for that QT editor and a different project it is often difficult to reconcile the two. A lot of potential is lost in dealing with the data-binding woes of retained GUIs. Reconciling Core Urho3D and “my version of Urho3D” has been unpleasant to say the least. Never mind that I intend this toolset to be usable outside of Urho3D.</p>
 <p>In trying to find ways to make exploratory efforts and easier UI I gave IMGUI paradigms a shot. For this I turned to Nuklear as it has a draw scheme that fits QT whereas IMGUI does not (barring writing a barycentric-rasterizer in QT … good luck with that).</p>
-<p><div class="lightbox-wrapper"><a class="lightbox" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/1X/c46e2fdc1abed6a67490fb810b541ba89ef5c4ca.png" rel="nofollow noopener" title="QI97XxX.png"><img alt="Nuklear in QT" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/c46e2fdc1abed6a67490fb810b541ba89ef5c4ca_2_10x10.png" height="368" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/c46e2fdc1abed6a67490fb810b541ba89ef5c4ca_2_690x368.png" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/c46e2fdc1abed6a67490fb810b541ba89ef5c4ca_2_690x368.png, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/c46e2fdc1abed6a67490fb810b541ba89ef5c4ca_2_1035x552.png 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/c46e2fdc1abed6a67490fb810b541ba89ef5c4ca_2_1380x736.png 2x" width="690"/><div class="meta">
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/1X/c46e2fdc1abed6a67490fb810b541ba89ef5c4ca.png" rel="nofollow noopener" title="QI97XxX.png"><img alt="Nuklear in QT" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/c46e2fdc1abed6a67490fb810b541ba89ef5c4ca_2_10x10.png" height="368" src="../../../images2/87c9c368f04c737a38ad84273af2a6d5.png" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/c46e2fdc1abed6a67490fb810b541ba89ef5c4ca_2_690x368.png, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/c46e2fdc1abed6a67490fb810b541ba89ef5c4ca_2_1035x552.png 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/c46e2fdc1abed6a67490fb810b541ba89ef5c4ca_2_1380x736.png 2x" width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">QI97XxX.png</span><span class="informations">1920×1024 264 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg>
 </div></a></div></p>
 <p>The results were excellent. While Nuklear’s widgets are very janky, I’ve already put in the effort of making several of them (text edit and slider) less janky and more usable. I will continue to do so for other widgets as is viable.</p>
@@ -65,7 +65,7 @@
           <div class="user_name">Sinoid</div>
           <div class="post_content">
 <p>This has definitely been the right choice so far. After implementing “hotspots” (areas that indicate mouse cursor, repaint needs, and tooltips) in Nuklear I’ve eliminated 90% of unnecessary repaints and I’m interacting more closely with QT. Once I slap in QIcon/QImage support it’s basically as done as it can get.</p>
-<p><div class="lightbox-wrapper"><a class="lightbox" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/1X/858c71d54af28410dc49bd9f0013fff735ef1cd3.png" rel="nofollow noopener" title="image.png"><img alt="Image" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/858c71d54af28410dc49bd9f0013fff735ef1cd3_2_10x10.png" height="374" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/858c71d54af28410dc49bd9f0013fff735ef1cd3_2_690x374.png" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/858c71d54af28410dc49bd9f0013fff735ef1cd3_2_690x374.png, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/858c71d54af28410dc49bd9f0013fff735ef1cd3_2_1035x561.png 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/858c71d54af28410dc49bd9f0013fff735ef1cd3_2_1380x748.png 2x" width="690"/><div class="meta">
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/1X/858c71d54af28410dc49bd9f0013fff735ef1cd3.png" rel="nofollow noopener" title="image.png"><img alt="Image" data-small-upload="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/858c71d54af28410dc49bd9f0013fff735ef1cd3_2_10x10.png" height="374" src="../../../images2/0a1abbf636709b6cf3df8a668715481c.png" srcset="https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/858c71d54af28410dc49bd9f0013fff735ef1cd3_2_690x374.png, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/858c71d54af28410dc49bd9f0013fff735ef1cd3_2_1035x561.png 1.5x, https://global.discourse-cdn.com/standard17/uploads/urho3d/optimized/1X/858c71d54af28410dc49bd9f0013fff735ef1cd3_2_1380x748.png 2x" width="690"/><div class="meta">
 <svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename">image.png</span><span class="informations">1920×1042 298 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg>
 </div></a></div></p>
 <p><a href="http://imgur.com/a/8CHRh" rel="nofollow noopener">Direct Image Link</a></p>
@@ -85,7 +85,7 @@
           <div class="user_name">Sinoid</div>
           <div class="post_content">
 <p>I couldn’t have been more wrong about Dear-IMGUI. With just a little bit of evil (of the slap a bunch of structs in a union variety) it was an easy job to write a backend for a pure QT scenario.</p>
-<p><img alt="Low resolution" height="321" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/1X/ed5b6008b9774660c399b6a5bec80bf4d04514a5.jpg" width="640"/></p>
+<p><img alt="Low resolution" height="321" src="../../../images2/8987ae85eceb76a7304b7b9a0b11a75c.jpg" width="640"/></p>
 <p><a href="http://i.imgur.com/ZagQj2T.png" rel="nofollow noopener">Full Resolution Version</a></p>
 <p>What’s going on in the above:</p>
 <ul>
@@ -194,7 +194,7 @@ Are you using QT for replacing Imgui missing features?</p>
 <aside class="quote no-group" data-post="4" data-topic="3119" data-username="johnnycable">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/johnnycable/40/788_2.png" width="20"/> johnnycable:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/b172fc48f4b6208a4519e86c27afb791.png" width="20"/> johnnycable:</div>
 <blockquote>
 <p>Are you using QT for replacing Imgui missing features?</p>
 </blockquote>
@@ -205,7 +205,7 @@ Are you using QT for replacing Imgui missing features?</p>
 <aside class="quote no-group" data-post="5" data-topic="3119" data-username="Eugene">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/eugene/40/902_2.png" width="20"/> Eugene:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/ae663b3d37eca5ee603f9e0610f8f829.png" width="20"/> Eugene:</div>
 <blockquote>
 <p>What are your plans for this Editor, BTW?</p>
 </blockquote>
@@ -218,7 +218,7 @@ Are you using QT for replacing Imgui missing features?</p>
 <aside class="quote no-group" data-full="true" data-post="7" data-topic="3119" data-username="smellymumbler">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/s/ad7895/40.png" width="20"/> smellymumbler:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/6da748b8a26de7f4edb17badb98017e7.png" width="20"/> smellymumbler:</div>
 <blockquote>
 <p>I love your translation/scale/rotation widget. I’ve been struggling a lot when trying to create one, so much that i eventually gave up and now i just use a matrix and a bunch of textfields. It works for me and my game, but i would love to learn how to do this properly. Do you recommend any specific material about it?</p>
 </blockquote>
@@ -227,7 +227,7 @@ Are you using QT for replacing Imgui missing features?</p>
 <aside class="quote no-group" data-full="true" data-post="8" data-topic="3119" data-username="slapin">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/s/dfb087/40.png" width="20"/> slapin:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/fd76f653c5f5a98690a798e37b37d018.png" width="20"/> slapin:</div>
 <blockquote>
 <p>I currently use draggable buttons for everything. Should be easier to do. Anyway, why don’t you use Editor’s gizmos?</p>
 </blockquote>
@@ -246,7 +246,7 @@ Are you using QT for replacing Imgui missing features?</p>
           <div class="post_content">
 <p>Almost there. Though I’ll most likely post the basis of the DearIMGUI in QT stuff later today and update with a link to the files.</p>
 <p>Shot of scene tree (Urho3D tree still hasn’t moved over to <em>Repeater</em> yet, definitely not going to use DearIMGUI for manipulable trees), Resource cache browser, Profiler, and properties.</p>
-<p><img alt="Low Resolution" height="321" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/1X/3666a6c16f1a65bbccecc45dd711341d90dcba5a.jpg" width="640"/><br/>
+<p><img alt="Low Resolution" height="321" src="../../../images2/3c00a7351816f9888d2350bd70fd6e49.jpg" width="640"/><br/>
 <a href="http://i.imgur.com/FZQ8Yz5.png" rel="nofollow noopener">Full-Res Version</a></p>
 <p>Although the Resource cache and Profiler are accessible through the debug HUD having them in GUI eliminates the screen space constraints so that the profiler can show <strong>everything</strong> and all resources from the cache (plus their reference counts) can be viewed … which is pretty useful.</p>
 <p>They’re both really just <em>baseline</em> widgets. There’s room for a lot more stuff going on in the Resource cache widget (<a href="https://gist.github.com/JSandusky/f684a0be15984c84ed1e59d13a166538" rel="nofollow noopener">CPP file for resource cache widget</a>) such as forcing dumps/reloads/OS-thumbnail-previews/etc (though the whole ResourceDirs thing makes OS thumbnails a big “WTF do I do” or I’d have done it already for rule of cool).</p>
@@ -296,7 +296,7 @@ Are you using QT for replacing Imgui missing features?</p>
         <div class="post">
           <div class="user_name">johnnycable</div>
           <div class="post_content">
-<p>Wow. Looks gorgeous! <img alt=":grinning:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/grinning.png?v=5" title=":grinning:"/></p>
+<p>Wow. Looks gorgeous! <img alt=":grinning:" class="emoji" src="../../../images2/993cdd6d5aba3f941b7389fd0b3a1ba1.png" title=":grinning:"/></p>
           </div>
         </div>
       </div>
@@ -308,7 +308,7 @@ Are you using QT for replacing Imgui missing features?</p>
         <div class="post">
           <div class="user_name">smellymumbler</div>
           <div class="post_content">
-<p>Absolutely fantastic! <img alt=":grinning:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/grinning.png?v=5" title=":grinning:"/></p>
+<p>Absolutely fantastic! <img alt=":grinning:" class="emoji" src="../../../images2/993cdd6d5aba3f941b7389fd0b3a1ba1.png" title=":grinning:"/></p>
           </div>
         </div>
       </div>
@@ -321,7 +321,7 @@ Are you using QT for replacing Imgui missing features?</p>
           <div class="user_name">Sinoid</div>
           <div class="post_content">
 <p><span class="mention">@johnnycable</span> and <span class="mention">@smellymumbler</span>, thanks!</p>
-<p><img alt="Latest shot" height="321" src="https://global.discourse-cdn.com/standard17/uploads/urho3d/original/1X/f8168eff77888545f03a57b976455118baca9191.jpg" width="640"/><br/>
+<p><img alt="Latest shot" height="321" src="../../../images2/2780c8aae0268b4b1760a64340c42ad5.jpg" width="640"/><br/>
 <a href="http://i.imgur.com/Krre48D.png" rel="nofollow noopener">Full Res</a></p>
 <p>I’ve been pushing out periodically over the past couple of hours. The latest pushes include everything pictured above. The scene tree has fully moved over to repeater now. And those release build issues should be gone.</p>
 <p>I’ll be returning to the property editor for completeness. After that I’ll be rounding out the missing functionality from the Urho3D scene editor. I expect to have all core functionality there by next weekend.</p>
@@ -356,7 +356,7 @@ Is that due to z-fight. Are you going to fix that?</p>
 <aside class="quote no-group" data-post="14" data-topic="3119" data-username="George1">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/g/9e8a1a/40.png" width="20"/> George1:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/55025fbd2afcb6a1f5abc6e341ed02b9.png" width="20"/> George1:</div>
 <blockquote>
 <p>I notice, the grid line doesn’t display correctly on the last picture.<br/>
 Is that due to z-fight. Are you going to fix that?</p>
@@ -396,7 +396,7 @@ What features do you miss in Qt?</p>
 <aside class="quote no-group quote-modified" data-full="true" data-post="15" data-topic="3119" data-username="Sinoid">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/s/f19dbf/40.png" width="20"/> Sinoid:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/364b15125065144cbdd62e2448806aa6.png" width="20"/> Sinoid:</div>
 <blockquote>
 <p>QT is designed for single document type scenarios and completely falls on its face when presented with multiple document types.[/quote]<br/>
 That one I just don’t get.<br/>
@@ -440,7 +440,7 @@ Also, the Qt Designer is just… not very good.</p>
 <aside class="quote" data-full="true" data-post="18" data-topic="3119">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/pencheff/40/259_1.png" width="20"/> Pencheff:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/5d114c543c1892e661ca59b63d409330.png" width="20"/> Pencheff:</div>
 <blockquote>
 <p>Multithreading is not so hard either, its safe to emit a signal from any thread and the QObject will receive it in its own.</p>
 </blockquote>
@@ -478,7 +478,7 @@ is that?</li>
 <aside class="quote no-group" data-full="true" data-post="16" data-topic="3119" data-username="Eugene">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/eugene/40/902_2.png" width="20"/> Eugene:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/ae663b3d37eca5ee603f9e0610f8f829.png" width="20"/> Eugene:</div>
 <blockquote>
 <p>May you explain what are your plans?<br/>
 What are you going (trying) to implement?</p>
@@ -508,7 +508,7 @@ Qt absolutely features scenarios with different kinds of documents. What are you
 <aside class="quote no-group quote-modified" data-post="17" data-topic="3119" data-username="TheSHEEEP">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/thesheeep/40/74_2.png" width="20"/> TheSHEEEP:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/94267ad0cdcbb740b93ca3432c7a79fb.png" width="20"/> TheSHEEEP:</div>
 <blockquote>
 <p>Quite honestly, all of this just sounds like you don’t know how to use Qt. … You are right that Qt is not MFC, but that should have been clear from looking at a few examples.</p>
 </blockquote>
@@ -533,7 +533,7 @@ Qt absolutely features scenarios with different kinds of documents. What are you
 <aside class="quote" data-full="true" data-post="18" data-topic="3119">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/pencheff/40/259_1.png" width="20"/> Pencheff:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/5d114c543c1892e661ca59b63d409330.png" width="20"/> Pencheff:</div>
 <blockquote>
 <p>Multithreading is not so hard either, its safe to emit a signal from any thread and the QObject will receive it in its own.</p>
 </blockquote>
@@ -564,7 +564,7 @@ Qt absolutely features scenarios with different kinds of documents. What are you
         <div class="post">
           <div class="user_name">Bluemoon</div>
           <div class="post_content">
-<p>It’s awesome to know that we all want Urho3D to develop better, but it seems we’ve mistakenly pulled out our arsenals of war when there is actually no battle cry… Why don’t we all pull back our arsenals and look for a common way the Urho3D community can move forward <img alt=":grin:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/grin.png?v=5" title=":grin:"/></p>
+<p>It’s awesome to know that we all want Urho3D to develop better, but it seems we’ve mistakenly pulled out our arsenals of war when there is actually no battle cry… Why don’t we all pull back our arsenals and look for a common way the Urho3D community can move forward <img alt=":grin:" class="emoji" src="../../../images2/ec34c8e58665ec32c0e7c847446db86d.png" title=":grin:"/></p>
           </div>
         </div>
       </div>

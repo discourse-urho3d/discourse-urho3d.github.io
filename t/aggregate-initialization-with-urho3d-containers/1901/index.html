@@ -85,7 +85,7 @@ Although i noticed we cant still do SendEvent(“Some event”, {{“key”, val
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/weitjong/40/4_1.png" width="20"/> weitjong:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/5dc21abd616a69d8b82c2d56dfa657a5.png" width="20"/> weitjong:</div>
 <blockquote>
 <p>A few events actually expect the VariantMap to be non-const. The map can be used as input as well as output. i.e. the event handler can also put data into the map so that the event sender can read it back.</p>
 </blockquote>
@@ -209,7 +209,7 @@ SendEvent("event", args);</code></pre>
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/sabotage3d/40/87_1.png" width="20"/> sabotage3d:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/db4c02596e658dc9102b66ceb5fb9d80.png" width="20"/> sabotage3d:</div>
 <blockquote>
 <p>If we can use C++11 I think Variadic templates are far more readable for functions than using initializer lists.</p>
 </blockquote>
@@ -231,7 +231,7 @@ Also initializer lists are completely broken when used together with a variadic 
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/rku/40/881_1.png" width="20"/> rku:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/c74e1d6abd7187cdd2f8199c8cfb922b.png" width="20"/> rku:</div>
 <blockquote>
 <p>weitjong what do you think solution for const problem should be then?</p>
 </blockquote>
@@ -252,14 +252,14 @@ Also initializer lists are completely broken when used together with a variadic 
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/weitjong/40/4_1.png" width="20"/> weitjong:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/5dc21abd616a69d8b82c2d56dfa657a5.png" width="20"/> weitjong:</div>
 <blockquote>
 <p>A few events actually expect the VariantMap to be non-const. The map can be used as input as well as output. i.e. the event handler can also put data into the map so that the event sender can read it back.</p>
 </blockquote>
 </aside>
 <p>This seems very wrong to me. The very idea of an event is to transport data from A to B and not the other way around, simply because the event sender cannot know who’s listening.</p>
 <p>Would it be possible to extract those few cases where receivers put data back into some other mechanism?</p>
-<p>[EDIT] A dirty hack would be to make the signature const, but have those few cases use const_cast.  <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/></p>
+<p>[EDIT] A dirty hack would be to make the signature const, but have those few cases use const_cast.  <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/></p>
           </div>
         </div>
       </div>
@@ -274,7 +274,7 @@ Also initializer lists are completely broken when used together with a variadic 
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/thecomet/40/142_1.png" width="20"/> TheComet:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/12a1dc2eccbee0e3555e7cc3e716f46e.png" width="20"/> TheComet:</div>
 <blockquote>
 <p>[quote=“weitjong”]A few events actually expect the VariantMap to be non-const. The map can be used as input as well as output. i.e. the event handler can also put data into the map so that the event sender can read it back.</p>
 </blockquote>
@@ -296,14 +296,14 @@ Also initializer lists are completely broken when used together with a variadic 
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/thecomet/40/142_1.png" width="20"/> TheComet:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/12a1dc2eccbee0e3555e7cc3e716f46e.png" width="20"/> TheComet:</div>
 <blockquote>
 <p>[quote=“weitjong”]A few events actually expect the VariantMap to be non-const. The map can be used as input as well as output. i.e. the event handler can also put data into the map so that the event sender can read it back.</p>
 </blockquote>
 </aside>
 <p>This seems very wrong to me. The very idea of an event is to transport data from A to B and not the other way around, simply because the event sender cannot know who’s listening.</p>
 <p>Would it be possible to extract those few cases where receivers put data back into some other mechanism?</p>
-<p>[EDIT] A dirty hack would be to make the signature const, but have those few cases use const_cast.  <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/>[/quote]</p>
+<p>[EDIT] A dirty hack would be to make the signature const, but have those few cases use const_cast.  <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/>[/quote]</p>
 <p>Those cases are really a few. I can think of two events as it was contributed by me not long ago. See NavigationEvents.h and DatabaseEvents.h. These events are not supposed to be subscribed by multiple listeners. But of course there is nothing prevented that and should they actually send conflicting data input. You are welcome to change it if there is better way. Unless the signature has been changed, I treat the map object as the container to communicate data between event sender and event subscribers in both directions (although mostly only one direction).</p>
 <p>Regarding sending events in worker threads, I believe that topic has been discussed here in the forums too. This is the latest discussion I could find quickly using google. <a href="http://discourse.urho3d.io/t/sending-event-from-non-main-thread/1687/1">topic1753.html</a>.</p>
           </div>

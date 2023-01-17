@@ -64,7 +64,7 @@ Although, of course, nothing prevents you from creating a copy of the vertex buf
 <aside class="quote no-group" data-post="1" data-topic="4655" data-username="lhlvieira">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/lhlvieira/40/1832_2.png" width="20"/> lhlvieira:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/5122ad5edef88e8581f6449aedb97032.png" width="20"/> lhlvieira:</div>
 <blockquote>
 <p>1- Is it even possible to edit a model’s mesh at runtime ?</p>
 </blockquote>
@@ -146,7 +146,7 @@ Although, of course, nothing prevents you from creating a copy of the vertex buf
 <aside class="quote no-group" data-full="true" data-post="2" data-topic="4655">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/orefkov/40/1164_1.png" width="20"/> orefkov:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/9f00551e78b4b4b1725a5dff4ab7a087.png" width="20"/> orefkov:</div>
 <blockquote>
 <p>Imho, personally, I would just prepare two different models in advance, at design time, with different weights. And at the moment of dismemberment simply replaced one model with another.<br/>
 Although, of course, nothing prevents you from creating a copy of the vertex buffer at run time, changing the weights during copying, and then assigning a new vertex buffer to the geometry.</p>
@@ -182,7 +182,7 @@ And still it would be possible to add morph animation of different injuries for 
 <aside class="quote no-group" data-post="3" data-topic="4655" data-username="Sinoid">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/s/f19dbf/40.png" width="20"/> Sinoid:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/364b15125065144cbdd62e2448806aa6.png" width="20"/> Sinoid:</div>
 <blockquote>
 <p>Make a whole ton of models and swap them</p>
 </blockquote>
@@ -191,7 +191,7 @@ And still it would be possible to add morph animation of different injuries for 
 <aside class="quote no-group" data-post="3" data-topic="4655" data-username="Sinoid">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/s/f19dbf/40.png" width="20"/> Sinoid:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/364b15125065144cbdd62e2448806aa6.png" width="20"/> Sinoid:</div>
 <blockquote>
 <p>CSG is tempting, don’t waste your time</p>
 </blockquote>
@@ -201,7 +201,7 @@ I actually have this pending idea/project in my mind of implementing an object s
 <aside class="quote no-group" data-post="3" data-topic="4655" data-username="Sinoid">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/s/f19dbf/40.png" width="20"/> Sinoid:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/364b15125065144cbdd62e2448806aa6.png" width="20"/> Sinoid:</div>
 <blockquote>
 <p>The easiest approach will be to scale the the joint at the severing point to 0 (which will collapse all geometry weighted to it or downstream to nothing) then spawning a <em>severed-limb</em> with the orientation of the severed joint had and then adding a <em>gore-flower</em> at the point the joint collapsed down to.</p>
 </blockquote>
@@ -210,7 +210,7 @@ I actually have this pending idea/project in my mind of implementing an object s
 <aside class="quote no-group" data-post="3" data-topic="4655" data-username="Sinoid">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/s/f19dbf/40.png" width="20"/> Sinoid:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/364b15125065144cbdd62e2448806aa6.png" width="20"/> Sinoid:</div>
 <blockquote>
 <p>Roll a custom exporter and write out a crap-load of different combinations of index-buffers. The old Ghoul2 system worked this way by changing the indices drawn, all vertex data was always present and gore just changed what the triangle layout was.</p>
 </blockquote>
@@ -219,7 +219,7 @@ I actually have this pending idea/project in my mind of implementing an object s
 <aside class="quote no-group" data-post="3" data-topic="4655" data-username="Sinoid">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/s/f19dbf/40.png" width="20"/> Sinoid:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/364b15125065144cbdd62e2448806aa6.png" width="20"/> Sinoid:</div>
 <blockquote>
 <p>Valve’s Left4Dead2 slides are easy to find, they’re shader based though and they’ll make a mess of batching (though animated models already do that … so not a ton of loss).</p>
 </blockquote>
@@ -228,16 +228,16 @@ I actually have this pending idea/project in my mind of implementing an object s
 <aside class="quote no-group" data-post="3" data-topic="4655" data-username="Sinoid">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/s/f19dbf/40.png" width="20"/> Sinoid:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/364b15125065144cbdd62e2448806aa6.png" width="20"/> Sinoid:</div>
 <blockquote>
 <p>No, you can’t really use bullet softbodies for this</p>
 </blockquote>
 </aside>
-<p>I figured. I don’t plan to make a boobs game <img alt=":joy:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/joy.png?v=10" title=":joy:"/>.</p>
+<p>I figured. I don’t plan to make a boobs game <img alt=":joy:" class="emoji" src="../../../images2/dc563f6411c5d1e83df26e3a8e63515c.png" title=":joy:"/>.</p>
 <aside class="quote no-group" data-post="3" data-topic="4655" data-username="Sinoid">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/s/f19dbf/40.png" width="20"/> Sinoid:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/364b15125065144cbdd62e2448806aa6.png" width="20"/> Sinoid:</div>
 <blockquote>
 <p>Realistically you’re going to have to make use of a whole bunch of different things.</p>
 <p>I’m trying out a combination of Ghoul2-esque index swapping, morph-targets, Left4Dead2’s ellipsoid method, and prefab scenes for spawn-lists. I was previously using too much CSG and that was a waste of time, now I’ve moved to just using volume selections to filter triangles and then fill the open-loops for a base geo. Though my gore requirements are closer to MK than a zombie game.</p>
@@ -258,7 +258,7 @@ I actually have this pending idea/project in my mind of implementing an object s
 <aside class="quote no-group" data-full="true" data-post="5" data-topic="4655">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/orefkov/40/1164_1.png" width="20"/> orefkov:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/9f00551e78b4b4b1725a5dff4ab7a087.png" width="20"/> orefkov:</div>
 <blockquote>
 <p>Only one additional model for every zombie model. Just copy of usual model, but for vertexes leave only one weight, every vertex leave linked only to one bone. And loop cut vertex groups one from another. After it you can subst model and move bones in any way.<br/>
 And still it would be possible to add morph animation of different injuries for each limb.</p>
@@ -377,7 +377,7 @@ If you use this mechanism, you still need to prepare several models in advance, 
 <aside class="quote no-group" data-post="13" data-topic="4655" data-username="lhlvieira">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/lhlvieira/40/1832_2.png" width="20"/> lhlvieira:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/5122ad5edef88e8581f6449aedb97032.png" width="20"/> lhlvieira:</div>
 <blockquote>
 <p>but I really wanted to do that at runtime instead of setting everything up in blender like that</p>
 </blockquote>
@@ -387,13 +387,13 @@ Then I can offer another such idea.<br/>
 You can create own version of the shader for drawing, in which the parameter will be worked out - which part of the model to draw and which not.<br/>
 similar like this</p><div class="onebox lazyYT lazyYT-container" data-parameters="feature=oembed&amp;wmode=opaque" data-youtube-id="SmR_Xa-_Cgs" data-youtube-title="Urho3D Models Dissolving Like Doom 3">
 <a href="https://www.youtube.com/watch?v=SmR_Xa-_Cgs" rel="noopener nofollow ugc" target="_blank">
-<img class="ytp-thumbnail-image" height="360" src="https://img.youtube.com/vi/SmR_Xa-_Cgs/hqdefault.jpg" title="Urho3D Models Dissolving Like Doom 3" width="480"/>
+<img class="ytp-thumbnail-image" height="360" src="../../../images2/6c59515276edcb976b5769d43692fb2a.jpg" title="Urho3D Models Dissolving Like Doom 3" width="480"/>
 </a>
 </div>
 <p>
 There is topic about it - <a class="inline-onebox" href="https://discourse.urho3d.io/t/models-dissolving-like-doom-3/1625">Models dissolving like Doom 3</a></p>
 <p>At the moment of dismemberment, add the second model - a duplicate of the first. Both assign this shader, for one model we ask to draw one part, for another - another.<br/>
-Bonus - you will be able to portray the tearing of a zombie anywhere, not only along the joints <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=10" title=":slight_smile:"/></p>
+Bonus - you will be able to portray the tearing of a zombie anywhere, not only along the joints <img alt=":slight_smile:" class="emoji" src="../../../images2/480f97b912eb537e18032299081e582a.png" title=":slight_smile:"/></p>
           </div>
         </div>
       </div>

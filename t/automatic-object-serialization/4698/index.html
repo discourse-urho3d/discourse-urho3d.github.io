@@ -105,13 +105,13 @@ Deserialization would happen in similar manner: deserialized objects are put to 
 <aside class="quote no-group" data-post="2" data-topic="4698">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/rku/40/881_2.png" width="20"/> rku:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/fd3b88ecdc16c24107db787de64d9d59.png" width="20"/> rku:</div>
 <blockquote>
 <p>Looks like noone cares. Sigh.</p>
 </blockquote>
 </aside>
 <p>I care about Urho without having something useful to say about each of its workings. Your proposal sounds nice and more efficient, but I must admit the exact technicalities are a bit over my head. The same may be true for many others.</p>
-<p>Sometimes its the least appreciated efforts which bear most value. <img alt=":slightly_smiling_face:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slightly_smiling_face.png?v=6" title=":slightly_smiling_face:"/></p>
+<p>Sometimes its the least appreciated efforts which bear most value. <img alt=":slightly_smiling_face:" class="emoji" src="../../../images2/c5efadebdea06e0499f03c0a7e1e9e61.png" title=":slightly_smiling_face:"/></p>
           </div>
         </div>
       </div>
@@ -158,16 +158,16 @@ There is a lot of things to talk about with respect to serializing, and getting 
 <aside class="quote no-group" data-post="5" data-topic="4698" data-username="Leith">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/leith/40/2384_2.png" width="20"/> Leith:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/344277caf39f87861709d8bd9d77ec6d.png" width="20"/> Leith:</div>
 <blockquote>
 <p>how does it serialize across platforms?</p>
 </blockquote>
 </aside>
-<p>Automagically <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=10" title=":wink:"/></p>
+<p>Automagically <img alt=":wink:" class="emoji" src="../../../images2/58bcd684421190f24be1944e2a997a04.png" title=":wink:"/></p>
 <aside class="quote no-group" data-post="5" data-topic="4698" data-username="Leith">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/leith/40/2384_2.png" width="20"/> Leith:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/344277caf39f87861709d8bd9d77ec6d.png" width="20"/> Leith:</div>
 <blockquote>
 <p>What about Endian issues?</p>
 </blockquote>
@@ -252,7 +252,7 @@ CEREAL_REGISTER_POLYMORPHIC_RELATION(CerealTest::BaseClassName, CerealTest)
         );
     }
 </code></pre>
-<p>Single function handles serialization <em>and</em> deserialization to any number of supported formats. I am still stunned about this <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=10" title=":wink:"/> <code>make_nvp()</code> (stands for “make name-value-pair”) for serialization of base class is not strictly necessary, but it makes output nicer. One thing you may find confusing is that <code>Integer Foo</code> attribute is registered to <code>CerealTest</code> class, but it is serialized as part of <code>Serializable</code> class. This is because <code>Serializable</code> class manages all attributes. This could probably be solved though.</p>
+<p>Single function handles serialization <em>and</em> deserialization to any number of supported formats. I am still stunned about this <img alt=":wink:" class="emoji" src="../../../images2/58bcd684421190f24be1944e2a997a04.png" title=":wink:"/> <code>make_nvp()</code> (stands for “make name-value-pair”) for serialization of base class is not strictly necessary, but it makes output nicer. One thing you may find confusing is that <code>Integer Foo</code> attribute is registered to <code>CerealTest</code> class, but it is serialized as part of <code>Serializable</code> class. This is because <code>Serializable</code> class manages all attributes. This could probably be solved though.</p>
 <p>As you see <code>StrignHash</code> and <code>Vector2</code> types are serialized transparently to the user as well. Their values in XML and JSON look user-friendly, but it comes at a cost of implementing serialization a little bit differently for every format.</p>
 <pre><code class="lang-cpp">
 // Vector2
@@ -326,7 +326,7 @@ Cereal looks quite tidy!</p>
 <aside class="quote no-group" data-post="7" data-topic="4698" data-username="Leith">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/leith/40/2384_2.png" width="20"/> Leith:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/344277caf39f87861709d8bd9d77ec6d.png" width="20"/> Leith:</div>
 <blockquote>
 <p>I’ve just quit playing around with using RTTR to automate angelscript bindings at runtime.</p>
 </blockquote>
@@ -335,7 +335,7 @@ Cereal looks quite tidy!</p>
 <aside class="quote no-group" data-post="7" data-topic="4698" data-username="Leith">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/leith/40/2384_2.png" width="20"/> Leith:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/344277caf39f87861709d8bd9d77ec6d.png" width="20"/> Leith:</div>
 <blockquote>
 <p><span class="hashtag">#1</span> - Can it serialize private members?</p>
 </blockquote>
@@ -344,7 +344,7 @@ Cereal looks quite tidy!</p>
 <aside class="quote no-group" data-post="7" data-topic="4698" data-username="Leith">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/leith/40/2384_2.png" width="20"/> Leith:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/344277caf39f87861709d8bd9d77ec6d.png" width="20"/> Leith:</div>
 <blockquote>
 <p><span class="hashtag">#2</span> - Can we tag public members to NOT be serialized?</p>
 </blockquote>
@@ -363,7 +363,7 @@ Cereal looks quite tidy!</p>
 <aside class="quote no-group" data-post="7" data-topic="4698" data-username="Leith">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/leith/40/2384_2.png" width="20"/> Leith:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/344277caf39f87861709d8bd9d77ec6d.png" width="20"/> Leith:</div>
 <blockquote>
 <p><span class="hashtag">#3</span> - How does it serialize object references / deal with circular references? I mean - are referenced objects serialized uniquely, or entirely serialized every time a reference is encountered?</p>
 </blockquote>

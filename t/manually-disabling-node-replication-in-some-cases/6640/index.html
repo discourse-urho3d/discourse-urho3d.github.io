@@ -79,7 +79,7 @@ enum CreateMode
           <div class="post_content">
 <p>I meant that the projectiles would be replicated, so clients could see them, but the replication would be disabled at certain times.</p>
 <p>But I think I already found a solution. If I understood correctly, I can use NetworkPriority component and set it’s priorities to zero and use NetworkPriority::SetAlwaysUpdateOwner(true) at the beginning. I also noticed the node removing event is always replicated, no matter of the NetworkPriority.</p>
-<p>EDIT: I realized the create event is also sent, no matter what the NetworkPriority says. So I already got it working perfectly with minimal effort. Nice <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=9" title=":slight_smile:"/></p>
+<p>EDIT: I realized the create event is also sent, no matter what the NetworkPriority says. So I already got it working perfectly with minimal effort. Nice <img alt=":slight_smile:" class="emoji" src="../../../images2/7bdd5ab4d67675d002d99e4b948c8cdb.png" title=":slight_smile:"/></p>
           </div>
         </div>
       </div>

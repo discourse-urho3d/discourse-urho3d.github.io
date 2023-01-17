@@ -159,7 +159,7 @@ endif ()[/quote]</p>
 In case someone’s interested, this is what worked for me:</p>
 <p>Download the MinGW-w64 installer from <a data-bbcode="true" href="http://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/installer/mingw-w64-install.exe/download" rel="nofollow noopener">http://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/installer/mingw-w64-install.exe/download</a><br/>
 Select the following options when installing. I chose GCC 4.8.3 to have the same stable version I have in the rest of OS’s.</p>
-<p><img alt="" height="" src="http://i.snag.gy/62wpt.jpg" width=""/></p>
+<p><img alt="" height="" src="../../../images2/050c3ae5f1fb9d9f9550637a9b2999b2.jpg" width=""/></p>
 <p>My issue was that I left the exception model by default: which is seh, and is only compatible for 64bits. The compiler was throwing the following error at the very beginning of the compilation (cstdlib):</p>
 <aside class="quote no-group">
 <blockquote>

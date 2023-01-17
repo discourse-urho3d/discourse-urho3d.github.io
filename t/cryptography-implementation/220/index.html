@@ -39,7 +39,7 @@ I found LibTomCrypt which may easily fit in the project as it’s optimized to r
 The total size of the whole library is personally quite heavy once compiled (~800kb on Win32) but I’ll compile only the necessary, common and/or and light hashing algorithms + public key infrastructures.</p>
 <p>Now my question, shall I map and adapt the cryptographic functions in the “Core” section or in a new section called something like “Cryptography”?<br/>
 Also, is it OK if this library is Public Domain?</p>
-<p>BTW, sorry if there’s some inconsistency, I’m more a scripting guy with network/system administration background then C/C++ programming.  <img alt=":confused:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/confused.png?v=5" title=":confused:"/><br/>
+<p>BTW, sorry if there’s some inconsistency, I’m more a scripting guy with network/system administration background then C/C++ programming.  <img alt=":confused:" class="emoji" src="../../../images2/5fc0af8f196734b5bf5c1aacdc718a17.png" title=":confused:"/><br/>
 Thanks!</p>
           </div>
         </div>
@@ -81,7 +81,7 @@ Thanks!</p>
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/cadaver/40/3_1.png" width="20"/> cadaver:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/17ea6233fe86521c2e3179bd3849d219.png" width="20"/> cadaver:</div>
 <blockquote>
 <p>I don’t mean my opinion to be the final say on this, but I’m not sure if cryptography should be in scope of Urho3D itself. Basically, if you need it in your own project, you can always integrate whatever library you like.</p>
 </blockquote>
@@ -95,15 +95,15 @@ Using them with keys + salt does the trick to avoid hackers having access to at 
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/cadaver/40/3_1.png" width="20"/> cadaver:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/17ea6233fe86521c2e3179bd3849d219.png" width="20"/> cadaver:</div>
 <blockquote>
 <p>I don’t mean my opinion to be the final say on this</p>
 </blockquote>
 </aside>
-<p>You’re the father of Urho3D, if you fell this may have bad behavior to your child, I shall not impose it.  <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=5" title=":smiley:"/></p>
+<p>You’re the father of Urho3D, if you fell this may have bad behavior to your child, I shall not impose it.  <img alt=":smiley:" class="emoji" src="../../../images2/c16ddadcbd525aa6d219a1df596d362f.png" title=":smiley:"/></p>
 <p>But if you are not comfortable with these, well… No problem, I can create a repository which could be mergeable manually with your master, so it could be “plugin”-like and it will also mean that it’s not directly supported by the main community (thought I would really like some feedback about it’s compilation through principally Apple side since  don’t own any of those).</p>
 <p>To give you the main reason for this implementation, my current focus is to create a complete standalone server with Urho3D which could run properly on all platforms supported by Urho3D, such a Raspberry Pi or even an Android smartphone.<br/>
-Finally! Complete portable servers would be possible! <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/></p>
+Finally! Complete portable servers would be possible! <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/></p>
           </div>
         </div>
       </div>
@@ -171,7 +171,7 @@ You can follow the progress here: <a data-bbcode="true" href="https://github.com
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/friesencr/40/827_1.png" width="20"/> friesencr:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/70bcc47748c28f7bda94e891e8db727b.png" width="20"/> friesencr:</div>
 <blockquote>
 <p>For sending passwords over the wire I would use an https post.  The  http client can be compiled against openssl.</p>
 </blockquote>
@@ -179,16 +179,16 @@ You can follow the progress here: <a data-bbcode="true" href="https://github.com
 <p>That was also my thoughts, but it’s not currently straightforward with Civetweb (though I guess we only need to set a build flag like “OPENSSL_LIB=path” but we still need to compile a third party manually beside) but still I want to permit a simple, light and independent way to implement custom and well known techniques to encrypt and use PKI with the native UDP socket or Serialize / Deserialize methods.<br/>
 RSA is what is mostly used with SSH2 and it’s pretty robust. I would be ready to prepared an little handshake system for public-private asymmetric keys when requested on the UDP socket.</p>
 <p>Otherwise, I’ve looked into axTLS/axhttpd (<a data-bbcode="true" href="http://axtls.sourceforge.net/" rel="nofollow noopener">http://axtls.sourceforge.net/</a>) instead of Civetweb as it doesn’t depend on OpenSSL and the license is interesting.<br/>
-I think we could use this one instead if someone is good enough to test and confirm the send/receive mechanism on SSL/TLS and if people approve. <img alt=":wink:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/wink.png?v=5" title=":wink:"/></p>
+I think we could use this one instead if someone is good enough to test and confirm the send/receive mechanism on SSL/TLS and if people approve. <img alt=":wink:" class="emoji" src="../../../images2/95940790c23d98635b2a6d3f22657158.png" title=":wink:"/></p>
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/canardian/40/67_1.png" width="20"/> Canardian:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/66f71e69ffb3c7c11318fee8cf7225d9.png" width="20"/> Canardian:</div>
 <blockquote>
 <p>I would personally need a crypt function to crypt sqlite3 records, and sqlite3 could be also included in Urho3D via some cmake defines. The sqlite3 db would be needed to read/write game data, which is kept in sync with the server’s sqlite3 db.</p>
 </blockquote>
 </aside>
-<p>Haha! You read in my mind, this was my next step! <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/><br/>
+<p>Haha! You read in my mind, this was my next step! <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/><br/>
 Though, more useful on a server than a client side, so this why another build flag for SQLite3.</p>
           </div>
         </div>
@@ -204,7 +204,7 @@ Though, more useful on a server than a client side, so this why another build fl
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/canardian/40/67_1.png" width="20"/> Canardian:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/66f71e69ffb3c7c11318fee8cf7225d9.png" width="20"/> Canardian:</div>
 <blockquote>
 <p>I wouldn’t mind have one proven crypt/decrypt function in Urho3D, but it makes no sense for an game engine to have several.</p>
 </blockquote>
@@ -233,7 +233,7 @@ No for those having a bigger project, sometime you rely on other apps and if the
 <aside class="quote no-group" data-username="silverkorn">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://avatars.discourse-cdn.com/v4/letter/s/a9adbd/40.png" width="20"/> silverkorn:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/84f294671b1ea6b26e8197602e330bd0.png" width="20"/> silverkorn:</div>
 <blockquote>
 <p>Though, more useful on a server than a client side, so this why another build flag for SQLite3.</p>
 </blockquote>
@@ -268,13 +268,13 @@ Currently Urho3D makes like 6MB big exe files at minimum, even when I disable al
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/canardian/40/67_1.png" width="20"/> Canardian:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/66f71e69ffb3c7c11318fee8cf7225d9.png" width="20"/> Canardian:</div>
 <blockquote>
 <p>Yes, but for optimal performance, you don’t want to query the server each time the player opens his inventory or moves some objects. Let the background replicator handle it in a lower frequency thread.</p>
 </blockquote>
 </aside>
 <p>Indeed!<br/>
-I guess this shall be done by the programmer (or as the default behavior) because the opposite may also be desired in some other case, SQLite can put databases in memory and if you have a light table but active exigence to call data from it, may it be. <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/><br/>
+I guess this shall be done by the programmer (or as the default behavior) because the opposite may also be desired in some other case, SQLite can put databases in memory and if you have a light table but active exigence to call data from it, may it be. <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/><br/>
 We never know, the server may have strong specs used for heavy duty targeting on real-time.</p>
           </div>
         </div>
@@ -314,7 +314,7 @@ We never know, the server may have strong specs used for heavy duty targeting on
           <div class="user_name">silverkorn</div>
           <div class="post_content">
 <p>Can LZ4 support a key?<br/>
-If people wants an additional layer of security (thin layer of varnish <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=5" title=":slight_smile:"/>), they can encrypt it with a static key (or possibly a dynamic key) because otherwise, using 7zip or any other compression browser on this data would reveal the whole stuff straight-forwardly since it’s purpose is to shrink and not really to hide…<br/>
+If people wants an additional layer of security (thin layer of varnish <img alt=":slight_smile:" class="emoji" src="../../../images2/ab33f6c546ca85e7d84a4e3c32cd4034.png" title=":slight_smile:"/>), they can encrypt it with a static key (or possibly a dynamic key) because otherwise, using 7zip or any other compression browser on this data would reveal the whole stuff straight-forwardly since it’s purpose is to shrink and not really to hide…<br/>
 Just like CRC32 in the the irreversible world, it’s made for data integrity and not hashing due to it’s obvious result and it’s great processing speed.<br/>
 Same goes for MD5/SHA1 usually used for hashing due to more complicated result which change the whole result by changing a tiny value and the speed may be slower than data integrity algorithms.</p>
           </div>

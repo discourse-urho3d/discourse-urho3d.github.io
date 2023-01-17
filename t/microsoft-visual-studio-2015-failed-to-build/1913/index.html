@@ -120,7 +120,7 @@
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/weitjong/40/4_1.png" width="20"/> weitjong:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/5dc21abd616a69d8b82c2d56dfa657a5.png" width="20"/> weitjong:</div>
 <blockquote>
 <p>Before you jump to that conclusion, it may be worth a try to build the nanodbc library as a standlone using its own build system. Things were much simpler last year when we first integrate nanodbc library into Urho3D. Now it seems the project has acquired some traction and contributions from other devs. In the past their CMakeLists.txt (or they didn’t have one before, cannot remember now) was simpler, and we actually just use our own version of the CMakeLists.txt calling our own macros. That CMakeLists.txt has not been updated much since then. Thus, I won’t rule out the possibility that the root cause of your problem is with us (with our integration). Best is if you could ascertain the root cause before filing a bug to any of the project, if possible.</p>
 </blockquote>
@@ -213,7 +213,7 @@ If you use cmake-gui all the way then when CMake prompted to choose a generator 
 <aside class="quote">
 <div class="title">
 <div class="quote-controls"></div>
-<img alt="" class="avatar" height="20" src="https://sjc6.discourse-cdn.com/standard17/user_avatar/discourse.urho3d.io/weitjong/40/4_1.png" width="20"/> weitjong:</div>
+<img alt="" class="avatar" height="20" src="../../../images2/5dc21abd616a69d8b82c2d56dfa657a5.png" width="20"/> weitjong:</div>
 <blockquote>
 <p>Could you retry again. I have attempted a fix by re implementing the VS2015 workaround for the linker error. IMHO, this is a regression issue on nanodbc side. i.e. their workaround code was overwritten by subsequent enhancement. After you have verified that the fix works (connection to database and query a field with text conversion, etc) then probably I can submit my patch to nanodbc upstream. Thanks.</p>
 </blockquote>
